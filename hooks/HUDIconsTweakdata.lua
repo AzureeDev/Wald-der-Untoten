@@ -4,8 +4,8 @@ Hooks:PostHook(HudIconsTweakData, "init", "init_zm_icons_gui", function(self)
 		texture_rect = {
 			0,
 			0,
-			512,
-			512
+			128,
+			128
 		}
     }
     self.perk_juggernog = {
@@ -13,8 +13,8 @@ Hooks:PostHook(HudIconsTweakData, "init", "init_zm_icons_gui", function(self)
 		texture_rect = {
 			0,
 			0,
-			512,
-			512
+			128,
+			128
 		}
 	}
 	self.perk_speedcola = {
@@ -22,8 +22,8 @@ Hooks:PostHook(HudIconsTweakData, "init", "init_zm_icons_gui", function(self)
 		texture_rect = {
 			0,
 			0,
-			512,
-			512
+			128,
+			128
 		}
 	}
 	self.perk_quickrevive = {
@@ -31,8 +31,8 @@ Hooks:PostHook(HudIconsTweakData, "init", "init_zm_icons_gui", function(self)
 		texture_rect = {
 			0,
 			0,
-			512,
-			512
+			128,
+			128
 		}
 	}
 	self.perk_doubletap = {
@@ -40,8 +40,8 @@ Hooks:PostHook(HudIconsTweakData, "init", "init_zm_icons_gui", function(self)
 		texture_rect = {
 			0,
 			0,
-			512,
-			512
+			128,
+			128
 		}
 	}
 	self.perk_deadshot = {
@@ -49,8 +49,8 @@ Hooks:PostHook(HudIconsTweakData, "init", "init_zm_icons_gui", function(self)
 		texture_rect = {
 			0,
 			0,
-			512,
-			512
+			128,
+			128
 		}
     }
 end)
