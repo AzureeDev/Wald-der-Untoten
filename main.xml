@@ -55,6 +55,7 @@
 			<hook file="GroupAIStateBesiege.lua" source_file="lib/managers/group_ai_states/groupaistatebesiege"/>
 			<hook file="TweakData.lua" source_file="lib/tweak_data/tweakdata"/>
 			<hook file="InteractionExt.lua" source_file="lib/units/interactions/interactionext"/>
+			<hook file="DynamicResourceManager.lua" source_file="lib/managers/dynamicresourcemanager"/>
 		</hooks>
 		<include directory="levels/zm_the_forest">
 			<file file="world.world" type="binary"/>
