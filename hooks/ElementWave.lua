@@ -30,7 +30,7 @@ function ElementWave:on_executed(instigator)
             local my_id = managers.statistics:_get_local_peer_id()
 
             if managers.trade:is_peer_in_custody(my_id) then
-                IngameWaitingForRespawnState._auto_respawn_t = 0
+                IngameWaitingForRespawnState._begin_game_enter_transition()
             end
             
             ElementWave.super.on_executed(self, instigator)
