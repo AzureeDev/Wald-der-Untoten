@@ -27,10 +27,8 @@ function ElementWave:on_executed(instigator)
             managers.statistics.ZOMBIES_CURRENTLY_SPAWNED = 0
             managers.statistics:_multiply_nb_zombies_by_current_wave(current_wave)
 
-            local my_id = managers.statistics:_get_local_peer_id()
-
-            if managers.trade:is_peer_in_custody(my_id) then
-                IngameWaitingForRespawnState._begin_game_enter_transition()
+            if game_state_machine:current_state_name() == "ingame_waiting_for_respawn" and not alive(managers.player:player_unit()) then
+                IngameWaitingForRespawnState:_begin_game_enter_transition()
             end
             
             ElementWave.super.on_executed(self, instigator)
