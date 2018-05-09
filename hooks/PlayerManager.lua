@@ -44,34 +44,6 @@ Hooks:PreHook(PlayerManager, "init", "zm_init_perk", function(self)
 end)
 
 Hooks:PostHook(PlayerManager, "update", "zm_upd_perk", function(self, t, dt)
-
-    --[[
-        Perks : Effects
-
-        - Juggernog                     2,500 Points
-        // First use only of this perk with restore health, shield, and downs.
-        MAIN: Current Health x2
-        ID  : perk_juggernog
-
-        - Speed Cola                    4,000 Points
-        MAIN: You reload your weapons 100% faster.
-        ID  : perk_speedcola
-
-        - Quick Revive                  2,000 Points
-        MAIN: (Solo)  Auto-revive when downed.
-              (Multi) Next time downed will not count on the total downs value.
-              ID  : perk_quickrevive
-
-        - Double Tap                    3,000 Points
-        MAIN: Increase the rate of fire of all weapons by 50%.
-        ID  : perk_doubletap
-
-        - Deadshot Daiquiri             2,500 Points
-        MAIN: Headshot multiplier of all enemies increased by 3.
-        ID  : perk_deadshot
-
-    ]]
-
     local player = self:player_unit()
 
     if self:has_special_equipment("perk_juggernog") then
@@ -123,8 +95,20 @@ Hooks:PostHook(PlayerManager, "update", "zm_upd_perk", function(self, t, dt)
         managers.hud._hud_zm_waves.weapon_name_bottom_right:set_text(tostring(weapon_name_id))
     end
 
-
+	self:_count_nb_perks()
 end)
+
+function PlayerManager:_count_nb_perks()
+	local count_perks = 0
+
+	if self:has_special_equipment("perk_quickrevive") then count_perks = count_perks + 1 end
+    if self:has_special_equipment("perk_juggernog") then count_perks = count_perks + 1 end
+    if self:has_special_equipment("perk_speedcola") then count_perks = count_perks + 1 end
+    if self:has_special_equipment("perk_doubletap") then count_perks = count_perks + 1 end
+	if self:has_special_equipment("perk_deadshot") then count_perks = count_perks + 1 end
+	
+	return count_perks
+end
 
 function PlayerManager:_update_cops_alive(change)
     self.totalCopAlive = self.totalCopAlive + change

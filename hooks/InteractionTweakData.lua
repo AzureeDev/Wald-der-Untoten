@@ -71,7 +71,8 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 3,
 		special_equipment = "zm_power_on",
 		equipment_text_id = "zm_no_power",		
-		special_equipment_block = "perk_juggernog"
+		special_equipment_block = "perk_juggernog",
+		is_perk_interaction = true
 	}
 
 	self.zm_perk_speedcola = {
@@ -82,7 +83,8 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 3,
 		special_equipment = "zm_power_on",
 		equipment_text_id = "zm_no_power",
-		special_equipment_block = "perk_speedcola"
+		special_equipment_block = "perk_speedcola",
+		is_perk_interaction = true
 	}
 
 	self.zm_perk_doubletap = {
@@ -93,7 +95,8 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 3,
 		special_equipment = "zm_power_on",
 		equipment_text_id = "zm_no_power",		
-		special_equipment_block = "perk_doubletap"
+		special_equipment_block = "perk_doubletap",
+		is_perk_interaction = true
 	}
 
 	self.zm_perk_quickrevive = {
@@ -104,7 +107,8 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 3,
 		special_equipment = "zm_power_on",
 		equipment_text_id = "zm_no_power",		
-		special_equipment_block = "perk_quickrevive"
+		special_equipment_block = "perk_quickrevive",
+		is_perk_interaction = true
 	}
 
 	self.zm_open_door_2000 = {
