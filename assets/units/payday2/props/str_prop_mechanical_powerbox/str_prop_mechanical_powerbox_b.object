@@ -1,0 +1,17 @@
+<dynamic_object>
+    <diesel orientation_object="rp_str_prop_mechanical_powerbox_b" materials="units/payday2/props/str_prop_mechanical_powerbox/str_prop_mechanical_powerbox" />
+    <bodies>
+        <body enabled="true" template="static" name="static_body" >
+            <object name="rp_str_prop_mechanical_powerbox_b" />
+            <object collision_type="box" name="c_box_01" padding="-2.5"/>
+            <object collision_type="box" name="c_box_02" padding="-2.5"/>
+        </body>
+    </bodies>
+    <decal_surfaces>
+        <decal_mesh enabled="true" name="dm_sheet_metal" material="sheet_metal" />
+    </decal_surfaces>
+    <graphics>
+        <object enabled="true" name="g_g" />
+        <object enabled="true" shadow_caster="true" name="s_s" />
+    </graphics>
+</dynamic_object>

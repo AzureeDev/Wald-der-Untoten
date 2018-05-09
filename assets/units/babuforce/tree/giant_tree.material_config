@@ -1,0 +1,17 @@
+<materials version="3">
+    <material name="mat_trunk_tree" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/babuforce/tree/giant_tree_df" />
+		<bump_normal_texture file="units/babuforce/tree/giant_tree_nm" />
+	</material>
+	
+     <material version="2" render_template="generic:ALIGN_NORMAL_WORLD_Z:ALPHA_MASKED:DIFFUSE_TEXTURE:DOUBLE_SIDED:EXTERNAL_ALPHA_REF:VEGETATION_BENDING" name="mat_tree_leaves">
+        <diffuse_texture file="units/babuforce/tree/giant_tree_df"/>
+        <variable value="0.62900000810623" type="scalar" name="normal_world_z_blend"/>
+        <variable value="0.50007247924805" type="scalar" name="speed"/>
+        <variable value="7.5999999046326 0.15999999642372 0" type="vector3" name="detail_settings"/>
+        <variable value="12 0.34999999403954 0" type="vector3" name="branch_settings"/>
+        <variable value="0.027000000700355" type="scalar" name="alpha_ref"/>
+	</material>
+		
+    <material name="shadow_caster" render_template="shadow_caster_only" version="2"/>
+</materials>

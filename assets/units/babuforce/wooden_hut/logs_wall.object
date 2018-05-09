@@ -1,0 +1,37 @@
+<dynamic_object>
+	<diesel materials="units/babuforce/wooden_hut/logs" orientation_object="rp_mkp_int_floor_2x2m_a" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_mkp_int_floor_2x2m_a" />
+			<object name="co_culling" />
+			<object name="g_wooden_wall_001" />
+			<object name="g_wooden_wall_002" />
+			<object name="g_wooden_wall_003" />
+			<object name="g_wooden_wall_004" />
+			<object name="g_wooden_wall_005" />
+			<object name="g_wooden_wall_006" />
+			<object name="g_wooden_wall_007" />
+			<object name="c_convex_001" collision_type="convex" padding="-2.5" />
+		</body>
+	</bodies>
+	<graphics>
+		<graphic_group name="frame" culling_object="co_culling" enabled="true">
+			<object name="g_wooden_wall_001" enabled="true" shadow_caster="true"/>
+			<object name="g_wooden_wall_002" enabled="true" shadow_caster="true"/>
+			<object name="g_wooden_wall_003" enabled="true" shadow_caster="true"/>
+			<object name="g_wooden_wall_004" enabled="true" shadow_caster="true"/>
+			<object name="g_wooden_wall_005" enabled="true" shadow_caster="true"/>
+			<object name="g_wooden_wall_006" enabled="true" shadow_caster="true"/>
+			<object name="g_wooden_wall_007" enabled="true" shadow_caster="true"/>
+		</graphic_group>
+	</graphics>
+    <decal_surfaces>
+			<object name="g_wooden_wall_001" enabled="true" material="wood"/>
+			<object name="g_wooden_wall_002" enabled="true" material="wood"/>
+			<object name="g_wooden_wall_003" enabled="true" material="wood"/>
+			<object name="g_wooden_wall_004" enabled="true" material="wood"/>
+			<object name="g_wooden_wall_005" enabled="true" material="wood"/>
+			<object name="g_wooden_wall_006" enabled="true" material="wood"/>
+			<object name="g_wooden_wall_007" enabled="true" material="wood"/>
+    </decal_surfaces>
+</dynamic_object>

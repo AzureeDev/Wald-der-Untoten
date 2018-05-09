@@ -1,0 +1,6 @@
+<materials version="3">
+	<material name="mat_door" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+		<diffuse_texture file="units/payday2/architecture/res/res_int_door_window_wood_01_df" />
+		<bump_normal_texture file="units/payday2/architecture/res/res_int_door_window_wood_01_nm" />
+	</material>
+</materials>

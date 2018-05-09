@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<dynamic_object>
+    <diesel materials="units/pd2_dlc2/csgo_models/props_vehicles/flatnose_truck_wrecked" orientation_object="rp_flatnose_truck_wrecked" />
+    <bodies>
+        <body name="static_body" template="static" enabled="true" >
+            <object name="rp_flatnose_truck_wrecked"/>
+            <object name="c_mesh_mopp_1" collision_type="mesh_mopp" />
+        </body>
+    </bodies>
+    
+    <decal_surfaces default_material="sheet_metal" static="true">
+        <decal_mesh name="g_flatnose_truck_wrecked_glass" material="glass_unbreakable" enabled="true"/>
+        <decal_mesh name="dm_metal" material="sheet_metal" enabled="true"/>
+        <decal_mesh name="dm_rubber" material="rubber" enabled="true"/>
+    </decal_surfaces> 
+    
+    <graphics>
+
+        <lod_object name="lod_truck_glass">
+            <object enabled="true" name="g_flatnose_truck_wrecked_glass" >
+                <material materials="mat_flatnose_truck_wrecked_2" max_distance="1500"/>
+                <material materials="mat_flatnose_truck_wrecked_2_lod" max_distance="2500"/>
+            </object>
+        </lod_object>
+
+        <lod_object name="lod_truck">
+            <object enabled="true" name="g_flatnose_truck_wrecked" >
+                <material materials="mat_flatnose_truck_wrecked_1" max_distance="1500"/>
+                <material materials="mat_flatnose_truck_wrecked_1_lod_1" max_distance="2000"/>
+                <material materials="mat_flatnose_truck_wrecked_1_lod_2" max_distance="3000"/>
+            </object>
+        </lod_object>
+    </graphics>
+</dynamic_object> 

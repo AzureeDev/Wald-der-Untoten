@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge-small" orientation_object="rp_wpn_fps_shot_b682_s_long"/>
+	<graphics>
+		<object name="g_stock_lod0" enabled="true"/>
+	</graphics>
+</dynamic_object>

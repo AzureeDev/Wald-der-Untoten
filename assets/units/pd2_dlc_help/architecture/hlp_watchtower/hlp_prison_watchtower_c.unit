@@ -1,0 +1,6 @@
+<unit type="hlp" slot="1">
+	<object file="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower_c" />
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+	</extensions>
+</unit>

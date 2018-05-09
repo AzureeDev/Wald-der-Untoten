@@ -1,0 +1,46 @@
+<dynamic_object>
+	<diesel materials="units/babuforce/wooden_hut/logs" orientation_object="rp_mkp_int_floor_2x2m_a" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_mkp_int_floor_2x2m_a" />
+			<object name="co_culling" />
+			<object name="g_log_window_001" />
+			<object name="g_log_window_002" />
+			<object name="g_log_window_003" />
+			<object name="g_log_window_004" />
+			<object name="g_log_window_006" />
+			<object name="g_log_window_007" />
+			<object name="g_log_window_008" />
+			<object name="g_log_window_009" />
+			<object name="g_log_window_010" />
+			<object name="c_convex_001" collision_type="convex" padding="-2.5" />
+			<object name="c_convex_002" collision_type="convex" padding="-2.5" />
+			<object name="c_convex_003" collision_type="convex" padding="-2.5" />
+			<object name="c_convex_004" collision_type="convex" padding="-2.5" />
+		</body>
+	</bodies>
+	<graphics>
+		<graphic_group name="frame" culling_object="co_culling" enabled="true">
+			<object name="g_log_window_001" enabled="true" shadow_caster="true"/>
+			<object name="g_log_window_002" enabled="true" shadow_caster="true"/>
+			<object name="g_log_window_003" enabled="true" shadow_caster="true"/>
+			<object name="g_log_window_004" enabled="true" shadow_caster="true"/>
+			<object name="g_log_window_006" enabled="true" shadow_caster="true"/>
+			<object name="g_log_window_007" enabled="true" shadow_caster="true"/>
+			<object name="g_log_window_008" enabled="true" shadow_caster="true"/>
+			<object name="g_log_window_009" enabled="true" shadow_caster="true"/>
+			<object name="g_log_window_010" enabled="true" shadow_caster="true"/>
+		</graphic_group>
+	</graphics>
+    <decal_surfaces>
+			<object name="g_log_window_001" enabled="true" material="wood"/>
+			<object name="g_log_window_002" enabled="true" material="wood"/>
+			<object name="g_log_window_003" enabled="true" material="wood"/>
+			<object name="g_log_window_004" enabled="true" material="wood"/>
+			<object name="g_log_window_006" enabled="true" material="wood"/>
+			<object name="g_log_window_007" enabled="true" material="wood"/>
+			<object name="g_log_window_008" enabled="true" material="wood"/>
+			<object name="g_log_window_009" enabled="true" material="wood"/>
+			<object name="g_log_window_010" enabled="true" material="wood"/>
+    </decal_surfaces>
+</dynamic_object>

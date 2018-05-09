@@ -1,0 +1,14 @@
+<materials version="3" group="weapon_group">
+	<material name="mtr_stock" unique="true" version="2" render_template="effect:BLEND_ADD:DIFFUSE0_TEXTURE:DIFFUSE0_THRESHOLD_SWEEP">
+        <diffuse_texture file="units/mods/weapons/wpn_fps_special_roach_pts/discharge_il"/>
+        <variable value="reddot" type="scalar" name="intensity"/>
+        <variable value="0.2313725490196078 1 1" type="vector3" name="threshold_sweep_color_s"/>
+        <variable value="0.2313725490196078 1 1" type="vector3" name="threshold_sweep_color_e"/>
+        <variable value="1" type="scalar" name="threshold_sweep_op_s"/>
+        <variable value="0.5" type="scalar" name="threshold_sweep_op_e"/>
+        <variable value="0.0190000005438924" type="scalar" name="threshold_sweep_fuzziness_s"/>
+        <variable value="0.025000000596046" type="scalar" name="threshold_sweep_fuzziness_e"/>
+        <variable value="0.8030000269413" type="scalar" name="threshold_sweep_speed"/>
+        <variable value="0.890000128746" type="scalar" name="threshold_sweep_time_exp"/>
+	</material>
+</materials>

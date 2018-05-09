@@ -1,0 +1,23 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_subcompact_wrecked/lxa_vehicle_car_subcompact_wrecked" orientation_object="rp_lxa_vehicle_car_subcompact_wrecked" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_lxa_vehicle_car_subcompact_wrecked" />
+			<object name="c_mesh_mopp_01" collision_type="mesh_mopp" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="glass_breakable">
+		<decal_mesh name="dm_glass_breakable" enabled="true" material="glass_breakable" />
+		<decal_mesh name="dm_metal" enabled="true" material="sheet_metal" />
+		<decal_mesh name="dm_rubber" enabled="true" material="rubber" />
+	</decal_surfaces>
+	<graphics>
+		<lod_object name="lod_g">
+			<object name="g_lod0" enabled="true" max_distance="2500" />
+			<object name="g_lod1" enabled="true" max_distance="3000" />
+			<object name="g_lod2" enabled="true" max_distance="4500" />
+			<object name="g_lod3" enabled="true" />
+		</lod_object>
+		<object name="s_s" enabled="true" shadow_caster="true" />
+	</graphics>
+</dynamic_object>

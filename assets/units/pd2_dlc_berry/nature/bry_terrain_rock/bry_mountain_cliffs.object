@@ -1,0 +1,16 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_berry/nature/bry_terrain_rock/bry_terrain_rocks" orientation_object="rp_bry_mountain_cliffs" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_bry_mountain_cliffs" />
+			<object name="c_mesh_mopp_01" collision_type="mesh_mopp" />
+		</body>
+	</bodies>
+	
+	<decal_surfaces default_material="stone" />
+	
+	<graphics>
+		<object name="g_g" enabled="true" />
+		<object name="s_s" enabled="true" shadow_caster="true" />
+	</graphics>
+</dynamic_object>

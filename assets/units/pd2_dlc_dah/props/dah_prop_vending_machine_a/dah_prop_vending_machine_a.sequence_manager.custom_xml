@@ -1,0 +1,28 @@
+<table>
+	<unit>
+		<sequence editable_state="true" name="'perk_quickrevive'" triggable="true">
+			<material_config name="'units/pd2_dlc_dah/props/dah_prop_vending_machine_a/quick_revive'"/>
+		</sequence>
+		<sequence editable_state="true" name="'perk_doubletap'" triggable="true">
+			<material_config name="'units/pd2_dlc_dah/props/dah_prop_vending_machine_a/double_tap'"/>
+		</sequence>
+		<sequence editable_state="true" name="'perk_speedcola'" triggable="true">
+			<material_config name="'units/pd2_dlc_dah/props/dah_prop_vending_machine_a/speed_cola'"/>
+		</sequence>
+		<sequence editable_state="true" name="'perk_juggernog'" triggable="true">
+			<material_config name="'units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a'"/>
+		</sequence>
+		<sequence editable_state="true" name="'perk_quickrevive_on'" triggable="true">
+			<material_config name="'units/pd2_dlc_dah/props/dah_prop_vending_machine_a/quick_revive_on'"/>
+		</sequence>
+		<sequence editable_state="true" name="'perk_doubletap_on'" triggable="true">
+			<material_config name="'units/pd2_dlc_dah/props/dah_prop_vending_machine_a/double_tap_on'"/>
+		</sequence>
+		<sequence editable_state="true" name="'perk_speedcola_on'" triggable="true">
+			<material_config name="'units/pd2_dlc_dah/props/dah_prop_vending_machine_a/speed_cola_on'"/>
+		</sequence>
+		<sequence editable_state="true" name="'perk_juggernog_on'" triggable="true">
+			<material_config name="'units/pd2_dlc_dah/props/dah_prop_vending_machine_a/juggernog_on'"/>
+		</sequence>
+	</unit>
+</table>

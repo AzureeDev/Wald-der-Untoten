@@ -1,0 +1,9 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge" orientation_object="rp_wpn_fps_shot_b682_s_long"/>
+	<graphics>
+		<object name="g_stock_lod0" enabled="true"/>
+	</graphics>
+	<!--<effects>
+		<effect_spawner name="somethinglol" enabled="true" object="g_stock_lod0" effect="effects/payday2/particles/character/taser_hittarget" />
+	</effects>-->
+</dynamic_object>

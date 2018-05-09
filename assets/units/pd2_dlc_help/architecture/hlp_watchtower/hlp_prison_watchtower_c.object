@@ -1,0 +1,16 @@
+<dynamic_object>
+	<diesel materials="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower" orientation_object="rp_hlp_prison_watchtower_c" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_hlp_prison_watchtower_c" />
+			<object name="c_convex_01" collision_type="convex" padding="-2.5"/>
+		</body>
+	</bodies>
+	<decal_surfaces default_material="stone">
+		<decal_mesh name="dm_stone" enabled="true" material="stone" />
+	</decal_surfaces>
+	<graphics>
+		<object name="g_g" enabled="true" />
+		<object name="s_s" enabled="true" shadow_caster="true" />
+	</graphics>
+</dynamic_object>

@@ -1,0 +1,22 @@
+<dynamic_object>
+	<diesel materials="units/payday2/props/gen_prop_plywood/gen_prop_plywood" orientation_object="rp_gen_prop_plank_1m" />
+	<bodies>
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_gen_prop_plank_1m" />
+			<object name="c_box_01" collision_type="box" padding="-2.5" />
+		</body>
+	</bodies>
+	<decal_surfaces default_material="wood">
+		<decal_mesh name="dm_wood" enabled="true" material="wood" />
+	</decal_surfaces>
+	<graphics>
+        <lod_object name="plywood_lod">
+            <object enabled="true" name="g_g" >
+                <material materials="mat_gen_prop_plywood" max_distance="2500" />
+                <material materials="mat_gen_prop_plywood_lod_1" max_distance="1000" />
+                <material materials="mat_gen_prop_plywood_lod_2" />
+            </object>
+        </lod_object>
+		<object name="s_s" enabled="true" shadow_caster="true" />
+	</graphics>
+</dynamic_object>

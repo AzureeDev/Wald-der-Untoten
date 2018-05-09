@@ -1,0 +1,9 @@
+<unit type="str" slot="1" >
+    <object file="units/payday2/vehicles/str_vehicle_van_dest/str_vehicle_van_dest_wrecked" />
+    <network sync="spawn"/>
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+        <extension name="damage" class="UnitDamage" />
+        <extension name="van_skin" class="VanSkinExt" />
+    </extensions>
+</unit>

@@ -1,0 +1,24 @@
+<unit type="wpn" slot="1" >
+	<object file="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display" />
+	<dependencies>
+		<depends_on font="fonts/font_digital" />
+	</dependencies>	
+	
+	<extensions>
+		<extension class="ScriptUnitData" name="unit_data" />
+		<extension class="DigitalGui" name="digital_gui_range" >
+			<var name="TYPE" value="number" />
+			<var name="COLOR_TYPE" value="blue" />
+			<var name="HEIGHT" value="200" />
+			<var name="_gui_object" value="g_display" />		
+		</extension>
+		<extension class="DigitalGui" name="digital_gui_scope" >
+			<var name="TYPE" value="number" />
+			<var name="COLOR_TYPE" value="blue" />
+			<var name="HEIGHT" value="200" />
+			<var name="_gui_object" value="g_display_upper" />
+			<var name="RENDER_TEMPLATE" value="OverlayVertexColorTextured" />
+			<var name="BLEND_MODE" value="add" />
+		</extension>
+	</extensions>
+</unit>

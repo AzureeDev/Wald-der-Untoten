@@ -1,0 +1,218 @@
+<table name="Wald Der Untoten">
+	<AssetUpdates id="-1" provider="modworkshop" use_local_dir="true" version="1"/>
+	<Hooks directory="hooks">
+		<hook file="MeleeWeaponsTweakData.lua" source_file="lib/tweak_data/blackmarket/meleeweaponstweakdata"/>
+		<hook file="UpgradesTweakData.lua" source_file="lib/tweak_data/upgradestweakdata"/>
+	</Hooks>
+	<Localization default="english.txt" directory="loc"/>
+	<contact assets_gui="guis/mission_briefing/preload_contact_bain" desc_id="contact_nepgearsy_desc" id="nepgearsy" name_id="contact_nepgearsy_name" package="packages/contact_bain"/>
+	<level ai_group_type="zombie" briefing_dialog="" id="zm_the_forest" max_bags="0" music="no_music" team_ai_off="true">
+		<add file="levels/zm_the_forest/add.xml"/>
+		<assets>
+			<asset name="zm_wald_der_untoten_perks"/>
+		</assets>
+		<hooks directory="hooks">
+			<hook file="MissionManager.lua" source_file="lib/managers/missionmanager"/>
+			<hook file="WeaponTweakData.lua" source_file="lib/tweak_data/weapontweakdata"/>
+			<hook file="AssetsTweakData.lua" source_file="lib/tweak_data/assetstweakdata"/>
+			<hook file="WeaponFactoryTweakData.lua" source_file="lib/tweak_data/weaponfactorytweakdata"/>
+			<hook file="WeaponSkinsTweakData.lua" source_file="lib/tweak_data/blackmarket/weaponskinstweakdata"/>
+			<hook file="InteractionTweakData.lua" source_file="lib/tweak_data/interactiontweakdata"/>
+			<hook file="ProjectilesTweakData.lua" source_file="lib/tweak_data/blackmarket/projectilestweakdata"/>
+			<hook file="EquipmentsTweakdata.lua" source_file="lib/tweak_data/equipmentstweakdata"/>
+			<hook file="HUDIconsTweakdata.lua" source_file="lib/tweak_data/hudiconstweakdata"/>
+			<hook file="CharacterTweakData.lua" source_file="lib/tweak_data/charactertweakdata"/>
+			<hook file="PlayerTweakData.lua" source_file="lib/tweak_data/playertweakdata"/>
+			<hook file="HUDIconsTweakData.lua" source_file="lib/tweak_data/hudiconstweakdata"/>
+			<hook file="EquipmentsTweakData.lua" source_file="lib/tweak_data/equipmentstweakdata"/>
+			<hook file="BlackMarketManager.lua" source_file="lib/managers/blackmarketmanager"/>
+			<hook file="Rebalance.lua" source_file="lib/managers/hudmanager"/>
+			<hook file="PlayerManager.lua" source_file="lib/managers/playermanager"/>
+			<hook file="ZMP.lua" source_file="lib/managers/statisticsmanager"/>
+			<hook file="HUDAssaultCorner.lua" source_file="lib/managers/hud/hudassaultcorner"/>
+			<hook file="HUDManagerPD2.lua" source_file="lib/managers/hudmanagerpd2"/>
+			<hook file="HUDManager.lua" source_file="lib/managers/hudmanager"/>
+			<hook file="HUDStageEndScreen.lua" source_file="lib/managers/hud/hudstageendscreen"/>
+			<hook file="CopDamage.lua" source_file="lib/units/enemies/cop/copdamage"/>
+			<hook file="UnitNetworkHandler.lua" source_file="lib/network/handlers/unitnetworkhandler"/>
+			<hook file="HuskPlayerMovement.lua" source_file="lib/units/beings/player/huskplayermovement"/>
+			<hook file="PlayerInventory.lua" source_file="lib/units/beings/player/playerinventory"/>
+			<hook file="PlayerDamage.lua" source_file="lib/units/beings/player/playerdamage"/>
+			<hook file="HuskPlayerInventory.lua" source_file="lib/units/beings/player/huskplayerinventory"/>
+			<hook file="SniperGrazeDamage.lua" source_file="lib/managers/player/snipergrazedamage"/>
+			<hook file="HUDMissionBriefing.lua" source_file="lib/managers/hud/hudmissionbriefing"/>
+			<hook file="GroupAITweakData.lua" source_file="lib/tweak_data/groupaitweakdata"/>
+			<hook file="RaycastWeaponBase.lua" source_file="lib/units/weapons/raycastweaponbase"/>
+			<hook file="NewRaycastWeaponBase.lua" source_file="lib/units/weapons/newraycastweaponbase"/>
+			<hook file="NewNPCRaycastWeaponBase.lua" source_file="lib/units/weapons/newnpcraycastweaponbase"/>
+			<hook file="PlayerStandard.lua" source_file="lib/units/beings/player/states/playerstandard"/>
+			<hook file="FPCameraPlayerBase.lua" source_file="lib/units/cameras/fpcameraplayerbase"/>
+			<hook file="CopLogicAttack.lua" source_file="lib/units/enemies/cop/logics/coplogicattack"/>
+			<hook file="CopActionShoot.lua" source_file="lib/units/enemies/cop/actions/upper_body/copactionshoot"/>
+			<hook file="EnemyManager.lua" source_file="lib/managers/enemymanager"/>
+			<hook file="ElementSpawnEnemyDummy.lua" source_file="lib/managers/mission/elementspawnenemydummy"/>
+			<hook file="GroupAIStateBesiege.lua" source_file="lib/managers/group_ai_states/groupaistatebesiege"/>
+			<hook file="TweakData.lua" source_file="lib/tweak_data/tweakdata"/>
+		</hooks>
+		<include directory="levels/zm_the_forest">
+			<file file="world.world" type="binary"/>
+			<file file="continents.continents" type="binary"/>
+			<file file="mission.mission" type="binary"/>
+			<file file="nav_manager_data.nav_data" type="binary"/>
+			<file file="world_sounds.world_sounds" type="binary"/>
+			<file file="world_cameras.world_cameras" type="binary"/>
+			<file file="collisions/collisions.continent" type="binary"/>
+			<file file="collisions/collisions.mission" type="binary"/>
+			<file file="world/world.continent" type="binary"/>
+			<file file="world/world.mission" type="binary"/>
+			<file file="editor_only/editor_only.continent" type="binary"/>
+			<file file="editor_only/editor_only.mission" type="binary"/>
+			<file file="nav/nav.continent" type="binary"/>
+			<file file="nav/nav.mission" type="binary"/>
+			<file file="cover_data.cover_data" type="binary"/>
+			<file file="environments/zm_d_bright.environment" type="custom_xml"/>
+			<file file="environments/zm_d.environment" type="custom_xml"/>
+			<file file="environments/ecl_finale_fixed_shadows.environment" type="custom_xml"/>
+			<file file="environments/default.environment" type="custom_xml"/>
+			<file file="environments/zm_rain.environment" type="custom_xml"/>
+			<file file="environments/zm_rain_hell.environment" type="custom_xml"/>
+		</include>
+		<intro_event>
+			<value_node value=""/>
+		</intro_event>
+		<outro_event>
+			<value_node value=""/>
+		</outro_event>
+		<packages>
+			<value_node value="levels/narratives/elephant/chew/collision/collision"/>
+			<value_node value="packages/narr_hvh"/>
+			<value_node value="levels/narratives/bain/hvh/world_sounds"/>
+			<value_node value="levels/narratives/butcher/thebomb/stage_3/marac/marac"/>
+			<value_node value="levels/narratives/butcher/thebomb/stage_3/world"/>
+			<value_node value="levels/narratives/butcher/thebomb/stage_3/world/world"/>
+			<value_node value="levels/narratives/butcher/thebomb/stage_3/world/world_init"/>
+			<value_node value="levels/narratives/butcher/thebomb/stage_3/marac/marac_init"/>
+			<value_node value="levels/narratives/butcher/thebomb/stage_3/world_init"/>
+			<value_node value="levels/narratives/bain/cage/editor_only/editor_only_init"/>
+			<value_node value="levels/narratives/bain/cage/editor_only/editor_only"/>
+			<value_node value="levels/instances/unique/hvh/hvh_chance/world/world"/>
+			<value_node value="levels/narratives/bain/help/env_art/env_art"/>
+			<value_node value="levels/instances/unique/mus_circuit_box/world/world"/>
+			<value_node value="levels/narratives/classics/glace/world"/>
+			<value_node value="levels/instances/unique/mad/mad_door/world/world"/>
+		</packages>
+		<script_data_mods directory="scriptdata">
+			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">
+				<options merge_mode="add" mode="add"/>
+			</mod>
+		</script_data_mods>
+		<sounds directory="assets/sound">
+			<sounds directory="deamon">
+				<sound id="zm_sam_laugh" path="demon_sam_laugh.ogg"/>
+				<sound id="zm_announcer_max_ammo" path="demon_sam_max_ammo.ogg"/>
+				<sound id="zm_announcer_firesale" path="demon_sam_firesale.ogg"/>
+				<sound id="zm_announcer_firesale_first" path="demon_sam_firesale_first.ogg"/>
+				<sound id="zm_announcer_double_points" path="demon_sam_double_points.ogg"/>
+				<sound id="zm_announcer_instakill" path="demon_sam_instakill.ogg"/>
+				<sound id="zm_announcer_wunder" path="LIGHTNING_IS_POWER.ogg"/>
+				<sound id="zm_announcer_roach" path="demon_sam_present.ogg"/>
+			</sounds>
+			<sounds directory="pew" prefix="regular" use_fix="true">
+				<sound id="zm_pew_lmg" path="lmg_m240_base.ogg" prefix="regular" use_fix="true"/>
+				<sound id="zm_pew_cobra" path="pis_cobra_base.ogg" prefix="regular" use_fix="true"/>
+				<sound id="zm_pew_m1911" path="pis_m1911_base.ogg" prefix="regular" use_fix="true"/>
+				<sound id="zm_pew_rifle" path="rif_m14_base.ogg" prefix="regular" use_fix="true"/>
+				<sound id="zm_pew_shta" path="shot_auto_base.ogg" prefix="regular" use_fix="true"/>
+				<sound id="zm_pew_shts" path="shot_single_base.ogg" prefix="regular" use_fix="true"/>
+				<sound id="zm_pew_snp_b" path="snp_barret_base.ogg" prefix="regular" use_fix="true"/>
+				<sound id="zm_pew_snp_e" path="snp_ebr_base.ogg" prefix="regular" use_fix="true"/>
+				<sound id="zm_pew_smg" path="smg_mp7_base.ogg" prefix="regular" use_fix="true"/>
+			</sounds>
+			<sound id="wunderwaffe_fire" path="wunder_fire.ogg" prefix="regular"/>
+			<sound id="lakner_mag_out" path="wunder_clip_out.ogg" prefix="first"/>
+			<sound id="lakner_mag_out" path="wunder_clip_out.ogg" prefix="rb6"/>
+			<sound id="lakner_mag_out" path="wunder_clip_out.ogg" prefix="grass"/>
+			<sound id="lakner_clip_contact_02" path="wunder_clip_contact.ogg" prefix="first"/>
+			<sound id="lakner_clip_contact_02" path="wunder_clip_contact.ogg" prefix="rb6"/>
+			<sound id="lakner_clip_contact_02" path="wunder_clip_contact.ogg" prefix="grass"/>
+			<sound id="lakner_mag_in" path="wunder_clip_in.ogg" prefix="grass"/>
+			<sound id="lakner_mag_in" path="wunder_clip_in.ogg" prefix="rb6"/>
+			<sound id="lakner_mag_in" path="wunder_clip_in.ogg" prefix="first"/>
+			<sound id="wunderwaffe_hit" path="gottem.ogg"/>
+			<sound id="wunderwaffe_spree" path="spree.ogg"/>
+			<sound id="wunderwaffe_spree2" path="spree2.ogg"/>
+			<sound id="roach_fire" path="railgun_boom.ogg" prefix="regular"/>
+			<sound id="zm_wave_end" path="end_2.ogg"/>
+			<sound id="zm_wave_new_1" path="new_v2_1.ogg"/>
+			<sound id="zm_wave_new_2" path="new_v2_2.ogg"/>
+			<sound id="zm_wave_new_3" path="new_v2_3.ogg"/>
+			<sound id="zm_special_wave" path="FETCH_ME_THEIR_SOULS.ogg"/>
+			<sound id="zm_firesale" path="firesale.ogg"/>
+			<sound id="zm_dead" path="ded.ogg"/>
+			<sound id="zm_pregame" path="pregame.ogg"/>
+			<sound id="zm_instakill_loop" path="instakill_loop.ogg"/>
+			<sound id="zm_double_points_loop" path="double_points_loop.ogg"/>
+			<sound id="zm_special_wave_end" path="specialwave_end.ogg"/>
+			<sound id="zm_power_on" path="power_on.ogg"/>
+		</sounds>
+	</level>
+	<narrative briefing_event="" contact="nepgearsy" id="zm_the_forest">
+		<chain>
+			<table level_id="zm_the_forest" type="d" type_id="heist_type_assault"/>
+		</chain>
+		<contract_cost>
+			<value_node value="4000"/>
+			<value_node value="8000"/>
+			<value_node value="20000"/>
+			<value_node value="40000"/>
+			<value_node value="100000"/>
+			<value_node value="100000"/>
+			<value_node value="100000"/>
+		</contract_cost>
+		<crimenet_callouts>
+			<value_node value="nothing"/>
+		</crimenet_callouts>
+		<crimenet_videos>
+			<value_node value="cn_branchbank2"/>
+		</crimenet_videos>
+		<debrief_event>
+			<value_node value=""/>
+		</debrief_event>
+		<experience_mul>
+			<value_node value="1"/>
+			<value_node value="1"/>
+			<value_node value="1"/>
+			<value_node value="1"/>
+			<value_node value="3"/>
+			<value_node value="3"/>
+			<value_node value="3"/>
+		</experience_mul>
+		<max_mission_xp>
+			<value_node value="8000"/>
+			<value_node value="8000"/>
+			<value_node value="8000"/>
+			<value_node value="8000"/>
+			<value_node value="8000"/>
+			<value_node value="8000"/>
+			<value_node value="8000"/>
+		</max_mission_xp>
+		<min_mission_xp>
+			<value_node value="2000"/>
+			<value_node value="2000"/>
+			<value_node value="2000"/>
+			<value_node value="2000"/>
+			<value_node value="2000"/>
+			<value_node value="2000"/>
+			<value_node value="2000"/>
+		</min_mission_xp>
+		<payout>
+			<value_node value="6000"/>
+			<value_node value="12000"/>
+			<value_node value="30000"/>
+			<value_node value="50000"/>
+			<value_node value="60000"/>
+			<value_node value="60000"/>
+			<value_node value="60000"/>
+		</payout>
+	</narrative>
+</table>
