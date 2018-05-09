@@ -1,0 +1,14 @@
+<table directory="assets">
+    <effect load="true" path="effects/zm/weapons/zm_pap_big_fps_ball_flash"/>
+    <effect load="true" path="effects/zm/weapons/zm_pap_extra_fps_big_sparse"/>
+    <effect load="true" path="effects/zm/weapons/zm_pap_big_fps_smoke_flash"/>
+    <effect load="true" path="effects/zm/weapons/zm_pap_big_fps_extra_long_flash"/>
+    <effect load="true" path="effects/zm/zm_pap_muzzle"/>
+    <effect load="true" path="effects/particles/weapons/trail_v2"/>
+    <effect load="true" path="effects/particles/weapons/shovel"/>
+    <effect load="true" path="effects/particles/weapons/super_shovel"/>
+    <effect load="true" path="effects/particles/weapons/wunder_fire"/>
+    <effect load="true" path="effects/particles/weapons/wunder_dg3_fire"/>
+    <effect load="true" path="effects/particles/weapons/wunder_sparks"/>
+    <effect load="true" path="effects/particles/weapons/wunder_dg3_sparks"/>
+</table>

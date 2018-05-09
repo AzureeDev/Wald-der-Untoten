@@ -27,7 +27,7 @@ function ElementWave:on_executed(instigator)
             managers.statistics.ZOMBIES_CURRENTLY_SPAWNED = 0
             managers.statistics:_multiply_nb_zombies_by_current_wave(current_wave)
 
-            local my_id = managers.statistics:get_local_peer_id()
+            local my_id = managers.statistics:_get_local_peer_id()
 
             if managers.trade:is_peer_in_custody(my_id) then 
                 IngameWaitingForRespawnState.request_player_spawn(my_id)

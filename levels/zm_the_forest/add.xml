@@ -1,14 +1,4 @@
 <table directory="assets">
-	<effect load="true" path="effects/zm/weapons/zm_pap_big_fps_ball_flash"/>
-	<effect load="true" path="effects/zm/weapons/zm_pap_extra_fps_big_sparse"/>
-	<effect load="true" path="effects/zm/weapons/zm_pap_big_fps_smoke_flash"/>
-	<effect load="true" path="effects/zm/weapons/zm_pap_big_fps_extra_long_flash"/>
-	<effect load="true" path="effects/zm/zm_pap_muzzle"/>
-	<effect load="true" path="effects/particles/weapons/trail_v2"/>
-	<effect load="true" path="effects/particles/weapons/shovel"/>
-	<effect load="true" path="effects/particles/weapons/super_shovel"/>
-	<effect load="true" path="effects/particles/weapons/wunder_fire"/>
-	<effect load="true" path="effects/particles/weapons/wunder_dg3_fire"/>
 	<texture force="true" path="effects/textures/misc/lightning2"/>
 	<texture force="true" path="effects/textures/add_atlas_df"/>
 	<texture force="true" path="effects/textures/effects_atlas"/>
@@ -62,98 +52,98 @@
 	<object path="units/weapon_walls/wpn_mp9"/>
 	<unit path="units/weapon_walls/wpn_mp9"/>
 
-	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe"/>
-	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_secondary"/>
-	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3"/>
-	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_pis_1911_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_pis_1911_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_m14_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_m14_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_shot_b682_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_shot_b682_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_smg_mp9_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_smg_mp9_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_snp_m95_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_snp_m95_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_spe_rpg7_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_spe_rpg7_secondary"/>
+	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe"/>
+	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_secondary"/>
+	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3"/>
+	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_pis_1911_primary"/>
+	<unit path="new_weapon_units/wpn_fps_pis_1911_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_m14_primary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_m14_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_shot_b682_primary"/>
+	<unit path="new_weapon_units/wpn_fps_shot_b682_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_smg_mp9_primary"/>
+	<unit path="new_weapon_units/wpn_fps_smg_mp9_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_snp_m95_primary"/>
+	<unit path="new_weapon_units/wpn_fps_snp_m95_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_spe_rpg7_primary"/>
+	<unit path="new_weapon_units/wpn_fps_spe_rpg7_secondary"/>
 	
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_m14_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_m14_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_snp_m95_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_snp_m95_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_pis_1911_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_pis_1911_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_shot_b682_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_shot_b682_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_smg_mp9_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_smg_mp9_upg_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_m14_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_m14_upg_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_snp_m95_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_snp_m95_upg_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_pis_1911_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_pis_1911_upg_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_shot_b682_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_shot_b682_upg_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_smg_mp9_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_smg_mp9_upg_secondary"/>
 
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_fal_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_fal_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_fal_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_fal_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_pis_deagle_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_pis_deagle_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_pis_deagle_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_pis_deagle_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_aug_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_aug_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_aug_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_aug_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_smg_p90_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_smg_p90_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_smg_p90_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_smg_p90_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_sho_striker_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_sho_striker_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_sho_striker_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_sho_striker_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_amcar_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_amcar_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_amcar_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_amcar_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_m16_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_m16_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_m16_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_m16_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_scar_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_scar_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_scar_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_scar_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_pis_judge_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_pis_judge_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_pis_judge_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_pis_judge_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_smg_thompson_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_smg_thompson_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_smg_thompson_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_smg_thompson_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_lmg_hk21_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_lmg_hk21_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_lmg_hk21_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_lmg_hk21_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_lmg_m249_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_lmg_m249_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_lmg_m249_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_lmg_m249_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_pis_rage_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_pis_rage_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_pis_rage_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_pis_rage_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_pis_peacemaker_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_pis_peacemaker_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_pis_peacemaker_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_pis_peacemaker_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_flint_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_ass_flint_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_flint_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_ass_flint_upg_secondary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_pis_breech_primary"/>
-	<unit load="true" path="new_weapon_units/wpn_fps_pis_breech_secondary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_pis_breech_upg_primary"/>
-	<unit load="true" path="new_weapon_units/upgrade/wpn_fps_pis_breech_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_fal_primary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_fal_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_fal_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_fal_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_pis_deagle_primary"/>
+	<unit path="new_weapon_units/wpn_fps_pis_deagle_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_pis_deagle_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_pis_deagle_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_aug_primary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_aug_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_aug_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_aug_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_smg_p90_primary"/>
+	<unit path="new_weapon_units/wpn_fps_smg_p90_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_smg_p90_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_smg_p90_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_sho_striker_primary"/>
+	<unit path="new_weapon_units/wpn_fps_sho_striker_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_sho_striker_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_sho_striker_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_amcar_primary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_amcar_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_amcar_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_amcar_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_m16_primary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_m16_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_m16_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_m16_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_scar_primary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_scar_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_scar_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_scar_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_pis_judge_primary"/>
+	<unit path="new_weapon_units/wpn_fps_pis_judge_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_pis_judge_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_pis_judge_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_smg_thompson_primary"/>
+	<unit path="new_weapon_units/wpn_fps_smg_thompson_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_smg_thompson_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_smg_thompson_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_lmg_hk21_primary"/>
+	<unit path="new_weapon_units/wpn_fps_lmg_hk21_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_lmg_hk21_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_lmg_hk21_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_lmg_m249_primary"/>
+	<unit path="new_weapon_units/wpn_fps_lmg_m249_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_lmg_m249_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_lmg_m249_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_pis_rage_primary"/>
+	<unit path="new_weapon_units/wpn_fps_pis_rage_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_pis_rage_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_pis_rage_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_pis_peacemaker_primary"/>
+	<unit path="new_weapon_units/wpn_fps_pis_peacemaker_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_pis_peacemaker_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_pis_peacemaker_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_flint_primary"/>
+	<unit path="new_weapon_units/wpn_fps_ass_flint_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_flint_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_ass_flint_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_pis_breech_primary"/>
+	<unit path="new_weapon_units/wpn_fps_pis_breech_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_pis_breech_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_pis_breech_upg_secondary"/>
 
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<model path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
@@ -190,8 +180,6 @@
 	<model path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_dg3_body"/>
 	<object path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_dg3_body"/>
 	<unit path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_dg3_body"/>
-	<effect load="true" path="effects/particles/weapons/wunder_sparks"/>
-    <effect load="true" path="effects/particles/weapons/wunder_dg3_sparks"/>
     <cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
     <material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
     <model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>

@@ -133,7 +133,8 @@ function ElementWeaponSwitch:_get_random_weapon()
 		"wpn_fps_pis_rage",
 		"wpn_fps_pis_peacemaker",
 		"wpn_fps_ass_flint",
-		"wpn_fps_pis_breech"
+		"wpn_fps_pis_breech",
+		"wpn_fps_spe_rpg7"
 	}
 	
 	if managers.player._wunderwaffe_unlocked then
