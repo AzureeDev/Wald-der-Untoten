@@ -13,14 +13,13 @@ Hooks:PostHook(StatisticsManager, "init", "zm_init_points", function(self)
 
     self.ZOMBIES_CURRENTLY_SPAWNED = 0
 
-    self.ZOMBIES_SPAWN = 9
+    self.ZOMBIES_SPAWN = 8
     self.ZOMBIES_KILLED = 0
-    self.ZOMBIES_SPAWN_MULT_BASE = 1.15
-    self.ZOMBIES_SPAWN_MULT_ADD = 0.15
+    self.ZOMBIES_SPAWN_MULT_BASE = 6
 end)
 
-function StatisticsManager:_multiply_nb_zombies_by_current_wave()
-    self.ZOMBIES_SPAWN = self.ZOMBIES_SPAWN * (self.ZOMBIES_SPAWN_MULT_BASE + (self.ZOMBIES_SPAWN_MULT_ADD))
+function StatisticsManager:_multiply_nb_zombies_by_current_wave(current_wave)
+    self.ZOMBIES_SPAWN = self.ZOMBIES_SPAWN + (self.ZOMBIES_SPAWN_MULT_BASE + current_wave)
 end
 
 function StatisticsManager:_get_local_peer_id()

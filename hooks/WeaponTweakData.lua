@@ -498,6 +498,8 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.peacemaker_upg_primary.stats_modifiers = {damage = 14}
     self.peacemaker_upg_primary.CLIP_AMMO_MAX = 6
     self.peacemaker_upg_primary.NR_CLIPS_MAX = 14
+    self.peacemaker_upg_primary.can_shoot_through_enemy = true
+    self.peacemaker_upg_primary.can_shoot_through_shield = true
     self.peacemaker_upg_primary.AMMO_MAX = self.peacemaker_upg_primary.CLIP_AMMO_MAX * self.peacemaker_upg_primary.NR_CLIPS_MAX
     self.peacemaker_upg_primary.use_data = {selection_index = PRIMARY}
     self.peacemaker_upg_secondary = deep_clone(self.peacemaker_upg_primary)
@@ -510,6 +512,8 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.new_raging_bull_upg_primary.stats_modifiers = {damage = 16}
     self.new_raging_bull_upg_primary.CLIP_AMMO_MAX = 6
     self.new_raging_bull_upg_primary.NR_CLIPS_MAX = 10
+    self.new_raging_bull_upg_primary.can_shoot_through_enemy = true
+    self.new_raging_bull_upg_primary.can_shoot_through_shield = true
     self.new_raging_bull_upg_primary.AMMO_MAX = self.new_raging_bull_upg_primary.CLIP_AMMO_MAX * self.new_raging_bull_upg_primary.NR_CLIPS_MAX
     self.new_raging_bull_upg_primary.use_data = {selection_index = PRIMARY}
     self.new_raging_bull_upg_secondary = deep_clone(self.new_raging_bull_upg_primary)

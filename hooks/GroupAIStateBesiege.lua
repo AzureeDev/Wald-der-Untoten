@@ -85,7 +85,7 @@ function GroupAIStateBesiege:_perform_group_spawning(spawn_task, force, use_last
 						spawned_unit:brain()._logic_data.spawned_in_phase = spawn_task.ai_task.phase
 					end
 
-					sp_data.delay_t = self._t + sp_data.interval
+					sp_data.delay_t = self._t
 
 					if sp_data.amount then
 						sp_data.amount = sp_data.amount - 1

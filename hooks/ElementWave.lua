@@ -13,20 +13,19 @@ function ElementWave:on_executed(instigator)
 	if not self._values.enabled then
 		self._mission_script:debug_output("Element '" .. self._editor_name .. "' not enabled. Skip.", Color(1, 1, 0, 0))
 		return
-	end
+    end
+    
+    local current_wave = managers.hud._hud_zm_waves._current_wave
 
     if self._values.ending_check then
         local nb_cop_alive = managers.player.totalCopAlive - managers.groupai:state():get_amount_enemies_converted_to_criminals() - managers.groupai:state():police_hostage_count() - 1
 
         managers.statistics.ZOMBIES_KILLED = managers.statistics.ZOMBIES_KILLED + 1
 
-        log("COUNT ZOMBIE KILLED = ", tostring(managers.statistics.ZOMBIES_KILLED))
-        log("COUNT ZOMBIE SPAWN = ", tostring(math.floor(managers.statistics.ZOMBIES_SPAWN)))
-
         if managers.statistics.ZOMBIES_KILLED == math.floor(managers.statistics.ZOMBIES_SPAWN) then
             managers.statistics.ZOMBIES_KILLED = 0
             managers.statistics.ZOMBIES_CURRENTLY_SPAWNED = 0
-            managers.statistics:_multiply_nb_zombies_by_current_wave()
+            managers.statistics:_multiply_nb_zombies_by_current_wave(current_wave)
             ElementWave.super.on_executed(self, instigator)
             return
         end
@@ -34,7 +33,6 @@ function ElementWave:on_executed(instigator)
         return
     end
 
-    local current_wave = managers.hud._hud_zm_waves._current_wave
 	managers.statistics:_update_zm_hud_element()
 
     if current_wave > 0 then
