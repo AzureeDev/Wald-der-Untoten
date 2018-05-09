@@ -1,3 +1,7 @@
+Hooks:PostHook(PlayerTweakData, "init", "zm_no_penalty_timer", function(self)
+	self.damage.respawn_time_penalty = 0
+end)
+
 Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", function(self)
     self.stances.nothing2_primary = deep_clone(self.stances.default)
     self.stances.nothing2_primary.standard.shoulders.translation = Vector3(1, 999999999, 0.2)

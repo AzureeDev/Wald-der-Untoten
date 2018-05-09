@@ -103,6 +103,7 @@
 			<value_node value="levels/instances/unique/mus_circuit_box/world/world"/>
 			<value_node value="levels/narratives/classics/glace/world"/>
 			<value_node value="levels/instances/unique/mad/mad_door/world/world"/>
+			<value_node value="packages/narr_firestarter3"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">

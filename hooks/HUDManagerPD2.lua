@@ -317,7 +317,12 @@ function HUDZMWaves:_animate_text_blinking()
         self._current_wave = self._current_wave + 1
         self._zm_wave_text:set_text("WAVE " .. self._current_wave)
 
+        managers.trade:set_trade_countdown(true)
+
         wait(8.5)
+
+        managers.trade:set_trade_countdown(false)
+        
         local from = Color(0, 0.6, 0, 0)
         local to = Color(1, 0.6, 0, 0)
         local t = 0
