@@ -41,7 +41,7 @@ Hooks:PostHook(StatisticsManager, "killed", "zm_init_add_zmpoints", function(sel
 	ZMPTweakData.points.kill["tank_skull"] = 180 * double_point_effect
 	ZMPTweakData.points.kill["taser"] = 100 * double_point_effect
 	ZMPTweakData.points.kill["medic"] = 80 * double_point_effect
-	ZMPTweakData.points.kill["sniper"] = 95 * double_point_effect
+    ZMPTweakData.points.kill["sniper"] = 95 * double_point_effect
 
 	ZMPTweakData.points.bonus = {}
 	ZMPTweakData.points.bonus["headshot"] = 50 * double_point_effect

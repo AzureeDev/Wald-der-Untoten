@@ -119,6 +119,7 @@
 				<sound id="zm_announcer_firesale_first" path="demon_sam_firesale_first.ogg"/>
 				<sound id="zm_announcer_double_points" path="demon_sam_double_points.ogg"/>
 				<sound id="zm_announcer_instakill" path="demon_sam_instakill.ogg"/>
+				<sound id="zm_announcer_kaboom" path="demon_dempsey_kaboom.ogg"/>
 				<sound id="zm_announcer_wunder" path="LIGHTNING_IS_POWER.ogg"/>
 				<sound id="zm_announcer_roach" path="demon_sam_present.ogg"/>
 			</sounds>
@@ -159,6 +160,7 @@
 			<sound id="zm_double_points_loop" path="double_points_loop.ogg"/>
 			<sound id="zm_special_wave_end" path="specialwave_end.ogg"/>
 			<sound id="zm_power_on" path="power_on.ogg"/>
+			<sound id="zm_boom" path="boom.ogg"/>
 		</sounds>
 	</level>
 	<narrative briefing_event="" contact="nepgearsy" id="zm_the_forest">

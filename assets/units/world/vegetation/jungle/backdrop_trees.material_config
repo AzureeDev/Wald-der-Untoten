@@ -1,0 +1,12 @@
+<materials version="3">
+    <material name="backdrop_trees" version="2" render_template="generic:ALPHA_MASKED:DIFFUSE_TEXTURE:DOUBLE_SIDED:EXTERNAL_ALPHA_REF:OPACITY_TEXTURE:RL_BACKDROP">
+        <variable value="0.5" type="scalar" name="alpha_ref"/>
+        <diffuse_texture file="units/world/vegetation/jungle/backdrop_trees_back_df"/>
+        <opacity_texture file="units/world/vegetation/jungle/backdrop_trees_back_op"/>
+    </material>
+    <material name="backdrop_trees_02" version="2" render_template="generic:ALPHA_MASKED:DIFFUSE_TEXTURE:DOUBLE_SIDED:EXTERNAL_ALPHA_REF:OPACITY_TEXTURE:RL_BACKDROP">
+        <variable value="0.5" type="scalar" name="alpha_ref"/>
+        <diffuse_texture file="units/world/vegetation/jungle/backdrop_trees_02_df"/>
+        <opacity_texture file="units/world/vegetation/jungle/backdrop_trees_02_op"/>
+    </material>
+</materials>

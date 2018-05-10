@@ -51,7 +51,6 @@
 	<model path="units/weapon_walls/wpn_mp9"/>
 	<object path="units/weapon_walls/wpn_mp9"/>
 	<unit path="units/weapon_walls/wpn_mp9"/>
-
 	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe"/>
 	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_secondary"/>
 	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3"/>
@@ -68,7 +67,6 @@
 	<unit path="new_weapon_units/wpn_fps_snp_m95_secondary"/>
 	<unit path="new_weapon_units/wpn_fps_spe_rpg7_primary"/>
 	<unit path="new_weapon_units/wpn_fps_spe_rpg7_secondary"/>
-	
 	<unit path="new_weapon_units/upgrade/wpn_fps_ass_m14_upg_primary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_ass_m14_upg_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_snp_m95_upg_primary"/>
@@ -79,7 +77,6 @@
 	<unit path="new_weapon_units/upgrade/wpn_fps_shot_b682_upg_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_smg_mp9_upg_primary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_smg_mp9_upg_secondary"/>
-
 	<unit path="new_weapon_units/wpn_fps_ass_fal_primary"/>
 	<unit path="new_weapon_units/wpn_fps_ass_fal_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_ass_fal_upg_primary"/>
@@ -144,7 +141,6 @@
 	<unit path="new_weapon_units/wpn_fps_pis_breech_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_pis_breech_upg_primary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_pis_breech_upg_secondary"/>
-
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<model path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<object path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
@@ -180,53 +176,51 @@
 	<model path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_dg3_body"/>
 	<object path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_dg3_body"/>
 	<unit path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wpn_third_spe_wunderwaffe_dg3_body"/>
-    <cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
-    <material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
-    <model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
-    <object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
-    <unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
-    <material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag_thq"/>
-    <cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
-    <material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
-    <model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
-    <object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
-    <unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
-    <material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag_thq"/>
-    <cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
-    <material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
-    <model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
-    <object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
-    <unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
-    <material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum_thq"/>
-    <cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum"/>
-    <material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum"/>
-    <model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum"/>
-    <object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum"/>
-    <unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum"/>
-    <material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum_thq"/>
-    <cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb"/>
-    <material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb"/>
-    <model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb"/>
-    <object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb"/>
-    <unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb"/>
-    <material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb_thq"/>
-    <cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb"/>
-    <material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb"/>
-    <model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb"/>
-    <object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb"/>
-    <unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb"/>
-    <material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb_thq"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
+	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
+	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
+	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_mag_thq"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
+	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
+	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
+	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag_thq"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
+	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
+	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
+	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum_thq"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum"/>
+	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum"/>
+	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum"/>
+	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_illum_thq"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb"/>
+	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb"/>
+	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb"/>
+	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb_thq"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb"/>
+	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb"/>
+	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb"/>
+	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb"/>
+	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb_thq"/>
 	<texture path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wunderwaffe_il"/>
-    <texture path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wunderwaffe_dg3_il"/>
+	<texture path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wunderwaffe_dg3_il"/>
 	<cooked_physics force="true" path="units/props/black_crate" unload="true"/>
 	<unit force="true" path="units/props/black_crate" unload="true"/>
 	<object force="true" path="units/props/black_crate" unload="true"/>
 	<material_config force="true" path="units/props/black_crate" unload="true"/>
 	<model force="true" path="units/props/black_crate" unload="true"/>
-	<sequence_manager force="true" path="units/props/black_crate" unload="true"/>
 	<texture force="true" path="units/props/black_crate_df" unload="true"/>
 	<texture force="true" path="units/props/black_crate_nm" unload="true"/>
-
 	<texture path="units/mods/weapons/wpn_fps_mel_zdann/combat_df"/>
 	<texture path="units/mods/weapons/wpn_fps_mel_zdann/combat_nm"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_mel_zdann/wpn_fps_mel_zdann"/>
@@ -240,7 +234,6 @@
 	<object path="units/mods/weapons/wpn_third_mel_zdann/wpn_third_mel_zdann"/>
 	<unit path="units/mods/weapons/wpn_third_mel_zdann/wpn_third_mel_zdann"/>
 	<material_config path="units/mods/weapons/wpn_third_mel_zdann/wpn_third_mel_zdann"/>
-
 	<texture path="units/mods/weapons/wpn_fps_special_roach_pts/bf4_railgun_df"/>
 	<texture path="units/mods/weapons/wpn_fps_special_roach_pts/bf4_railgun_nm"/>
 	<texture path="units/mods/weapons/wpn_fps_special_roach_pts/bf4_lens_df"/>
@@ -315,7 +308,6 @@
 	<unit path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display_thq"/>
-	
 	<cooked_physics path="units/babuforce/wooden_hut/logs_wall"/>
 	<model path="units/babuforce/wooden_hut/logs_wall"/>
 	<object path="units/babuforce/wooden_hut/logs_wall"/>
@@ -327,7 +319,6 @@
 	<unit path="units/babuforce/wooden_hut/logs_window"/>
 	<texture path="units/babuforce/wooden_hut/woodlog_df"/>
 	<texture path="units/babuforce/wooden_hut/woodlog_nm"/>
-
 	<cooked_physics force="true" path="units/babuforce/tree/giant_tree"/>
 	<model force="true" path="units/babuforce/tree/giant_tree"/>
 	<unit force="true" path="units/babuforce/tree/giant_tree"/>
@@ -335,133 +326,145 @@
 	<material_config force="true" path="units/babuforce/tree/giant_tree"/>
 	<texture force="true" path="units/babuforce/tree/giant_tree_df"/>
 	<texture force="true" path="units/babuforce/tree/giant_tree_nm"/>
-
 	<unit_load name="units/test/jocke/plane_black_temp">
 		<cooked_physics force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
-		<unit force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
-		<object force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
 		<material_config force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
+		<object force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
+		<unit force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
 	</unit_load>
 	<unit_load name="units/pd2_dlc1/equipment/ind_interactable_shipping_crate_2x1x1m/ind_interactable_shipping_crate_2x1x1m">
 		<cooked_physics force="true" path="units/pd2_dlc1/equipment/ind_interactable_shipping_crate_2x1x1m/ind_interactable_shipping_crate_2x1x1m" unload="true"/>
-		<unit force="true" path="units/pd2_dlc1/equipment/ind_interactable_shipping_crate_2x1x1m/ind_interactable_shipping_crate_2x1x1m" unload="true"/>
-		<object force="true" path="units/pd2_dlc1/equipment/ind_interactable_shipping_crate_2x1x1m/ind_interactable_shipping_crate_2x1x1m" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc1/equipment/ind_interactable_shipping_crate_2x1x1m/ind_interactable_shipping_crate_2x1x1m" unload="true"/>
+		<object force="true" path="units/pd2_dlc1/equipment/ind_interactable_shipping_crate_2x1x1m/ind_interactable_shipping_crate_2x1x1m" unload="true"/>
 		<sequence_manager force="true" path="units/pd2_dlc1/equipment/ind_interactable_shipping_crate_2x1x1m/ind_interactable_shipping_crate_2x1x1m" unload="true"/>
+		<unit force="true" path="units/pd2_dlc1/equipment/ind_interactable_shipping_crate_2x1x1m/ind_interactable_shipping_crate_2x1x1m" unload="true"/>
 	</unit_load>
 	<unit_load name="units/pd2_dlc_berry/props/bry_prop_moutain_powertower/bry_prop_mountain_powertower">
 		<cooked_physics force="true" path="units/pd2_dlc_berry/props/bry_prop_moutain_powertower/bry_prop_mountain_powertower" unload="true"/>
-		<unit force="true" path="units/pd2_dlc_berry/props/bry_prop_moutain_powertower/bry_prop_mountain_powertower" unload="true"/>
-		<object force="true" path="units/pd2_dlc_berry/props/bry_prop_moutain_powertower/bry_prop_mountain_powertower" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_berry/props/bry_prop_moutain_powertower/bry_prop_mountain_powertower" unload="true"/>
+		<object force="true" path="units/pd2_dlc_berry/props/bry_prop_moutain_powertower/bry_prop_mountain_powertower" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_berry/props/bry_prop_moutain_powertower/bry_prop_mountain_powertower" unload="true"/>
 	</unit_load>
 	<unit_load name="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower_a">
 		<cooked_physics force="true" path="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower_a" unload="true"/>
-		<unit force="true" path="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower_a" unload="true"/>
-		<object force="true" path="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower_a" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower" unload="true"/>
+		<object force="true" path="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower_a" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower_a" unload="true"/>
 	</unit_load>
 	<unit_load name="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower_c">
 		<cooked_physics force="true" path="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower_c" unload="true"/>
-		<unit force="true" path="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower_c" unload="true"/>
-		<object force="true" path="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower_c" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower" unload="true"/>
+		<object force="true" path="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower_c" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_help/architecture/hlp_watchtower/hlp_prison_watchtower_c" unload="true"/>
 	</unit_load>
 	<unit_load name="units/payday2/props/gen_prop_plywood/gen_prop_plank_1m">
 		<cooked_physics force="true" path="units/payday2/props/gen_prop_plywood/gen_prop_plank_1m" unload="true"/>
-		<unit force="true" path="units/payday2/props/gen_prop_plywood/gen_prop_plank_1m" unload="true"/>
-		<object force="true" path="units/payday2/props/gen_prop_plywood/gen_prop_plank_1m" unload="true"/>
 		<material_config force="true" path="units/payday2/props/gen_prop_plywood/gen_prop_plywood" unload="true"/>
+		<object force="true" path="units/payday2/props/gen_prop_plywood/gen_prop_plank_1m" unload="true"/>
+		<unit force="true" path="units/payday2/props/gen_prop_plywood/gen_prop_plank_1m" unload="true"/>
 	</unit_load>
 	<unit_load name="units/payday2/architecture/res/spawn_debris_door_wood">
 		<cooked_physics force="true" path="units/payday2/architecture/res/spawn_debris_door_wood" unload="true"/>
-		<unit force="true" path="units/payday2/architecture/res/spawn_debris_door_wood" unload="true"/>
-		<object force="true" path="units/payday2/architecture/res/spawn_debris_door_wood" unload="true"/>
 		<material_config force="true" path="units/payday2/architecture/res/spawn_debris_door_wood" unload="true"/>
+		<object force="true" path="units/payday2/architecture/res/spawn_debris_door_wood" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/res/spawn_debris_door_wood" unload="true"/>
 	</unit_load>
 	<unit_load name="units/payday2/nature/pnau/pnau_backdrop_forest_segment/pnau_backdrop_forest_segment_01_a">
 		<cooked_physics force="true" path="units/payday2/nature/pnau/pnau_backdrop_forest_segment/pnau_backdrop_forest_segment_01_a" unload="true"/>
-		<unit force="true" path="units/payday2/nature/pnau/pnau_backdrop_forest_segment/pnau_backdrop_forest_segment_01_a" unload="true"/>
-		<object force="true" path="units/payday2/nature/pnau/pnau_backdrop_forest_segment/pnau_backdrop_forest_segment_01_a" unload="true"/>
 		<material_config force="true" path="units/payday2/nature/pnau/pnau_backdrop_forest_segment/pnau_backdrop_forest_segment" unload="true"/>
+		<object force="true" path="units/payday2/nature/pnau/pnau_backdrop_forest_segment/pnau_backdrop_forest_segment_01_a" unload="true"/>
+		<unit force="true" path="units/payday2/nature/pnau/pnau_backdrop_forest_segment/pnau_backdrop_forest_segment_01_a" unload="true"/>
 	</unit_load>
 	<unit_load name="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a">
-		<unit force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
-		<object force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/speed_cola" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/double_tap" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/quick_revive" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/juggernog_on" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/speed_cola_on" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/double_tap_on" unload="true"/>
-		<sequence_manager force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a_df" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_speedcola" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_doubletap" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_quickrevive" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_juggernog_il" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_speedcola_il" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_doubletap_il" unload="true"/>
+		<object force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
+		<sequence_manager force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 	</unit_load>
 	<unit_load name="units/pd2_dlc_dah/props/dah_prop_vending_machine_b/dah_prop_vending_machine_b">
-		<unit force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_b/dah_prop_vending_machine_b" unload="true"/>
-		<object force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_b/dah_prop_vending_machine_b" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_b/dah_prop_vending_machine_b" unload="true"/>
+		<object force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_b/dah_prop_vending_machine_b" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_b/dah_prop_vending_machine_b" unload="true"/>
 	</unit_load>
 	<unit_load name="units/pd2_dlc_berry/nature/bry_terrain_rock/bry_mountain_solid_wall_exterior">
-		<unit force="true" path="units/pd2_dlc_berry/nature/bry_terrain_rock/bry_mountain_solid_wall_exterior" unload="true"/>
-		<object force="true" path="units/pd2_dlc_berry/nature/bry_terrain_rock/bry_mountain_solid_wall_exterior" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_berry/nature/bry_terrain_rock/bry_terrain_rocks" unload="true"/>
+		<object force="true" path="units/pd2_dlc_berry/nature/bry_terrain_rock/bry_mountain_solid_wall_exterior" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_berry/nature/bry_terrain_rock/bry_mountain_solid_wall_exterior" unload="true"/>
 	</unit_load>
 	<unit_load name="units/pd2_dlc_berry/nature/bry_terrain_rock/bry_mountain_cliffs">
-		<unit force="true" path="units/pd2_dlc_berry/nature/bry_terrain_rock/bry_mountain_cliffs" unload="true"/>
-		<object force="true" path="units/pd2_dlc_berry/nature/bry_terrain_rock/bry_mountain_cliffs" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_berry/nature/bry_terrain_rock/bry_terrain_rocks" unload="true"/>
+		<object force="true" path="units/pd2_dlc_berry/nature/bry_terrain_rock/bry_mountain_cliffs" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_berry/nature/bry_terrain_rock/bry_mountain_cliffs" unload="true"/>
 	</unit_load>
 	<unit_load name="units/payday2/vehicles/str_vehicle_van_dest/str_vehicle_van_dest_wrecked">
-		<unit force="true" path="units/payday2/vehicles/str_vehicle_van_dest/str_vehicle_van_dest_wrecked" unload="true"/>
-		<object force="true" path="units/payday2/vehicles/str_vehicle_van_dest/str_vehicle_van_dest_wrecked" unload="true"/>
 		<material_config force="true" path="units/payday2/vehicles/str_vehicle_van_dest/str_vehicle_van_dest_wrecked" unload="true"/>
+		<object force="true" path="units/payday2/vehicles/str_vehicle_van_dest/str_vehicle_van_dest_wrecked" unload="true"/>
 		<sequence_manager force="true" path="units/payday2/vehicles/str_vehicle_van_dest/str_vehicle_van_dest_wrecked" unload="true"/>
+		<unit force="true" path="units/payday2/vehicles/str_vehicle_van_dest/str_vehicle_van_dest_wrecked" unload="true"/>
 	</unit_load>
 	<unit_load name="units/pd2_dlc2/csgo_models/props_vehicles/cara_95sedan_wrecked">
-		<unit force="true" path="units/pd2_dlc2/csgo_models/props_vehicles/cara_95sedan_wrecked" unload="true"/>
-		<object force="true" path="units/pd2_dlc2/csgo_models/props_vehicles/cara_95sedan_wrecked" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc2/csgo_models/props_vehicles/cara_95sedan_wrecked" unload="true"/>
+		<object force="true" path="units/pd2_dlc2/csgo_models/props_vehicles/cara_95sedan_wrecked" unload="true"/>
 		<sequence_manager force="true" path="units/pd2_dlc2/csgo_models/props_vehicles/cara_95sedan_wrecked" unload="true"/>
+		<unit force="true" path="units/pd2_dlc2/csgo_models/props_vehicles/cara_95sedan_wrecked" unload="true"/>
 	</unit_load>
 	<unit_load name="units/pd2_dlc2/csgo_models/props_vehicles/flatnose_truck_wrecked">
-		<unit force="true" path="units/pd2_dlc2/csgo_models/props_vehicles/flatnose_truck_wrecked" unload="true"/>
-		<object force="true" path="units/pd2_dlc2/csgo_models/props_vehicles/flatnose_truck_wrecked" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc2/csgo_models/props_vehicles/flatnose_truck_wrecked" unload="true"/>
+		<object force="true" path="units/pd2_dlc2/csgo_models/props_vehicles/flatnose_truck_wrecked" unload="true"/>
+		<unit force="true" path="units/pd2_dlc2/csgo_models/props_vehicles/flatnose_truck_wrecked" unload="true"/>
 	</unit_load>
 	<unit_load name="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_crossover_wrecked/lxa_vehicle_car_crossover_wrecked">
-		<unit force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_crossover_wrecked/lxa_vehicle_car_crossover_wrecked" unload="true"/>
-		<object force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_crossover_wrecked/lxa_vehicle_car_crossover_wrecked" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_crossover_wrecked/lxa_vehicle_car_crossover_wrecked" unload="true"/>
+		<object force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_crossover_wrecked/lxa_vehicle_car_crossover_wrecked" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_crossover_wrecked/lxa_vehicle_car_crossover_wrecked" unload="true"/>
 	</unit_load>
 	<unit_load name="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_subcompact_wrecked/lxa_vehicle_car_subcompact_wrecked">
-		<unit force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_subcompact_wrecked/lxa_vehicle_car_subcompact_wrecked" unload="true"/>
-		<object force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_subcompact_wrecked/lxa_vehicle_car_subcompact_wrecked" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_subcompact_wrecked/lxa_vehicle_car_subcompact_wrecked" unload="true"/>
+		<object force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_subcompact_wrecked/lxa_vehicle_car_subcompact_wrecked" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_subcompact_wrecked/lxa_vehicle_car_subcompact_wrecked" unload="true"/>
 	</unit_load>
 	<unit_load name="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_suv_wrecked/lxa_vehicle_car_suv_wrecked">
-		<unit force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_suv_wrecked/lxa_vehicle_car_suv_wrecked" unload="true"/>
-		<object force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_suv_wrecked/lxa_vehicle_car_suv_wrecked" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_suv_wrecked/lxa_vehicle_car_suv_wrecked" unload="true"/>
+		<object force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_suv_wrecked/lxa_vehicle_car_suv_wrecked" unload="true"/>
+		<unit force="true" path="units/pd2_dlc_holly/river/vehicles/lxa_vehicle_car_suv_wrecked/lxa_vehicle_car_suv_wrecked" unload="true"/>
 	</unit_load>
 	<unit_load name="units/payday2/architecture/res_ext_apartment/res_ext_apartment_power_cable_01">
-		<unit force="true" path="units/payday2/architecture/res_ext_apartment/res_ext_apartment_power_cable_01" unload="true"/>
-		<object force="true" path="units/payday2/architecture/res_ext_apartment/res_ext_apartment_power_cable_01" unload="true"/>
 		<material_config force="true" path="units/payday2/architecture/res_ext_apartment/res_ext_apartment_power_cable_01" unload="true"/>
+		<object force="true" path="units/payday2/architecture/res_ext_apartment/res_ext_apartment_power_cable_01" unload="true"/>
+		<unit force="true" path="units/payday2/architecture/res_ext_apartment/res_ext_apartment_power_cable_01" unload="true"/>
 	</unit_load>
 	<unit_load name="units/dev_tools/level_tools/navigation/navigation_splitter_02m">
-		<unit force="true" path="units/dev_tools/level_tools/navigation/navigation_splitter_02m" unload="true"/>
-		<object force="true" path="units/dev_tools/level_tools/navigation_blocker" unload="true"/>
 		<material_config force="true" path="core/material_configs/hub_elements" unload="true"/>
+		<object force="true" path="units/dev_tools/level_tools/navigation_blocker" unload="true"/>
+		<unit force="true" path="units/dev_tools/level_tools/navigation/navigation_splitter_02m" unload="true"/>
 	</unit_load>
 	<unit_load name="units/dev_tools/level_tools/navigation_splitter_1m">
-		<unit force="true" path="units/dev_tools/level_tools/navigation_splitter_1m" unload="true"/>
-		<object force="true" path="units/dev_tools/level_tools/navigation_splitter_1m" unload="true"/>
 		<material_config force="true" path="core/material_configs/hub_elements" unload="true"/>
+		<object force="true" path="units/dev_tools/level_tools/navigation_splitter_1m" unload="true"/>
+		<unit force="true" path="units/dev_tools/level_tools/navigation_splitter_1m" unload="true"/>
 	</unit_load>
+	<add path="units/world/vegetation/jungle/backdrop_trees_02" type="unit">
+		<unit force="true" path="units/world/vegetation/jungle/backdrop_trees_02" unload="true"/>
+		<object force="true" path="units/world/vegetation/jungle/backdrop_trees_02" unload="true"/>
+		<material_config force="true" path="units/world/vegetation/jungle/backdrop_trees" unload="true"/>
+	</add>
+	<add path="units/world/vegetation/jungle/backdrop_trees_01" type="unit">
+		<material_config force="true" path="units/world/vegetation/jungle/backdrop_trees" unload="true"/>
+		<object force="true" path="units/world/vegetation/jungle/backdrop_trees_01" unload="true"/>
+		<unit force="true" path="units/world/vegetation/jungle/backdrop_trees_01" unload="true"/>
+	</add>
+	<sequence_manager force="true" path="units/props/black_crate" unload="true"/>
 </table>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="units/world/vegetation/jungle/backdrop_trees" orientation_object="rp_backdrop_trees_middle_02" />
+  <bodies>
+    <body name="static_body" enabled="true" template="static">
+      <object name="c_backdrop_trees_middle_02" collision_type="mesh_mopp" />
+    </body>
+  </bodies>
+  <graphics>
+    <object name="g_backdrop_trees_middle_02" enabled="true"  />
+  </graphics>
+</dynamic_object>

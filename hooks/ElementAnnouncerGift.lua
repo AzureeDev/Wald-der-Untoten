@@ -94,6 +94,33 @@ function ElementAnnouncerGift:on_executed(instigator)
         managers.statistics.events.instakill_active = false
         managers.hud._hud_zm_waves:_set_gift_visible("icon_instakill", false)        
     end
+
+    if self._values.gift_id == "kaboom" then
+        local overlay_effect = {
+			blend_mode = "normal",
+			sustain = 0,
+			play_paused = true,
+			fade_in = 0,
+			fade_out = 3,
+			color = Color(1, 1, 1, 1),
+			timer = TimerManager:main()
+        }
+        
+        self._source = SoundDevice:create_source(self._editor_name)
+		self._source:set_position(self._values.position)
+        self._source:set_orientation(self._values.rotation)
+        self._source:post_event("zm_announcer_kaboom")
+
+        self._source_boom = SoundDevice:create_source(self._editor_name .. "_boom")
+		self._source_boom:set_position(self._values.position)
+        self._source_boom:set_orientation(self._values.rotation)
+        self._source_boom:post_event("zm_boom")
+
+        managers.overlay_effect:play_effect(overlay_effect)
+
+        local double_point_effect = managers.statistics.events.double_point_active and 2 or 1
+        managers.statistics:_add_zm_points(400 * double_point_effect, managers.statistics:_get_local_peer_id())
+    end
 	
 	ElementAnnouncerGift.super.on_executed(self, instigator)
 end
