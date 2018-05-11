@@ -290,6 +290,10 @@ function HUDZMWaves:_set_gift_visible(gift, visible)
     texture:animate(animate_icon_lifetime)
 end
 
+function HUDZMWaves:_new_animation_wave_start()
+
+end
+
 function HUDZMWaves:_animate_text_blinking()
     local function animate_text_blinking(o)
         local from = Color(1, 0.6, 0, 0)

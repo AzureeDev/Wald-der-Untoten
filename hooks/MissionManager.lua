@@ -4,6 +4,7 @@ dofile(ModPath .. "hooks/ElementWave.lua")
 dofile(ModPath .. "hooks/ElementAnnouncerGift.lua")
 dofile(ModPath .. "hooks/ElementDynamicEnv.lua")
 
+--[[
 function MissionManager:add_fading_debug_output(debug, color, as_subtitle)
     if as_subtitle then
         self:_show_debug_subtitle(debug, color)
@@ -20,3 +21,4 @@ function MissionManager:add_fading_debug_output(debug, color, as_subtitle)
         self._fading_debug_output:script().log(stuff[self._fade_index] .. " " .. debug, color, nil)
     end
 end
+--]]
