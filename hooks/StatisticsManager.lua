@@ -7,7 +7,7 @@ Hooks:PostHook(StatisticsManager, "killed", "zm_init_add_zmpoints", function(sel
     local category
        
     if by_melee then
-        category = "on_melee"
+        category = "on_melee_kill"
         points_to_add = managers.wdu:_get_points_amount(category) * double_point_effect
 
         managers.wdu:_add_money_to(peer_id, points_to_add)

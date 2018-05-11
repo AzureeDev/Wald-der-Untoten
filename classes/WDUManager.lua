@@ -1,7 +1,7 @@
 WDUManager = WDUManager or class()
 
 function WDUManager:init()
-    if not self:_on_wdu_map()
+    if not self:_on_wdu_map() then
         return
     end
 
@@ -43,7 +43,7 @@ function WDUManager:_init_variables()
     self.level = {
         zombies = {
             currently_spawned = 0,
-            max_spawns = 0,
+            max_spawns = 8,
             killed = 0,
             add_on_end_wave = 6
         },
@@ -147,8 +147,7 @@ end
 function WDUManager:_add_money_to(peer_id, amount)
     if amount and type(amount) == "number" then
         local additional_amount = math.floor(amount)
-        local current_money = self.players[peer_id].money
-        current_money = current_money + additional_amount
+        self.players[peer_id].money = self.players[peer_id].money + additional_amount
 
         LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
         self:_update_hud_element()
@@ -157,9 +156,8 @@ end
 
 function WDUManager:_deduct_money_to(peer_id, amount)
     if amount and type(amount) == "number" then
-        local additional_amount = math.floor(amount)
-        local current_money = self.players[peer_id].money
-        current_money = current_money - additional_amount
+        local minus_amount = math.floor(amount)
+        self.players[peer_id].money = self.players[peer_id].money - minus_amount
 
         LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
         self:_update_hud_element()
@@ -201,7 +199,7 @@ function WDUManager:_get_points_amount(category, unit)
         return self.points[category]
     end
 
-    if not self.points.[category][unit] then
+    if not self.points[category][unit] then
         return self.points["default"]
     end
 

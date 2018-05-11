@@ -16,4 +16,5 @@ Hooks:PostHook(HUDMissionBriefing, "set_player_slot", "zm_postinit_set_player", 
     }
 
     managers.wdu:_init_new_player(data)
+    managers.wdu:_init_wave_highscore()
 end)
