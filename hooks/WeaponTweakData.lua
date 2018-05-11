@@ -282,56 +282,56 @@ function WeaponTweakData:_init_zm_new_weapons()
 	
 	-- What about Nepgear with a shovel? :shovelthinking:
 	
-	self.ak74_primary = deep_clone(self.ak74)
+    self.ak74_primary = deep_clone(self.ak74)
     self.ak74_primary.animations.reload_name_id = "ak74"
-    self.ak74_primary.weapon_hold = "ak47"	--gee, that's not confusing at all
+    self.ak74_primary.weapon_hold = "ak47"    --gee, that's not confusing at all
     self.ak74_primary.use_data = {selection_index = PRIMARY}
     self.ak74_secondary = deep_clone(self.ak74_primary)
     self.ak74_secondary.use_data = {selection_index = SECONDARY}
-	
-	self.ching_primary = deep_clone(self.ching)
+    
+    self.ching_primary = deep_clone(self.ching)
     self.ching_primary.animations.reload_name_id = "ching"
     self.ching_primary.weapon_hold = "ching"
     self.ching_primary.use_data = {selection_index = PRIMARY}
     self.ching_secondary = deep_clone(self.ching_primary)
     self.ching_secondary.use_data = {selection_index = SECONDARY}
-	
-	self.lemming_primary = deep_clone(self.lemming)
+    
+    self.lemming_primary = deep_clone(self.lemming)
     self.lemming_primary.animations.reload_name_id = "lemming"
     self.lemming_primary.weapon_hold = "packrat"
     self.lemming_primary.use_data = {selection_index = PRIMARY}
     self.lemming_secondary = deep_clone(self.lemming_primary)
     self.lemming_secondary.use_data = {selection_index = SECONDARY}
-	
-	self.m37_primary = deep_clone(self.m37)
+    
+    self.m37_primary = deep_clone(self.m37)
     self.m37_primary.animations.reload_name_id = "m37"
     self.m37_primary.weapon_hold = "m37"
     self.m37_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
     self.m37_secondary = deep_clone(self.m37_primary)
     self.m37_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
-	
-	self.r870_primary = deep_clone(self.r870)
+    
+    self.r870_primary = deep_clone(self.r870)
     self.r870_primary.animations.reload_name_id = "r870_shotgun"
     self.r870_primary.weapon_hold = "r870_shotgun"
     self.r870_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
     self.r870_secondary = deep_clone(self.r870_primary)
     self.r870_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
-	
-	self.erma_primary = deep_clone(self.erma)
+    
+    self.erma_primary = deep_clone(self.erma)
     self.erma_primary.animations.reload_name_id = "erma"
     self.erma_primary.weapon_hold = "erma"
     self.erma_primary.use_data = {selection_index = PRIMARY}
     self.erma_secondary = deep_clone(self.erma_primary)
     self.erma_secondary.use_data = {selection_index = SECONDARY}
-	
-	self.schakal_primary = deep_clone(self.schakal)
+    
+    self.schakal_primary = deep_clone(self.schakal)
     self.schakal_primary.animations.reload_name_id = "schakal"
     self.schakal_primary.weapon_hold = "schakal"
     self.schakal_primary.use_data = {selection_index = PRIMARY}
     self.schakal_secondary = deep_clone(self.schakal_primary)
     self.schakal_secondary.use_data = {selection_index = SECONDARY}
-	
-	self.tec9_primary = deep_clone(self.tec9)
+    
+    self.tec9_primary = deep_clone(self.tec9)
     self.tec9_primary.animations.reload_name_id = "tec9"
     self.tec9_primary.weapon_hold = "tec9"
     self.tec9_primary.use_data = {selection_index = PRIMARY}
