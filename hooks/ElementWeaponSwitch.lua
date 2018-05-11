@@ -105,7 +105,11 @@ function ElementWeaponSwitch:on_executed(instigator)
         if  managers.player:player_unit():inventory().equip_selection then
             managers.player:player_unit():inventory():equip_selection(current_index_equipped, false)
         end
-    end
+	end
+	
+	managers.player:_change_player_state()
+	managers.hud:set_teammate_weapon_firemode(HUDManager.PLAYER_PANEL, 1, unit:inventory():unit_by_selection(1):base():fire_mode())
+	managers.hud:set_teammate_weapon_firemode(HUDManager.PLAYER_PANEL, 2, unit:inventory():unit_by_selection(2):base():fire_mode())
 
     ElementWeaponSwitch.super.on_executed(self, instigator)
 end

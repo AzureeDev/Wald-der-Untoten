@@ -4,6 +4,7 @@
 	<Hooks directory="hooks">
 		<hook file="MeleeWeaponsTweakData.lua" source_file="lib/tweak_data/blackmarket/meleeweaponstweakdata"/>
 		<hook file="UpgradesTweakData.lua" source_file="lib/tweak_data/upgradestweakdata"/>
+		<hook file="Setup.lua" source_file="lib/setups/gamesetup"/>
 	</Hooks>
 	<Localization default="english.txt" directory="loc"/>
 	<contact assets_gui="guis/mission_briefing/preload_contact_bain" desc_id="contact_nepgearsy_desc" id="nepgearsy" name_id="contact_nepgearsy_name" package="packages/contact_bain"/>
@@ -29,7 +30,7 @@
 			<hook file="BlackMarketManager.lua" source_file="lib/managers/blackmarketmanager"/>
 			<hook file="Rebalance.lua" source_file="lib/managers/hudmanager"/>
 			<hook file="PlayerManager.lua" source_file="lib/managers/playermanager"/>
-			<hook file="ZMP.lua" source_file="lib/managers/statisticsmanager"/>
+			<hook file="StatisticsManager.lua" source_file="lib/managers/statisticsmanager"/>
 			<hook file="HUDAssaultCorner.lua" source_file="lib/managers/hud/hudassaultcorner"/>
 			<hook file="HUDManagerPD2.lua" source_file="lib/managers/hudmanagerpd2"/>
 			<hook file="HUDManager.lua" source_file="lib/managers/hudmanager"/>

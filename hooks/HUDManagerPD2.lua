@@ -32,9 +32,9 @@ function HUDZMWaves:_create_zm_waves_hud(parent)
 end
 
 function HUDZMWaves:_create_gift_hud(parent)
-    local is_firesale = managers.statistics.events.firesale_active
-    local is_instakill = managers.statistics.events.instakill_active
-    local is_double_points = managers.statistics.events.double_point_active
+    local is_firesale = managers.wdu:_is_event_active("firesale")
+    local is_instakill = managers.wdu:_is_event_active("instakill")
+    local is_double_points = managers.wdu:_is_event_active("double_points")
 
     local gift_panel = parent:panel({
         name = "gift_panel",
@@ -318,8 +318,8 @@ function HUDZMWaves:_animate_text_blinking()
 
         o:set_color(to)
 
-        self._current_wave = self._current_wave + 1
-        self._zm_wave_text:set_text("WAVE " .. self._current_wave)
+        managers.wdu.level.wave.current = managers.wdu.level.wave.current + 1
+        self._zm_wave_text:set_text("WAVE " .. managers.wdu.level.wave.current)
 
         managers.trade:set_trade_countdown(true)
 

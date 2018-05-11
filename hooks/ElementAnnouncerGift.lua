@@ -44,7 +44,7 @@ function ElementAnnouncerGift:on_executed(instigator)
             managers.hud._hud_zm_waves:_set_gift_visible("icon_firesale", true) 
         end
 
-        managers.statistics.events.firesale_active = true
+        managers.wdu:_setup_event_state("firesale", true)
     -- Scripted in game
     end
 
@@ -53,13 +53,13 @@ function ElementAnnouncerGift:on_executed(instigator)
     end
 
     if self._values.gift_id == "firesale_disable" then
-        managers.statistics.events.firesale_active = false
+        managers.wdu:_setup_event_state("firesale", false)
         managers.hud._hud_zm_waves:_set_gift_visible("icon_firesale", false)
     end
 
     if self._values.gift_id == "double_points" then
         managers.hud._hud_zm_waves:_set_gift_visible("icon_double_points", true) 
-        managers.statistics.events.double_point_active = true
+        managers.wdu:_setup_event_state("double_points", true)
         self._source = SoundDevice:create_source(self._editor_name)
 		self._source:set_position(self._values.position)
         self._source:set_orientation(self._values.rotation)
@@ -72,13 +72,13 @@ function ElementAnnouncerGift:on_executed(instigator)
     end
 
     if self._values.gift_id == "double_points_disable" then
-        managers.statistics.events.double_point_active = false
+        managers.wdu:_setup_event_state("double_points", false)
         managers.hud._hud_zm_waves:_set_gift_visible("icon_double_points", false)         
     end
 
     if self._values.gift_id == "instakill" then
         managers.hud._hud_zm_waves:_set_gift_visible("icon_instakill", true)
-        managers.statistics.events.instakill_active = true
+        managers.wdu:_setup_event_state("instakill", true)
         self._source = SoundDevice:create_source(self._editor_name)
 		self._source:set_position(self._values.position)
         self._source:set_orientation(self._values.rotation)
@@ -91,7 +91,7 @@ function ElementAnnouncerGift:on_executed(instigator)
     end
 
     if self._values.gift_id == "instakill_disable" then
-        managers.statistics.events.instakill_active = false
+        managers.wdu:_setup_event_state("instakill", false)        
         managers.hud._hud_zm_waves:_set_gift_visible("icon_instakill", false)        
     end
 
@@ -118,8 +118,8 @@ function ElementAnnouncerGift:on_executed(instigator)
 
         managers.overlay_effect:play_effect(overlay_effect)
 
-        local double_point_effect = managers.statistics.events.double_point_active and 2 or 1
-        managers.statistics:_add_zm_points(400 * double_point_effect, managers.statistics:_get_local_peer_id())
+        local double_point_effect = managers.wdu:_is_event_active("double_points") and 2 or 1
+        managers.wdu:_add_money_to(managers.wdu:_peer_id(), 400 * double_point_effect)
     end
 	
 	ElementAnnouncerGift.super.on_executed(self, instigator)

@@ -14,7 +14,9 @@ Hooks:PostHook(HUDStageEndScreen, "stage_money_counter_init", "zm_music_over", f
     self._source = SoundDevice:create_source("zm_dead_end")
     self._source:post_event("zm_dead")
 
-    local total = managers.hud._hud_zm_waves._current_wave
+    local peer_id = managers.wdu:_peer_id()
+    local current_highscore = managers.wdu:_get_current_highscore_of(id)
+    local total = managers.wdu.level.wave.current
     local s = ""
 
     if total > 1 then
@@ -28,11 +30,41 @@ Hooks:PostHook(HUDStageEndScreen, "stage_money_counter_init", "zm_music_over", f
         color = Color.white,
         visible = true,
         align = "center",
-        valign = "center",
-        vertical = "center"
+        y = 10
     })
 
-    wave_survived:set_world_center_y(self._package_forepanel:world_center_y())
+
+
+    for i, player_data in ipairs(managers.wdu.players) do
+        local highscore_text_players = {}
+        local name = player_data.name
+        local hs_waves = tostring(player_data.max_waves_survived)
+        
+        if current_wave > player_data.max_waves_survived then
+            managers.wdu:_save_new_highscore(current_wave)
+        end
+
+        if i == 1 then
+            highscore_text_players[1] = self._package_forepanel:text({
+                text = name .. " survived a maximum of " .. hs_waves .. " waves",
+                font_size = tweak_data.menu.pd2_large_font_size - 8,
+                color = Color.white,
+                visible = true,
+                align = "center"
+            })
+            highscore_text_players[1]:set_top(wave_survived:bottom() + 10)
+        else
+            highscore_text_players[i] = self._package_forepanel:text({
+                text = name .. " survived a maximum of " .. hs_waves .. " waves",
+                font_size = tweak_data.menu.pd2_large_font_size - 8,
+                color = Color.white,
+                visible = true,
+                align = "center"
+            })
+    
+            highscore_text_players[i]:set_top(highscore_text_players[i - 1]:bottom() + 10)
+        end
+    end
 
     self._foreground_layer_safe:child("stage_text"):set_text(self._stage_name .. ": GAME OVER")
 	self._background_layer_full:child("stage_text"):set_text(self._stage_name .. ": GAME OVER")

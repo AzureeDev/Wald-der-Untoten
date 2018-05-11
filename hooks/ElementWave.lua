@@ -15,17 +15,15 @@ function ElementWave:on_executed(instigator)
 		return
     end
     
-    local current_wave = managers.hud._hud_zm_waves._current_wave
+    local current_wave = managers.wdu:_get_current_wave()
 
     if self._values.ending_check then
-        local nb_cop_alive = managers.player.totalCopAlive - managers.groupai:state():get_amount_enemies_converted_to_criminals() - managers.groupai:state():police_hostage_count() - 1
+        managers.wdu.level.zombies.killed = managers.wdu.level.zombies.killed + 1
 
-        managers.statistics.ZOMBIES_KILLED = managers.statistics.ZOMBIES_KILLED + 1
-
-        if managers.statistics.ZOMBIES_KILLED == math.floor(managers.statistics.ZOMBIES_SPAWN) then
-            managers.statistics.ZOMBIES_KILLED = 0
-            managers.statistics.ZOMBIES_CURRENTLY_SPAWNED = 0
-            managers.statistics:_multiply_nb_zombies_by_current_wave(current_wave)
+        if managers.wdu.level.zombies.killed == math.floor(managers.wdu.level.zombies.max_spawns) then
+            managers.wdu.level.zombies.killed = 0
+            managers.wdu.level.zombies.currently_spawned = 0
+            managers.wdu:_multiply_zombies_by_wave(current_wave)
             
             ElementWave.super.on_executed(self, instigator)
             return
@@ -33,8 +31,6 @@ function ElementWave:on_executed(instigator)
 
         return
     end
-
-	managers.statistics:_update_zm_hud_element()
 
     if current_wave > 0 then
         managers.player:add_grenade_amount(2, true)

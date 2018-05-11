@@ -3,11 +3,11 @@ function ElementSpawnEnemyDummy:produce(params)
 		return
     end
 
-    if managers.statistics.ZOMBIES_CURRENTLY_SPAWNED >= math.floor(managers.statistics.ZOMBIES_SPAWN) then
+    if managers.wdu.level.zombies.currently_spawned >= math.floor(managers.wdu.level.zombies.max_spawns) then
         return
     end
 
-    managers.statistics.ZOMBIES_CURRENTLY_SPAWNED = managers.statistics.ZOMBIES_CURRENTLY_SPAWNED + 1
+    managers.wdu.level.zombies.currently_spawned = managers.wdu.level.zombies.currently_spawned + 1
 
 	if params and params.name then
 		local unit = safe_spawn_unit(params.name, self:get_orientation())

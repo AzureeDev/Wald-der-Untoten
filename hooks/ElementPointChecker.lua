@@ -18,12 +18,12 @@ function ElementPointChecker:on_executed(instigator)
 	local peer = managers.network:session():peer_by_unit(instigator)
 	local peer_id = peer:id() or 1
 
-	local current_points = tonumber(managers.statistics._zm_points[peer_id])
+	local current_points = tonumber(managers.wdu.players[peer_id].money)
 	if current_points < self._values.cost then
 		return
 	end
 
-	managers.statistics:_remove_zm_points(self._values.cost, peer_id)
+	managers.wdu:_deduct_money_to(peer_id, self._values.cost)
 	ElementPointChecker.super.on_executed(self, instigator)
 end
 
