@@ -10,7 +10,7 @@ function BaseInteractionExt:can_interact(player)
     local count_perks = managers.player:_count_nb_perks()
     local max_perks = 4
 
-    if self._tweak_data.is_perk_interaction and count_perk >= max_perks then
+    if self._tweak_data.is_perk_interaction and count_perks >= max_perks then
         return false
     end
 
