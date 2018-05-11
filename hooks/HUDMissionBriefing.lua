@@ -18,3 +18,24 @@ Hooks:PostHook(HUDMissionBriefing, "set_player_slot", "zm_postinit_set_player", 
     managers.wdu:_init_new_player(data)
     managers.wdu:_init_wave_highscore()
 end)
+
+function HUDMissionBriefing:set_slot_outfit(peer_id, criminal_name, outfit)
+	local slot = self._ready_slot_panel:child("slot_" .. tostring(peer_id))
+
+	if not slot or not alive(slot) then
+		return
+	end
+
+	if managers.network:session() and not managers.network:session():peer(peer_id) then
+		return
+	end
+
+	local detection_panel = slot:child("detection")
+
+	detection_panel:child("detection_left"):set_visible(false)
+	detection_panel:child("detection_right"):set_visible(false)
+	detection_panel:set_visible(false)
+	slot:child("detection_value"):set_visible(true)
+    slot:child("detection_value"):set_text("MAX: " .. tostring(managers.wdu.players[peer_id].max_waves_survived))
+    slot:child("detection_value"):set_color(Color(1, 0, 1))
+end

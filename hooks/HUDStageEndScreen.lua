@@ -15,7 +15,6 @@ Hooks:PostHook(HUDStageEndScreen, "stage_money_counter_init", "zm_music_over", f
     self._source:post_event("zm_dead")
 
     local peer_id = managers.wdu:_peer_id()
-    local current_highscore = managers.wdu:_get_current_highscore_of(id)
     local total = managers.wdu.level.wave.current
     local s = ""
 
@@ -28,43 +27,74 @@ Hooks:PostHook(HUDStageEndScreen, "stage_money_counter_init", "zm_music_over", f
         font = tweak_data.menu.pd2_large_font,
         font_size = tweak_data.menu.pd2_large_font_size,
         color = Color.white,
-        visible = true,
-        align = "center",
-        y = 10
+        y = 10,
+        x = 10
     })
 
+    managers.hud:make_fine_text(wave_survived)
 
+    local current_wave = managers.wdu.level.wave.current
+    local my_id = managers.wdu:_peer_id()
 
-    for i, player_data in ipairs(managers.wdu.players) do
-        local highscore_text_players = {}
-        local name = player_data.name
-        local hs_waves = tostring(player_data.max_waves_survived)
-        
-        if current_wave > player_data.max_waves_survived then
-            managers.wdu:_save_new_highscore(current_wave)
-        end
-
-        if i == 1 then
-            highscore_text_players[1] = self._package_forepanel:text({
-                text = name .. " survived a maximum of " .. hs_waves .. " waves",
-                font_size = tweak_data.menu.pd2_large_font_size - 8,
-                color = Color.white,
-                visible = true,
-                align = "center"
-            })
-            highscore_text_players[1]:set_top(wave_survived:bottom() + 10)
-        else
-            highscore_text_players[i] = self._package_forepanel:text({
-                text = name .. " survived a maximum of " .. hs_waves .. " waves",
-                font_size = tweak_data.menu.pd2_large_font_size - 8,
-                color = Color.white,
-                visible = true,
-                align = "center"
-            })
-    
-            highscore_text_players[i]:set_top(highscore_text_players[i - 1]:bottom() + 10)
-        end
+    local function get_player_data(id, data_wanted)
+        return managers.wdu.players[id][data_wanted]
     end
+
+    if current_wave > get_player_data(my_id, "max_waves_survived") then
+        managers.wdu:_save_new_highscore(current_wave)
+    end
+
+    local player_1 = self._package_forepanel:text({
+        name = "highscore_1",
+        text = get_player_data(1, "player_name") .. " survived a maximum of " .. get_player_data(1, "max_waves_survived") .. " waves",
+        font = tweak_data.menu.pd2_large_font,
+        font_size = tweak_data.menu.pd2_large_font_size - 16,
+        color = Color.white,
+        visible = true
+    })
+    managers.hud:make_fine_text(player_1)
+
+    player_1:set_top(wave_survived:bottom() + 10)
+    player_1:set_left(wave_survived:left())
+
+    local player_2 = self._package_forepanel:text({
+        name = "highscore_2",
+        text = get_player_data(2, "player_name") .. " survived a maximum of " .. get_player_data(2, "max_waves_survived") .. " waves",
+        font = tweak_data.menu.pd2_large_font,
+        font_size = tweak_data.menu.pd2_large_font_size - 16,
+        color = Color.white,
+        visible = get_player_data(2, "player_name") ~= "" and true or false
+    })
+    managers.hud:make_fine_text(player_2)
+
+    player_2:set_top(player_1:bottom() + 5)
+    player_2:set_left(wave_survived:left())
+
+    local player_3 = self._package_forepanel:text({
+        name = "highscore_3",
+        text = get_player_data(3, "player_name") .. " survived a maximum of " .. get_player_data(3, "max_waves_survived") .. " waves",
+        font = tweak_data.menu.pd2_large_font,
+        font_size = tweak_data.menu.pd2_large_font_size - 16,
+        color = Color.white,
+        visible = get_player_data(3, "player_name") ~= "" and true or false
+    })
+    managers.hud:make_fine_text(player_3)
+
+    player_3:set_top(player_2:bottom() + 5)
+    player_3:set_left(wave_survived:left())
+
+    local player_4 = self._package_forepanel:text({
+        name = "highscore_4",
+        text = get_player_data(4, "player_name") .. " survived a maximum of " .. get_player_data(4, "max_waves_survived") .. " waves",
+        font = tweak_data.menu.pd2_large_font,
+        font_size = tweak_data.menu.pd2_large_font_size - 16,
+        color = Color.white,
+        visible = get_player_data(4, "player_name") ~= "" and true or false
+    })
+    managers.hud:make_fine_text(player_4)
+
+    player_4:set_top(player_3:bottom() + 5)
+    player_4:set_left(wave_survived:left())
 
     self._foreground_layer_safe:child("stage_text"):set_text(self._stage_name .. ": GAME OVER")
 	self._background_layer_full:child("stage_text"):set_text(self._stage_name .. ": GAME OVER")

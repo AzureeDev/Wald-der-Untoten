@@ -12,28 +12,28 @@ function WDUManager:_init_variables()
     self.wave_highscore_file = SavePath .. "WaldDerUntoten_Highscore.data"
     self.players = {
         [1] = {
-            name = "nil",
+            player_name = "",
             total_score = 0,
             money = 0,
             max_waves_survived = 0,
             synched = false
         },
         [2] = {
-            name = "nil",
+            player_name = "",
             total_score = 0,
             money = 0,
             max_waves_survived = 0,
             synched = false
         },
         [3] = {
-            name = "nil",
+            player_name = "",
             total_score = 0,
             money = 0,
             max_waves_survived = 0,
             synched = false
         },
         [4] = {
-            name = "nil",
+            player_name = "",
             total_score = 0,
             money = 0,
             max_waves_survived = 0,
@@ -82,7 +82,7 @@ function WDUManager:_init_new_player(data)
         return
     end
 
-    self:_set_player_name(data.id, data.player_name)
+    self:_set_player_name(data.id, data.name)
     self:_set_start_money(data.id, 500)
 end
 
@@ -122,8 +122,12 @@ function WDUManager:_save_new_highscore(wave)
     LuaNetworking:SendToPeers("ZMWavesHighScore", tostring(wave))
 end
 
+function WDUManager:_get_current_highscore_of(id)
+    return self.players[id].max_waves_survived
+end
+
 function WDUManager:_set_player_name(id, name)
-    self.players[id].name = name
+    self.players[id].player_name = name
 end
 
 function WDUManager:_set_start_money(id, money)
@@ -148,6 +152,7 @@ function WDUManager:_add_money_to(peer_id, amount)
     if amount and type(amount) == "number" then
         local additional_amount = math.floor(amount)
         self.players[peer_id].money = self.players[peer_id].money + additional_amount
+        self.players[peer_id].total_score = self.players[peer_id].total_score + additional_amount
 
         LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
         self:_update_hud_element()
