@@ -49,13 +49,13 @@ function WDUManager:_init_variables()
         },
         wave = {
             current = 0
-        },
-        active_events = {
-            double_points = false,
-            instakill = false,
-            firesale = false
         }
     }
+
+    self.level.active_events = {}
+    self.level.active_events.double_points = false
+    self.level.active_events.instakill = false
+    self.level.active_events.firesale = false
 
     self.points = {
         default = 50,
@@ -212,6 +212,10 @@ function WDUManager:_get_points_amount(category, unit)
 end
 
 function WDUManager:_on_wdu_map()
+    if Global.editor_mode then
+        return true
+    end
+
     if not managers.job then
         return false
     end
@@ -224,19 +228,11 @@ function WDUManager:_on_wdu_map()
 end
 
 function WDUManager:_setup_event_state(event, state)
-    if not self.level.active_events[event] then
-        return
-    end
-
     self.level.active_events[event] = state
 end
 
 function WDUManager:_is_event_active(event)
-    if not self.level.active_events[event] or self.level.active_events[event] == false then
-        return false
-    end
-
-    return true
+    return self.level.active_events[event]
 end
 
 function WDUManager:_get_current_wave()
