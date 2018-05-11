@@ -699,7 +699,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.schakal_upg_secondary = deep_clone(self.schakal_upg_primary)
     self.schakal_upg_secondary.use_data = {selection_index = SECONDARY}
 	
-	self.tec9_upg_primary = deep_clone(self.tec9_primary_primary)
+	self.tec9_upg_primary = deep_clone(self.tec9_primary)
     self.tec9_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.tec9_upg_primary.sounds.fire = "zm_pew_smg"
     self.tec9_upg_primary.sounds.fire_single = "zm_pew_smg"
