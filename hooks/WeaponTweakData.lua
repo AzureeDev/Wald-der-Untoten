@@ -279,6 +279,64 @@ function WeaponTweakData:_init_zm_new_weapons()
     }}
     self.roach_secondary = deep_clone(self.roach_primary)
     self.roach_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
+	
+	-- What about Nepgear with a shovel? :shovelthinking:
+	
+	self.ak74_primary = deep_clone(self.ak74)
+    self.ak74_primary.animations.reload_name_id = "ak74"
+    self.ak74_primary.weapon_hold = "ak47"	--gee, that's not confusing at all
+    self.ak74_primary.use_data = {selection_index = PRIMARY}
+    self.ak74_secondary = deep_clone(self.ak74_primary)
+    self.ak74_secondary.use_data = {selection_index = SECONDARY}
+	
+	self.ching_primary = deep_clone(self.ching)
+    self.ching_primary.animations.reload_name_id = "ching"
+    self.ching_primary.weapon_hold = "ching"
+    self.ching_primary.use_data = {selection_index = PRIMARY}
+    self.ching_secondary = deep_clone(self.ching_primary)
+    self.ching_secondary.use_data = {selection_index = SECONDARY}
+	
+	self.lemming_primary = deep_clone(self.lemming)
+    self.lemming_primary.animations.reload_name_id = "lemming"
+    self.lemming_primary.weapon_hold = "packrat"
+    self.lemming_primary.use_data = {selection_index = PRIMARY}
+    self.lemming_secondary = deep_clone(self.lemming_primary)
+    self.lemming_secondary.use_data = {selection_index = SECONDARY}
+	
+	self.m37_primary = deep_clone(self.m37)
+    self.m37_primary.animations.reload_name_id = "m37"
+    self.m37_primary.weapon_hold = "m37"
+    self.m37_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
+    self.m37_secondary = deep_clone(self.m37_primary)
+    self.m37_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
+	
+	self.r870_primary = deep_clone(self.r870)
+    self.r870_primary.animations.reload_name_id = "r870_shotgun"
+    self.r870_primary.weapon_hold = "r870_shotgun"
+    self.r870_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
+    self.r870_secondary = deep_clone(self.r870_primary)
+    self.r870_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
+	
+	self.erma_primary = deep_clone(self.erma)
+    self.erma_primary.animations.reload_name_id = "erma"
+    self.erma_primary.weapon_hold = "erma"
+    self.erma_primary.use_data = {selection_index = PRIMARY}
+    self.erma_secondary = deep_clone(self.erma_primary)
+    self.erma_secondary.use_data = {selection_index = SECONDARY}
+	
+	self.schakal_primary = deep_clone(self.schakal)
+    self.schakal_primary.animations.reload_name_id = "schakal"
+    self.schakal_primary.weapon_hold = "schakal"
+    self.schakal_primary.use_data = {selection_index = PRIMARY}
+    self.schakal_secondary = deep_clone(self.schakal_primary)
+    self.schakal_secondary.use_data = {selection_index = SECONDARY}
+	
+	self.tec9_primary = deep_clone(self.tec9)
+    self.tec9_primary.animations.reload_name_id = "tec9"
+    self.tec9_primary.weapon_hold = "tec9"
+    self.tec9_primary.use_data = {selection_index = PRIMARY}
+    self.tec9_secondary = deep_clone(self.tec9_primary)
+    self.tec9_secondary.use_data = {selection_index = SECONDARY}
 
     self:_init_upgraded_zm_weapons()
 end
@@ -554,4 +612,102 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.m1928_upg_primary.use_data = {selection_index = PRIMARY}
     self.m1928_upg_secondary = deep_clone(self.m1928_upg_primary)
     self.m1928_upg_secondary.use_data = {selection_index = SECONDARY}
+	
+	--more pew for the shovel gods
+	
+	self.ak74_upg_primary = deep_clone(self.ak74_primary)
+    self.ak74_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.ak74_upg_primary.sounds.fire = "zm_pew_rifle"
+    self.ak74_upg_primary.sounds.fire_single = "zm_pew_rifle"
+    self.ak74_upg_primary.stats_modifiers = {damage = 7}
+    self.ak74_upg_primary.CLIP_AMMO_MAX = 7
+    self.ak74_upg_primary.NR_CLIPS_MAX = 7
+    self.ak74_upg_primary.AMMO_MAX = self.ak74_upg_primary.CLIP_AMMO_MAX * self.ak74_upg_primary.NR_CLIPS_MAX
+    self.ak74_upg_primary.use_data = {selection_index = PRIMARY}
+    self.ak74_upg_secondary = deep_clone(self.ak74_upg_primary)
+    self.ak74_upg_secondary.use_data = {selection_index = SECONDARY}
+	
+	self.ching_upg_primary = deep_clone(self.ching_primary)
+    self.ching_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.ching_upg_primary.sounds.fire = "zm_pew_rifle"
+    self.ching_upg_primary.sounds.fire_single = "zm_pew_rifle"
+    self.ching_upg_primary.stats_modifiers = {damage = 7}
+    self.ching_upg_primary.CLIP_AMMO_MAX = 7
+    self.ching_upg_primary.NR_CLIPS_MAX = 7
+    self.ching_upg_primary.AMMO_MAX = self.ching_upg_primary.CLIP_AMMO_MAX * self.ching_upg_primary.NR_CLIPS_MAX
+    self.ching_upg_primary.use_data = {selection_index = PRIMARY}
+    self.ching_upg_secondary = deep_clone(self.ching_upg_primary)
+    self.ching_upg_secondary.use_data = {selection_index = SECONDARY}
+	
+	self.lemming_upg_primary = deep_clone(self.lemming_primary)
+    self.lemming_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.lemming_upg_primary.sounds.fire = "zm_pew_cobra"
+    self.lemming_upg_primary.sounds.fire_single = "zm_pew_cobra"
+    self.lemming_upg_primary.stats_modifiers = {damage = 7}
+    self.lemming_upg_primary.CLIP_AMMO_MAX = 7
+    self.lemming_upg_primary.NR_CLIPS_MAX = 7
+    self.lemming_upg_primary.AMMO_MAX = self.lemming_upg_primary.CLIP_AMMO_MAX * self.lemming_upg_primary.NR_CLIPS_MAX
+    self.lemming_upg_primary.use_data = {selection_index = PRIMARY}
+    self.lemming_upg_secondary = deep_clone(self.lemming_upg_primary)
+    self.lemming_upg_secondary.use_data = {selection_index = SECONDARY}
+	
+	self.m37_upg_primary = deep_clone(self.m37_primary)
+    self.m37_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.m37_upg_primary.sounds.fire = "zm_pew_shts"
+    self.m37_upg_primary.sounds.fire_single = "zm_pew_shts"
+    self.m37_upg_primary.stats_modifiers = {damage = 7}
+    self.m37_upg_primary.CLIP_AMMO_MAX = 7
+    self.m37_upg_primary.NR_CLIPS_MAX = 7
+    self.m37_upg_primary.AMMO_MAX = self.m37_upg_primary.CLIP_AMMO_MAX * self.m37_upg_primary.NR_CLIPS_MAX
+    self.m37_upg_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
+    self.m37_upg_secondary = deep_clone(self.m37_upg_primary)
+    self.m37_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
+	
+	self.r870_upg_primary = deep_clone(self.r870_primary)
+    self.r870_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.r870_upg_primary.sounds.fire = "zm_pew_shts"
+    self.r870_upg_primary.sounds.fire_single = "zm_pew_shts"
+    self.r870_upg_primary.stats_modifiers = {damage = 7}
+    self.r870_upg_primary.CLIP_AMMO_MAX = 7
+    self.r870_upg_primary.NR_CLIPS_MAX = 7
+    self.r870_upg_primary.AMMO_MAX = self.r870_upg_primary.CLIP_AMMO_MAX * self.r870_upg_primary.NR_CLIPS_MAX
+    self.r870_upg_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
+    self.r870_upg_secondary = deep_clone(self.r870_upg_primary)
+    self.r870_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
+	
+	self.erma_upg_primary = deep_clone(self.erma_primary)
+    self.erma_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.erma_upg_primary.sounds.fire = "zm_pew_smg"
+    self.erma_upg_primary.sounds.fire_single = "zm_pew_smg"
+    self.erma_upg_primary.stats_modifiers = {damage = 7}
+    self.erma_upg_primary.CLIP_AMMO_MAX = 7
+    self.erma_upg_primary.NR_CLIPS_MAX = 7
+    self.erma_upg_primary.AMMO_MAX = self.erma_upg_primary.CLIP_AMMO_MAX * self.erma_upg_primary.NR_CLIPS_MAX
+    self.erma_upg_primary.use_data = {selection_index = PRIMARY}
+    self.erma_upg_secondary = deep_clone(self.erma_upg_primary)
+    self.erma_upg_secondary.use_data = {selection_index = SECONDARY}
+	
+	self.schakal_upg_primary = deep_clone(self.schakal_primary)
+    self.schakal_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.schakal_upg_primary.sounds.fire = "zm_pew_smg"
+    self.schakal_upg_primary.sounds.fire_single = "zm_pew_smg"
+    self.schakal_upg_primary.stats_modifiers = {damage = 7}
+    self.schakal_upg_primary.CLIP_AMMO_MAX = 7
+    self.schakal_upg_primary.NR_CLIPS_MAX = 7
+    self.schakal_upg_primary.AMMO_MAX = self.schakal_upg_primary.CLIP_AMMO_MAX * self.schakal_upg_primary.NR_CLIPS_MAX
+    self.schakal_upg_primary.use_data = {selection_index = PRIMARY}
+    self.schakal_upg_secondary = deep_clone(self.schakal_upg_primary)
+    self.schakal_upg_secondary.use_data = {selection_index = SECONDARY}
+	
+	self.tec9_upg_primary = deep_clone(self.tec9_primary_primary)
+    self.tec9_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.tec9_upg_primary.sounds.fire = "zm_pew_smg"
+    self.tec9_upg_primary.sounds.fire_single = "zm_pew_smg"
+    self.tec9_upg_primary.stats_modifiers = {damage = 7}
+    self.tec9_upg_primary.CLIP_AMMO_MAX = 7
+    self.tec9_upg_primary.NR_CLIPS_MAX = 7
+    self.tec9_upg_primary.AMMO_MAX = self.tec9_upg_primary.CLIP_AMMO_MAX * self.tec9_upg_primary.NR_CLIPS_MAX
+    self.tec9_upg_primary.use_data = {selection_index = PRIMARY}
+    self.tec9_upg_secondary = deep_clone(self.tec9_upg_primary)
+    self.tec9_upg_secondary.use_data = {selection_index = SECONDARY}
 end

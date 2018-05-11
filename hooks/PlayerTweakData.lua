@@ -64,7 +64,7 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 	self.stances.roach_primary = deep_clone(self.stances.siltstone)
 	self.stances.roach_secondary = deep_clone(self.stances.siltstone)
 
---shovel approved new stances
+	--shovel approved new stances
 	self.stances.amcar_primary = deep_clone(self.stances.amcar)
 	self.stances.amcar_secondary = deep_clone(self.stances.amcar)
 	self.stances.amcar_upg_primary = deep_clone(self.stances.amcar)
@@ -147,4 +147,45 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 
 	self.stances.rpg7_primary = deep_clone(self.stances.rpg7)
 	self.stances.rpg7_secondary = deep_clone(self.stances.rpg7)
+	
+	--shovel mkii stances
+	self.stances.ak74_primary = deep_clone(self.stances.ak74)
+	self.stances.ak74_secondary = deep_clone(self.stances.ak74)
+	self.stances.ak74_upg_primary = deep_clone(self.stances.ak74)
+	self.stances.ak74_upg_secondary = deep_clone(self.stances.ak74)
+	
+	self.stances.ching_primary = deep_clone(self.stances.ching)
+	self.stances.ching_secondary = deep_clone(self.stances.ching)
+	self.stances.ching_upg_primary = deep_clone(self.stances.ching)
+	self.stances.ching_upg_secondary = deep_clone(self.stances.ching)
+	
+	self.stances.lemming_primary = deep_clone(self.stances.lemming)
+	self.stances.lemming_secondary = deep_clone(self.stances.lemming)
+	self.stances.lemming_upg_primary = deep_clone(self.stances.lemming)
+	self.stances.lemming_upg_secondary = deep_clone(self.stances.lemming)
+	
+	self.stances.m37_primary = deep_clone(self.stances.m37)
+	self.stances.m37_secondary = deep_clone(self.stances.m37)
+	self.stances.m37_upg_primary = deep_clone(self.stances.m37)
+	self.stances.m37_upg_secondary = deep_clone(self.stances.m37)
+	
+	self.stances.r870_primary = deep_clone(self.stances.r870)
+	self.stances.r870_secondary = deep_clone(self.stances.r870)
+	self.stances.r870_upg_primary = deep_clone(self.stances.r870)
+	self.stances.r870_upg_secondary = deep_clone(self.stances.r870)
+	
+	self.stances.erma_primary = deep_clone(self.stances.erma)
+	self.stances.erma_secondary = deep_clone(self.stances.erma)
+	self.stances.erma_upg_primary = deep_clone(self.stances.erma)
+	self.stances.erma_upg_secondary = deep_clone(self.stances.erma)
+	
+	self.stances.schakal_primary = deep_clone(self.stances.schakal)
+	self.stances.schakal_secondary = deep_clone(self.stances.schakal)
+	self.stances.schakal_upg_primary = deep_clone(self.stances.schakal)
+	self.stances.schakal_upg_secondary = deep_clone(self.stances.schakal)
+	
+	self.stances.tec9_primary = deep_clone(self.stances.tec9)
+	self.stances.tec9_secondary = deep_clone(self.stances.tec9)
+	self.stances.tec9_upg_primary = deep_clone(self.stances.tec9)
+	self.stances.tec9_upg_secondary = deep_clone(self.stances.tec9)
 end)
