@@ -20,9 +20,6 @@ function ElementPointChecker:on_executed(instigator)
 
 	local current_points = tonumber(managers.wdu.players[peer_id].money)
 	if current_points < self._values.cost then
-		if managers.hud then
-            managers.hud:show_hint( { text = "Not enough points." } )
-        end
 		return
 	end
 
