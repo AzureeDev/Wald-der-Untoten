@@ -1,5 +1,4 @@
 function WeaponFactoryManager:unpack_blueprint_from_string(factory_id, blueprint_string)
-    log("attempting to unpack the blueprint of: ", tostring(factory_id), "with a blueprint:", tostring(blueprint_string))
 
 	local factory = tweak_data.weapon.factory
 	local index_table = string.split(blueprint_string, " ")

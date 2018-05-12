@@ -136,15 +136,13 @@
 				<sound id="zm_pew_snp_e" path="snp_ebr_base.ogg" prefix="regular" use_fix="true"/>
 				<sound id="zm_pew_smg" path="smg_mp7_base.ogg" prefix="regular" use_fix="true"/>
 			</sounds>
-			<sounds directory="zombie"> <!--No Prefix-->
+			<sounds directory="zombie">
 				<sounds directory="taunt">
-					<!--Taunt-->
 					<sound id="z1n_g90" path="taunt_00.ogg"/>
 					<sound id="z2n_g90" path="taunt_01.ogg"/>
 					<sound id="z3n_g90" path="taunt_02.ogg"/>
 					<sound id="z4n_g90" path="taunt_03.ogg"/>
 					<sound id="z5n_g90" path="taunt_04.ogg"/>
-					<!--Swearing-->
 					<sound id="z1n_lk3a" path="taunt_00.ogg"/>
 					<sound id="z2n_lk3a" path="taunt_01.ogg"/>
 					<sound id="z3n_lk3a" path="taunt_02.ogg"/>
@@ -157,19 +155,16 @@
 					<sound id="z5n_lk3b" path="taunt_09.ogg"/>
 				</sounds>
 				<sounds directory="command">
-					<!--Help!-->
 					<sound id="z1n_hlp" path="help_00.ogg"/>
 					<sound id="z2n_hlp" path="help_01.ogg"/>
 					<sound id="z3n_hlp" path="help_02.ogg"/>
 					<sound id="z4n_hlp" path="help_03.ogg"/>
 					<sound id="z5n_hlp" path="help_04.ogg"/>
-					<!--Ready up!-->
 					<sound id="z1n_rdy" path="ready_00.ogg"/>
 					<sound id="z2n_rdy" path="ready_01.ogg"/>
 					<sound id="z3n_rdy" path="ready_02.ogg"/>
 					<sound id="z4n_rdy" path="ready_03.ogg"/>
 					<sound id="z5n_rdy" path="ready_04.ogg"/>
-					<!--Move in!-->
 					<sound id="z1n_mov" path="move_00.ogg"/>
 					<sound id="z2n_mov" path="move_01.ogg"/>
 					<sound id="z3n_mov" path="move_02.ogg"/>
@@ -177,25 +172,21 @@
 					<sound id="z5n_mov" path="move_04.ogg"/>
 				</sounds>
 				<sounds directory="hurt">
-					<!--Burning-->
 					<sound id="z1n_burnhurt" path="burn_00.ogg"/>
 					<sound id="z2n_burnhurt" path="burn_01.ogg"/>
 					<sound id="z3n_burnhurt" path="burn_02.ogg"/>
 					<sound id="z4n_burnhurt" path="burn_03.ogg"/>
 					<sound id="z5n_burnhurt" path="burn_04.ogg"/>
-					<!--Immolation-->
 					<sound id="z1n_burndeath" path="immolate_00.ogg"/>
 					<sound id="z2n_burndeath" path="immolate_01.ogg"/>
 					<sound id="z3n_burndeath" path="immolate_02.ogg"/>
 					<sound id="z4n_burndeath" path="immolate_03.ogg"/>
 					<sound id="z5n_burndeath" path="immolate_04.ogg"/>
-					<!--Hurt Grunt-->
 					<sound id="z1n_x01a_any_3p" path="hurt_00.ogg"/>
 					<sound id="z2n_x01a_any_3p" path="hurt_01.ogg"/>
 					<sound id="z3n_x01a_any_3p" path="hurt_02.ogg"/>
 					<sound id="z4n_x01a_any_3p" path="hurt_03.ogg"/>
 					<sound id="z5n_x01a_any_3p" path="hurt_04.ogg"/>
-					<!--Death-->
 					<sound id="z1n_x01a_any_3p" path="death_00.ogg"/>
 					<sound id="z2n_x01a_any_3p" path="death_01.ogg"/>
 					<sound id="z3n_x01a_any_3p" path="death_02.ogg"/>
@@ -203,15 +194,13 @@
 					<sound id="z5n_x01a_any_3p" path="death_04.ogg"/>
 				</sounds>
 			</sounds>
-			<sounds directory="zombie" prefix="grass"> <!--Grass Prefix-->
+			<sounds directory="zombie" prefix="grass">
 				<sounds directory="taunt">
-					<!--Taunt-->
 					<sound id="z1n_g90" path="taunt_00.ogg"/>
 					<sound id="z2n_g90" path="taunt_01.ogg"/>
 					<sound id="z3n_g90" path="taunt_02.ogg"/>
 					<sound id="z4n_g90" path="taunt_03.ogg"/>
 					<sound id="z5n_g90" path="taunt_04.ogg"/>
-					<!--Swearing-->
 					<sound id="z1n_lk3a" path="taunt_00.ogg"/>
 					<sound id="z2n_lk3a" path="taunt_01.ogg"/>
 					<sound id="z3n_lk3a" path="taunt_02.ogg"/>
@@ -224,19 +213,16 @@
 					<sound id="z5n_lk3b" path="taunt_09.ogg"/>
 				</sounds>
 				<sounds directory="command">
-					<!--Help!-->
 					<sound id="z1n_hlp" path="help_00.ogg"/>
 					<sound id="z2n_hlp" path="help_01.ogg"/>
 					<sound id="z3n_hlp" path="help_02.ogg"/>
 					<sound id="z4n_hlp" path="help_03.ogg"/>
 					<sound id="z5n_hlp" path="help_04.ogg"/>
-					<!--Ready up!-->
 					<sound id="z1n_rdy" path="ready_00.ogg"/>
 					<sound id="z2n_rdy" path="ready_01.ogg"/>
 					<sound id="z3n_rdy" path="ready_02.ogg"/>
 					<sound id="z4n_rdy" path="ready_03.ogg"/>
 					<sound id="z5n_rdy" path="ready_04.ogg"/>
-					<!--Move in!-->
 					<sound id="z1n_mov" path="move_00.ogg"/>
 					<sound id="z2n_mov" path="move_01.ogg"/>
 					<sound id="z3n_mov" path="move_02.ogg"/>
@@ -244,25 +230,21 @@
 					<sound id="z5n_mov" path="move_04.ogg"/>
 				</sounds>
 				<sounds directory="hurt">
-					<!--Burning-->
 					<sound id="z1n_burnhurt" path="burn_00.ogg"/>
 					<sound id="z2n_burnhurt" path="burn_01.ogg"/>
 					<sound id="z3n_burnhurt" path="burn_02.ogg"/>
 					<sound id="z4n_burnhurt" path="burn_03.ogg"/>
 					<sound id="z5n_burnhurt" path="burn_04.ogg"/>
-					<!--Immolation-->
 					<sound id="z1n_burndeath" path="immolate_00.ogg"/>
 					<sound id="z2n_burndeath" path="immolate_01.ogg"/>
 					<sound id="z3n_burndeath" path="immolate_02.ogg"/>
 					<sound id="z4n_burndeath" path="immolate_03.ogg"/>
 					<sound id="z5n_burndeath" path="immolate_04.ogg"/>
-					<!--Hurt Grunt-->
 					<sound id="z1n_x01a_any_3p" path="hurt_00.ogg"/>
 					<sound id="z2n_x01a_any_3p" path="hurt_01.ogg"/>
 					<sound id="z3n_x01a_any_3p" path="hurt_02.ogg"/>
 					<sound id="z4n_x01a_any_3p" path="hurt_03.ogg"/>
 					<sound id="z5n_x01a_any_3p" path="hurt_04.ogg"/>
-					<!--Death-->
 					<sound id="z1n_x01a_any_3p" path="death_00.ogg"/>
 					<sound id="z2n_x01a_any_3p" path="death_01.ogg"/>
 					<sound id="z3n_x01a_any_3p" path="death_02.ogg"/>
