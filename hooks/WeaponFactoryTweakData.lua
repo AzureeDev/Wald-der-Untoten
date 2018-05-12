@@ -99,14 +99,14 @@ function WeaponFactoryTweakData:_init_wunderwaffe()
     self.wpn_fps_spe_wunderwaffe_primary.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe"
     self.wpn_fps_spe_wunderwaffe_primary.default_blueprint = {
         "wpn_fps_spe_wunderwaffe_body",
-		"wpn_fps_spe_wunderwaffe_illum",
-		"wpn_fps_spe_wunderwaffe_mag",
-		"wpn_fps_spe_wunderwaffe_bulb_outer",
-		"wpn_fps_spe_wunderwaffe_center_glow",
-		"wpn_fps_spe_wunderwaffe_center_tube",
-		"wpn_fps_spe_wunderwaffe_metal",
-		"wpn_fps_spe_wunderwaffe_pipes",
-		"wpn_fps_spe_wunderwaffe_wood"
+        "wpn_fps_spe_wunderwaffe_illum",
+        "wpn_fps_spe_wunderwaffe_mag",
+        "wpn_fps_spe_wunderwaffe_bulb_outer",
+        "wpn_fps_spe_wunderwaffe_center_glow",
+        "wpn_fps_spe_wunderwaffe_center_tube",
+        "wpn_fps_spe_wunderwaffe_metal",
+        "wpn_fps_spe_wunderwaffe_pipes",
+        "wpn_fps_spe_wunderwaffe_wood"
     }
  
     self.wpn_fps_spe_wunderwaffe_secondary = deep_clone(self.wpn_fps_spe_wunderwaffe_primary)
@@ -153,14 +153,14 @@ function WeaponFactoryTweakData:_init_wunderwaffe_dg3()
     self.wpn_fps_spe_wunderwaffe_dg3_primary.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3"
     self.wpn_fps_spe_wunderwaffe_dg3_primary.default_blueprint = {
         "wpn_fps_spe_wunderwaffe_dg3_body",
-		"wpn_fps_spe_wunderwaffe_dg3_illum",
-		"wpn_fps_spe_wunderwaffe_dg3_mag",
-		"wpn_fps_spe_wunderwaffe_dg3_bulb_outer",
-		"wpn_fps_spe_wunderwaffe_center_glow",
-		"wpn_fps_spe_wunderwaffe_center_tube",
-		"wpn_fps_spe_wunderwaffe_dg3_metal",
-		"wpn_fps_spe_wunderwaffe_dg3_pipes",
-		"wpn_fps_spe_wunderwaffe_dg3_wood"
+        "wpn_fps_spe_wunderwaffe_dg3_illum",
+        "wpn_fps_spe_wunderwaffe_dg3_mag",
+        "wpn_fps_spe_wunderwaffe_dg3_bulb_outer",
+        "wpn_fps_spe_wunderwaffe_center_glow",
+        "wpn_fps_spe_wunderwaffe_center_tube",
+        "wpn_fps_spe_wunderwaffe_dg3_metal",
+        "wpn_fps_spe_wunderwaffe_dg3_pipes",
+        "wpn_fps_spe_wunderwaffe_dg3_wood"
     }
     self.wpn_fps_spe_wunderwaffe_dg3_secondary = deep_clone(self.wpn_fps_spe_wunderwaffe_dg3_primary)
     self.wpn_fps_spe_wunderwaffe_dg3_secondary.unit = "units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_dg3_secondary"
