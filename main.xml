@@ -178,19 +178,17 @@
 					<sound id="z3n_burnhurt" path="burn_02.ogg"/>
 					<sound id="z4n_burnhurt" path="burn_03.ogg"/>
 					<sound id="z5n_burnhurt" path="burn_04.ogg"/>
-          <sound id="mdc_burnhurt" path="burn_00.ogg"/>
-          <sound id="bdz_burnhurt" path="burn_01.ogg"/>
-          <sound id="clk_burnhurt" path="burn_02.ogg"/>
-          <sound id="tsr_burnhurt" path="burn_04.ogg"/>
+					<sound id="mdc_burnhurt" path="burn_00.ogg"/>
+					<sound id="clk_burnhurt" path="burn_02.ogg"/>
+					<sound id="tsr_burnhurt" path="burn_04.ogg"/>
 					<sound id="z1n_burndeath" path="immolate_00.ogg"/>
 					<sound id="z2n_burndeath" path="immolate_01.ogg"/>
 					<sound id="z3n_burndeath" path="immolate_02.ogg"/>
 					<sound id="z4n_burndeath" path="immolate_03.ogg"/>
 					<sound id="z5n_burndeath" path="immolate_04.ogg"/>
-          <sound id="mdc_burndeath" path="immolate_00.ogg"/>
-          <sound id="bdz_burndeath" path="immolate_01.ogg"/>
-          <sound id="clk_burndeath" path="immolate_02.ogg"/>
-          <sound id="tsr_burndeath" path="immolate_04.ogg"/>
+					<sound id="mdc_burndeath" path="immolate_00.ogg"/>
+					<sound id="clk_burndeath" path="immolate_02.ogg"/>
+					<sound id="tsr_burndeath" path="immolate_04.ogg"/>
 					<sound id="z1n_x01a_any_3p" path="hurt_00.ogg"/>
 					<sound id="z2n_x01a_any_3p" path="hurt_01.ogg"/>
 					<sound id="z3n_x01a_any_3p" path="hurt_02.ogg"/>
@@ -249,28 +247,26 @@
 					<sound id="z3n_burnhurt" path="burn_02.ogg"/>
 					<sound id="z4n_burnhurt" path="burn_03.ogg"/>
 					<sound id="z5n_burnhurt" path="burn_04.ogg"/>
-          <sound id="mdc_burnhurt" path="burn_00.ogg"/>
-          <sound id="bdz_burnhurt" path="burn_01.ogg"/>
-          <sound id="clk_burnhurt" path="burn_02.ogg"/>
-          <sound id="tsr_burnhurt" path="burn_04.ogg"/>
+					<sound id="mdc_burnhurt" path="burn_00.ogg"/>
+					<sound id="clk_burnhurt" path="burn_02.ogg"/>
+					<sound id="tsr_burnhurt" path="burn_04.ogg"/>
 					<sound id="z1n_burndeath" path="immolate_00.ogg"/>
 					<sound id="z2n_burndeath" path="immolate_01.ogg"/>
 					<sound id="z3n_burndeath" path="immolate_02.ogg"/>
 					<sound id="z4n_burndeath" path="immolate_03.ogg"/>
 					<sound id="z5n_burndeath" path="immolate_04.ogg"/>
-          <sound id="mdc_burndeath" path="immolate_00.ogg"/>
-          <sound id="bdz_burndeath" path="immolate_01.ogg"/>
-          <sound id="clk_burndeath" path="immolate_02.ogg"/>
-          <sound id="tsr_burndeath" path="immolate_04.ogg"/>
+					<sound id="mdc_burndeath" path="immolate_00.ogg"/>
+					<sound id="clk_burndeath" path="immolate_02.ogg"/>
+					<sound id="tsr_burndeath" path="immolate_04.ogg"/>
 					<sound id="z1n_x01a_any_3p" path="hurt_00.ogg"/>
 					<sound id="z2n_x01a_any_3p" path="hurt_01.ogg"/>
 					<sound id="z3n_x01a_any_3p" path="hurt_02.ogg"/>
 					<sound id="z4n_x01a_any_3p" path="hurt_03.ogg"/>
 					<sound id="z5n_x01a_any_3p" path="hurt_04.ogg"/>
-          <sound id="mdc_x01a_any_3p" path="hurt_00.ogg"/>
-          <sound id="bdz_x01a_any_3p" path="hurt_01.ogg"/>
-          <sound id="clk_x01a_any_3p" path="hurt_02.ogg"/>
-          <sound id="tsr_x01a_any_3p" path="hurt_04.ogg"/>
+					<sound id="mdc_x01a_any_3p" path="hurt_00.ogg"/>
+					<sound id="bdz_x01a_any_3p" path="hurt_01.ogg"/>
+					<sound id="clk_x01a_any_3p" path="hurt_02.ogg"/>
+					<sound id="tsr_x01a_any_3p" path="hurt_04.ogg"/>
 					<sound id="z1n_x02a_any_3p" path="death_00.ogg"/>
 					<sound id="z2n_x02a_any_3p" path="death_01.ogg"/>
 					<sound id="z3n_x02a_any_3p" path="death_02.ogg"/>
