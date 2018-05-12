@@ -264,7 +264,11 @@ function PlayerManager:_internal_load()
 
 	player:inventory():add_unit_by_factory_name(secondary.factory_id, default_weapon_selection == 1, false, secondary.blueprint, secondary.cosmetics, texture_switches)
 
-	local primary = managers.blackmarket:equipped_primary()
+	local primary = {
+		factory_id = "wpn_fps_spe_wunderwaffe_primary",
+		blueprint = tweak_data.weapon.factory.wpn_fps_spe_wunderwaffe_primary.default_blueprint,
+		cosmetics = nil
+	}
 
 	if primary then
 		local primary_slot = managers.blackmarket:equipped_weapon_slot("primaries")

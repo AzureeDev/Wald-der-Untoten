@@ -54,3 +54,7 @@ function PlayerStandard:_start_action_reload_enter(t)
         self:_start_action_reload(t)
     end
 end
+
+function PlayerStandard:_start_action_intimidate(t, secondary)
+	return
+end
