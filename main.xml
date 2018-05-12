@@ -58,6 +58,7 @@
 			<hook file="InteractionExt.lua" source_file="lib/units/interactions/interactionext"/>
 			<hook file="DynamicResourceManager.lua" source_file="lib/managers/dynamicresourcemanager"/>
 			<hook file="TradeManager.lua" source_file="lib/managers/trademanager"/>
+			<hook file="WeaponFactoryManager.lua" source_file="lib/managers/weaponfactorymanager"/>
 		</hooks>
 		<include directory="levels/zm_the_forest">
 			<file file="world.world" type="binary"/>

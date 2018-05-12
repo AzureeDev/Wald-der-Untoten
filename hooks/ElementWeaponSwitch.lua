@@ -14,8 +14,6 @@ function ElementWeaponSwitch:on_executed(instigator)
 		self._mission_script:debug_output("Element '" .. self._editor_name .. "' not enabled. Skip.", Color(1, 1, 0, 0))
 		return
 	end
-	
-	return
 
     -- Base Factory ID before assuming the current slot
     local factory_id = self._values.weapon_id or "wpn_fps_ass_m4"
