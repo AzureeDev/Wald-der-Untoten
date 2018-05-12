@@ -291,7 +291,119 @@ function HUDZMWaves:_set_gift_visible(gift, visible)
 end
 
 function HUDZMWaves:_new_animation_wave_start()
+    local function anim_blink_white(o)
+        o:set_color(Color(1, 1, 1, 1))
+        managers.trade:set_trade_countdown(true)
 
+        over(0.5, function (p)
+			o:set_color(o:color():with_alpha(1 - p))
+        end)
+        
+        over(0.5, function (p)
+			o:set_color(o:color():with_alpha(p))
+        end)
+        
+        over(0.5, function (p)
+			o:set_color(o:color():with_alpha(1 - p))
+        end)
+        
+        over(0.5, function (p)
+			o:set_color(o:color():with_alpha(p))
+        end)
+        
+        over(0.5, function (p)
+			o:set_color(o:color():with_alpha(1 - p))
+        end)
+        
+        over(0.5, function (p)
+			o:set_color(o:color():with_alpha(p))
+        end)
+        
+        over(0.5, function (p)
+			o:set_color(o:color():with_alpha(1 - p))
+        end)
+        
+        over(0.5, function (p)
+			o:set_color(o:color():with_alpha(p))
+        end)
+        
+        over(0.5, function (p)
+			o:set_color(o:color():with_alpha(1 - p))
+        end)
+        
+        over(0.5, function (p)
+			o:set_color(o:color():with_alpha(p))
+        end)
+        
+        over(0.5, function (p)
+			o:set_color(o:color():with_alpha(1 - p))
+        end)
+        
+        over(0.5, function (p)
+			o:set_color(o:color():with_alpha(p))
+        end)
+        
+        over(0.5, function (p)
+			o:set_color(o:color():with_alpha(1 - p))
+        end)
+        
+        over(1, function (p)
+			o:set_color(o:color():with_alpha(1 - p))
+        end)
+
+        managers.wdu.level.wave.current = managers.wdu.level.wave.current + 1
+        self._zm_wave_text:set_text("WAVE " .. managers.wdu.level.wave.current)
+        
+        wait(1)
+
+        managers.trade:set_trade_countdown(false)
+        
+        local from = Color(0, 1, 1, 1)
+        local to = Color(1, 1, 1, 1)
+        local t = 0
+
+        o:set_color(from)
+
+        while t < 1 do
+            local dt = coroutine.yield()
+            t = t + dt
+        end
+
+        t = 0
+
+        while t < 1 do
+            local dt = coroutine.yield()
+            t = t + dt
+
+            o:set_color(from * (1 - t) + to * t)
+        end
+
+        o:set_color(to)
+
+        local from = Color(1, 1, 1, 1)
+        local to = Color(1, 0.6, 0, 0)
+        local t = 0
+
+        o:set_color(from)
+
+        while t < 1 do
+            local dt = coroutine.yield()
+            t = t + dt
+        end
+
+        t = 0
+
+        while t < 1 do
+            local dt = coroutine.yield()
+            t = t + dt
+
+            o:set_color(from * (1 - t) + to * t)
+        end
+
+        o:set_color(to)
+    end
+
+    self._zm_wave_text:animate(anim_blink_white)
 end
 
 function HUDZMWaves:_animate_text_blinking()
@@ -492,6 +604,18 @@ function HUDZMPoints:_create_zm_hud(parent)
     self._zmp_points[2]:set_text("---")
     self._zmp_points[3]:set_text("---")
     self._zmp_points[4]:set_text("---")
+end
+
+function HUDZMPoints:_animate_points_gained(text)
+    text:set_font_size(tweak_data.menu.pd2_small_font_size + 4)
+
+    local function animate_points_gained_big(o)
+        over(1, function(t)
+            o:set_font_size(4 - (t - tweak_data.menu.pd2_small_font_size))
+        end)
+    end
+
+    text:animate(animate_points_gained_big)
 end
 
 local HUDManager_setup_player_info_hud_pd2_original = HUDManager._setup_player_info_hud_pd2

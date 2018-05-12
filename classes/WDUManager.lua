@@ -13,29 +13,29 @@ function WDUManager:_init_variables()
     self.players = {
         [1] = {
             player_name = "",
-            total_score = 0,
-            money = 0,
+            total_score = 500,
+            money = 500,
             max_waves_survived = 0,
             synched = false
         },
         [2] = {
             player_name = "",
-            total_score = 0,
-            money = 0,
+            total_score = 500,
+            money = 500,
             max_waves_survived = 0,
             synched = false
         },
         [3] = {
             player_name = "",
-            total_score = 0,
-            money = 0,
+            total_score = 500,
+            money = 500,
             max_waves_survived = 0,
             synched = false
         },
         [4] = {
             player_name = "",
-            total_score = 0,
-            money = 0,
+            total_score = 500,
+            money = 500,
             max_waves_survived = 0,
             synched = false
         }
@@ -178,6 +178,7 @@ function WDUManager:_update_hud_element()
         		managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_visible(true)
         	end)
             managers.hud._hud_zm_points._zmp_points[peer:id()]:set_text(tostring(self.players[peer:id()].money))
+            managers.hud._hud_zm_points:_animate_points_gained(managers.hud._hud_zm_points._zmp_points[peer:id()])
             managers.hud._hud_zm_points._zmp_points[peer:id()]:set_visible(true)
         end
     else
@@ -187,6 +188,7 @@ function WDUManager:_update_hud_element()
             managers.hud._hud_zm_points._zmp_avatars[1]:set_visible(true)
         end)
         managers.hud._hud_zm_points._zmp_points[1]:set_text(tostring(self.players[1].money))
+        managers.hud._hud_zm_points:_animate_points_gained(managers.hud._hud_zm_points._zmp_points[1])
         managers.hud._hud_zm_points._zmp_points[1]:set_visible(true)
     end
 end

@@ -33,11 +33,14 @@ function ElementWave:on_executed(instigator)
     end
 
     if current_wave > 0 then
+        managers.hud._hud_zm_waves:_new_animation_wave_start()
         managers.player:add_grenade_amount(2, true)
         tweak_data.character:_multiply_by_wave_nb(current_wave)
+    else
+        managers.hud._hud_zm_waves:_animate_text_blinking()
     end
 
-    managers.hud._hud_zm_waves:_animate_text_blinking()
+    
 	ElementWave.super.on_executed(self, instigator)
 end
 

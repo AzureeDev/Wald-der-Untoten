@@ -40,10 +40,16 @@ Hooks:PreHook(PlayerManager, "init", "zm_init_perk", function(self)
     self._has_perk_juggernog = false
     self._wunderwaffe_unlocked = false
     self._roach_unlocked = false
-    self.totalCopAlive = 0
+	self.totalCopAlive = 0
+	self._show_point_list = false
 end)
 
 Hooks:PostHook(PlayerManager, "update", "zm_upd_perk", function(self, t, dt)
+	if not self._show_point_list then
+		managers.wdu:_update_hud_element()
+		self._show_point_list = true
+	end
+
     local player = self:player_unit()
 
     if self:has_special_equipment("perk_juggernog") then
