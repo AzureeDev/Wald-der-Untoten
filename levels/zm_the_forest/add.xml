@@ -334,6 +334,14 @@
 	<texture path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wunderwaffe_df"/>
 	<texture path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wunderwaffe_dg3_df"/>
 	
+	<!--Eye Accessory-->
+	<cooked_physics path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
+	<material_config path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
+	<model path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
+	<object path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
+	<unit path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes" load="false"/>
+	<texture path="units/zdann/ene_acc_zombie_eyes/zombie_eyes_il"/>
+	
 	<cooked_physics force="true" path="units/props/black_crate" unload="true"/>
 	<unit force="true" path="units/props/black_crate" unload="true"/>
 	<object force="true" path="units/props/black_crate" unload="true"/>

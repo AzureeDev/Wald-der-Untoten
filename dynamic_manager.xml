@@ -11,4 +11,5 @@
     <effect load="true" path="effects/particles/weapons/wunder_dg3_fire"/>
     <effect load="true" path="effects/particles/weapons/wunder_sparks"/>
     <effect load="true" path="effects/particles/weapons/wunder_dg3_sparks"/>
+    <effect load="true" path="effects/zm/zm_eyes"/>
 </table>

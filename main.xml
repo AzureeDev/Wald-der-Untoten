@@ -59,6 +59,7 @@
 			<hook file="DynamicResourceManager.lua" source_file="lib/managers/dynamicresourcemanager"/>
 			<hook file="TradeManager.lua" source_file="lib/managers/trademanager"/>
 			<hook file="WeaponFactoryManager.lua" source_file="lib/managers/weaponfactorymanager"/>
+			<hook file="CopBase.lua" source_file="lib/units/enemies/cop/copbase"/>
 		</hooks>
 		<include directory="levels/zm_the_forest">
 			<file file="world.world" type="binary"/>
