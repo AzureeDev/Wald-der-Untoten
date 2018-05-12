@@ -16,9 +16,9 @@ Hooks:PreHook(PlayerDamage, "on_downed", "zm_remove_perks_on_down", function(sel
         managers.player:remove_special("perk_speedcola")
     end
     if managers.player:has_special_equipment("perk_doubletap") then
-        managers.player:remove_special("perk_speedcola")
+        managers.player:remove_special("perk_doubletap")
     end
-    if managers.player:has_special_equipment("perk_speedcola") then
-        managers.player:remove_special("perk_speedcola")
+    if managers.player:has_special_equipment("perk_quickrevive") then
+        managers.player:remove_special("perk_quickrevive")
     end
 end)

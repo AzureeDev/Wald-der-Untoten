@@ -341,6 +341,16 @@
 	<object path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes"/>
 	<unit path="units/zdann/ene_acc_zombie_eyes/ene_acc_zombie_eyes" load="false"/>
 	<texture path="units/zdann/ene_acc_zombie_eyes/zombie_eyes_il"/>
+
+	<object force="true" path="units/pd2_dlc_hvh/characters/ene_fbi_heavy_hvh_1/ene_fbi_heavy_hvh_1"/>
+	<object force="true" path="units/pd2_dlc_hvh/characters/ene_fbi_swat_hvh_1/ene_fbi_swat_hvh_1"/>
+	<object force="true" path="units/pd2_dlc_hvh/characters/ene_fbi_swat_hvh_2/ene_fbi_swat_hvh_2"/>
+	<object force="true" path="units/pd2_dlc_hvh/characters/ene_medic_hvh_m4/ene_medic_hvh_m4"/>
+	<object force="true" path="units/pd2_dlc_hvh/characters/ene_medic_hvh_r870/ene_medic_hvh_r870"/>
+	<object force="true" path="units/pd2_dlc_hvh/characters/ene_swat_heavy_hvh_1/ene_swat_heavy_hvh_1"/>
+	<object force="true" path="units/pd2_dlc_hvh/characters/ene_swat_hvh_1/ene_swat_hvh_1"/>
+	<object force="true" path="units/pd2_dlc_hvh/characters/ene_swat_hvh_2/ene_swat_hvh_2"/>
+	<object force="true" path="units/pd2_dlc_hvh/characters/ene_tazer_hvh_1/ene_tazer_hvh_1"/>
 	
 	<cooked_physics force="true" path="units/props/black_crate" unload="true"/>
 	<unit force="true" path="units/props/black_crate" unload="true"/>
