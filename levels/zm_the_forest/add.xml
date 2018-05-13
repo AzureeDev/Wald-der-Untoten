@@ -22,6 +22,7 @@
 	<texture path="perks/gift_double_points"/>
 	<texture path="perks/gift_instakill"/>
 	<texture path="perks/power"/>
+	<movie path="movies/ascension"/>
 	<cooked_physics path="units/weapon_walls/crate_mysterybox"/>
 	<material_config path="units/weapon_walls/crate_mysterybox"/>
 	<model path="units/weapon_walls/crate_mysterybox"/>
@@ -51,8 +52,6 @@
 	<model path="units/weapon_walls/wpn_mp9"/>
 	<object path="units/weapon_walls/wpn_mp9"/>
 	<unit path="units/weapon_walls/wpn_mp9"/>
-
-
 
 	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe"/>
 	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe/wpn_fps_spe_wunderwaffe_secondary"/>

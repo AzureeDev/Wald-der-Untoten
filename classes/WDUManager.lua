@@ -7,6 +7,7 @@ function WDUManager:init()
 
     self:_init_variables()
     self:_setup_xaudio()
+    self:_setup_video_panel()
 end
 
 function WDUManager:_init_variables()
@@ -271,6 +272,19 @@ function WDUManager:_get_mod_path()
     return WDU.ModPath
 end
 
+function WDUManager:_setup_video_panel()
+    self._full_workspace = managers.gui_data:create_fullscreen_workspace()
+end
+
+function WDUManager:_play_teleporter_transition()
+    self.video_panel = managers.wdu._full_workspace:panel():video({
+		video = "movies/ascension",
+		width = 1280,
+		height = 720,
+		layer = 1
+	})
+end
+
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)
     if id == "ZMUpdatePoints" then
         local points = tonumber(data)
@@ -285,4 +299,14 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
         local max_waves = tonumber(data)
         managers.wdu.players[sender].max_waves_survived = max_waves
     end
+end)
+
+Hooks:Add("GameSetupUpdate", "VideoPanelUpdate", function(t, dt)
+    if not alive(managers.wdu.video_panel) then
+        return
+    end
+
+	if managers.wdu.video_panel and managers.wdu.video_panel:current_frame() >= managers.wdu.video_panel:frames() then
+		managers.wdu.video_panel:parent():remove(managers.wdu.video_panel)
+	end
 end)
