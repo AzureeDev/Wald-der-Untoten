@@ -1,0 +1,6 @@
+<unit type="mkp" slot="1">
+	<object file="units/babuforce/teleporter/teleporter_pad" />
+	<extensions>
+		<extension name="unit_data" class="ScriptUnitData" />
+	</extensions>
+</unit>

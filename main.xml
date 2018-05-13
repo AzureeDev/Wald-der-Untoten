@@ -126,6 +126,12 @@
 				<sound id="zm_pew_snp_e" path="snp_ebr_base.ogg" prefix="regular" use_fix="true"/>
 				<sound id="zm_pew_smg" path="smg_mp7_base.ogg" prefix="regular" use_fix="true"/>
 			</sounds>
+			<sounds directory="teleporter">
+				<sound id="zm_teleporter_activated" path="activated.ogg"/>
+				<sound id="zm_teleporter_arrived" path="arrived.ogg"/>
+				<sound id="zm_teleporter_combined" path="combined.ogg"/>
+				<sound id="zm_teleporter_ip" path="teleportation.ogg"/>
+			</sounds>
 			<sounds directory="zombie">
 				<sounds directory="taunt">
 					<sound id="z1n_g90" path="taunt_00.ogg"/>
