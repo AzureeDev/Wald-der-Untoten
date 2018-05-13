@@ -467,8 +467,6 @@
 	<unit force="true" path="units/babuforce/tree/giant_tree"/>
 	<object force="true" path="units/babuforce/tree/giant_tree"/>
 	<material_config force="true" path="units/babuforce/tree/giant_tree"/>
-	<texture force="true" path="units/babuforce/tree/giant_tree_df"/>
-	<texture force="true" path="units/babuforce/tree/giant_tree_nm"/>
 	<unit_load name="units/test/jocke/plane_black_temp">
 		<cooked_physics force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
 		<material_config force="true" path="units/test/jocke/plane_black_temp" unload="true"/>
