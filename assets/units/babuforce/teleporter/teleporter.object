@@ -1,5 +1,5 @@
 <dynamic_object>
-	<diesel materials="teleporter/teleporter" orientation_object="rp_mkp_int_floor_2x2m_a" />
+	<diesel materials="units/babuforce/teleporter/teleporter" orientation_object="rp_mkp_int_floor_2x2m_a" />
 	<bodies>
 		<body name="body_static" enabled="true" template="static">
 			<object name="rp_mkp_int_floor_2x2m_a" />

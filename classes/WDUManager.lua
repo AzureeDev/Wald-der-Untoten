@@ -5,7 +5,6 @@ function WDUManager:init()
         return
     end
 
-    self:_get_mod_path()
     self:_init_variables()
     self:_setup_xaudio()
 end

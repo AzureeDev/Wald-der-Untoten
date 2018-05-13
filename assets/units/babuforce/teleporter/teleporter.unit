@@ -1,5 +1,5 @@
 <unit type="mkp" slot="1">
-	<object file="teleporter/teleporter" />
+	<object file="units/babuforce/teleporter/teleporter" />
 	<extensions>
 		<extension name="unit_data" class="ScriptUnitData" />
 	</extensions>
