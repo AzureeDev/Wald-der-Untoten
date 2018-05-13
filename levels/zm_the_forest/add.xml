@@ -639,14 +639,17 @@
 		<cooked_physics path="units/babuforce/teleporter/teleporter"/>
 		<model path="units/babuforce/teleporter/teleporter"/>
 		<object path="units/babuforce/teleporter/teleporter"/>
+		<sequence_manager path="units/babuforce/teleporter/teleporter"/>
 		<unit path="units/babuforce/teleporter/teleporter"/>
 		<material_config path="units/babuforce/teleporter/teleporter"/>
+		<material_config path="units/babuforce/teleporter/teleporter_on"/>
 		<texture path="units/babuforce/teleporter/glass_op"/>
 		<texture path="units/babuforce/teleporter/global_grey_51"/>
 		<texture path="units/babuforce/teleporter/lightning_chamber_main_df"/>
 		<texture path="units/babuforce/teleporter/lightning_chamber_main_nm"/>
 		<texture path="units/babuforce/teleporter/lightning_chamber_glass_df"/>
 		<texture path="units/babuforce/teleporter/tele_glow_df"/>
+		<texture path="units/babuforce/teleporter/tele_glow_off_df"/>
 		<texture path="units/babuforce/teleporter/tele_glow_nm"/>
 		<texture path="units/babuforce/teleporter/tele_glow2_df"/>
 		<texture path="units/babuforce/teleporter/teleporter_main_2_df"/>
@@ -654,7 +657,8 @@
 		<texture path="units/babuforce/teleporter/teleporter_main_df"/>
 		<texture path="units/babuforce/teleporter/teleporter_main_nm"/>
 		<texture path="units/babuforce/teleporter/vacuum_tube_df"/>
-		<texture path="units/babuforce/teleporter/vacuum_tube_nm"/>
+		<texture path="units/babuforce/teleporter/vacuum_tube_op"/>
+		<texture path="units/babuforce/teleporter/vacuum_tube_il"/>
 	</unit_load>
 	<unit_load name="units/babuforce/teleporter/teleporter_pad">
 		<cooked_physics path="units/babuforce/teleporter/teleporter_pad"/>
