@@ -6,10 +6,12 @@ function WDUManager:init()
     end
 
     self:_init_variables()
+    self:_setup_xaudio()
 end
 
 function WDUManager:_init_variables()
     self.wave_highscore_file = SavePath .. "WaldDerUntoten_Highscore.data"
+    self.xaudio_initialized = false
     self.players = {
         [1] = {
             player_name = "",
@@ -49,13 +51,13 @@ function WDUManager:_init_variables()
         },
         wave = {
             current = 0
+        },
+        active_events = {
+            double_points = false,
+            instakill = false,
+            firesale = false
         }
     }
-
-    self.level.active_events = {}
-    self.level.active_events.double_points = false
-    self.level.active_events.instakill = false
-    self.level.active_events.firesale = false
 
     self.points = {
         default = 50,
@@ -239,6 +241,30 @@ end
 
 function WDUManager:_get_current_wave()
     return self.level.wave.current
+end
+
+function WDUManager:_setup_xaudio()
+    blt.xaudio.setup()
+    self.xaudio_initialized = true
+end
+
+function WDUManager:_play_music(event)
+    if not self.xaudio_initialized then
+        return
+    end
+
+    Global.music_manager.source:post_event("stop_all_music")
+
+    if self._music_source then
+        self._buffer:close(true)
+        self._music_source:close()
+        self._music_source = nil
+    end
+
+    self._buffer = XAudio.Buffer:new("Maps/Wald Der Untoten/assets/sound/" .. event .. ".ogg")
+    self._music_source = XAudio.Source:new(self._buffer)
+    self._music_source:set_type("music")
+    self._music_source:set_relative(true)
 end
 
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)

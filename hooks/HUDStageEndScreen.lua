@@ -10,9 +10,7 @@ end)
 
 Hooks:PostHook(HUDStageEndScreen, "stage_money_counter_init", "zm_music_over", function(self, t, dt)
     Global.music_manager.source:post_event("stop_all_music")
-
-    self._source = SoundDevice:create_source("zm_dead_end")
-    self._source:post_event("zm_dead")
+    managers.wdu:_play_music("ded")
 
     local peer_id = managers.wdu:_peer_id()
     local total = managers.wdu.level.wave.current
