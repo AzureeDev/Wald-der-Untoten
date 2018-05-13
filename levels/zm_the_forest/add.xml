@@ -352,7 +352,7 @@
 	<object force="true" path="units/pd2_dlc_hvh/characters/ene_swat_hvh_2/ene_swat_hvh_2"/>
 	<object force="true" path="units/pd2_dlc_hvh/characters/ene_tazer_hvh_1/ene_tazer_hvh_1"/>
 	<object force="true" path="units/pd2_dlc_hvh/characters/ene_shield_hvh_2/ene_shield_hvh_2"/>
-	<object force="true" path="units/pd2_dlc_hvh/characters/ene_shield_hvh_1/ene_shield_hvh_2"/>
+	<object force="true" path="units/pd2_dlc_hvh/characters/ene_shield_hvh_1/ene_shield_hvh_1"/>
 	
 	<cooked_physics force="true" path="units/props/black_crate" unload="true"/>
 	<unit force="true" path="units/props/black_crate" unload="true"/>
