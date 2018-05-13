@@ -14,52 +14,41 @@
 			<asset name="zm_wald_der_untoten_perks"/>
 		</assets>
 		<hooks directory="hooks">
-			<hook file="MissionManager.lua" source_file="lib/managers/missionmanager"/>
-			<hook file="WeaponTweakData.lua" source_file="lib/tweak_data/weapontweakdata"/>
 			<hook file="AssetsTweakData.lua" source_file="lib/tweak_data/assetstweakdata"/>
+			<hook file="BlackMarketManager.lua" source_file="lib/managers/blackmarketmanager"/>
+			<hook file="CharacterTweakData.lua" source_file="lib/tweak_data/charactertweakdata"/>
+			<hook file="CopBase.lua" source_file="lib/units/enemies/cop/copbase"/>
+			<hook file="CopDamage.lua" source_file="lib/units/enemies/cop/copdamage"/>
+			<hook file="DynamicResourceManager.lua" source_file="lib/managers/dynamicresourcemanager"/>
+			<hook file="ElementSpawnEnemyDummy.lua" source_file="lib/managers/mission/elementspawnenemydummy"/>
+			<hook file="EnemyManager.lua" source_file="lib/managers/enemymanager"/>
+			<hook file="EquipmentsTweakdata.lua" source_file="lib/tweak_data/equipmentstweakdata"/>
+			<hook file="GroupAIStateBesiege.lua" source_file="lib/managers/group_ai_states/groupaistatebesiege"/>
+			<hook file="GroupAITweakData.lua" source_file="lib/tweak_data/groupaitweakdata"/>
+			<hook file="HUDAssaultCorner.lua" source_file="lib/managers/hud/hudassaultcorner"/>
+			<hook file="HUDIconsTweakdata.lua" source_file="lib/tweak_data/hudiconstweakdata"/>
+			<hook file="HUDManager.lua" source_file="lib/managers/hudmanager"/>
+			<hook file="HUDManagerPD2.lua" source_file="lib/managers/hudmanagerpd2"/>
+			<hook file="HUDMissionBriefing.lua" source_file="lib/managers/hud/hudmissionbriefing"/>
+			<hook file="HUDStageEndScreen.lua" source_file="lib/managers/hud/hudstageendscreen"/>
+			<hook file="HuskPlayerMovement.lua" source_file="lib/units/beings/player/huskplayermovement"/>
+			<hook file="InteractionExt.lua" source_file="lib/units/interactions/interactionext"/>
+			<hook file="InteractionTweakData.lua" source_file="lib/tweak_data/interactiontweakdata"/>
+			<hook file="MissionManager.lua" source_file="lib/managers/missionmanager"/>
+			<hook file="NewRaycastWeaponBase.lua" source_file="lib/units/weapons/newraycastweaponbase"/>
+			<hook file="PlayerDamage.lua" source_file="lib/units/beings/player/playerdamage"/>
+			<hook file="PlayerManager.lua" source_file="lib/managers/playermanager"/>
+			<hook file="PlayerStandard.lua" source_file="lib/units/beings/player/states/playerstandard"/>
+			<hook file="PlayerTweakData.lua" source_file="lib/tweak_data/playertweakdata"/>
+			<hook file="ProjectilesTweakData.lua" source_file="lib/tweak_data/blackmarket/projectilestweakdata"/>
+			<hook file="RaycastWeaponBase.lua" source_file="lib/units/weapons/raycastweaponbase"/>
+			<hook file="Rebalance.lua" source_file="lib/managers/hudmanager"/>
+			<hook file="SniperGrazeDamage.lua" source_file="lib/managers/player/snipergrazedamage"/>
+			<hook file="StatisticsManager.lua" source_file="lib/managers/statisticsmanager"/>
+			<hook file="TweakData.lua" source_file="lib/tweak_data/tweakdata"/>
 			<hook file="WeaponFactoryTweakData.lua" source_file="lib/tweak_data/weaponfactorytweakdata"/>
 			<hook file="WeaponSkinsTweakData.lua" source_file="lib/tweak_data/blackmarket/weaponskinstweakdata"/>
-			<hook file="InteractionTweakData.lua" source_file="lib/tweak_data/interactiontweakdata"/>
-			<hook file="ProjectilesTweakData.lua" source_file="lib/tweak_data/blackmarket/projectilestweakdata"/>
-			<hook file="EquipmentsTweakdata.lua" source_file="lib/tweak_data/equipmentstweakdata"/>
-			<hook file="HUDIconsTweakdata.lua" source_file="lib/tweak_data/hudiconstweakdata"/>
-			<hook file="CharacterTweakData.lua" source_file="lib/tweak_data/charactertweakdata"/>
-			<hook file="PlayerTweakData.lua" source_file="lib/tweak_data/playertweakdata"/>
-			<hook file="HUDIconsTweakData.lua" source_file="lib/tweak_data/hudiconstweakdata"/>
-			<hook file="EquipmentsTweakData.lua" source_file="lib/tweak_data/equipmentstweakdata"/>
-			<hook file="BlackMarketManager.lua" source_file="lib/managers/blackmarketmanager"/>
-			<hook file="Rebalance.lua" source_file="lib/managers/hudmanager"/>
-			<hook file="PlayerManager.lua" source_file="lib/managers/playermanager"/>
-			<hook file="StatisticsManager.lua" source_file="lib/managers/statisticsmanager"/>
-			<hook file="HUDAssaultCorner.lua" source_file="lib/managers/hud/hudassaultcorner"/>
-			<hook file="HUDManagerPD2.lua" source_file="lib/managers/hudmanagerpd2"/>
-			<hook file="HUDManager.lua" source_file="lib/managers/hudmanager"/>
-			<hook file="HUDStageEndScreen.lua" source_file="lib/managers/hud/hudstageendscreen"/>
-			<hook file="CopDamage.lua" source_file="lib/units/enemies/cop/copdamage"/>
-			<hook file="UnitNetworkHandler.lua" source_file="lib/network/handlers/unitnetworkhandler"/>
-			<hook file="HuskPlayerMovement.lua" source_file="lib/units/beings/player/huskplayermovement"/>
-			<hook file="PlayerInventory.lua" source_file="lib/units/beings/player/playerinventory"/>
-			<hook file="PlayerDamage.lua" source_file="lib/units/beings/player/playerdamage"/>
-			<hook file="HuskPlayerInventory.lua" source_file="lib/units/beings/player/huskplayerinventory"/>
-			<hook file="SniperGrazeDamage.lua" source_file="lib/managers/player/snipergrazedamage"/>
-			<hook file="HUDMissionBriefing.lua" source_file="lib/managers/hud/hudmissionbriefing"/>
-			<hook file="GroupAITweakData.lua" source_file="lib/tweak_data/groupaitweakdata"/>
-			<hook file="RaycastWeaponBase.lua" source_file="lib/units/weapons/raycastweaponbase"/>
-			<hook file="NewRaycastWeaponBase.lua" source_file="lib/units/weapons/newraycastweaponbase"/>
-			<hook file="NewNPCRaycastWeaponBase.lua" source_file="lib/units/weapons/newnpcraycastweaponbase"/>
-			<hook file="PlayerStandard.lua" source_file="lib/units/beings/player/states/playerstandard"/>
-			<hook file="FPCameraPlayerBase.lua" source_file="lib/units/cameras/fpcameraplayerbase"/>
-			<hook file="CopLogicAttack.lua" source_file="lib/units/enemies/cop/logics/coplogicattack"/>
-			<hook file="CopActionShoot.lua" source_file="lib/units/enemies/cop/actions/upper_body/copactionshoot"/>
-			<hook file="EnemyManager.lua" source_file="lib/managers/enemymanager"/>
-			<hook file="ElementSpawnEnemyDummy.lua" source_file="lib/managers/mission/elementspawnenemydummy"/>
-			<hook file="GroupAIStateBesiege.lua" source_file="lib/managers/group_ai_states/groupaistatebesiege"/>
-			<hook file="TweakData.lua" source_file="lib/tweak_data/tweakdata"/>
-			<hook file="InteractionExt.lua" source_file="lib/units/interactions/interactionext"/>
-			<hook file="DynamicResourceManager.lua" source_file="lib/managers/dynamicresourcemanager"/>
-			<hook file="TradeManager.lua" source_file="lib/managers/trademanager"/>
-			<hook file="WeaponFactoryManager.lua" source_file="lib/managers/weaponfactorymanager"/>
-			<hook file="CopBase.lua" source_file="lib/units/enemies/cop/copbase"/>
+			<hook file="WeaponTweakData.lua" source_file="lib/tweak_data/weapontweakdata"/>
 		</hooks>
 		<include directory="levels/zm_the_forest">
 			<file file="world.world" type="binary"/>
