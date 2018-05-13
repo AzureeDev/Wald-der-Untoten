@@ -29,6 +29,16 @@
     "zm_perk_speedcola_3000" : "Hold $BTN_INTERACT to buy Speed Cola [Cost: 3,000]",
     "zm_perk_quickrevive_1500" : "Hold $BTN_INTERACT to buy Quick Revive [Cost: 1,500]",
     "zm_perk_doubletap_2000" : "Hold $BTN_INTERACT to buy Double Tap [Cost: 2,000]",
+
+    "zm_wall_buy_r870_1300" : "Hold $BTN_INTERACT to buy a R870 [Cost: 1,300]",
+    "zm_wall_buy_ak47_2000" : "Hold $BTN_INTERACT to buy a AK-47 [Cost: 2,000]",
+    "zm_wall_buy_r870_1100" : "Hold $BTN_INTERACT to buy a MP40 [Cost: 1,100]",
+    "zm_wall_buy_57_1000" : "Hold $BTN_INTERACT to buy a Five-seveN [Cost: 1,000]",
+    "zm_wall_buy_m37_1300" : "Hold $BTN_INTERACT to buy a M37 [Cost: 1,300]",
+    "zm_wall_buy_garand_1500" : "Hold $BTN_INTERACT to buy a M1 Garand [Cost: 1,500]",
+    "zm_wall_buy_ump45_1450" : "Hold $BTN_INTERACT to buy a UMP-45 [Cost: 1,450]",
+    "zm_wall_buy_tec9_800" : "Hold $BTN_INTERACT to buy a TEC-9 [Cost: 800]",
+
     "zm_activate_song_invisible" : "",
 
     "wpn_m1911_name" : "M1911",
