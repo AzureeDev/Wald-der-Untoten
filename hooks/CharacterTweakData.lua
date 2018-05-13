@@ -57,3 +57,7 @@ Hooks:PostHook(CharacterTweakData, "_init_city_swat", "zm_disable_surrenders_6",
 	self.city_swat.surrender = nil
 	self.city_swat.rescue_hostages = false
 end)
+
+Hooks:PostHook(CharacterTweakData, "_init_medic", "zm_disable_rescue_med", function(self, presets)
+	self.medic.rescue_hostages = false
+end)
