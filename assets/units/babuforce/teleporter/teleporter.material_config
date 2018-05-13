@@ -40,6 +40,11 @@
 	<material name="mat_tele_glow2_c" render_template="generic:DIFFUSE_TEXTURE" version="2">
 		<diffuse_texture file="units/babuforce/teleporter/tele_glow2_df" />
 	</material>
+	
+    <material name="mat_tesla_c" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP" version="2">
+        <diffuse_texture file="units/babuforce/teleporter/tesla_df" />
+        <bump_normal_texture file="units/babuforce/teleporter/tesla_nm" />
+    </material>
 		
     <material name="shadow_caster" render_template="shadow_caster_only" version="2"/>
 </materials>

@@ -665,7 +665,6 @@
 		<model path="units/babuforce/teleporter/teleporter_pad"/>
 		<object path="units/babuforce/teleporter/teleporter_pad"/>
 		<unit path="units/babuforce/teleporter/teleporter_pad"/>
-		<material_config path="units/babuforce/teleporter/teleporter"/>
 		<texture path="units/babuforce/teleporter/tesla_df"/>
 		<texture path="units/babuforce/teleporter/tesla_nm"/>
 	</unit_load>
