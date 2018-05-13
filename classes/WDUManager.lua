@@ -5,6 +5,7 @@ function WDUManager:init()
         return
     end
 
+    self:_get_mod_path()
     self:_init_variables()
     self:_setup_xaudio()
 end
@@ -261,10 +262,14 @@ function WDUManager:_play_music(event)
         self._music_source = nil
     end
 
-    self._buffer = XAudio.Buffer:new("Maps/Wald Der Untoten/assets/sound/" .. event .. ".ogg")
+    self._buffer = XAudio.Buffer:new(self:_get_mod_path() .. "assets/sound/" .. event .. ".ogg")
     self._music_source = XAudio.Source:new(self._buffer)
     self._music_source:set_type("music")
     self._music_source:set_relative(true)
+end
+
+function WDUManager:_get_mod_path()
+    return WDU.ModPath
 end
 
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)
