@@ -114,15 +114,6 @@ function CopDamage:_spawn_head_gadget(params)
 	end
 
 	if self._head_gear_object then
-		if self._nr_head_gear_objects then
-			for i = 1, self._nr_head_gear_objects, 1 do
-				local head_gear_obj_name = self._head_gear_object .. tostring(i)
-				self._unit:get_object(Idstring(head_gear_obj_name)):set_visibility(false)
-			end
-		else
-			self._unit:get_object(Idstring(self._head_gear_object)):set_visibility(false)
-		end
-
 		if self._head_gear_decal_mesh then
 			local mesh_name_idstr = Idstring(self._head_gear_decal_mesh)
 
