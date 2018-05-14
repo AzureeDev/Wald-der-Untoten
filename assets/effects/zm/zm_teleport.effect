@@ -287,8 +287,8 @@
             <light per_particle_age="false" shadow_caster="false" specular="true" color_input="constant" color="0 0 128" multiplier_input="keys" far_range_input="constant" far_range="1000">
                 <multiplier_keys loop="false">
                     <key t="0" v="5"/>
-                    <key t="4.2371325492859" v="3"/>
-                    <key t="5" v="0"/>
+                    <key t="2" v="3"/>
+                    <key t="3" v="0"/>
                 </multiplier_keys>
             </light>
         </visualizerstack>
