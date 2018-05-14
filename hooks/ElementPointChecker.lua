@@ -20,7 +20,7 @@ function ElementPointChecker:on_executed(instigator)
 
 	local current_points = tonumber(managers.wdu.players[peer_id].money)
 	if current_points < self._values.cost then
-		return
+		--return
 	end
 
 	managers.wdu:_deduct_money_to(peer_id, self._values.cost)
