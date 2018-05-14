@@ -137,6 +137,15 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 4
 	}
 
+	self.zm_teleporter = {
+		is_teleporter = true,
+		text_id = "zm_teleporter",
+		action_text_id = "zm_use_teleporter",
+		start_active = false,
+		timer = 1,
+		interact_distance = 500
+	}
+
 	self.zm_activate_song_invisible = {
 		text_id = "zm_activate_song_invisible",
 		action_text_id = "zm_buy_weapon",

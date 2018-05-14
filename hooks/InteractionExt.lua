@@ -8,7 +8,11 @@ function BaseInteractionExt:can_interact(player)
     end
     
     local count_perks = managers.player:_count_nb_perks()
-    local max_perks = 4
+	local max_perks = 4
+	
+	if self._tweak_data.is_teleporter and not managers.wdu:_is_teleporter_available() then
+		return false
+	end
 
     if self._tweak_data.is_perk_interaction and count_perks >= max_perks then
         return false

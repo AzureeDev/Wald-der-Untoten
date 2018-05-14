@@ -15,6 +15,10 @@ function ElementPlayVideo:on_executed(instigator)
 		return
 	end
 
+	if managers.player:player_unit() ~= instigator then
+		return
+	end
+
 	managers.wdu:_play_teleporter_transition()
 
 	ElementPlayVideo.super.on_executed(self, instigator)

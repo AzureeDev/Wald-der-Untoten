@@ -57,6 +57,9 @@ function WDUManager:_init_variables()
             double_points = false,
             instakill = false,
             firesale = false
+        },
+        teleporter = {
+            active = true
         }
     }
 
@@ -283,6 +286,14 @@ function WDUManager:_play_teleporter_transition()
 		height = 720,
 		layer = 1
 	})
+end
+
+function WDUManager:_set_teleporter_state(state)
+    self.level.teleporter.active = state
+end
+
+function WDUManager:_is_teleporter_available()
+    return self.level.teleporter.active
 end
 
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)

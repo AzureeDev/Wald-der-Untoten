@@ -131,6 +131,10 @@
 				<sound id="zm_teleporter_arrived" path="arrived.ogg"/>
 				<sound id="zm_teleporter_combined" path="combined.ogg"/>
 				<sound id="zm_teleporter_ip" path="teleportation.ogg"/>
+				<sound id="zm_mono_teleporter_on" path="mono_turned_on.ogg"/>
+				<sound id="zm_mono_activate_teleporter" path="mono_activate_teleporter.ogg"/>
+				<sound id="zm_mono_comeback_activate" path="mono_comeback_activate.ogg"/>
+				<sound id="zm_mono_teleport_in_progress" path="mono_teleport_in_progress.ogg"/>
 			</sounds>
 			<sounds directory="zombie">
 				<sounds directory="taunt">
