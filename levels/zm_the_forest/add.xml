@@ -365,6 +365,7 @@
 	<texture force="true" path="units/props/black_crate_nm" unload="true"/>
 	<texture path="units/mods/weapons/wpn_fps_mel_zdann/combat_df"/>
 	<texture path="units/mods/weapons/wpn_fps_mel_zdann/combat_nm"/>
+	<texture path="guis/dlcs/kurumi/textures/pd2/blackmarket/icons/melee_weapons/zdann"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_mel_zdann/wpn_fps_mel_zdann"/>
 	<model path="units/mods/weapons/wpn_fps_mel_zdann/wpn_fps_mel_zdann"/>
 	<object path="units/mods/weapons/wpn_fps_mel_zdann/wpn_fps_mel_zdann"/>
