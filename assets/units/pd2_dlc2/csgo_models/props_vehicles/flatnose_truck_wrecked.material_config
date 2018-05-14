@@ -12,13 +12,13 @@
     <material name="mat_flatnose_truck_wrecked_2" version="2" render_template="opacity:CUBE_ENVIRONMENT_MAPPING:CUBE_FRESNEL:DIFFUSE_TEXTURE" >
         <opacity_texture file="units/pd2_dlc2/csgo_models/props_vehicles/flatnose_truck_glass_op"/>
         <diffuse_texture file="units/pd2_dlc2/csgo_models/props_vehicles/flatnose_truck_glass_df"/>
-        <reflection_texture type="cube" global_texture="cu ds rrent_global_texture"/>
+        <reflection_texture type="cube" global_texture="current_global_texture"/>
         <variable value="2 1 0" type="vector3" name="fresnel_settings"/>
     </material>
     <material name="mat_flatnose_truck_wrecked_2_lod" version="2" render_template="opacity:CUBE_ENVIRONMENT_MAPPING:CUBE_FRESNEL:DIFFUSE_TEXTURE" >
         <opacity_texture file="units/pd2_dlc2/csgo_models/props_vehicles/flatnose_truck_glass_op" mip="3"/>
         <diffuse_texture file="units/pd2_dlc2/csgo_models/props_vehicles/flatnose_truck_glass_df" mip="3"/>/>
-        <reflection_texture type="cube" global_texture="cu ds rrent_global_texture"/>
+        <reflection_texture type="cube" global_texture="current_global_texture"/>
         <variable value="2 1 0" type="vector3" name="fresnel_settings"/>
     </material>
 </materials>
