@@ -284,7 +284,7 @@ function WDUManager:_play_teleporter_transition()
 		video = "movies/ascension",
 		width = 1280,
 		height = 720,
-		layer = 1
+		layer = -10
 	})
 end
 
@@ -305,7 +305,7 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
         if managers.hud then
             managers.wdu:_update_hud_element()
         end
-        
+
         managers.wdu:_update_total_score(sender, points)
     end
 
