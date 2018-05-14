@@ -40,7 +40,7 @@
     "zm_wall_buy_tec9_800" : "Hold $BTN_INTERACT to buy a TEC-9 [Cost: 800]",
 
     "zm_teleporter" : "Hold $BTN_INTERACT to teleport [Cost: 3,000]",
-    "zm_use_teleporter" : "Use the teleporter",
+    "zm_use_teleporter" : "Using the teleporter",
 
     "zm_activate_song_invisible" : "",
 
