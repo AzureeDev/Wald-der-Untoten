@@ -13,4 +13,5 @@
     <effect load="true" path="effects/particles/weapons/wunder_dg3_sparks"/>
     <effect load="true" path="effects/zm/zm_eyes"/>
     <effect load="true" path="effects/zm/zm_teleport"/>
+    <effect load="true" path="effects/zm/zm_teleport_sparks"/>
 </table>
