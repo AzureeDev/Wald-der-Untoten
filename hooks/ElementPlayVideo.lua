@@ -16,6 +16,7 @@ function ElementPlayVideo:on_executed(instigator)
 	end
 
 	if managers.player:player_unit() ~= instigator then
+		log("you're not in. nah.")
 		return
 	end
 
