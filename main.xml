@@ -136,6 +136,8 @@
 				<sound id="zm_mono_activate_teleporter" path="mono_activate_teleporter.ogg"/>
 				<sound id="zm_mono_comeback_activate" path="mono_comeback_activate.ogg"/>
 				<sound id="zm_mono_teleport_in_progress" path="mono_teleport_in_progress.ogg"/>
+				<sound id="zm_mono_teleporter_charging" path="mono_teleporter_charging.ogg"/>
+				<sound id="zm_mono_spawn" path="mono_spawn.ogg"/>
 			</sounds>
 			<sounds directory="zombie">
 				<sounds directory="taunt">
