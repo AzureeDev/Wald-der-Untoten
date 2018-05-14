@@ -302,7 +302,10 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
 
         managers.wdu.players[sender].money = points
 
-        managers.wdu:_update_hud_element()
+        if managers.hud then
+            managers.wdu:_update_hud_element()
+        end
+        
         managers.wdu:_update_total_score(sender, points)
     end
 
