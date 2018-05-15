@@ -20,9 +20,24 @@ function ElementPointChecker:on_executed(instigator)
 
 	local current_points = tonumber(managers.wdu.players[peer_id].money)
 	if current_points < self._values.cost then
-		--return
+		managers.wdu:_element_play_sound({
+			name = self._editor_name .. "_" .. self._id,
+			custom_dir = "sound",
+			file_name = "denied.ogg",
+			is_3d = true,
+			position = self._values.position
+		})
+		return
 	end
-	
+
+	managers.wdu:_element_play_sound({
+		name = self._editor_name .. "_" .. self._id,
+		custom_dir = "sound",
+		file_name = "cashin.ogg",
+		is_3d = true,
+		position = self._values.position
+	})
+
 	managers.wdu:_deduct_money_to(peer_id, self._values.cost)
 	ElementPointChecker.super.on_executed(self, instigator)
 end

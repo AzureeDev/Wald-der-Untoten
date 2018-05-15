@@ -311,6 +311,8 @@
 			<sound id="zm_special_wave_end" path="specialwave_end.ogg"/>
 			<sound id="zm_power_on" path="power_on.ogg"/>
 			<sound id="zm_boom" path="boom.ogg"/>
+			<sound id="zm_cashin" path="cashin.ogg"/>
+			<sound id="zm_denied" path="denied.ogg"/>
 		</sounds>
 	</level>
 	<narrative briefing_event="" contact="nepgearsy" id="zm_the_forest">

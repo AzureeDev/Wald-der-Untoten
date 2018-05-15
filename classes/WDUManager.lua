@@ -81,6 +81,9 @@ function WDUManager:_init_variables()
         on_headshot = 50,
         on_melee_kill = 130
     }
+
+    self._sound_buffers = {}
+    self._sound_sources = {}
 end
 
 function WDUManager:_init_new_player(data)
@@ -252,6 +255,52 @@ function WDUManager:_setup_xaudio()
     self.xaudio_initialized = true
 end
 
+function WDUManager:_element_play_sound(data)
+    if not self.xaudio_initialized then
+        return
+    end
+
+    if not self._sound_sources[data.name] then
+        table.insert(self._sound_buffers, data.name)
+        table.insert(self._sound_sources, data.name)
+    end
+
+    if self._sound_sources[data.name] then
+        self._sound_buffers[data.name]:close(true)
+        self._sound_sources[data.name]:close()
+        self._sound_sources[data.name] = nil
+    end
+
+    local directory = ""
+
+    if data.custom_dir and data.custom_dir ~= "" then
+        directory = data.custom_dir .. "/"
+    end
+
+    self._sound_buffers[data.name] = XAudio.Buffer:new(self:_get_mod_path() .. "assets/" .. directory .. data.file_name)
+    self._sound_sources[data.name] = XAudio.Source:new(self._sound_buffers[data.name])
+
+    self._sound_sources[data.name]:set_type(data.sound_type)
+    self._sound_sources[data.name]:set_relative(data.is_relative)
+    self._sound_sources[data.name]:set_looping(data.is_loop)
+
+    if data.is_3d then
+        self._sound_sources[data.name]:set_position(data.position)
+    end
+
+    if data.use_velocity then
+        self._sound_sources[data.name]:set_velocity(data.position)
+    end
+
+    if data.override_volume and data.override_volume > 0 then
+        if data.override_volume > 1 then
+            data.override_volume = 1
+        end
+
+        self._sound_sources[data.name]:set_volume(data.override_volume)
+    end
+end
+
 function WDUManager:_play_music(event)
     if not self.xaudio_initialized then
         return
@@ -267,6 +316,7 @@ function WDUManager:_play_music(event)
 
     self._buffer = XAudio.Buffer:new(self:_get_mod_path() .. "assets/sound/" .. event .. ".ogg")
     self._music_source = XAudio.Source:new(self._buffer)
+
     self._music_source:set_type("music")
     self._music_source:set_relative(true)
 end
