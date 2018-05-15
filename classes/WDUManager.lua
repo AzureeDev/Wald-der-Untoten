@@ -283,6 +283,10 @@ function WDUManager:_element_play_sound(data)
     if data.sound_type == "sfx" then data.sound_type = XAudioSource.SOUND_EFFECT end
     if data.sound_type == "music" then data.sound_type = XAudioSource.MUSIC end
 
+    if not data.sound_type then
+        data.sound_type = XAudioSource.SOUND_EFFECT
+    end
+
     self._sound_sources[data.name]:set_type(data.sound_type)
     self._sound_sources[data.name]:set_relative(data.is_relative)
     self._sound_sources[data.name]:set_looping(data.is_loop)
