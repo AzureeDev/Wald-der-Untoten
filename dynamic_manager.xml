@@ -14,4 +14,5 @@
     <effect load="true" path="effects/zm/zm_eyes"/>
     <effect load="true" path="effects/zm/zm_teleport"/>
     <effect load="true" path="effects/zm/zm_teleport_sparks"/>
+    <effect load="true" path="effects/zm/zm_glow"/>
 </table>
