@@ -126,18 +126,3 @@ function NewRaycastWeaponBase:damage_multiplier()
 
 	return multiplier
 end
-
-function NewRaycastWeaponBase:_material_config_name(part_id, unit_name, use_cc_material_config, force_third_person)
-	if use_cc_material_config and tweak_data.weapon.factory.parts[part_id].cc_thq_material_config then
-		return tweak_data.weapon.factory.parts[part_id].cc_thq_material_config
-	end
-
-	if tweak_data.weapon.factory.parts[part_id].thq_material_config then
-		return tweak_data.weapon.factory.parts[part_id].thq_material_config
-	end
-
-	local cc_string = use_cc_material_config and "_cc" or ""
-	local thq_string = "_thq"
-
-	return Idstring(unit_name .. cc_string .. thq_string)
-end
