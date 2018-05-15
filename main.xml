@@ -99,6 +99,8 @@
 			<value_node value="packages/narr_firestarter3"/>
 			<value_node value="levels/instances/unique/are_loot_shoot/world/world"/>
 			<value_node value="levels/narratives/classics/dah/backdrop/backdrop"/>
+			<value_node value="levels/instances/unique/cane/cane_trap_flame/world/world"/>
+			<value_node value="levels/instances/unique/chill/wick_kill_room/world/world"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">
