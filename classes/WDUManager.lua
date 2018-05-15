@@ -280,11 +280,8 @@ function WDUManager:_element_play_sound(data)
     self._sound_buffers[data.name] = XAudio.Buffer:new(self:_get_mod_path() .. "assets/" .. directory .. data.file_name)
     self._sound_sources[data.name] = XAudio.Source:new(self._sound_buffers[data.name])
 
-    if data.sound_type == "sfx" then data.sound_type = XAudioSource.SOUND_EFFECT end
-    if data.sound_type == "music" then data.sound_type = XAudioSource.MUSIC end
-
     if not data.sound_type then
-        data.sound_type = XAudioSource.SOUND_EFFECT
+        data.sound_type = "sfx"
     end
 
     self._sound_sources[data.name]:set_type(data.sound_type)
