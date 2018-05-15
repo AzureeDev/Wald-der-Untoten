@@ -264,7 +264,7 @@ function NewRaycastWeaponBase:_update_stats_values(disallow_replenish)
 	self._fire_rate_multiplier = managers.blackmarket:fire_rate_multiplier(self._name_id, self:weapon_tweak_data().categories, self._silencer, nil, current_state, self._blueprint)
 
 	if managers.player:has_special_equipment("perk_doubletap") then
-		self._fire_rate_multiplier = self._fire_rate_multiplier * 1.25
+		self._fire_rate_multiplier = self._fire_rate_multiplier * 10
 	end
 end
 
