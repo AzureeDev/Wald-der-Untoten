@@ -22,9 +22,7 @@ function ElementPointChecker:on_executed(instigator)
 	if current_points < self._values.cost then
 		--return
 	end
-
-	log("called")
-
+	
 	managers.wdu:_deduct_money_to(peer_id, self._values.cost)
 	ElementPointChecker.super.on_executed(self, instigator)
 end

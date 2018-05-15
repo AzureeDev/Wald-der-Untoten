@@ -68,7 +68,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_upgrade_weapon",
 		start_active = false,
 		axis = "y",
-		timer = 10
+		timer = 4
     }
 
     self.zm_open_path_1000 = {

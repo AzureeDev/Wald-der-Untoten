@@ -205,7 +205,23 @@ function ElementWeaponSwitch:_get_punched_weapon_by_factory(factory)
 		wpn_fps_ass_flint_primary = "wpn_fps_ass_flint_upg_primary",
 		wpn_fps_ass_flint_secondary = "wpn_fps_ass_flint_upg_secondary",
 		wpn_fps_pis_breech_primary = "wpn_fps_pis_breech_upg_primary",
-		wpn_fps_pis_breech_secondary = "wpn_fps_pis_breech_upg_secondary"
+		wpn_fps_pis_breech_secondary = "wpn_fps_pis_breech_upg_secondary",
+		wpn_fps_ass_74_primary = "wpn_fps_ass_74_upg_primary",
+		wpn_fps_ass_74_secondary = "wpn_fps_ass_74_upg_secondary",
+		wpn_fps_ass_ching_primary = "wpn_fps_ass_ching_upg_primary",
+		wpn_fps_ass_ching_secondary = "wpn_fps_ass_ching_upg_secondary",
+		wpn_fps_pis_lemming_primary = "wpn_fps_pis_lemming_upg_primary",
+		wpn_fps_pis_lemming_secondary = "wpn_fps_pis_lemming_upg_secondary",
+		wpn_fps_shot_m37_primary = "wpn_fps_shot_m37_upg_primary",
+		wpn_fps_shot_m37_secondary = "wpn_fps_shot_m37_upg_secondary",
+		wpn_fps_shot_r870_primary = "wpn_fps_shot_r870_upg_primary",
+		wpn_fps_shot_r870_secondary = "wpn_fps_shot_r870_upg_secondary",
+		wpn_fps_smg_erma_primary = "wpn_fps_smg_erma_upg_primary",
+		wpn_fps_smg_erma_secondary = "wpn_fps_smg_erma_upg_secondary",
+		wpn_fps_smg_schakal_primary = "wpn_fps_smg_schakal_upg_primary",
+		wpn_fps_smg_schakal_secondary = "wpn_fps_smg_schakal_upg_secondary",
+		wpn_fps_smg_tec9_primary = "wpn_fps_smg_tec9_upg_primary",
+		wpn_fps_smg_tec9_secondary = "wpn_fps_smg_tec9_upg_secondary"
 	}
 
 	local punch_tbl = {}
