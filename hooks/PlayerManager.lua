@@ -98,7 +98,9 @@ Hooks:PostHook(PlayerManager, "update", "zm_upd_perk", function(self, t, dt)
             weapon_name_id = ""
         end
 
-        managers.hud._hud_zm_waves.weapon_name_bottom_right:set_text(tostring(weapon_name_id))
+		managers.hud._hud_zm_waves.weapon_name_bottom_right:set_text(tostring(weapon_name_id))
+		
+		current_weapon:_update_rof_on_perk()
     end
 
 	self:_count_nb_perks()

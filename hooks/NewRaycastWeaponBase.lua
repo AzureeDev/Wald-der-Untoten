@@ -55,12 +55,14 @@ function NewRaycastWeaponBase:reload_speed_multiplier()
 	multiplier = multiplier * self:reload_speed_stat()
     multiplier = managers.crime_spree:modify_value("WeaponBase:GetReloadSpeedMultiplier", multiplier)
 	multiplier = multiplier * (managers.player:has_special_equipment("perk_speedcola") and 2 or 1)
-	
+
+	return multiplier
+end
+
+function NewRaycastWeaponBase:_update_rof_on_perk()
 	if managers.player:has_special_equipment("perk_doubletap") then
 		self._fire_rate_multiplier = self._fire_rate_multiplier * 10
 	end
-
-	return multiplier
 end
 
 Hooks:PostHook(NewRaycastWeaponBase, "init", "Waffe_AddBulletTrail", function(self)
