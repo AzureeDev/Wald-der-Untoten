@@ -24,6 +24,7 @@ function ElementPointChecker:on_executed(instigator)
 			name = self._editor_name .. "_" .. self._id,
 			custom_dir = "sound",
 			file_name = "denied.ogg",
+			sound_type = "sfx",
 			is_3d = true,
 			position = self._values.position
 		})
@@ -34,6 +35,7 @@ function ElementPointChecker:on_executed(instigator)
 		name = self._editor_name .. "_" .. self._id,
 		custom_dir = "sound",
 		file_name = "cashin.ogg",
+		sound_type = "sfx",
 		is_3d = true,
 		position = self._values.position
 	})
