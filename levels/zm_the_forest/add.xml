@@ -648,6 +648,16 @@
 		<effect force="true" load="true" path="effects/payday2/particles/flares/disco_flare_big_02" unload="true"/>
 		<texture force="true" path="effects/payday2/textures/flares/disco_flare_big_02_df" unload="true"/>
 	</add>
+	<unit_load name="units/babuforce/random_box/random_box">
+		<material_config path="units/babuforce/random_box/random_box"/>
+		<texture path="units/babuforce/random_box/textures/generic_objective_df"/>
+		<texture path="units/babuforce/random_box/textures/zm_magic_box_df"/>
+		<texture path="units/babuforce/random_box/textures/zm_magic_box_hay_df"/>
+		<cooked_physics path="units/babuforce/random_box/random_box"/>
+		<model path="units/babuforce/random_box/random_box"/>
+		<object path="units/babuforce/random_box/random_box"/>
+		<unit path="units/babuforce/random_box/random_box"/>
+	</unit_load>
 	<movie path="movies/ascension"/>
 	<sequence_manager force="true" path="units/props/black_crate" unload="true"/>
 </table>
