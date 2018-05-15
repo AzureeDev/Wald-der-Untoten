@@ -23,6 +23,8 @@ function ElementPointChecker:on_executed(instigator)
 		--return
 	end
 
+	log("called")
+
 	managers.wdu:_deduct_money_to(peer_id, self._values.cost)
 	ElementPointChecker.super.on_executed(self, instigator)
 end

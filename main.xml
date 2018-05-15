@@ -98,6 +98,7 @@
 			<value_node value="levels/instances/unique/mad/mad_door/world/world"/>
 			<value_node value="packages/narr_firestarter3"/>
 			<value_node value="levels/instances/unique/are_loot_shoot/world/world"/>
+			<value_node value="levels/narratives/classics/dah/backdrop/backdrop"/>
 		</packages>
 		<script_data_mods directory="scriptdata">
 			<mod replacement="objectives.objective" replacement_type="custom_xml" target_ext="objective" target_path="gamedata/objectives">

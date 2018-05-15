@@ -39,7 +39,29 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 1.5
 	}
 
+	self.zm_wall_buy_57_1000 = {
+		text_id = "zm_wall_buy_57_1000",
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 1.5
+	}
 	
+	self.zm_wall_buy_ump45_1450 = {
+		text_id = "zm_wall_buy_ump45_1450",
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 1.5
+	}
+
+	self.zm_wall_buy_m37_1300 = {
+		text_id = "zm_wall_buy_m37_1300",
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 1.5
+	}
 
     self.zm_pack_a_punch = {
         text_id = "zm_pack_a_punch",

@@ -32,7 +32,7 @@
 
     "zm_wall_buy_r870_1300" : "Hold $BTN_INTERACT to buy a R870 [Cost: 1,300]",
     "zm_wall_buy_ak47_2000" : "Hold $BTN_INTERACT to buy a AK-47 [Cost: 2,000]",
-    "zm_wall_buy_r870_1100" : "Hold $BTN_INTERACT to buy a MP40 [Cost: 1,100]",
+    "zm_wall_buy_mp40_1100" : "Hold $BTN_INTERACT to buy a MP40 [Cost: 1,100]",
     "zm_wall_buy_57_1000" : "Hold $BTN_INTERACT to buy a Five-seveN [Cost: 1,000]",
     "zm_wall_buy_m37_1300" : "Hold $BTN_INTERACT to buy a M37 [Cost: 1,300]",
     "zm_wall_buy_garand_1500" : "Hold $BTN_INTERACT to buy a M1 Garand [Cost: 1,500]",
