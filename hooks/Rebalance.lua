@@ -5,3 +5,4 @@ Hooks:PostHook( HUDManager, "init", "zm_rebalance", function(self)
     tweak_data.weapon.colt_1911_secondary.stats.total_ammo_mod = 8
     tweak_data.weapon.colt_1911_secondary.stats.damage = 130
 end)
+

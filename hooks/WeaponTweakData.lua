@@ -97,6 +97,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.b682_primary = deep_clone(self.b682)
     self.b682_primary.animations.reload_name_id = "b682"
     self.b682_primary.weapon_hold = "b682"
+    self.b682_primary.NR_CLIPS_MAX = self.b682_primary.NR_CLIPS_MAX * 2
+    self.b682_primary.AMMO_MAX = self.b682_primary.CLIP_AMMO_MAX * self.b682_primary.NR_CLIPS_MAX
     self.b682_secondary = deep_clone(self.b682_primary)
     self.b682_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
 
@@ -110,6 +112,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.m95_primary = deep_clone(self.m95)
     self.m95_primary.animations.reload_name_id = "m95"
     self.m95_primary.weapon_hold = "m95"
+    self.m95_primary.NR_CLIPS_MAX = self.m95_primary.NR_CLIPS_MAX * 2
+    self.m95_primary.AMMO_MAX = self.m95_primary.CLIP_AMMO_MAX * self.m95_primary.NR_CLIPS_MAX
     self.m95_primary.stats_modifiers = {damage = 50}
     self.m95_secondary = deep_clone(self.m95_primary)
     self.m95_secondary.use_data = {selection_index = SECONDARY}
@@ -125,48 +129,64 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.aug_primary = deep_clone(self.aug)
     self.aug_primary.animations.reload_name_id = "aug"
     self.aug_primary.weapon_hold = "aug"
+    self.aug_primary.NR_CLIPS_MAX = self.aug_primary.NR_CLIPS_MAX * 2
+    self.aug_primary.AMMO_MAX = self.aug_primary.CLIP_AMMO_MAX * self.aug_primary.NR_CLIPS_MAX
     self.aug_secondary = deep_clone(self.aug_primary)
     self.aug_secondary.use_data = {selection_index = SECONDARY}
 	
     self.fal_primary = deep_clone(self.fal)
     self.fal_primary.animations.reload_name_id = "fal"
     self.fal_primary.weapon_hold = "fal"
+    self.fal_primary.NR_CLIPS_MAX = self.fal_primary.NR_CLIPS_MAX * 2
+    self.fal_primary.AMMO_MAX = self.fal_primary.CLIP_AMMO_MAX * self.fal_primary.NR_CLIPS_MAX
     self.fal_secondary = deep_clone(self.fal_primary)
     self.fal_secondary.use_data = {selection_index = SECONDARY}
 	
     self.flint_primary = deep_clone(self.flint)
     self.flint_primary.animations.reload_name_id = "flint"
     self.flint_primary.weapon_hold = "flint"
+    self.flint_primary.NR_CLIPS_MAX = self.flint_primary.NR_CLIPS_MAX * 3
+    self.flint_primary.AMMO_MAX = self.flint_primary.CLIP_AMMO_MAX * self.flint_primary.NR_CLIPS_MAX
     self.flint_secondary = deep_clone(self.flint_primary)
     self.flint_secondary.use_data = {selection_index = SECONDARY}
 	
     self.m16_primary = deep_clone(self.m16)
     self.m16_primary.animations.reload_name_id = "m16"
     self.m16_primary.weapon_hold = "m4"
+    self.m16_primary.NR_CLIPS_MAX = self.m16_primary.NR_CLIPS_MAX * 3
+    self.m16_primary.AMMO_MAX = self.m16_primary.CLIP_AMMO_MAX * self.m16_primary.NR_CLIPS_MAX
     self.m16_secondary = deep_clone(self.m16_primary)
     self.m16_secondary.use_data = {selection_index = SECONDARY}
 	
     self.scar_primary = deep_clone(self.scar)
     self.scar_primary.animations.reload_name_id = "scar"
     self.scar_primary.weapon_hold = "m4"
+    self.scar_primary.NR_CLIPS_MAX = self.scar_primary.NR_CLIPS_MAX * 2
+    self.scar_primary.AMMO_MAX = self.scar_primary.CLIP_AMMO_MAX * self.scar_primary.NR_CLIPS_MAX
     self.scar_secondary = deep_clone(self.scar_primary)
     self.scar_secondary.use_data = {selection_index = SECONDARY}
 	
     self.hk21_primary = deep_clone(self.hk21)
     self.hk21_primary.animations.reload_name_id = "hk21"
     self.hk21_primary.weapon_hold = "hk21"
+    self.hk21_primary.NR_CLIPS_MAX = self.hk21_primary.NR_CLIPS_MAX * 2
+    self.hk21_primary.AMMO_MAX = self.hk21_primary.CLIP_AMMO_MAX * self.hk21_primary.NR_CLIPS_MAX
     self.hk21_secondary = deep_clone(self.hk21_primary)
     self.hk21_secondary.use_data = {selection_index = SECONDARY}
 	
     self.m249_primary = deep_clone(self.m249)
     self.m249_primary.animations.reload_name_id = "m249"
     self.m249_primary.weapon_hold = "m249"
+    self.m249_primary.NR_CLIPS_MAX = self.m249_primary.NR_CLIPS_MAX * 2
+    self.m249_primary.AMMO_MAX = self.m249_primary.CLIP_AMMO_MAX * self.m249_primary.NR_CLIPS_MAX
     self.m249_secondary = deep_clone(self.m249_primary)
     self.m249_secondary.use_data = {selection_index = SECONDARY}
 	
     self.breech_primary = deep_clone(self.breech)
     self.breech_primary.animations.reload_name_id = "breech"
     self.breech_primary.weapon_hold = "breech"
+    self.breech_primary.NR_CLIPS_MAX = self.breech_primary.NR_CLIPS_MAX * 2
+    self.breech_primary.AMMO_MAX = self.breech_primary.CLIP_AMMO_MAX * self.breech_primary.NR_CLIPS_MAX
     self.breech_primary.use_data = {selection_index = PRIMARY}
     self.breech_secondary = deep_clone(self.breech_primary)
     self.breech_secondary.use_data = {selection_index = SECONDARY}
@@ -174,6 +194,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.deagle_primary = deep_clone(self.deagle)
     self.deagle_primary.animations.reload_name_id = "deagle"
     self.deagle_primary.weapon_hold = "deagle"
+    self.deagle_primary.NR_CLIPS_MAX = self.deagle_primary.NR_CLIPS_MAX * 2
+    self.deagle_primary.AMMO_MAX = self.deagle_primary.CLIP_AMMO_MAX * self.deagle_primary.NR_CLIPS_MAX
     self.deagle_primary.use_data = {selection_index = PRIMARY}
     self.deagle_secondary = deep_clone(self.deagle_primary)
     self.deagle_secondary.use_data = {selection_index = SECONDARY}
@@ -181,6 +203,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.judge_primary = deep_clone(self.judge)
     self.judge_primary.animations.reload_name_id = "judge"
     self.judge_primary.weapon_hold = "raging_bull"
+    self.judge_primary.NR_CLIPS_MAX = self.judge_primary.NR_CLIPS_MAX * 2
+    self.judge_primary.AMMO_MAX = self.judge_primary.CLIP_AMMO_MAX * self.judge_primary.NR_CLIPS_MAX
     self.judge_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
     self.judge_secondary = deep_clone(self.judge_primary)
     self.judge_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
@@ -188,6 +212,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.peacemaker_primary = deep_clone(self.peacemaker)
     self.peacemaker_primary.animations.reload_name_id = "peacemaker"
     self.peacemaker_primary.weapon_hold = "peacemaker"
+    self.peacemaker_primary.NR_CLIPS_MAX = self.peacemaker_primary.NR_CLIPS_MAX * 2
+    self.peacemaker_primary.AMMO_MAX = self.peacemaker_primary.CLIP_AMMO_MAX * self.peacemaker_primary.NR_CLIPS_MAX
     self.peacemaker_primary.use_data = {selection_index = PRIMARY}    
     self.peacemaker_primary.stats_modifiers = {damage = 1}
     self.peacemaker_secondary = deep_clone(self.peacemaker_primary)
@@ -196,6 +222,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.new_raging_bull_primary = deep_clone(self.new_raging_bull)
     self.new_raging_bull_primary.animations.reload_name_id = "raging_bull"
     self.new_raging_bull_primary.weapon_hold = "raging_bull"
+    self.new_raging_bull_primary.NR_CLIPS_MAX = self.new_raging_bull_primary.NR_CLIPS_MAX * 2
+    self.new_raging_bull_primary.AMMO_MAX = self.new_raging_bull_primary.CLIP_AMMO_MAX * self.new_raging_bull_primary.NR_CLIPS_MAX
     self.new_raging_bull_primary.use_data = {selection_index = PRIMARY}    
     self.new_raging_bull_secondary = deep_clone(self.new_raging_bull_primary)
     self.new_raging_bull_secondary.use_data = {selection_index = SECONDARY}
@@ -203,6 +231,9 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.striker_primary = deep_clone(self.striker)
     self.striker_primary.animations.reload_name_id = "striker"
     self.striker_primary.weapon_hold = "striker"
+    self.striker_primary.NR_CLIPS_MAX = self.striker_primary.NR_CLIPS_MAX * 2
+    self.striker_primary.AMMO_MAX = self.striker_primary.CLIP_AMMO_MAX * self.striker_primary.NR_CLIPS_MAX
+    self.striker_primary.stats.damage = 120
     self.striker_primary.use_data = {selection_index = PRIMARY, align_place = "left_hand"}
     self.striker_secondary = deep_clone(self.striker_primary)
     self.striker_secondary.use_data = {selection_index = SECONDARY, align_place = "left_hand"}
@@ -210,6 +241,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.p90_primary = deep_clone(self.p90)
     self.p90_primary.animations.reload_name_id = "p90"
     self.p90_primary.weapon_hold = "p90"
+    self.p90_primary.NR_CLIPS_MAX = self.p90_primary.NR_CLIPS_MAX * 2
+    self.p90_primary.AMMO_MAX = self.p90_primary.CLIP_AMMO_MAX * self.p90_primary.NR_CLIPS_MAX
     self.p90_primary.use_data = {selection_index = PRIMARY}
     self.p90_secondary = deep_clone(self.p90_primary)
     self.p90_secondary.use_data = {selection_index = SECONDARY}
@@ -217,6 +250,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.m1928_primary = deep_clone(self.m1928)
     self.m1928_primary.animations.reload_name_id = "m1928"
     self.m1928_primary.weapon_hold = "tommy"
+    self.m1928_primary.NR_CLIPS_MAX = self.m1928_primary.NR_CLIPS_MAX * 2
+    self.m1928_primary.AMMO_MAX = self.m1928_primary.CLIP_AMMO_MAX * self.m1928_primary.NR_CLIPS_MAX
     self.m1928_primary.use_data = {selection_index = PRIMARY}
     self.m1928_secondary = deep_clone(self.m1928_primary)
     self.m1928_secondary.use_data = {selection_index = SECONDARY}
@@ -285,6 +320,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.ak74_primary = deep_clone(self.ak74)
     self.ak74_primary.animations.reload_name_id = "ak74"
     self.ak74_primary.weapon_hold = "ak47"    --gee, that's not confusing at all
+    self.ak74_primary.NR_CLIPS_MAX = self.ak74_primary.NR_CLIPS_MAX * 2
+    self.ak74_primary.AMMO_MAX = self.ak74_primary.CLIP_AMMO_MAX * self.ak74_primary.NR_CLIPS_MAX
     self.ak74_primary.use_data = {selection_index = PRIMARY}
     self.ak74_secondary = deep_clone(self.ak74_primary)
     self.ak74_secondary.use_data = {selection_index = SECONDARY}
@@ -292,6 +329,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.ching_primary = deep_clone(self.ching)
     self.ching_primary.animations.reload_name_id = "ching"
     self.ching_primary.weapon_hold = "ching"
+    self.ching_primary.NR_CLIPS_MAX = self.ching_primary.NR_CLIPS_MAX * 2
+    self.ching_primary.AMMO_MAX = self.ching_primary.CLIP_AMMO_MAX * self.ching_primary.NR_CLIPS_MAX
     self.ching_primary.use_data = {selection_index = PRIMARY}
     self.ching_secondary = deep_clone(self.ching_primary)
     self.ching_secondary.use_data = {selection_index = SECONDARY}
@@ -299,6 +338,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.lemming_primary = deep_clone(self.lemming)
     self.lemming_primary.animations.reload_name_id = "lemming"
     self.lemming_primary.weapon_hold = "packrat"
+    self.lemming_primary.NR_CLIPS_MAX = self.lemming_primary.NR_CLIPS_MAX * 2
+    self.lemming_primary.AMMO_MAX = self.lemming_primary.CLIP_AMMO_MAX * self.lemming_primary.NR_CLIPS_MAX
     self.lemming_primary.use_data = {selection_index = PRIMARY}
     self.lemming_secondary = deep_clone(self.lemming_primary)
     self.lemming_secondary.use_data = {selection_index = SECONDARY}
@@ -306,6 +347,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.m37_primary = deep_clone(self.m37)
     self.m37_primary.animations.reload_name_id = "m37"
     self.m37_primary.weapon_hold = "m37"
+    self.m37_primary.NR_CLIPS_MAX = self.m37_primary.NR_CLIPS_MAX * 2
+    self.m37_primary.AMMO_MAX = self.m37_primary.CLIP_AMMO_MAX * self.m37_primary.NR_CLIPS_MAX
     self.m37_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
     self.m37_secondary = deep_clone(self.m37_primary)
     self.m37_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
@@ -313,6 +356,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.r870_primary = deep_clone(self.r870)
     self.r870_primary.animations.reload_name_id = "r870_shotgun"
     self.r870_primary.weapon_hold = "r870_shotgun"
+    self.r870_primary.NR_CLIPS_MAX = self.r870_primary.NR_CLIPS_MAX * 2
+    self.r870_primary.AMMO_MAX = self.r870_primary.CLIP_AMMO_MAX * self.r870_primary.NR_CLIPS_MAX
     self.r870_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
     self.r870_secondary = deep_clone(self.r870_primary)
     self.r870_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
@@ -320,6 +365,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.erma_primary = deep_clone(self.erma)
     self.erma_primary.animations.reload_name_id = "erma"
     self.erma_primary.weapon_hold = "erma"
+    self.erma_primary.NR_CLIPS_MAX = self.erma_primary.NR_CLIPS_MAX * 2
+    self.erma_primary.AMMO_MAX = self.erma_primary.CLIP_AMMO_MAX * self.erma_primary.NR_CLIPS_MAX
     self.erma_primary.use_data = {selection_index = PRIMARY}
     self.erma_secondary = deep_clone(self.erma_primary)
     self.erma_secondary.use_data = {selection_index = SECONDARY}
@@ -327,6 +374,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.schakal_primary = deep_clone(self.schakal)
     self.schakal_primary.animations.reload_name_id = "schakal"
     self.schakal_primary.weapon_hold = "schakal"
+    self.schakal_primary.NR_CLIPS_MAX = self.schakal_primary.NR_CLIPS_MAX * 2
+    self.schakal_primary.AMMO_MAX = self.schakal_primary.CLIP_AMMO_MAX * self.schakal_primary.NR_CLIPS_MAX
     self.schakal_primary.use_data = {selection_index = PRIMARY}
     self.schakal_secondary = deep_clone(self.schakal_primary)
     self.schakal_secondary.use_data = {selection_index = SECONDARY}
@@ -334,6 +383,8 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.tec9_primary = deep_clone(self.tec9)
     self.tec9_primary.animations.reload_name_id = "tec9"
     self.tec9_primary.weapon_hold = "tec9"
+    self.tec9_primary.NR_CLIPS_MAX = self.tec9_primary.NR_CLIPS_MAX * 2
+    self.tec9_primary.AMMO_MAX = self.tec9_primary.CLIP_AMMO_MAX * self.tec9_primary.NR_CLIPS_MAX
     self.tec9_primary.use_data = {selection_index = PRIMARY}
     self.tec9_secondary = deep_clone(self.tec9_primary)
     self.tec9_secondary.use_data = {selection_index = SECONDARY}
