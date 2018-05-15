@@ -62,7 +62,7 @@ end
 function NewRaycastWeaponBase:_update_rof_on_perk()
 	local user_unit = self._setup and self._setup.user_unit
 	local current_state = alive(user_unit) and user_unit:movement() and user_unit:movement()._current_state
-	
+
 	if managers.player:has_special_equipment("perk_doubletap") then
 		self._fire_rate_multiplier = managers.blackmarket:fire_rate_multiplier(self._name_id, self:weapon_tweak_data().categories, self._silencer, nil, current_state, self._blueprint) * 1.25
 	else
@@ -125,4 +125,19 @@ function NewRaycastWeaponBase:damage_multiplier()
 	end
 
 	return multiplier
+end
+
+function NewRaycastWeaponBase:_material_config_name(part_id, unit_name, use_cc_material_config, force_third_person)
+	if use_cc_material_config and tweak_data.weapon.factory.parts[part_id].cc_thq_material_config then
+		return tweak_data.weapon.factory.parts[part_id].cc_thq_material_config
+	end
+
+	if tweak_data.weapon.factory.parts[part_id].thq_material_config then
+		return tweak_data.weapon.factory.parts[part_id].thq_material_config
+	end
+
+	local cc_string = use_cc_material_config and "_cc" or ""
+	local thq_string = "_thq"
+
+	return Idstring(unit_name .. cc_string .. thq_string)
 end
