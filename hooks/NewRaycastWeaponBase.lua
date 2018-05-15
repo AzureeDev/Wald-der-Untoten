@@ -60,8 +60,11 @@ function NewRaycastWeaponBase:reload_speed_multiplier()
 end
 
 function NewRaycastWeaponBase:_update_rof_on_perk()
+	local user_unit = self._setup and self._setup.user_unit
+	local current_state = alive(user_unit) and user_unit:movement() and user_unit:movement()._current_state
+	
 	if managers.player:has_special_equipment("perk_doubletap") then
-		self._fire_rate_multiplier = self._fire_rate_multiplier * 1.25
+		self._fire_rate_multiplier = managers.blackmarket:fire_rate_multiplier(self._name_id, self:weapon_tweak_data().categories, self._silencer, nil, current_state, self._blueprint) * 1.25
 	else
 		self._fire_rate_multiplier = managers.blackmarket:fire_rate_multiplier(self._name_id, self:weapon_tweak_data().categories, self._silencer, nil, current_state, self._blueprint)
 	end
