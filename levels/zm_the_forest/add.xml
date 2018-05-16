@@ -695,6 +695,13 @@
 		<object force="true" path="core/units/light_spot/light_spot" unload="true"/>
 		<material_config force="true" path="core/material_configs/hub_elements" unload="true"/>
 	</add>
+	<unit_load name="units/zdann/kurumi/shovel">
+		<cooked_physics path="units/zdann/kurumi/shovel"/>
+		<model path="units/zdann/kurumi/shovel"/>
+		<unit path="units/zdann/kurumi/shovel"/>
+		<object path="units/zdann/kurumi/shovel"/>
+		<material_config path="units/zdann/kurumi/shovel"/>
+	</unit_load>
 	<movie path="movies/ascension"/>
 	<sequence_manager force="true" path="units/props/black_crate" unload="true"/>
 </table>
