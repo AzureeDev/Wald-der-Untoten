@@ -72,8 +72,4 @@ end)
 
 Hooks:PostHook(CharacterTweakData, "_init_taser", "zm_taser_tweak", function(self, presets)
 	self.taser.dodge = nil
-<<<<<<< HEAD
 end)
-=======
-end)
->>>>>>> master
