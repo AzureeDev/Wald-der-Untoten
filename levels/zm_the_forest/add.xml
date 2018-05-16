@@ -665,7 +665,6 @@
 		<object path="units/babuforce/random_box/random_box"/>
 		<unit path="units/babuforce/random_box/random_box"/>
 	</unit_load>
-<<<<<<< HEAD
 	<unit_load name="units/zdann/pap_machine/pap_machine">
 		<cooked_physics path="units/zdann/pap_machine/pap_machine"/>
 		<model path="units/zdann/pap_machine/pap_machine"/>
@@ -673,7 +672,6 @@
 		<material_config path="units/zdann/pap_machine/pap_machine"/>
 		<unit path="units/zdann/pap_machine/pap_machine"/>
 	</unit_load>
-=======
 	<add path="units/world/brushes/puddle_blood/puddle_blood_3" type="unit">
 		<material_config force="true" path="units/world/brushes/puddle_blood/puddles_blood" unload="true"/>
 		<object force="true" path="units/world/brushes/puddle_blood/puddle_blood_3" unload="true"/>
@@ -689,7 +687,6 @@
 		<object force="true" path="core/units/light_spot/light_spot" unload="true"/>
 		<material_config force="true" path="core/material_configs/hub_elements" unload="true"/>
 	</add>
->>>>>>> master
 	<movie path="movies/ascension"/>
 	<sequence_manager force="true" path="units/props/black_crate" unload="true"/>
 </table>
