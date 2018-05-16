@@ -369,7 +369,7 @@ function WDUManager:_get_weapons_in_mystery_box()
 		"wpn_fps_lmg_hk21",
 		"wpn_fps_lmg_m249",
 		"wpn_fps_pis_rage",
-		"wpn_fps_pis_peacemaker",
+		"wpn_fps_snp_msr",
 		"wpn_fps_ass_flint",
 		"wpn_fps_pis_breech",
 		"wpn_fps_spe_rpg7",
@@ -440,7 +440,11 @@ function WDUManager:_convert_factory_to_upgrade()
 		wpn_fps_smg_tec9_primary = "wpn_fps_smg_tec9_upg_primary",
         wpn_fps_smg_tec9_secondary = "wpn_fps_smg_tec9_upg_secondary",
         wpn_fps_spe_rpg7_primary = "wpn_fps_spe_rpg7_upg_primary",
-        wpn_fps_spe_rpg7_secondary = "wpn_fps_spe_rpg7_upg_secondary"
+        wpn_fps_spe_rpg7_secondary = "wpn_fps_spe_rpg7_upg_secondary",
+        wpn_fps_special_roach_primary = "wpn_fps_special_roach_upg_primary",
+        wpn_fps_special_roach_secondary = "wpn_fps_special_roach_upg_secondary",
+        wpn_fps_snp_msr_primary = "wpn_fps_snp_msr_upg_primary",
+        wpn_fps_snp_msr_secondary = "wpn_fps_snp_msr_upg_secondary"
 	}
 end
 

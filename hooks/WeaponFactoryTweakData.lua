@@ -722,6 +722,13 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 
     self.wpn_fps_snp_msr_upg_primary = deep_clone(self.wpn_fps_snp_msr)
     self.wpn_fps_snp_msr_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_snp_msr_upg_primary"
-    self.wpn_fps_snp_msr_upg_secondary = deep_clone(self.wpn_fps_snp_msr)
+    self.wpn_fps_snp_msr_upg_primary.default_blueprint = {
+        "wpn_fps_snp_msr_b_long",
+        "wpn_fps_snp_msr_body_msr",
+        "wpn_fps_snp_msr_m_standard",
+        "wpn_fps_upg_o_leupold",
+        "wpn_fps_upg_fl_ass_laser"
+    }
+    self.wpn_fps_snp_msr_upg_secondary = deep_clone(self.wpn_fps_snp_msr_upg_primary)
     self.wpn_fps_snp_msr_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_snp_msr_upg_secondary"
 end
