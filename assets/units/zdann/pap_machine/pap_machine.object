@@ -1,50 +1,60 @@
 <?xml version="1.0"?>
 <dynamic_object>
-	<diesel materials="units/zdann/pap_machine/pap_machine" orientation_object="rp_ind_interactable_shipping_crate_2x1x1m" />
-	<!--sequence_manager file="units/props/black_crate" /-->
-
+	<diesel materials="units/zdann/pap_machine/pap_machine" orientation_object="rp_mkp_int_floor_2x2m_a" />
 	<bodies>
-		<body name="body_static" enabled="false" template="static">
-			<object name="rp_ind_interactable_shipping_crate_2x1x1m" />
-			<object name="c_c" collision_type="convex" />
-		</body>
-		<body name="body_static_open" enabled="false" template="static">
-			<object name="rp_ind_interactable_shipping_crate_2x1x1m" />
-			<object name="c_c_open" collision_type="convex" />
-		</body>
-		<body name="body_mover_blocker" enabled="false" template="mover_blocker">
-			<object name="rp_ind_interactable_shipping_crate_2x1x1m" />
-			<object name="c_mover_blocker" collision_type="box" />
+		<body name="body_static" enabled="true" template="static">
+			<object name="rp_mkp_int_floor_2x2m_a" />
+			<object name="co_culling" />
+			<object name="g_back" />
+			<object name="g_body" />
+			<object name="g_bottom_rollers" />
+			<object name="g_frame_left" />
+			<object name="g_frame_right" />
+			<object name="g_inside_detail" />
+			<object name="g_logo_bottom" />
+			<object name="g_logo_edge" />
+			<object name="g_logo_top" />
+			<object name="g_side_inside" />
+			<object name="g_top" />
+			<object name="g_upper_roller_side" />
+			<object name="g_upper_rollers" />
+			<object name="g_wood" />
+			<object name="c_convex_001" collision_type="convex" padding="-2.5" />
 		</body>
 	</bodies>
-
-	<decal_surfaces default_material="hardwood">
-		<decal_mesh name="g_g" 				enabled="false" material="hardwood" />
-		<decal_mesh name="g_g_open" 		enabled="false" material="hardwood" />
-	</decal_surfaces>
-
 	<graphics>
-		<graphic_group name="vigne" enabled="true" culling_object="co_culling">
-			<object name="g_upper_roller_side" 			enabled="true" shadow_caster="true" />
-			<object name="g_top" 			enabled="true" shadow_caster="true" />
-			<object name="g_logo_edge" 			enabled="true" shadow_caster="true" />
-			<object name="g_side_inside" 			enabled="true" shadow_caster="true" />
-			<object name="g_upper_rollers" 			enabled="true" shadow_caster="true" />
-			<object name="g_logo_bottom" 			enabled="true" shadow_caster="true" />
-			<object name="g_bottom_rollers" 			enabled="true" shadow_caster="true" />
-			<object name="g_body" 			enabled="true" shadow_caster="true" />
-			<object name="g_frame_right" 			enabled="true" shadow_caster="true" />
-			<object name="g_frame_left" 			enabled="true" shadow_caster="true" />
-			<object name="g_wood" 			enabled="true" shadow_caster="true" />
-			<object name="g_back" 			enabled="true" shadow_caster="true" />
-			<object name="g_logo_top" 			enabled="true" shadow_caster="true" />
-			<object name="g_inside_detail" 			enabled="true" shadow_caster="true" />
-			
-			<!--dumb things below-->
-			<object name="g_g" 			enabled="false" shadow_caster="false" />
-			<object name="s_s" 			enabled="false" shadow_caster="true" />
-			<object name="g_g_open" 	enabled="false" shadow_caster="false" />
-			<object name="s_s_open" 	enabled="false" shadow_caster="true" />
+		<graphic_group name="vigne" culling_object="co_culling" enabled="true">
+			<object name="g_back" enabled="true" shadow_caster="true"/>
+			<object name="g_body" enabled="true" shadow_caster="true"/>
+			<object name="g_bottom_rollers" enabled="true" shadow_caster="true"/>
+			<object name="g_frame_left" enabled="true" shadow_caster="true"/>
+			<object name="g_frame_right" enabled="true" shadow_caster="true"/>
+			<object name="g_inside_detail" enabled="true" shadow_caster="true"/>
+			<object name="g_logo_bottom" enabled="true" shadow_caster="true"/>
+			<object name="g_logo_edge" enabled="true" shadow_caster="true"/>
+			<object name="g_logo_top" enabled="true" shadow_caster="true"/>
+			<object name="g_side_inside" enabled="true" shadow_caster="true"/>
+			<object name="g_top" enabled="true" shadow_caster="true"/>
+			<object name="g_upper_roller_side" enabled="true" shadow_caster="true"/>
+			<object name="g_upper_rollers" enabled="true" shadow_caster="true"/>
+			<object name="g_wood" enabled="true" shadow_caster="true"/>
+			<object name="g_top" enabled="true" shadow_caster="true"/>
 		</graphic_group>
 	</graphics>
+    <decal_surfaces>
+			<object name="g_back" enabled="true" material="metal"/>
+			<object name="g_body" enabled="true" material="metal"/>
+			<object name="g_bottom_rollers" enabled="true" material="metal"/>
+			<object name="g_frame_left" enabled="true" material="metal"/>
+			<object name="g_frame_right" enabled="true" material="metal"/>
+			<object name="g_inside_detail" enabled="true" material="metal"/>
+			<object name="g_logo_bottom" enabled="true" material="metal"/>
+			<object name="g_logo_edge" enabled="true" material="metal"/>
+			<object name="g_logo_top" enabled="true" material="metal"/>
+			<object name="g_side_inside" enabled="true" material="metal"/>
+			<object name="g_top" enabled="true" material="metal"/>
+			<object name="g_upper_roller_side" enabled="true" material="metal"/>
+			<object name="g_upper_rollers" enabled="true" material="metal"/>
+			<object name="g_wood" enabled="true" material="metal"/>
+    </decal_surfaces>
 </dynamic_object>
