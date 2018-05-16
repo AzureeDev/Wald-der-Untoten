@@ -658,6 +658,13 @@
 		<object path="units/babuforce/random_box/random_box"/>
 		<unit path="units/babuforce/random_box/random_box"/>
 	</unit_load>
+	<unit_load name="units/zdann/pap_machine/pap_machine">
+		<cooked_physics path="units/zdann/pap_machine/pap_machine"/>
+		<model path="units/zdann/pap_machine/pap_machine"/>
+		<object path="units/zdann/pap_machine/pap_machine"/>
+		<material_config path="units/zdann/pap_machine/pap_machine"/>
+		<unit path="units/zdann/pap_machine/pap_machine"/>
+	</unit_load>
 	<movie path="movies/ascension"/>
 	<sequence_manager force="true" path="units/props/black_crate" unload="true"/>
 </table>
