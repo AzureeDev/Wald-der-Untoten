@@ -336,6 +336,7 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.ching_secondary.use_data = {selection_index = SECONDARY}
     
     self.lemming_primary = deep_clone(self.lemming)
+    self.lemming_primary.name_id = "wpn_lemming_name"
     self.lemming_primary.animations.reload_name_id = "lemming"
     self.lemming_primary.weapon_hold = "packrat"
     self.lemming_primary.NR_CLIPS_MAX = self.lemming_primary.NR_CLIPS_MAX * 2
