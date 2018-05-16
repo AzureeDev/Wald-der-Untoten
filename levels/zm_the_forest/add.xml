@@ -679,6 +679,26 @@
 		<object path="units/zdann/pap_machine/pap_machine"/>
 		<material_config path="units/zdann/pap_machine/pap_machine"/>
 		<unit path="units/zdann/pap_machine/pap_machine"/>
+		<texture path="units/zdann/pap_machine/textures/bottom_back_df"/>
+		<texture path="units/zdann/pap_machine/textures/bottom_back_nm"/>
+		<texture path="units/zdann/pap_machine/textures/frame_left_df"/>
+		<texture path="units/zdann/pap_machine/textures/frame_left_nm"/>
+		<texture path="units/zdann/pap_machine/textures/frame_right_df"/>
+		<texture path="units/zdann/pap_machine/textures/frame_right_nm"/>
+		<texture path="units/zdann/pap_machine/textures/front_side_df"/>
+		<texture path="units/zdann/pap_machine/textures/front_side_nm"/>
+		<texture path="units/zdann/pap_machine/textures/inside_detail_df"/>
+		<texture path="units/zdann/pap_machine/textures/inside_detail_nm"/>
+		<texture path="units/zdann/pap_machine/textures/leather_df"/>
+		<texture path="units/zdann/pap_machine/textures/main_df"/>
+		<texture path="units/zdann/pap_machine/textures/main_nm"/>
+		<texture path="units/zdann/pap_machine/textures/side_inside_df"/>
+		<texture path="units/zdann/pap_machine/textures/side_inside_nm"/>
+		<texture path="units/zdann/pap_machine/textures/sign_off_df"/>
+		<texture path="units/zdann/pap_machine/textures/top_df"/>
+		<texture path="units/zdann/pap_machine/textures/top_nm"/>
+		<texture path="units/zdann/pap_machine/textures/top_main_df"/>
+		<texture path="units/zdann/pap_machine/textures/top_main_nm"/>
 	</unit_load>
 	<add path="units/world/brushes/puddle_blood/puddle_blood_3" type="unit">
 		<material_config force="true" path="units/world/brushes/puddle_blood/puddles_blood" unload="true"/>
