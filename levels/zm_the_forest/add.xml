@@ -636,6 +636,13 @@
 		<object path="units/babuforce/teleporter/teleporter_pad"/>
 		<unit path="units/babuforce/teleporter/teleporter_pad"/>
 	</unit_load>
+	<unit_load name="units/zdann/pap_machine/pap_machine">
+		<cooked_physics path="units/zdann/pap_machine/pap_machine"/>
+		<model path="units/zdann/pap_machine/pap_machine"/>
+		<object path="units/zdann/pap_machine/pap_machine"/>
+		<material_config path="units/zdann/pap_machine/pap_machine"/>
+		<unit path="units/zdann/pap_machine/pap_machine"/>
+	</unit_load>
 	<add path="units/payday2/props/com_prop_club_light_led/com_prop_club_light_led_orange" type="unit">
 		<texture force="true" path="units/payday2/props/com_prop_club_light_led/com_prop_club_light_led_df" unload="true"/>
 		<texture force="true" path="units/payday2/props/com_prop_club_light_led/com_prop_club_light_led_nm" unload="true"/>
