@@ -31,33 +31,45 @@ end
 Hooks:PostHook(CharacterTweakData, "_init_fbi", "zm_disable_surrenders", function(self, presets)
 	self.fbi.surrender = nil
 	self.fbi.rescue_hostages = false
+	self.fbi.dodge = nil
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_swat", "zm_disable_surrenders_2", function(self, presets)
 	self.swat.surrender = nil
 	self.swat.rescue_hostages = false
+	self.swat.dodge = nil
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_heavy_swat", "zm_disable_surrenders_3", function(self, presets)
 	self.heavy_swat.surrender = nil
 	self.heavy_swat.rescue_hostages = false
+	self.heavy_swat.dodge = nil
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_fbi_swat", "zm_disable_surrenders_4", function(self, presets)
 	self.fbi_swat.surrender = nil
 	self.fbi_swat.rescue_hostages = false
+	self.fbi_swat.dodge = nil
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_fbi_heavy_swat", "zm_disable_surrenders_5", function(self, presets)
 	self.fbi_heavy_swat.surrender = nil
 	self.fbi_heavy_swat.rescue_hostages = false
+	self.fbi_heavy_swat.dodge = nil
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_city_swat", "zm_disable_surrenders_6", function(self, presets)
 	self.city_swat.surrender = nil
 	self.city_swat.rescue_hostages = false
+	self.city_swat.dodge = nil
 end)
 
-Hooks:PostHook(CharacterTweakData, "_init_medic", "zm_disable_rescue_med", function(self, presets)
+Hooks:PostHook(CharacterTweakData, "_init_medic", "zm_med_tweak", function(self, presets)
 	self.medic.rescue_hostages = false
+	self.medic.suppression = nil
+	self.medic.dodge = nil
+end)
+
+Hooks:PostHook(CharacterTweakData, "_init_taser", "zm_taser_tweak", function(self, presets)
+	self.taser.dodge = nil
 end)
