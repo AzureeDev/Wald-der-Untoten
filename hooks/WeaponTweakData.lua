@@ -801,6 +801,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.msr_upg_secondary.use_data = {selection_index = SECONDARY}
 
     self.roach_upg_primary = deep_clone(self.roach_primary)
+    self.roach_upg_primary.name_id = "wpn_roach_upg_name"
     self.roach_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.roach_upg_primary.CLIP_AMMO_MAX = 6
     self.roach_upg_primary.NR_CLIPS_MAX = 5
