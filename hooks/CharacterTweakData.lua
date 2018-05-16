@@ -64,8 +64,12 @@ Hooks:PostHook(CharacterTweakData, "_init_city_swat", "zm_disable_surrenders_6",
 	self.city_swat.dodge = nil
 end)
 
-Hooks:PostHook(CharacterTweakData, "_init_medic", "zm_disable_rescue_med", function(self, presets)
+Hooks:PostHook(CharacterTweakData, "_init_medic", "zm_med_tweak", function(self, presets)
 	self.medic.rescue_hostages = false
 	self.medic.suppression = nil
 	self.medic.dodge = nil
+end)
+
+Hooks:PostHook(CharacterTweakData, "_init_taser", "zm_taser_tweak", function(self, presets)
+	self.taser.dodge = nil
 end)
