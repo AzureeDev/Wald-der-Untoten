@@ -1,7 +1,5 @@
 {
     "heist_zm_the_forest_name" : "Wald Der Untoten",
-    "failed_summary_name" : "You died. No one survived. The entire world is full of zombies and humanity has come to a bitter end.",
-    "hud_custody_in" : "Dead in",
     "heist_zm_the_forest_brief" : "",
     "menu_jukebox_track_zm_the_forest" : "with your little shovel",
     "zm_wald_der_untoten_perks_name" : "Available Perks",
@@ -19,6 +17,7 @@
     "zm_buy_weapon" : "Buying a weapon",
     "zm_buy_perk" : "Buying a perk",
     "zm_open_path_1000" : "Hold $BTN_INTERACT to open this path [Cost: 1,000]",
+    "zm_open_path_2000" : "Hold $BTN_INTERACT to open this path [Cost: 2,000]",
     "zm_open_door_2000" : "Hold $BTN_INTERACT to open this door [Cost: 2,000]",
     "zm_opening_path" : "Opening path",
     "zm_pack_a_punch" : "Hold $BTN_INTERACT to upgrade your current weapon [Cost: 5,000]",

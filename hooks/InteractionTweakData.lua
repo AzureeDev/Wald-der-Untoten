@@ -76,7 +76,31 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_opening_path",
 		start_active = false,
 		timer = 1.5,
+        interact_distance = 1300
+	}
+
+	self.zm_open_path_1000_nrm = {
+		text_id = "zm_open_path_1000",
+		action_text_id = "zm_opening_path",
+		start_active = false,
+		timer = 1.5,
         interact_distance = 500
+	}
+
+	self.zm_open_path_2000 = {
+		text_id = "zm_open_path_2000",
+		action_text_id = "zm_opening_path",
+		start_active = false,
+		timer = 1.5,
+        interact_distance = 700
+	}
+
+	self.zm_open_path_2000_exp = {
+		text_id = "zm_open_path_2000",
+		action_text_id = "zm_opening_path",
+		start_active = false,
+		timer = 1.5,
+        interact_distance = 1300
 	}
 	
 	self.zm_wall_buy_mp9_2500 = {
@@ -183,5 +207,29 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		interact_distance = 250
+	}
+
+	self.zm_wall_buy_ak47_2000 = {
+		text_id = "zm_wall_buy_ak47_2000",
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 1.5
+	}
+
+	self.zm_wall_buy_mp40_1100 = {
+		text_id = "zm_wall_buy_mp40_1100",
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 1.5
+	}
+
+	self.zm_wall_buy_garand_1500 = {
+		text_id = "zm_wall_buy_garand_1500",
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 1.5
 	}
 end)

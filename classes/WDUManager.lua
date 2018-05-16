@@ -8,6 +8,10 @@ function WDUManager:init()
     self:_init_variables()
     self:_setup_xaudio()
     self:_setup_video_panel()
+    
+    if LocalizationManager then
+        LocalizationManager:load_localization_file( self:_get_mod_path() .. "loc/unique_lines.txt" )
+    end
 end
 
 function WDUManager:_init_variables()
