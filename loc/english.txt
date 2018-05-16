@@ -46,6 +46,7 @@
     "zm_activate_song_invisible" : "",
 
     "wpn_m1911_name" : "M1911",
+    "wpn_lemming_name" : "5/7 Pistol",
     "wpn_melee_zdann" : "Zdann's Shovel",
     "wpn_roach_name" : "Railgun Rorsch MK-1",
     "wpn_roach_upg_name" : "Railgun Rorsch MK-9000",
