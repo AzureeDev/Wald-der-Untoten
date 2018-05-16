@@ -63,6 +63,8 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 	self.stances.mp9_upg_secondary = deep_clone(self.stances.mp9)
 	self.stances.roach_primary = deep_clone(self.stances.siltstone)
 	self.stances.roach_secondary = deep_clone(self.stances.siltstone)
+	self.stances.roach_upg_primary = deep_clone(self.stances.siltstone)
+	self.stances.roach_upg_secondary = deep_clone(self.stances.siltstone)
 
 	--shovel approved new stances
 	self.stances.amcar_primary = deep_clone(self.stances.amcar)
@@ -147,6 +149,8 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 
 	self.stances.rpg7_primary = deep_clone(self.stances.rpg7)
 	self.stances.rpg7_secondary = deep_clone(self.stances.rpg7)
+	self.stances.rpg7_upg_primary = deep_clone(self.stances.rpg7)
+	self.stances.rpg7_upg_secondary = deep_clone(self.stances.rpg7)
 	
 	--shovel mkii stances
 	self.stances.ak74_primary = deep_clone(self.stances.ak74)
@@ -188,4 +192,13 @@ Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", func
 	self.stances.tec9_secondary = deep_clone(self.stances.tec9)
 	self.stances.tec9_upg_primary = deep_clone(self.stances.tec9)
 	self.stances.tec9_upg_secondary = deep_clone(self.stances.tec9)
+
+	self.stances.msr_primary = deep_clone(self.stances.msr)
+	self.stances.msr_primary.steelsight.shoulders.translation = Vector3(-12.943, -41, -2)
+	self.stances.msr_secondary = deep_clone(self.stances.msr)
+	self.stances.msr_secondary.steelsight.shoulders.translation = Vector3(-12.943, -41, -2)
+	self.stances.msr_upg_primary = deep_clone(self.stances.msr)
+	self.stances.msr_upg_primary.steelsight.shoulders.translation = Vector3(-12.943, -43, -2)
+	self.stances.msr_upg_secondary = deep_clone(self.stances.msr)
+	self.stances.msr_upg_secondary.steelsight.shoulders.translation = Vector3(-12.943, -43, -2)
 end)

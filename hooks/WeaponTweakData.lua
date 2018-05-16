@@ -340,6 +340,9 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.lemming_primary.weapon_hold = "packrat"
     self.lemming_primary.NR_CLIPS_MAX = self.lemming_primary.NR_CLIPS_MAX * 2
     self.lemming_primary.AMMO_MAX = self.lemming_primary.CLIP_AMMO_MAX * self.lemming_primary.NR_CLIPS_MAX
+    self.lemming_primary.can_shoot_through_enemy = false 
+    self.lemming_primary.can_shoot_through_wall = false 
+    self.lemming_primary.can_shoot_through_shield = false 
     self.lemming_primary.use_data = {selection_index = PRIMARY}
     self.lemming_secondary = deep_clone(self.lemming_primary)
     self.lemming_secondary.use_data = {selection_index = SECONDARY}
@@ -389,6 +392,15 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.tec9_secondary = deep_clone(self.tec9_primary)
     self.tec9_secondary.use_data = {selection_index = SECONDARY}
 
+    self.msr_primary = deep_clone(self.msr)
+    self.msr_primary.animations.reload_name_id = "msr"
+    self.msr_primary.weapon_hold = "msr"
+    self.msr_primary.NR_CLIPS_MAX = self.msr_primary.NR_CLIPS_MAX * 2
+    self.msr_primary.AMMO_MAX = self.msr_primary.CLIP_AMMO_MAX * self.msr_primary.NR_CLIPS_MAX
+    self.msr_primary.use_data = {selection_index = PRIMARY}
+    self.msr_secondary = deep_clone(self.msr_primary)
+    self.msr_secondary.use_data = {selection_index = SECONDARY}
+
     self:_init_upgraded_zm_weapons()
 end
 
@@ -403,8 +415,6 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.new_m14_upg_primary.AMMO_MAX = self.new_m14_upg_primary.CLIP_AMMO_MAX * self.new_m14_upg_primary.NR_CLIPS_MAX
     self.new_m14_upg_primary.stats_modifiers = {damage = 8}
     self.new_m14_upg_primary.can_shoot_through_enemy = true
-    self.new_m14_upg_primary.can_shoot_through_wall = true
-    self.new_m14_upg_primary.can_shoot_through_shield = true
     self.new_m14_upg_secondary = deep_clone(self.new_m14_upg_primary)
     self.new_m14_upg_secondary.use_data = {selection_index = SECONDARY}
 
@@ -473,6 +483,18 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.mp9_upg_primary.use_data = {selection_index = PRIMARY}
     self.mp9_upg_secondary = deep_clone(self.mp9_upg_primary)
     self.mp9_upg_secondary.use_data = {selection_index = SECONDARY}
+
+    self.rpg7_upg_primary = deep_clone(self.b682_primary)
+    self.rpg7_upg_primary.name_id = "wpn_rpg7_upg_name"
+    self.rpg7_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.rpg7_upg_primary.sounds.fire = "zm_pew_m1911"
+    self.rpg7_upg_primary.sounds.fire_single = "zm_pew_shts"
+    self.rpg7_upg_primary.stats_modifiers = {damage = 10}
+    self.rpg7_upg_primary.CLIP_AMMO_MAX = 5
+    self.rpg7_upg_primary.NR_CLIPS_MAX = 5
+    self.rpg7_upg_primary.AMMO_MAX = self.rpg7_upg_primary.CLIP_AMMO_MAX * self.rpg7_upg_primary.NR_CLIPS_MAX
+    self.rpg7_upg_secondary = deep_clone(self.rpg7_upg_primary)
+    self.rpg7_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
 	
 	
 --for whom the shovel tolls
@@ -670,9 +692,9 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.ak74_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.ak74_upg_primary.sounds.fire = "zm_pew_rifle"
     self.ak74_upg_primary.sounds.fire_single = "zm_pew_rifle"
-    self.ak74_upg_primary.stats_modifiers = {damage = 7}
-    self.ak74_upg_primary.CLIP_AMMO_MAX = 7
-    self.ak74_upg_primary.NR_CLIPS_MAX = 7
+    self.ak74_upg_primary.stats_modifiers = {damage = 10}
+    self.ak74_upg_primary.CLIP_AMMO_MAX = 45
+    self.ak74_upg_primary.NR_CLIPS_MAX = 8
     self.ak74_upg_primary.AMMO_MAX = self.ak74_upg_primary.CLIP_AMMO_MAX * self.ak74_upg_primary.NR_CLIPS_MAX
     self.ak74_upg_primary.use_data = {selection_index = PRIMARY}
     self.ak74_upg_secondary = deep_clone(self.ak74_upg_primary)
@@ -682,9 +704,10 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.ching_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.ching_upg_primary.sounds.fire = "zm_pew_rifle"
     self.ching_upg_primary.sounds.fire_single = "zm_pew_rifle"
-    self.ching_upg_primary.stats_modifiers = {damage = 7}
-    self.ching_upg_primary.CLIP_AMMO_MAX = 7
+    self.ching_upg_primary.stats_modifiers = {damage = 8}
+    self.ching_upg_primary.CLIP_AMMO_MAX = 20
     self.ching_upg_primary.NR_CLIPS_MAX = 7
+    self.ching_upg_primary.can_shoot_through_shield = true
     self.ching_upg_primary.AMMO_MAX = self.ching_upg_primary.CLIP_AMMO_MAX * self.ching_upg_primary.NR_CLIPS_MAX
     self.ching_upg_primary.use_data = {selection_index = PRIMARY}
     self.ching_upg_secondary = deep_clone(self.ching_upg_primary)
@@ -694,9 +717,12 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.lemming_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.lemming_upg_primary.sounds.fire = "zm_pew_cobra"
     self.lemming_upg_primary.sounds.fire_single = "zm_pew_cobra"
-    self.lemming_upg_primary.stats_modifiers = {damage = 7}
-    self.lemming_upg_primary.CLIP_AMMO_MAX = 7
+    self.lemming_upg_primary.stats_modifiers = {damage = 13}
+    self.lemming_upg_primary.CLIP_AMMO_MAX = 20
     self.lemming_upg_primary.NR_CLIPS_MAX = 7
+    self.lemming_upg_primary.can_shoot_through_enemy = true 
+    self.lemming_upg_primary.can_shoot_through_wall = true 
+    self.lemming_upg_primary.can_shoot_through_shield = true 
     self.lemming_upg_primary.AMMO_MAX = self.lemming_upg_primary.CLIP_AMMO_MAX * self.lemming_upg_primary.NR_CLIPS_MAX
     self.lemming_upg_primary.use_data = {selection_index = PRIMARY}
     self.lemming_upg_secondary = deep_clone(self.lemming_upg_primary)
@@ -706,8 +732,8 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.m37_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.m37_upg_primary.sounds.fire = "zm_pew_shts"
     self.m37_upg_primary.sounds.fire_single = "zm_pew_shts"
-    self.m37_upg_primary.stats_modifiers = {damage = 7}
-    self.m37_upg_primary.CLIP_AMMO_MAX = 7
+    self.m37_upg_primary.stats_modifiers = {damage = 12}
+    self.m37_upg_primary.CLIP_AMMO_MAX = 16
     self.m37_upg_primary.NR_CLIPS_MAX = 7
     self.m37_upg_primary.AMMO_MAX = self.m37_upg_primary.CLIP_AMMO_MAX * self.m37_upg_primary.NR_CLIPS_MAX
     self.m37_upg_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
@@ -718,9 +744,9 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.r870_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.r870_upg_primary.sounds.fire = "zm_pew_shts"
     self.r870_upg_primary.sounds.fire_single = "zm_pew_shts"
-    self.r870_upg_primary.stats_modifiers = {damage = 7}
-    self.r870_upg_primary.CLIP_AMMO_MAX = 7
-    self.r870_upg_primary.NR_CLIPS_MAX = 7
+    self.r870_upg_primary.stats_modifiers = {damage = 10}
+    self.r870_upg_primary.CLIP_AMMO_MAX = 12
+    self.r870_upg_primary.NR_CLIPS_MAX = 9
     self.r870_upg_primary.AMMO_MAX = self.r870_upg_primary.CLIP_AMMO_MAX * self.r870_upg_primary.NR_CLIPS_MAX
     self.r870_upg_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
     self.r870_upg_secondary = deep_clone(self.r870_upg_primary)
@@ -730,9 +756,9 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.erma_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.erma_upg_primary.sounds.fire = "zm_pew_smg"
     self.erma_upg_primary.sounds.fire_single = "zm_pew_smg"
-    self.erma_upg_primary.stats_modifiers = {damage = 7}
-    self.erma_upg_primary.CLIP_AMMO_MAX = 7
-    self.erma_upg_primary.NR_CLIPS_MAX = 7
+    self.erma_upg_primary.stats_modifiers = {damage = 14}
+    self.erma_upg_primary.CLIP_AMMO_MAX = 64
+    self.erma_upg_primary.NR_CLIPS_MAX = 4
     self.erma_upg_primary.AMMO_MAX = self.erma_upg_primary.CLIP_AMMO_MAX * self.erma_upg_primary.NR_CLIPS_MAX
     self.erma_upg_primary.use_data = {selection_index = PRIMARY}
     self.erma_upg_secondary = deep_clone(self.erma_upg_primary)
@@ -742,9 +768,9 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.schakal_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.schakal_upg_primary.sounds.fire = "zm_pew_smg"
     self.schakal_upg_primary.sounds.fire_single = "zm_pew_smg"
-    self.schakal_upg_primary.stats_modifiers = {damage = 7}
-    self.schakal_upg_primary.CLIP_AMMO_MAX = 7
-    self.schakal_upg_primary.NR_CLIPS_MAX = 7
+    self.schakal_upg_primary.stats_modifiers = {damage = 14}
+    self.schakal_upg_primary.CLIP_AMMO_MAX = 48
+    self.schakal_upg_primary.NR_CLIPS_MAX = 6
     self.schakal_upg_primary.AMMO_MAX = self.schakal_upg_primary.CLIP_AMMO_MAX * self.schakal_upg_primary.NR_CLIPS_MAX
     self.schakal_upg_primary.use_data = {selection_index = PRIMARY}
     self.schakal_upg_secondary = deep_clone(self.schakal_upg_primary)
@@ -754,11 +780,32 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.tec9_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.tec9_upg_primary.sounds.fire = "zm_pew_smg"
     self.tec9_upg_primary.sounds.fire_single = "zm_pew_smg"
-    self.tec9_upg_primary.stats_modifiers = {damage = 7}
-    self.tec9_upg_primary.CLIP_AMMO_MAX = 7
-    self.tec9_upg_primary.NR_CLIPS_MAX = 7
+    self.tec9_upg_primary.stats_modifiers = {damage = 15}
+    self.tec9_upg_primary.CLIP_AMMO_MAX = 25
+    self.tec9_upg_primary.NR_CLIPS_MAX = 10
     self.tec9_upg_primary.AMMO_MAX = self.tec9_upg_primary.CLIP_AMMO_MAX * self.tec9_upg_primary.NR_CLIPS_MAX
     self.tec9_upg_primary.use_data = {selection_index = PRIMARY}
     self.tec9_upg_secondary = deep_clone(self.tec9_upg_primary)
     self.tec9_upg_secondary.use_data = {selection_index = SECONDARY}
+
+    self.msr_upg_primary = deep_clone(self.msr_primary)
+    self.msr_upg_primary.name_id = "wpn_msr_upg_name"
+    self.msr_upg_primary.CLIP_AMMO_MAX = 10
+    self.msr_upg_primary.NR_CLIPS_MAX = 6
+    self.msr_upg_primary.AMMO_MAX = self.msr_upg_primary.CLIP_AMMO_MAX * self.msr_upg_primary.NR_CLIPS_MAX
+    self.msr_upg_primary.sounds.fire = "zm_pew_snp_b"
+    self.msr_upg_primary.sounds.fire_single = "zm_pew_snp_e"
+    self.msr_upg_primary.stats_modifiers = {damage = 150}
+    self.msr_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.msr_upg_secondary = deep_clone(self.msr_upg_primary)
+    self.msr_upg_secondary.use_data = {selection_index = SECONDARY}
+
+    self.roach_upg_primary = deep_clone(self.roach_primary)
+    self.roach_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.roach_upg_primary.CLIP_AMMO_MAX = 6
+    self.roach_upg_primary.NR_CLIPS_MAX = 5
+    self.roach_upg_primary.AMMO_MAX = self.roach_upg_primary.CLIP_AMMO_MAX * self.roach_upg_primary.NR_CLIPS_MAX
+    self.roach_upg_primary.use_data = {selection_index = PRIMARY}
+    self.roach_upg_secondary = deep_clone(self.roach_upg_primary)
+    self.roach_upg_secondary.use_data = {selection_index = SECONDARY}
 end

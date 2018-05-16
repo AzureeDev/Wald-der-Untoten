@@ -77,6 +77,8 @@
 	<unit path="new_weapon_units/upgrade/wpn_fps_shot_b682_upg_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_smg_mp9_upg_primary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_smg_mp9_upg_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_spe_rpg7_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_spe_rpg7_upg_secondary"/>
 	<unit path="new_weapon_units/wpn_fps_ass_fal_primary"/>
 	<unit path="new_weapon_units/wpn_fps_ass_fal_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_ass_fal_upg_primary"/>
@@ -173,6 +175,10 @@
 	<unit path="new_weapon_units/wpn_fps_smg_tec9_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_smg_tec9_upg_primary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_smg_tec9_upg_secondary"/>
+	<unit path="new_weapon_units/wpn_fps_snp_msr_primary"/>
+	<unit path="new_weapon_units/wpn_fps_snp_msr_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_snp_msr_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_snp_msr_upg_secondary"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<model path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<object path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
@@ -361,6 +367,8 @@
 	<object path="units/mods/weapons/wpn_fps_special_roach/wpn_fps_special_roach"/>
 	<unit path="units/mods/weapons/wpn_fps_special_roach/wpn_fps_special_roach_primary"/>
 	<unit path="units/mods/weapons/wpn_fps_special_roach/wpn_fps_special_roach_secondary"/>
+	<unit path="units/mods/weapons/wpn_fps_special_roach/wpn_fps_special_roach_upg_primary"/>
+	<unit path="units/mods/weapons/wpn_fps_special_roach/wpn_fps_special_roach_upg_secondary"/>
 	<unit path="units/mods/weapons/wpn_fps_special_roach/wpn_fps_special_roach_npc"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"/>

@@ -181,14 +181,13 @@ end
 function WDUManager:_update_hud_element()
     if not Global.game_settings.single_player then
         for _, peer in pairs(managers.network:session():all_peers()) do
-            Steam:friend_avatar(2, peer:user_id(), function (texture)
-        		local avatar = texture or "guis/textures/pd2/none_icon"
-                managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_image(avatar)
-        		managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_visible(true)
-        	end)
-            managers.hud._hud_zm_points._zmp_points[peer:id()]:set_text(tostring(self.players[peer:id()].money))
-            managers.hud._hud_zm_points:_animate_points_gained(managers.hud._hud_zm_points._zmp_points[peer:id()])
-            managers.hud._hud_zm_points._zmp_points[peer:id()]:set_visible(true)
+                Steam:friend_avatar(2, peer:user_id(), function (texture)
+                    local avatar = texture or "guis/textures/pd2/none_icon"
+                    managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_image(avatar)
+                    managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_visible(true)
+                end)
+                managers.hud._hud_zm_points._zmp_points[peer:id()]:set_text(tostring(self.players[peer:id()].money))
+                managers.hud._hud_zm_points._zmp_points[peer:id()]:set_visible(true)
         end
     else
         Steam:friend_avatar(2, Steam:userid(), function (texture)
@@ -197,7 +196,6 @@ function WDUManager:_update_hud_element()
             managers.hud._hud_zm_points._zmp_avatars[1]:set_visible(true)
         end)
         managers.hud._hud_zm_points._zmp_points[1]:set_text(tostring(self.players[1].money))
-        managers.hud._hud_zm_points:_animate_points_gained(managers.hud._hud_zm_points._zmp_points[1])
         managers.hud._hud_zm_points._zmp_points[1]:set_visible(true)
     end
 end
@@ -348,6 +346,102 @@ end
 
 function WDUManager:_is_teleporter_available()
     return self.level.teleporter.active
+end
+
+function WDUManager:_get_weapons_in_mystery_box()
+    return {
+        "wpn_fps_spe_wunderwaffe",
+		"wpn_fps_special_roach",
+		"wpn_fps_ass_m14",
+		"wpn_fps_shot_b682",
+		"wpn_fps_smg_mp9",
+		"wpn_fps_snp_m95",
+		"wpn_fps_ass_fal",
+		"wpn_fps_pis_deagle",
+		"wpn_fps_ass_aug",
+		"wpn_fps_smg_p90",
+		"wpn_fps_sho_striker",
+		"wpn_fps_ass_amcar",
+		"wpn_fps_ass_m16",
+		"wpn_fps_ass_scar",
+		"wpn_fps_pis_judge",
+		"wpn_fps_smg_thompson",
+		"wpn_fps_lmg_hk21",
+		"wpn_fps_lmg_m249",
+		"wpn_fps_pis_rage",
+		"wpn_fps_pis_peacemaker",
+		"wpn_fps_ass_flint",
+		"wpn_fps_pis_breech",
+		"wpn_fps_spe_rpg7",
+		"wpn_fps_smg_tec9"
+    }
+end
+
+function WDUManager:_convert_factory_to_upgrade()
+    return {
+		wpn_fps_spe_wunderwaffe_primary = "wpn_fps_spe_wunderwaffe_dg3_primary",
+		wpn_fps_spe_wunderwaffe_secondary = "wpn_fps_spe_wunderwaffe_dg3_secondary",
+		wpn_fps_ass_m14_primary = "wpn_fps_ass_m14_upg_primary",
+		wpn_fps_ass_m14_secondary = "wpn_fps_ass_m14_upg_secondary",
+		wpn_fps_snp_m95_primary = "wpn_fps_snp_m95_upg_primary",
+		wpn_fps_snp_m95_secondary = "wpn_fps_snp_m95_upg_secondary",
+		wpn_fps_smg_mp9_primary = "wpn_fps_smg_mp9_upg_primary",
+		wpn_fps_smg_mp9_secondary = "wpn_fps_smg_mp9_upg_secondary",
+		wpn_fps_shot_b682_primary = "wpn_fps_shot_b682_upg_primary",
+		wpn_fps_shot_b682_secondary = "wpn_fps_shot_b682_upg_secondary",
+		wpn_fps_pis_1911_primary = "wpn_fps_pis_1911_upg_primary",
+		wpn_fps_pis_1911_secondary = "wpn_fps_pis_1911_upg_secondary",
+		wpn_fps_ass_fal_primary = "wpn_fps_ass_fal_upg_primary",
+		wpn_fps_ass_fal_secondary = "wpn_fps_ass_fal_upg_secondary",
+		wpn_fps_pis_deagle_primary = "wpn_fps_pis_deagle_upg_primary",
+		wpn_fps_pis_deagle_secondary = "wpn_fps_pis_deagle_upg_secondary",
+		wpn_fps_ass_aug_primary = "wpn_fps_ass_aug_upg_primary",
+		wpn_fps_ass_aug_secondary = "wpn_fps_ass_aug_upg_secondary",
+		wpn_fps_smg_p90_primary = "wpn_fps_smg_p90_upg_primary",
+		wpn_fps_smg_p90_secondary = "wpn_fps_smg_p90_upg_secondary",
+		wpn_fps_sho_striker_primary = "wpn_fps_sho_striker_upg_primary",
+		wpn_fps_sho_striker_secondary = "wpn_fps_sho_striker_upg_secondary",
+		wpn_fps_ass_amcar_primary = "wpn_fps_ass_amcar_upg_primary",
+		wpn_fps_ass_amcar_secondary = "wpn_fps_ass_amcar_upg_secondary",
+		wpn_fps_ass_m16_primary = "wpn_fps_ass_m16_upg_primary",
+		wpn_fps_ass_m16_secondary = "wpn_fps_ass_m16_upg_secondary",
+		wpn_fps_ass_scar_primary = "wpn_fps_ass_scar_upg_primary",
+		wpn_fps_ass_scar_secondary = "wpn_fps_ass_scar_upg_secondary",
+		wpn_fps_pis_judge_primary = "wpn_fps_pis_judge_upg_primary",
+		wpn_fps_pis_judge_secondary = "wpn_fps_pis_judge_upg_secondary",
+		wpn_fps_smg_thompson_primary = "wpn_fps_smg_thompson_upg_primary",
+		wpn_fps_smg_thompson_secondary = "wpn_fps_smg_thompson_upg_secondary",
+		wpn_fps_lmg_hk21_primary = "wpn_fps_lmg_hk21_upg_primary",
+		wpn_fps_lmg_hk21_secondary = "wpn_fps_lmg_hk21_upg_secondary",
+		wpn_fps_lmg_m249_primary = "wpn_fps_lmg_m249_upg_primary",
+		wpn_fps_lmg_m249_secondary = "wpn_fps_lmg_m249_upg_secondary",
+		wpn_fps_pis_rage_primary = "wpn_fps_pis_rage_upg_primary",
+		wpn_fps_pis_rage_secondary = "wpn_fps_pis_rage_upg_secondary",
+		wpn_fps_pis_peacemaker_primary = "wpn_fps_pis_peacemaker_upg_primary",
+		wpn_fps_pis_peacemaker_secondary = "wpn_fps_pis_peacemaker_upg_secondary",
+		wpn_fps_ass_flint_primary = "wpn_fps_ass_flint_upg_primary",
+		wpn_fps_ass_flint_secondary = "wpn_fps_ass_flint_upg_secondary",
+		wpn_fps_pis_breech_primary = "wpn_fps_pis_breech_upg_primary",
+		wpn_fps_pis_breech_secondary = "wpn_fps_pis_breech_upg_secondary",
+		wpn_fps_ass_74_primary = "wpn_fps_ass_74_upg_primary",
+		wpn_fps_ass_74_secondary = "wpn_fps_ass_74_upg_secondary",
+		wpn_fps_ass_ching_primary = "wpn_fps_ass_ching_upg_primary",
+		wpn_fps_ass_ching_secondary = "wpn_fps_ass_ching_upg_secondary",
+		wpn_fps_pis_lemming_primary = "wpn_fps_pis_lemming_upg_primary",
+		wpn_fps_pis_lemming_secondary = "wpn_fps_pis_lemming_upg_secondary",
+		wpn_fps_shot_m37_primary = "wpn_fps_shot_m37_upg_primary",
+		wpn_fps_shot_m37_secondary = "wpn_fps_shot_m37_upg_secondary",
+		wpn_fps_shot_r870_primary = "wpn_fps_shot_r870_upg_primary",
+		wpn_fps_shot_r870_secondary = "wpn_fps_shot_r870_upg_secondary",
+		wpn_fps_smg_erma_primary = "wpn_fps_smg_erma_upg_primary",
+		wpn_fps_smg_erma_secondary = "wpn_fps_smg_erma_upg_secondary",
+		wpn_fps_smg_schakal_primary = "wpn_fps_smg_schakal_upg_primary",
+		wpn_fps_smg_schakal_secondary = "wpn_fps_smg_schakal_upg_secondary",
+		wpn_fps_smg_tec9_primary = "wpn_fps_smg_tec9_upg_primary",
+        wpn_fps_smg_tec9_secondary = "wpn_fps_smg_tec9_upg_secondary",
+        wpn_fps_spe_rpg7_primary = "wpn_fps_spe_rpg7_upg_primary",
+        wpn_fps_spe_rpg7_secondary = "wpn_fps_spe_rpg7_upg_secondary"
+	}
 end
 
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)

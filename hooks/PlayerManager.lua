@@ -46,7 +46,10 @@ end)
 
 Hooks:PostHook(PlayerManager, "update", "zm_upd_perk", function(self, t, dt)
 	if not self._show_point_list then
-		managers.wdu:_update_hud_element()
+		DelayedCalls:Add( "ZmShowPointsDelay", 2, function()
+			managers.wdu:_update_hud_element()
+		end)
+		
 		self._show_point_list = true
 	end
 

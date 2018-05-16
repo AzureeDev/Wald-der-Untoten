@@ -56,5 +56,7 @@
     "wpn_m95_upg_name" : "Barrett Cal. 115",
     "wpn_waffe_name" : "Wunderwaffe DG-2",
     "wpn_waffe_upg_name" : "Wunderwaffe DG-3 JZ",
-    "wpn_minigun_upg_name" : "K.M. Vulcan"
+    "wpn_minigun_upg_name" : "K.M. Vulcan",
+    "wpn_rpg7_upg_name" : "Atomic Protivotankoviy Granatomyot",
+    "wpn_msr_upg_name" : "SHS-95 - 'Skeletal Head Seeker'"
 }
