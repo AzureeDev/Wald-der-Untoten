@@ -13,7 +13,15 @@ function ElementWeaponSwitch:on_executed(instigator)
     if not self._values.enabled then
 		self._mission_script:debug_output("Element '" .. self._editor_name .. "' not enabled. Skip.", Color(1, 1, 0, 0))
 		return
-	end
+    end
+    
+    -- Grenade spot ? Call it directly and refill nades. Terminate it afterwards.
+
+    if self._values.is_grenade_spot then
+        managers.player:add_grenade_amount(10)
+        ElementWeaponSwitch.super.on_executed(self, instigator)
+        return
+    end
 
     -- Base Factory ID before assuming the current slot
     local factory_id = self._values.weapon_id or "wpn_fps_ass_m4"

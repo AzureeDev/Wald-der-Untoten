@@ -175,6 +175,16 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		is_perk_interaction = true
 	}
 
+	self.zm_perk_quickrevive_solo = {
+		text_id = "zm_perk_quickrevive_solo",
+		action_text_id = "zm_buy_perk",
+		start_active = false,
+		axis = "y",
+		timer = 3,
+		special_equipment_block = "perk_quickrevive",
+		is_perk_interaction = true
+	}
+
 	self.zm_open_door_2000 = {
 		text_id = "zm_open_door_2000",
 		action_text_id = "zm_opening_path",
@@ -227,6 +237,14 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 
 	self.zm_wall_buy_garand_1500 = {
 		text_id = "zm_wall_buy_garand_1500",
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 1.5
+	}
+
+	self.zm_wall_buy_nades_1000 = {
+		text_id = "zm_wall_buy_nades_1000",
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		axis = "y",

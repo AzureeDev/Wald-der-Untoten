@@ -646,9 +646,9 @@
 	</unit_load>
 	<unit_load name="units/zdann/pap_machine/pap_machine">
 		<cooked_physics path="units/zdann/pap_machine/pap_machine"/>
+		<material_config path="units/zdann/pap_machine/pap_machine"/>
 		<model path="units/zdann/pap_machine/pap_machine"/>
 		<object path="units/zdann/pap_machine/pap_machine"/>
-		<material_config path="units/zdann/pap_machine/pap_machine"/>
 		<unit path="units/zdann/pap_machine/pap_machine"/>
 	</unit_load>
 	<add path="units/payday2/props/com_prop_club_light_led/com_prop_club_light_led_orange" type="unit">
@@ -674,11 +674,6 @@
 		<unit path="units/babuforce/random_box/random_box"/>
 	</unit_load>
 	<unit_load name="units/zdann/pap_machine/pap_machine">
-		<cooked_physics path="units/zdann/pap_machine/pap_machine"/>
-		<model path="units/zdann/pap_machine/pap_machine"/>
-		<object path="units/zdann/pap_machine/pap_machine"/>
-		<material_config path="units/zdann/pap_machine/pap_machine"/>
-		<unit path="units/zdann/pap_machine/pap_machine"/>
 		<texture path="units/zdann/pap_machine/textures/bottom_back_df"/>
 		<texture path="units/zdann/pap_machine/textures/bottom_back_nm"/>
 		<texture path="units/zdann/pap_machine/textures/frame_left_df"/>
@@ -699,6 +694,11 @@
 		<texture path="units/zdann/pap_machine/textures/top_nm"/>
 		<texture path="units/zdann/pap_machine/textures/top_main_df"/>
 		<texture path="units/zdann/pap_machine/textures/top_main_nm"/>
+		<cooked_physics path="units/zdann/pap_machine/pap_machine"/>
+		<material_config path="units/zdann/pap_machine/pap_machine"/>
+		<model path="units/zdann/pap_machine/pap_machine"/>
+		<object path="units/zdann/pap_machine/pap_machine"/>
+		<unit path="units/zdann/pap_machine/pap_machine"/>
 	</unit_load>
 	<add path="units/world/brushes/puddle_blood/puddle_blood_3" type="unit">
 		<material_config force="true" path="units/world/brushes/puddle_blood/puddles_blood" unload="true"/>
@@ -711,17 +711,22 @@
 		<unit force="true" path="units/world/brushes/puddle_blood/puddle_blood_4" unload="true"/>
 	</add>
 	<add path="core/units/light_spot/light_spot" type="unit">
-		<unit force="true" path="core/units/light_spot/light_spot" unload="true"/>
-		<object force="true" path="core/units/light_spot/light_spot" unload="true"/>
 		<material_config force="true" path="core/material_configs/hub_elements" unload="true"/>
+		<object force="true" path="core/units/light_spot/light_spot" unload="true"/>
+		<unit force="true" path="core/units/light_spot/light_spot" unload="true"/>
 	</add>
 	<unit_load name="units/zdann/kurumi/shovel">
 		<cooked_physics path="units/zdann/kurumi/shovel"/>
-		<model path="units/zdann/kurumi/shovel"/>
-		<unit path="units/zdann/kurumi/shovel"/>
-		<object path="units/zdann/kurumi/shovel"/>
 		<material_config path="units/zdann/kurumi/shovel"/>
+		<model path="units/zdann/kurumi/shovel"/>
+		<object path="units/zdann/kurumi/shovel"/>
+		<unit path="units/zdann/kurumi/shovel"/>
 	</unit_load>
+	<add path="units/dev_tools/level_tools/dev_collision/dev_collision_8x32m" type="unit">
+		<unit force="true" path="units/dev_tools/level_tools/dev_collision/dev_collision_8x32m" unload="true"/>
+		<object force="true" path="units/dev_tools/level_tools/dev_collision/dev_collision_8x32m" unload="true"/>
+		<material_config force="true" path="core/material_configs/hub_elements" unload="true"/>
+	</add>
 	<movie path="movies/ascension"/>
 	<sequence_manager force="true" path="units/props/black_crate" unload="true"/>
 </table>

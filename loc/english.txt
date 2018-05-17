@@ -1,6 +1,8 @@
 {
     "heist_zm_the_forest_name" : "Wald Der Untoten",
     "heist_zm_the_forest_brief" : "",
+    "contact_nepgearsy_name" : "Nepgearsy",
+	"contact_nepgearsy_desc" : "This guy. I've never seen his face. He's also talking through a bad voice filter. I suggest you to be careful when you're going to fulfill his requests. Something bad might happen...",
     "menu_jukebox_track_zm_the_forest" : "with your little shovel",
     "zm_wald_der_untoten_perks_name" : "Available Perks",
     "hud_assault_zombie" : "Zombie Assault in progress",
@@ -28,6 +30,7 @@
     "zm_perk_juggernog_2500" : "Hold $BTN_INTERACT to buy Juggernog [Cost: 2,500]",
     "zm_perk_speedcola_3000" : "Hold $BTN_INTERACT to buy Speed Cola [Cost: 3,000]",
     "zm_perk_quickrevive_1500" : "Hold $BTN_INTERACT to buy Quick Revive [Cost: 1,500]",
+    "zm_perk_quickrevive_solo" : "Hold $BTN_INTERACT to buy Quick Revive [Cost: 500]",
     "zm_perk_doubletap_2000" : "Hold $BTN_INTERACT to buy Double Tap [Cost: 2,000]",
 
     "zm_wall_buy_r870_1300" : "Hold $BTN_INTERACT to buy a R870 [Cost: 1,300]",
@@ -38,6 +41,7 @@
     "zm_wall_buy_garand_1500" : "Hold $BTN_INTERACT to buy a M1 Garand [Cost: 1,500]",
     "zm_wall_buy_ump45_1450" : "Hold $BTN_INTERACT to buy a UMP-45 [Cost: 1,450]",
     "zm_wall_buy_tec9_800" : "Hold $BTN_INTERACT to buy a TEC-9 [Cost: 800]",
+    "zm_wall_buy_nades_1000" : "Hold $BTN_INTERACT to refill your throwables [Cost: 1,000]",
 
     "zm_teleporter" : "Hold $BTN_INTERACT to use the teleporter",
     "zm_use_teleporter" : "Using the teleporter",

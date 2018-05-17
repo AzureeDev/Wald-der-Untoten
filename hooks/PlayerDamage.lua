@@ -10,15 +10,16 @@ end
 
 function PlayerDamage:_chk_cheat_death()
     if Application:digest_value(self._revives, false) > 1 and not self._check_berserker_done and managers.player:has_special_equipment("perk_quickrevive") then
-        if Global.game_settings.single_player then
+        if managers.wdu:_is_solo() then
             local player_name = managers.network.account:username()
             local text_concat = "Reviving " .. player_name .. " ..."
-            managers.hud:present_mid_text( { text = text_concat, title = "Quick Revive", time = 5 } )
-            self._auto_revive_timer = 5
+            managers.hud:present_mid_text( { text = text_concat, title = "Quick Revive", time = 6 } )
+            self._auto_revive_timer = 6.5
 
-            DelayedCalls:Add( "ZmRemoveQuickReviveIn", 5, function()
+            DelayedCalls:Add( "ZmRemoveQuickReviveIn", 6.5, function()
                 managers.player:remove_special("perk_quickrevive")
-            end)
+			end)
+			
             return
         end
     end
@@ -42,7 +43,7 @@ Hooks:PreHook(PlayerDamage, "on_downed", "zm_remove_perks_on_down", function(sel
     if managers.player:has_special_equipment("perk_doubletap") then
         managers.player:remove_special("perk_doubletap")
     end
-    if not Global.game_settings.single_player and managers.player:has_special_equipment("perk_quickrevive") then
+    if not managers.wdu:_is_solo() and managers.player:has_special_equipment("perk_quickrevive") then
         managers.player:remove_special("perk_quickrevive")
     end
 end)
@@ -93,7 +94,7 @@ function PlayerDamage:damage_fall(data)
 			self._revives = Application:digest_value(1, true)
         end
         
-        if Global.game_settings.single_player and managers.player:has_special_equipment("perk_quickrevive") then
+        if managers.wdu:_is_solo() and managers.player:has_special_equipment("perk_quickrevive") then
             self:_chk_cheat_death()
         end
 	else

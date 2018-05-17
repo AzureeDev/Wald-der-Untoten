@@ -6,7 +6,7 @@ Hooks:PostHook(GroupAITweakData, "_init_unit_categories", "zm_allow_clk_dozers",
     }
     
     self.special_unit_spawn_limits = {
-        shield = 3,
+        shield = 0,
         medic = 5,
         taser = 5,
         tank = 5,
