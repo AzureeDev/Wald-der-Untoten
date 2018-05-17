@@ -96,7 +96,7 @@ function WDUManager:_init_new_player(data)
     end
 
     self:_set_player_name(data.id, data.name)
-    self:_set_start_money(data.id, 9500)
+    self:_set_start_money(data.id, 500)
 end
 
 function WDUManager:_is_solo()
@@ -368,7 +368,6 @@ function WDUManager:_is_teleporter_available()
 end
 
 function WDUManager:_get_weapons_in_mystery_box()
-    return { "wpn_fps_spe_rpg7" } --[[
     return {
         "wpn_fps_spe_wunderwaffe",
 		"wpn_fps_special_roach",
@@ -394,7 +393,7 @@ function WDUManager:_get_weapons_in_mystery_box()
 		"wpn_fps_pis_breech",
 		"wpn_fps_spe_rpg7",
 		"wpn_fps_smg_tec9"
-    }]]
+    }
 end
 
 function WDUManager:_convert_factory_to_upgrade()

@@ -597,6 +597,7 @@
 		<material_config path="units/weapon_walls/new/wpn_graffiti_r870"/>
 		<material_config path="units/weapon_walls/new/wpn_graffiti_tec9"/>
 		<material_config path="units/weapon_walls/new/wpn_graffiti_ump45"/>
+		<material_config path="units/weapon_walls/new/wpn_graffiti_nade"/>
 		<texture path="units/weapon_walls/new/textures/wpn_graffiti_57"/>
 		<texture path="units/weapon_walls/new/textures/wpn_graffiti_ak47"/>
 		<texture path="units/weapon_walls/new/textures/wpn_graffiti_garand"/>
@@ -605,6 +606,7 @@
 		<texture path="units/weapon_walls/new/textures/wpn_graffiti_r870"/>
 		<texture path="units/weapon_walls/new/textures/wpn_graffiti_tec9"/>
 		<texture path="units/weapon_walls/new/textures/wpn_graffiti_ump45"/>
+		<texture path="units/weapon_walls/new/textures/wpn_graffiti_nade"/>
 		<cooked_physics path="units/weapon_walls/new/wpn_graffiti"/>
 		<model path="units/weapon_walls/new/wpn_graffiti"/>
 		<object path="units/weapon_walls/new/wpn_graffiti"/>
