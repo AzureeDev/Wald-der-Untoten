@@ -82,6 +82,7 @@ end)
 
 function WeaponTweakData:_init_zm_new_weapons()
     self.colt_1911_primary = deep_clone(self.colt_1911)
+    self.colt_1911_primary.name_id = "wpn_m1911_name"
     self.colt_1911_primary.animations.reload_name_id = "colt_1911"
     self.colt_1911_primary.weapon_hold = "colt_1911"
     self.colt_1911_primary.CLIP_AMMO_MAX = 7
