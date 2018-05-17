@@ -351,10 +351,27 @@ function WDUManager:_setup_video_panel()
 end
 
 function WDUManager:_play_teleporter_transition()
+
+    local res = RenderSettings.resolution
+	local src_width = 1280
+	local src_height = 720
+	local dest_width, dest_height = nil
+
+	if res.x / res.y < src_width / src_height then
+		dest_width = res.x
+		dest_height = (src_height * dest_width) / src_width
+	else
+		dest_height = res.y
+		dest_width = (src_width * dest_height) / src_height
+    end
+    
+    local x = (res.x - dest_width) / 2
+    local y = (res.y - dest_height) / 2
+    
     self.video_panel = managers.wdu._full_workspace:panel():video({
 		video = "movies/ascension",
-		width = 1280,
-		height = 720,
+		x = x,
+		y = y,
 		layer = -10
 	})
 end
