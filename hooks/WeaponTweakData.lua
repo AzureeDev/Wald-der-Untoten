@@ -418,8 +418,6 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.tec9_primary.animations.reload_name_id = "tec9"
     self.tec9_primary.weapon_hold = "tec9"
     self.tec9_primary.stats_modifiers = {damage = 2}
-    self.tec9_primary.NR_CLIPS_MAX = self.tec9_primary.NR_CLIPS_MAX * 2
-    self.tec9_primary.AMMO_MAX = self.tec9_primary.CLIP_AMMO_MAX * self.tec9_primary.NR_CLIPS_MAX
     self.tec9_primary.use_data = {selection_index = PRIMARY}
     self.tec9_secondary = deep_clone(self.tec9_primary)
     self.tec9_secondary.use_data = {selection_index = SECONDARY}
