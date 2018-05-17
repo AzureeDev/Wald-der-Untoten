@@ -4,6 +4,5 @@
 	<network sync="spawn"/>
 	<extensions>
 		<extension name="unit_data" 	class="ScriptUnitData" />
-		<extension name="damage" 		class="UnitDamage" />
 	</extensions>
 </unit>

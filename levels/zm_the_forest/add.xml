@@ -689,13 +689,15 @@
 		<texture path="units/zdann/pap_machine/textures/leather_df"/>
 		<texture path="units/zdann/pap_machine/textures/main_df"/>
 		<texture path="units/zdann/pap_machine/textures/main_nm"/>
+		<texture path="units/zdann/pap_machine/textures/main_il"/>
+		<texture path="units/zdann/pap_machine/textures/main_op"/>
 		<texture path="units/zdann/pap_machine/textures/side_inside_df"/>
 		<texture path="units/zdann/pap_machine/textures/side_inside_nm"/>
-		<texture path="units/zdann/pap_machine/textures/sign_off_df"/>
 		<texture path="units/zdann/pap_machine/textures/top_df"/>
 		<texture path="units/zdann/pap_machine/textures/top_nm"/>
 		<texture path="units/zdann/pap_machine/textures/top_main_df"/>
 		<texture path="units/zdann/pap_machine/textures/top_main_nm"/>
+		<texture path="units/zdann/pap_machine/textures/roller_df"/>
 		<cooked_physics path="units/zdann/pap_machine/pap_machine"/>
 		<material_config path="units/zdann/pap_machine/pap_machine"/>
 		<model path="units/zdann/pap_machine/pap_machine"/>

@@ -55,6 +55,6 @@
 			<object name="g_top" enabled="true" material="metal"/>
 			<object name="g_upper_roller_side" enabled="true" material="metal"/>
 			<object name="g_upper_rollers" enabled="true" material="metal"/>
-			<object name="g_wood" enabled="true" material="metal"/>
+			<object name="g_wood" enabled="true" material="wood"/>
     </decal_surfaces>
 </dynamic_object>
