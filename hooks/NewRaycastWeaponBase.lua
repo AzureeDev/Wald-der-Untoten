@@ -1,3 +1,19 @@
+local mvec3_set = mvector3.set
+local mvec3_add = mvector3.add
+local mvec3_dot = mvector3.dot
+local mvec3_sub = mvector3.subtract
+local mvec3_mul = mvector3.multiply
+local mvec3_norm = mvector3.normalize
+local mvec3_dir = mvector3.direction
+local mvec3_set_l = mvector3.set_length
+local mvec3_len = mvector3.length
+local math_clamp = math.clamp
+local math_lerp = math.lerp
+local tmp_vec1 = Vector3()
+local tmp_vec2 = Vector3()
+local ids_single = Idstring("single")
+local ids_auto = Idstring("auto")
+
 function NewRaycastWeaponBase:reload_speed_multiplier()
 	if self._current_reload_speed_multiplier then
 		return self._current_reload_speed_multiplier
@@ -38,9 +54,20 @@ function NewRaycastWeaponBase:reload_speed_multiplier()
 	multiplier = self:_convert_add_to_mul(multiplier)
 	multiplier = multiplier * self:reload_speed_stat()
     multiplier = managers.crime_spree:modify_value("WeaponBase:GetReloadSpeedMultiplier", multiplier)
-    multiplier = multiplier * (managers.player:has_special_equipment("perk_speedcola") and 2 or 1)
+	multiplier = multiplier * (managers.player:has_special_equipment("perk_speedcola") and 2 or 1)
 
 	return multiplier
+end
+
+function NewRaycastWeaponBase:_update_rof_on_perk()
+	local user_unit = self._setup and self._setup.user_unit
+	local current_state = alive(user_unit) and user_unit:movement() and user_unit:movement()._current_state
+
+	if managers.player:has_special_equipment("perk_doubletap") then
+		self._fire_rate_multiplier = managers.blackmarket:fire_rate_multiplier(self._name_id, self:weapon_tweak_data().categories, self._silencer, nil, current_state, self._blueprint) * 1.25
+	else
+		self._fire_rate_multiplier = managers.blackmarket:fire_rate_multiplier(self._name_id, self:weapon_tweak_data().categories, self._silencer, nil, current_state, self._blueprint)
+	end
 end
 
 Hooks:PostHook(NewRaycastWeaponBase, "init", "Waffe_AddBulletTrail", function(self)
@@ -85,3 +112,17 @@ Hooks:PostHook(NewRaycastWeaponBase, "fire", "Waffe_FireBulletTrail", function(s
 		end
 	end
 end)
+
+function NewRaycastWeaponBase:damage_multiplier()
+	local multiplier
+	local user_unit = self._setup and self._setup.user_unit
+	local current_state = alive(user_unit) and user_unit:movement() and user_unit:movement()._current_state
+
+	if managers.player:has_special_equipment("perk_doubletap") then
+		multiplier = managers.blackmarket:damage_multiplier(self._name_id, self:weapon_tweak_data().categories, self._silencer, nil, current_state, self._blueprint) * 1.25
+	else
+		multiplier = managers.blackmarket:damage_multiplier(self._name_id, self:weapon_tweak_data().categories, self._silencer, nil, current_state, self._blueprint)
+	end
+
+	return multiplier
+end

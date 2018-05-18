@@ -3,6 +3,8 @@ dofile(ModPath .. "hooks/ElementPointChecker.lua")
 dofile(ModPath .. "hooks/ElementWave.lua")
 dofile(ModPath .. "hooks/ElementAnnouncerGift.lua")
 dofile(ModPath .. "hooks/ElementDynamicEnv.lua")
+dofile(ModPath .. "hooks/ElementPlayVideo.lua")
+dofile(ModPath .. "hooks/ElementXAudio.lua")
 
 --[[
 function MissionManager:add_fading_debug_output(debug, color, as_subtitle)
@@ -21,4 +23,4 @@ function MissionManager:add_fading_debug_output(debug, color, as_subtitle)
         self._fading_debug_output:script().log(stuff[self._fade_index] .. " " .. debug, color, nil)
     end
 end
---]]
+]]

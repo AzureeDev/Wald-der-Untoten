@@ -1,0 +1,8 @@
+<materials version="3">
+    <material name="com_prop_club_light_led" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:SELF_ILLUMINATION" version="2">
+        <diffuse_texture file="units/payday2/props/com_prop_club_light_led/com_prop_club_light_led_df"/>
+        <bump_normal_texture file="units/payday2/props/com_prop_club_light_led/com_prop_club_light_led_nm"/>
+        <self_illumination_texture file="units/payday2/props/com_prop_club_light_led/com_prop_club_light_led_il"/>
+        <variable value="sun" type="scalar" name="il_multiplier"/>
+    </material>
+</materials>

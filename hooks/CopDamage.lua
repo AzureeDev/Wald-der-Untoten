@@ -107,3 +107,19 @@ Hooks:PreHook(CopDamage, "damage_bullet", "zm_instakill_bullet", function(self, 
         managers.wdu:_add_money_to(peer_id, hit_points)
     end
 end)
+
+function CopDamage:_spawn_head_gadget(params)
+	if not self._head_gear then
+		return
+	end
+
+	if self._head_gear_object then
+		if self._head_gear_decal_mesh then
+			local mesh_name_idstr = Idstring(self._head_gear_decal_mesh)
+
+			self._unit:decal_surface(mesh_name_idstr):set_mesh_material(mesh_name_idstr, Idstring("flesh"))
+		end
+    end
+    
+	self._head_gear = false
+end

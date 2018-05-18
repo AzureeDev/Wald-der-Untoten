@@ -1,0 +1,14 @@
+<dynamic_object>
+    <diesel orientation_object="rp_com_prop_club_light_led" materials="units/payday2/props/com_prop_club_light_led/com_prop_club_light_led" />
+    <bodies>
+        <body enabled="true" template="static" name="static_body" >
+            <object collision_type="box" name="c_box_01" />
+        </body>
+    </bodies>
+    <graphics>
+        <object enabled="false" name="g_g" />
+    </graphics>
+	<effects>
+		<effect_spawner name="flashlight" object="e_light" effect="effects/payday2/particles/flares/disco_flare_big_02" enabled="true" assign_parent="true"/>
+	</effects>
+</dynamic_object>

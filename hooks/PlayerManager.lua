@@ -46,7 +46,10 @@ end)
 
 Hooks:PostHook(PlayerManager, "update", "zm_upd_perk", function(self, t, dt)
 	if not self._show_point_list then
-		managers.wdu:_update_hud_element()
+		DelayedCalls:Add( "ZmShowPointsDelay", 2, function()
+			managers.wdu:_update_hud_element()
+		end)
+		
 		self._show_point_list = true
 	end
 
@@ -98,7 +101,9 @@ Hooks:PostHook(PlayerManager, "update", "zm_upd_perk", function(self, t, dt)
             weapon_name_id = ""
         end
 
-        managers.hud._hud_zm_waves.weapon_name_bottom_right:set_text(tostring(weapon_name_id))
+		managers.hud._hud_zm_waves.weapon_name_bottom_right:set_text(tostring(weapon_name_id))
+		
+		current_weapon:_update_rof_on_perk()
     end
 
 	self:_count_nb_perks()
@@ -264,11 +269,7 @@ function PlayerManager:_internal_load()
 
 	player:inventory():add_unit_by_factory_name(secondary.factory_id, default_weapon_selection == 1, false, secondary.blueprint, secondary.cosmetics, texture_switches)
 
-	local primary = {
-		factory_id = "wpn_fps_spe_wunderwaffe_primary",
-		blueprint = tweak_data.weapon.factory.wpn_fps_spe_wunderwaffe_primary.default_blueprint,
-		cosmetics = nil
-	}
+	local primary = managers.blackmarket:equipped_primary()
 
 	if primary then
 		local primary_slot = managers.blackmarket:equipped_weapon_slot("primaries")

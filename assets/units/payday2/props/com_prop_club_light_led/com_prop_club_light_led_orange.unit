@@ -1,0 +1,9 @@
+<unit type="com" slot="1" >
+    <object file="units/payday2/props/com_prop_club_light_led/com_prop_club_light_led_orange" />
+  <dependencies>
+  	<depends_on effect="effects/payday2/particles/flares/disco_flare_big_02" />
+  </dependencies>
+    <extensions>
+        <extension class="ScriptUnitData" name="unit_data" />
+    </extensions>
+</unit>

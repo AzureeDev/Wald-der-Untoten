@@ -1,7 +1,8 @@
 {
     "heist_zm_the_forest_name" : "Wald Der Untoten",
-    "failed_summary_name" : "You died. No one survived. The entire world is full of zombies and humanity has come to a bitter end.",
     "heist_zm_the_forest_brief" : "",
+    "contact_nepgearsy_name" : "Nepgearsy",
+	"contact_nepgearsy_desc" : "This guy. I've never seen his face. He's also talking through a bad voice filter. I suggest you to be careful when you're going to fulfill his requests. Something bad might happen...",
     "menu_jukebox_track_zm_the_forest" : "with your little shovel",
     "zm_wald_der_untoten_perks_name" : "Available Perks",
     "hud_assault_zombie" : "Zombie Assault in progress",
@@ -18,6 +19,7 @@
     "zm_buy_weapon" : "Buying a weapon",
     "zm_buy_perk" : "Buying a perk",
     "zm_open_path_1000" : "Hold $BTN_INTERACT to open this path [Cost: 1,000]",
+    "zm_open_path_2000" : "Hold $BTN_INTERACT to open this path [Cost: 2,000]",
     "zm_open_door_2000" : "Hold $BTN_INTERACT to open this door [Cost: 2,000]",
     "zm_opening_path" : "Opening path",
     "zm_pack_a_punch" : "Hold $BTN_INTERACT to upgrade your current weapon [Cost: 5,000]",
@@ -28,10 +30,27 @@
     "zm_perk_juggernog_2500" : "Hold $BTN_INTERACT to buy Juggernog [Cost: 2,500]",
     "zm_perk_speedcola_3000" : "Hold $BTN_INTERACT to buy Speed Cola [Cost: 3,000]",
     "zm_perk_quickrevive_1500" : "Hold $BTN_INTERACT to buy Quick Revive [Cost: 1,500]",
+    "zm_perk_quickrevive_solo" : "Hold $BTN_INTERACT to buy Quick Revive [Cost: 500]",
     "zm_perk_doubletap_2000" : "Hold $BTN_INTERACT to buy Double Tap [Cost: 2,000]",
+
+    "zm_wall_buy_r870_1300" : "Hold $BTN_INTERACT to buy a R870 [Cost: 1,300]",
+    "zm_wall_buy_ak47_2000" : "Hold $BTN_INTERACT to buy a AK-47 [Cost: 2,000]",
+    "zm_wall_buy_mp40_1100" : "Hold $BTN_INTERACT to buy a MP40 [Cost: 1,100]",
+    "zm_wall_buy_57_1000" : "Hold $BTN_INTERACT to buy a Five-seveN [Cost: 1,000]",
+    "zm_wall_buy_m37_1300" : "Hold $BTN_INTERACT to buy a M37 [Cost: 1,300]",
+    "zm_wall_buy_garand_1500" : "Hold $BTN_INTERACT to buy a M1 Garand [Cost: 1,500]",
+    "zm_wall_buy_ump45_1450" : "Hold $BTN_INTERACT to buy a UMP-45 [Cost: 1,450]",
+    "zm_wall_buy_tec9_800" : "Hold $BTN_INTERACT to buy a TEC-9 [Cost: 800]",
+    "zm_wall_buy_nades_1000" : "Hold $BTN_INTERACT to refill your throwables [Cost: 1,000]",
+
+    "zm_teleporter" : "Hold $BTN_INTERACT to use the teleporter",
+    "zm_use_teleporter" : "Using the teleporter",
+    "zm_teleporter_cooling_down" : "The teleporter is cooling down",
+
     "zm_activate_song_invisible" : "",
 
     "wpn_m1911_name" : "M1911",
+    "wpn_lemming_name" : "5/7 Pistol",
     "wpn_melee_zdann" : "Zdann's Shovel",
     "wpn_roach_name" : "Railgun Rorsch MK-1",
     "wpn_roach_upg_name" : "Railgun Rorsch MK-9000",
@@ -41,5 +60,7 @@
     "wpn_m95_upg_name" : "Barrett Cal. 115",
     "wpn_waffe_name" : "Wunderwaffe DG-2",
     "wpn_waffe_upg_name" : "Wunderwaffe DG-3 JZ",
-    "wpn_minigun_upg_name" : "K.M. Vulcan"
+    "wpn_minigun_upg_name" : "K.M. Vulcan",
+    "wpn_rpg7_upg_name" : "Atomic Protivotankoviy Granatomyot",
+    "wpn_msr_upg_name" : "SHS-95 - 'Skeletal Head Seeker'"
 }
