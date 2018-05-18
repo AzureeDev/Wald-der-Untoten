@@ -105,9 +105,9 @@ function WDUManager:_is_solo()
         return true
     end
 
-    local peer_counter = LuaNetworking:GetNumberOfPeers()
+    local nb_players = managers.network:session() and managers.network:session():amount_of_players()
     
-    if peer_counter == 1 then
+    if nb_players == 1 then
         return true
     end
 

@@ -184,8 +184,6 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.hk21_primary.animations.reload_name_id = "hk21"
     self.hk21_primary.weapon_hold = "hk21"
     self.hk21_primary.stats_modifiers = {damage = 2}
-    self.hk21_primary.NR_CLIPS_MAX = self.hk21_primary.NR_CLIPS_MAX * 2
-    self.hk21_primary.AMMO_MAX = self.hk21_primary.CLIP_AMMO_MAX * self.hk21_primary.NR_CLIPS_MAX
     self.hk21_secondary = deep_clone(self.hk21_primary)
     self.hk21_secondary.use_data = {selection_index = SECONDARY}
 	
@@ -193,8 +191,6 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.m249_primary.animations.reload_name_id = "m249"
     self.m249_primary.weapon_hold = "m249"
     self.m249_primary.stats_modifiers = {damage = 2}
-    self.m249_primary.NR_CLIPS_MAX = self.m249_primary.NR_CLIPS_MAX * 2
-    self.m249_primary.AMMO_MAX = self.m249_primary.CLIP_AMMO_MAX * self.m249_primary.NR_CLIPS_MAX
     self.m249_secondary = deep_clone(self.m249_primary)
     self.m249_secondary.use_data = {selection_index = SECONDARY}
 	
@@ -602,7 +598,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.hk21_upg_primary.sounds.fire_single = "zm_pew_lmg"
     self.hk21_upg_primary.stats_modifiers = {damage = 8}
     self.hk21_upg_primary.CLIP_AMMO_MAX = 150
-    self.hk21_upg_primary.NR_CLIPS_MAX = 5
+    self.hk21_upg_primary.NR_CLIPS_MAX = 6
     self.hk21_upg_primary.AMMO_MAX = self.hk21_upg_primary.CLIP_AMMO_MAX * self.hk21_upg_primary.NR_CLIPS_MAX
     self.hk21_upg_secondary = deep_clone(self.hk21_upg_primary)
     self.hk21_upg_secondary.use_data = {selection_index = SECONDARY}
@@ -613,7 +609,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.m249_upg_primary.sounds.fire_single = "zm_pew_lmg"
     self.m249_upg_primary.stats_modifiers = {damage = 10}
     self.m249_upg_primary.CLIP_AMMO_MAX = 125
-    self.m249_upg_primary.NR_CLIPS_MAX = 4
+    self.m249_upg_primary.NR_CLIPS_MAX = 5
     self.m249_upg_primary.AMMO_MAX = self.m249_upg_primary.CLIP_AMMO_MAX * self.m249_upg_primary.NR_CLIPS_MAX
     self.m249_upg_secondary = deep_clone(self.m249_upg_primary)
     self.m249_upg_secondary.use_data = {selection_index = SECONDARY}
@@ -835,10 +831,11 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.roach_upg_primary = deep_clone(self.roach_primary)
     self.roach_upg_primary.name_id = "wpn_roach_upg_name"
     self.roach_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.roach_upg_primary.fire_mode_data = {fire_rate = 0.11}
     self.roach_upg_primary.CLIP_AMMO_MAX = 6
     self.roach_upg_primary.NR_CLIPS_MAX = 5
     self.roach_upg_primary.AMMO_MAX = self.roach_upg_primary.CLIP_AMMO_MAX * self.roach_upg_primary.NR_CLIPS_MAX
-    self.roach_upg_primary.use_data = {selection_index = PRIMARY}
+    self.roach_upg_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
     self.roach_upg_secondary = deep_clone(self.roach_upg_primary)
-    self.roach_upg_secondary.use_data = {selection_index = SECONDARY}
+    self.roach_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
 end

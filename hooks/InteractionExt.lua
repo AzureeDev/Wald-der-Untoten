@@ -58,12 +58,6 @@ function BaseInteractionExt:_get_timer()
 		multiplier = multiplier * managers.player:upgrade_value(self._tweak_data.upgrade_timer_multiplier.category, self._tweak_data.upgrade_timer_multiplier.upgrade, 1)
 	end
 
-	if self.tweak_data == "revive" then
-		if managers.player:has_special_equipment("perk_quickrevive") then
-			multiplier = multiplier * 2
-		end
-	end
-
 	if self._tweak_data.upgrade_timer_multipliers then
 		for _, upgrade_timer_multiplier in pairs(self._tweak_data.upgrade_timer_multipliers) do
 			multiplier = multiplier * managers.player:upgrade_value(upgrade_timer_multiplier.category, upgrade_timer_multiplier.upgrade, 1)
@@ -74,6 +68,12 @@ function BaseInteractionExt:_get_timer()
 		local data = managers.player:upgrade_value("player", "level_interaction_timer_multiplier") or {}
 		local player_level = managers.experience:current_level() or 0
 		multiplier = multiplier * (1 - (data[1] or 0) * math.ceil(player_level / (data[2] or 1)))
+	end
+
+	if self.tweak_data == "revive" then
+		if managers.player:has_special_equipment("perk_quickrevive") then
+			multiplier = multiplier * 2
+		end
 	end
 
 	return self:_timer_value() * multiplier * managers.player:toolset_value()
