@@ -1,9 +1,13 @@
 <table global_key="WDU" name="Wald Der Untoten">
 	<AddFiles file="dynamic_manager.xml"/>
+	<AddFiles directory="assets">
+		<texture path="wald_der_untoten_ui/map_icon"/>
+	</AddFiles>
 	<AssetUpdates id="-1" provider="modworkshop" use_local_dir="true" version="1"/>
 	<Hooks directory="hooks">
 		<hook file="MeleeWeaponsTweakData.lua" source_file="lib/tweak_data/blackmarket/meleeweaponstweakdata"/>
 		<hook file="UpgradesTweakData.lua" source_file="lib/tweak_data/upgradestweakdata"/>
+		<hook file="DynamicResourceManager.lua" source_file="lib/managers/dynamicresourcemanager"/>
 	</Hooks>
 	<Localization default="english.txt" directory="loc"/>
 	<contact assets_gui="guis/mission_briefing/preload_contact_bain" desc_id="contact_nepgearsy_desc" id="nepgearsy" name_id="contact_nepgearsy_name" package="packages/contact_bain"/>
@@ -19,7 +23,6 @@
 			<hook file="CharacterTweakData.lua" source_file="lib/tweak_data/charactertweakdata"/>
 			<hook file="CopBase.lua" source_file="lib/units/enemies/cop/copbase"/>
 			<hook file="CopDamage.lua" source_file="lib/units/enemies/cop/copdamage"/>
-			<hook file="DynamicResourceManager.lua" source_file="lib/managers/dynamicresourcemanager"/>
 			<hook file="ElementSpawnEnemyDummy.lua" source_file="lib/managers/mission/elementspawnenemydummy"/>
 			<hook file="EnemyManager.lua" source_file="lib/managers/enemymanager"/>
 			<hook file="EquipmentsTweakdata.lua" source_file="lib/tweak_data/equipmentstweakdata"/>
@@ -389,7 +392,7 @@
 			<sound id="zm_denied" path="denied.ogg"/>
 		</sounds>
 	</level>
-	<narrative briefing_event="" contact="nepgearsy" id="zm_the_forest">
+	<narrative briefing_event="" contact="nepgearsy" icon="wald_der_untoten_ui/map_icon" id="zm_the_forest">
 		<chain>
 			<table level_id="zm_the_forest" type="d" type_id="heist_type_assault"/>
 		</chain>

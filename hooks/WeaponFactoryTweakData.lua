@@ -203,6 +203,12 @@ function WeaponFactoryTweakData:_init_roach()
         },
         wpn_fps_special_roach_secondary = {
 			translation = Vector3(0, -12.5, -5.3)
+        },
+        wpn_fps_special_roach_upg_primary = {
+			translation = Vector3(0, -12.5, -5.3)
+        },
+        wpn_fps_special_roach_upg_secondary = {
+			translation = Vector3(0, -12.5, -5.3)
 		}
 	}
 	self.parts.wpn_fps_special_roach_irons.perks = {"scope", "highlight"}

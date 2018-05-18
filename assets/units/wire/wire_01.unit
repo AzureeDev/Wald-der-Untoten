@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<unit type="wire" slot="35">
+  <object file="units/wire/wire_01" />
+  <extensions>
+    <extension name="unit_data" class="ScriptUnitData" />
+    <extension name="wire_data" class="CoreWireData" />
+  </extensions>
+</unit>
