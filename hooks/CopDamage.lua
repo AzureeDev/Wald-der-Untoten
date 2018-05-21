@@ -10,6 +10,32 @@ function CopDamage:_dismember_condition(attack_data)
 	return true
 end
 
+function CopDamage:_sync_dismember(attacker_unit)
+	return true
+end
+
+function CopDamage:_check_special_death_conditions(variant, body, attacker_unit, weapon_unit)
+	local special_deaths = self._unit:base():char_tweak().special_deaths
+
+	if not special_deaths or not special_deaths[variant] then
+		return
+	end
+
+	local body_data = special_deaths[variant][body:name():key()]
+
+	if not body_data then
+		return
+	end
+
+    if self._unit:damage():has_sequence(body_data.sequence) then
+        self._unit:damage():run_sequence_simple(body_data.sequence)
+    end
+
+    if body_data.special_comment and attacker_unit == managers.player:player_unit() then
+        return body_data.special_comment
+    end
+end
+
 function CopDamage:get_damage_type(damage_percent, category)
 	local hurt_table = self._char_tweak.damage.hurt_severity[category or "bullet"]
 	local dmg = damage_percent / self._HEALTH_GRANULARITY
