@@ -64,7 +64,9 @@ function WDUManager:_init_variables()
         },
         teleporter = {
             active = true
-        }
+        },
+        scale = 0,
+        scale_value_max = 2
     }
 
     self.points = {
@@ -112,6 +114,26 @@ function WDUManager:_is_solo()
     end
 
     return false
+end
+
+function WDUManager:_increase_scale_value()
+    self.level.scale = self.level.scale + 1
+end
+
+function WDUManager:_get_scale()
+    return self.level.scale
+end
+
+function WDUManager:_scale_required()
+    if self.level.scale >= self.level.scale_value_max then
+        return true
+    end
+
+    return false
+end
+
+function WDUManager:_reset_scale()
+    self.level.scale = 0
 end
 
 function WDUManager:_init_wave_highscore()

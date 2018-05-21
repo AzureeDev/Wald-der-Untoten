@@ -35,7 +35,13 @@ function ElementWave:on_executed(instigator)
     if current_wave > 0 then
         managers.hud._hud_zm_waves:_new_animation_wave_start()
         managers.player:add_grenade_amount(2, true)
-        tweak_data.character:_multiply_by_wave_nb(current_wave)
+
+        managers.wdu:_increase_scale_value()
+
+        if managers.wdu:_scale_required() then
+            tweak_data.character:_multiply_by_wave_nb(current_wave)
+            managers.wdu:_reset_scale()
+        end
     else
         managers.hud._hud_zm_waves:_animate_text_blinking()
     end
