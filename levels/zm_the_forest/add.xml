@@ -193,43 +193,43 @@
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_body"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_body"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_body"/>
-	<unit load="false" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_body"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_body"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_body_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb_outer"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb_outer"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb_outer"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb_outer"/>
-	<unit load="false" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb_outer"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb_outer"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_bulb_outer_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_glow"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_glow"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_glow"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_glow"/>
-	<unit load="false" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_glow"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_glow"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_glow_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_tube"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_tube"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_tube"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_tube"/>
-	<unit load="false" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_tube"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_tube"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_center_tube_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_metal"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_metal"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_metal"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_metal"/>
-	<unit load="false" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_metal"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_metal"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_metal_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_pipes"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_pipes"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_pipes"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_pipes"/>
-	<unit load="false" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_pipes"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_pipes"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_pipes_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_wood"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_wood"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_wood"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_wood"/>
-	<unit load="false" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_wood"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_wood"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_wood_thq"/>
 	<texture path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/textures/wunderwaffe_body_df"/>
 	<texture path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/textures/wunderwaffe_bulb_df"/>
@@ -276,43 +276,43 @@
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_body"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_body"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_body"/>
-	<unit load="false" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_body"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_body"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_body_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb_outer"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb_outer"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb_outer"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb_outer"/>
-	<unit load="false" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb_outer"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb_outer"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_bulb_outer_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_metal"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_metal"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_metal"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_metal"/>
-	<unit load="false" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_metal"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_metal"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_metal_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_pipes"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_pipes"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_pipes"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_pipes"/>
-	<unit load="false" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_pipes"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_pipes"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_pipes_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_wood"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_wood"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_wood"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_wood"/>
-	<unit load="false" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_wood"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_wood"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_wood_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
-	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_mag_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
 	<model path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
 	<object path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
-	<unit path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum"/>
 	<material_config path="units/mods/weapons/wpn_fps_spe_wunderwaffe_pts/wpn_fps_spe_wunderwaffe_dg3_illum_thq"/>
 	<texture path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wunderwaffe_df"/>
 	<texture path="units/mods/weapons/wpn_third_spe_wunderwaffe_pts/wunderwaffe_dg3_df"/>
@@ -331,8 +331,6 @@
 	<object force="true" path="units/pd2_dlc_hvh/characters/ene_swat_hvh_1/ene_swat_hvh_1"/>
 	<object force="true" path="units/pd2_dlc_hvh/characters/ene_swat_hvh_2/ene_swat_hvh_2"/>
 	<object force="true" path="units/pd2_dlc_hvh/characters/ene_tazer_hvh_1/ene_tazer_hvh_1"/>
-	<object force="true" path="units/pd2_dlc_hvh/characters/ene_shield_hvh_2/ene_shield_hvh_2"/>
-	<object force="true" path="units/pd2_dlc_hvh/characters/ene_shield_hvh_1/ene_shield_hvh_1"/>
 	<cooked_physics force="true" path="units/props/black_crate" unload="true"/>
 	<unit force="true" path="units/props/black_crate" unload="true"/>
 	<object force="true" path="units/props/black_crate" unload="true"/>
@@ -373,61 +371,61 @@
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"/>
-	<unit path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
-	<unit path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built"/>
-	<unit path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge"/>
-	<unit path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel-50cal"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel-50cal"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel-50cal"/>
-	<unit path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel-50cal"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel-50cal"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel-50cal"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel-50cal_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge-small"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge-small"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge-small"/>
-	<unit path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge-small"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge-small"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge-small"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge-small_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_inside"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_inside"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_inside"/>
-	<unit path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_inside"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_inside"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_inside"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_inside_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_lens"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_lens"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_lens"/>
-	<unit path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_lens"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_lens"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_lens"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_lens_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_reticle"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_reticle"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_reticle"/>
-	<unit path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_reticle"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_reticle"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_reticle"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_reticle_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display"/>
-	<unit path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_o_display_thq"/>
 	<cooked_physics path="units/babuforce/wooden_hut/logs_wall"/>

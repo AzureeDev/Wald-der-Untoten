@@ -31,45 +31,81 @@ end
 Hooks:PostHook(CharacterTweakData, "_init_fbi", "zm_disable_surrenders", function(self, presets)
 	self.fbi.surrender = nil
 	self.fbi.rescue_hostages = false
+	self.fbi.allowed_poses = {crouch = false, stand = true}
 	self.fbi.dodge = nil
+	self.fbi.no_retreat = true
+	self.fbi.no_arrest = true
+	self.fbi.move_speed = presets.move_speed.lightning
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_swat", "zm_disable_surrenders_2", function(self, presets)
 	self.swat.surrender = nil
 	self.swat.rescue_hostages = false
+	self.swat.allowed_poses = {crouch = false, stand = true}
 	self.swat.dodge = nil
+	self.swat.no_retreat = true
+	self.swat.no_arrest = true
+	self.swat.move_speed = presets.move_speed.lightning
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_heavy_swat", "zm_disable_surrenders_3", function(self, presets)
 	self.heavy_swat.surrender = nil
 	self.heavy_swat.rescue_hostages = false
+	self.heavy_swat.allowed_poses = {crouch = false, stand = true}
 	self.heavy_swat.dodge = nil
+	self.heavy_swat.no_retreat = true
+	self.heavy_swat.no_arrest = true
+	self.heavy_swat.move_speed = presets.move_speed.lightning
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_fbi_swat", "zm_disable_surrenders_4", function(self, presets)
 	self.fbi_swat.surrender = nil
 	self.fbi_swat.rescue_hostages = false
+	self.fbi_swat.allowed_poses = {crouch = false, stand = true}
 	self.fbi_swat.dodge = nil
+	self.fbi_swat.no_retreat = true
+	self.fbi_swat.no_arrest = true
+	self.fbi_swat.move_speed = presets.move_speed.lightning
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_fbi_heavy_swat", "zm_disable_surrenders_5", function(self, presets)
 	self.fbi_heavy_swat.surrender = nil
 	self.fbi_heavy_swat.rescue_hostages = false
+	self.fbi_heavy_swat.allowed_poses = {crouch = false, stand = true}
 	self.fbi_heavy_swat.dodge = nil
+	self.fbi_heavy_swat.no_retreat = true
+	self.fbi_heavy_swat.no_arrest = true
+	self.fbi_heavy_swat.move_speed = presets.move_speed.lightning
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_city_swat", "zm_disable_surrenders_6", function(self, presets)
 	self.city_swat.surrender = nil
 	self.city_swat.rescue_hostages = false
+	self.city_swat.allowed_poses = {crouch = false, stand = true}
 	self.city_swat.dodge = nil
+	self.city_swat.no_retreat = true
+	self.city_swat.no_arrest = true
+	self.city_swat.move_speed = presets.move_speed.lightning
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_medic", "zm_med_tweak", function(self, presets)
 	self.medic.rescue_hostages = false
 	self.medic.suppression = nil
+	self.medic.allowed_poses = {crouch = false, stand = true}
 	self.medic.dodge = nil
+	self.medic.no_retreat = true
+	self.medic.no_arrest = true
+	self.medic.move_speed = presets.move_speed.lightning
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_taser", "zm_taser_tweak", function(self, presets)
 	self.taser.dodge = nil
+	self.taser.no_retreat = true
+	self.taser.no_arrest = true
+	self.taser.allowed_poses = {crouch = false, stand = true}
+	self.taser.move_speed = presets.move_speed.lightning
+end)
+
+Hooks:PostHook(CharacterTweakData, "_init_spooc", "zm_cloakie_tweak", function(self, presets)
+	self.spooc.allowed_poses = {crouch = false, stand = true}
 end)

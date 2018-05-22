@@ -52,6 +52,7 @@
 			<hook file="WeaponFactoryTweakData.lua" source_file="lib/tweak_data/weaponfactorytweakdata"/>
 			<hook file="WeaponSkinsTweakData.lua" source_file="lib/tweak_data/blackmarket/weaponskinstweakdata"/>
 			<hook file="WeaponTweakData.lua" source_file="lib/tweak_data/weapontweakdata"/>
+			<hook file="CopActionWalk.lua" source_file="lib/units/enemies/cop/actions/lower_body/copactionwalk"/>
 		</hooks>
 		<include directory="levels/zm_the_forest">
 			<file file="world.world" type="binary"/>

@@ -768,7 +768,8 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.m37_upg_secondary = deep_clone(self.m37_upg_primary)
     self.m37_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
 	
-	self.r870_upg_primary = deep_clone(self.r870_primary)
+    self.r870_upg_primary = deep_clone(self.r870_primary)
+    self.r870_upg_primary.name_id = "wpn_r870_upg_name"
     self.r870_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.r870_upg_primary.sounds.fire = "zm_pew_shts"
     self.r870_upg_primary.sounds.fire_single = "zm_pew_shts"
@@ -823,7 +824,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.msr_upg_primary.AMMO_MAX = self.msr_upg_primary.CLIP_AMMO_MAX * self.msr_upg_primary.NR_CLIPS_MAX
     self.msr_upg_primary.sounds.fire = "zm_pew_snp_b"
     self.msr_upg_primary.sounds.fire_single = "zm_pew_snp_e"
-    self.msr_upg_primary.stats_modifiers = {damage = 150}
+    self.msr_upg_primary.stats_modifiers = {damage = 85}
     self.msr_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
     self.msr_upg_secondary = deep_clone(self.msr_upg_primary)
     self.msr_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "left_hand"}
