@@ -836,6 +836,8 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.roach_upg_primary.CLIP_AMMO_MAX = 6
     self.roach_upg_primary.NR_CLIPS_MAX = 5
     self.roach_upg_primary.AMMO_MAX = self.roach_upg_primary.CLIP_AMMO_MAX * self.roach_upg_primary.NR_CLIPS_MAX
+    self.roach_upg_primary.sounds.fire = "zm_pew_roach"
+    self.roach_upg_primary.sounds.fire_single = "zm_pew_roach"
     self.roach_upg_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
     self.roach_upg_secondary = deep_clone(self.roach_upg_primary)
     self.roach_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}

@@ -134,6 +134,7 @@
 				<sound id="zm_pew_snp_b" path="snp_barret_base.ogg" prefix="regular" use_fix="true"/>
 				<sound id="zm_pew_snp_e" path="snp_ebr_base.ogg" prefix="regular" use_fix="true"/>
 				<sound id="zm_pew_smg" path="smg_mp7_base.ogg" prefix="regular" use_fix="true"/>
+				<sound id="zm_pew_roach" path="railgun_papboom.ogg" prefix="regular" use_fix="true"/>
 			</sounds>
 			<sounds directory="teleporter">
 				<sound id="zm_teleporter_activated" path="activated.ogg"/>
