@@ -52,7 +52,7 @@ function WDUManager:_init_variables()
             currently_spawned = 0,
             max_spawns = 8,
             killed = 0,
-            add_on_end_wave = 4
+            add_on_end_wave = 2
         },
         wave = {
             current = 0

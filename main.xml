@@ -569,6 +569,9 @@
 			<sound id="zm_boom" path="boom.ogg"/>
 			<sound id="zm_cashin" path="cashin.ogg"/>
 			<sound id="zm_denied" path="denied.ogg"/>
+			<sound id="zm_hs_1" path="headshot_1.ogg"/>
+			<sound id="zm_hs_2" path="headshot_2.ogg"/>
+			<sound id="zm_hs_3" path="headshot_3.ogg"/>
 		</sounds>
 	</level>
 	<narrative briefing_event="" contact="nepgearsy" icon="wald_der_untoten_ui/map_icon" id="zm_the_forest">

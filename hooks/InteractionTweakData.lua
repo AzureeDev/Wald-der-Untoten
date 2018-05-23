@@ -185,6 +185,18 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		is_perk_interaction = true
 	}
 
+	self.zm_perk_deadshot = {
+		text_id = "zm_perk_deadshot_4000",
+		action_text_id = "zm_buy_perk",
+		start_active = false,
+		axis = "y",
+		timer = 3,
+		special_equipment = "zm_power_on",
+		equipment_text_id = "zm_no_power",		
+		special_equipment_block = "perk_deadshot",
+		is_perk_interaction = true
+	}
+
 	self.zm_open_door_2000 = {
 		text_id = "zm_open_door_2000",
 		action_text_id = "zm_opening_path",

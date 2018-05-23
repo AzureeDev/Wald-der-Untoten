@@ -1,0 +1,6 @@
+<materials version="3">
+    <material name="mat_str_01_grass" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:RL_ENVIRONMENT" version="2">
+        <diffuse_texture file="units/payday2/architecture/str/str_ext_grass_df"/>
+        <bump_normal_texture file="units/payday2/architecture/str/str_ext_grass_nm"/>
+    </material>
+</materials>

@@ -498,6 +498,7 @@
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/speed_cola" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/double_tap" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/quick_revive" unload="true"/>
+		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dead_shot" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/quick_revive_on" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/juggernog_on" unload="true"/>
 		<material_config force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/speed_cola_on" unload="true"/>
@@ -506,6 +507,7 @@
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_speedcola" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_doubletap" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_quickrevive" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_deadshot" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_quickrevive_il" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_juggernog_il" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_speedcola_il" unload="true"/>
@@ -725,9 +727,14 @@
 		<unit path="units/zdann/kurumi/shovel"/>
 	</unit_load>
 	<add path="units/dev_tools/level_tools/dev_collision/dev_collision_8x32m" type="unit">
-		<unit force="true" path="units/dev_tools/level_tools/dev_collision/dev_collision_8x32m" unload="true"/>
-		<object force="true" path="units/dev_tools/level_tools/dev_collision/dev_collision_8x32m" unload="true"/>
 		<material_config force="true" path="core/material_configs/hub_elements" unload="true"/>
+		<object force="true" path="units/dev_tools/level_tools/dev_collision/dev_collision_8x32m" unload="true"/>
+		<unit force="true" path="units/dev_tools/level_tools/dev_collision/dev_collision_8x32m" unload="true"/>
+	</add>
+	<add path="units/payday2/architecture/str/str_ext_grass_16x16m_a" type="unit">
+		<unit force="true" path="units/payday2/architecture/str/str_ext_grass_16x16m_a" unload="true"/>
+		<object force="true" path="units/payday2/architecture/str/str_ext_grass_16x16m_a" unload="true"/>
+		<material_config force="true" path="units/payday2/architecture/str/str_01_grass" unload="true"/>
 	</add>
 	<movie path="movies/ascension"/>
 	<sequence_manager force="true" path="units/props/black_crate" unload="true"/>

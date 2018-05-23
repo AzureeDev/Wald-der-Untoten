@@ -4,7 +4,6 @@ dofile(ModPath .. "hooks/ElementWave.lua")
 dofile(ModPath .. "hooks/ElementAnnouncerGift.lua")
 dofile(ModPath .. "hooks/ElementDynamicEnv.lua")
 dofile(ModPath .. "hooks/ElementPlayVideo.lua")
-dofile(ModPath .. "hooks/ElementXAudio.lua")
 
 --[[
 function MissionManager:add_fading_debug_output(debug, color, as_subtitle)

@@ -32,6 +32,7 @@
     "zm_perk_quickrevive_1500" : "Hold $BTN_INTERACT to buy Quick Revive [Cost: 1,500]",
     "zm_perk_quickrevive_solo" : "Hold $BTN_INTERACT to buy Quick Revive [Cost: 500]",
     "zm_perk_doubletap_2000" : "Hold $BTN_INTERACT to buy Double Tap [Cost: 2,000]",
+    "zm_perk_deadshot_4000" : "Hold $BTN_INTERACT to buy Dead Shot [Cost: 4,000]",
 
     "zm_wall_buy_r870_1300" : "Hold $BTN_INTERACT to buy a R870 [Cost: 1,300]",
     "zm_wall_buy_ak47_2000" : "Hold $BTN_INTERACT to buy a AK-47 [Cost: 2,000]",
