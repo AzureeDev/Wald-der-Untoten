@@ -363,6 +363,7 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.lemming_primary.stats_modifiers = {damage = 2}
     self.lemming_primary.NR_CLIPS_MAX = self.lemming_primary.NR_CLIPS_MAX * 2
     self.lemming_primary.AMMO_MAX = self.lemming_primary.CLIP_AMMO_MAX * self.lemming_primary.NR_CLIPS_MAX
+    self.lemming_primary.armor_piercing_chance = 0
     self.lemming_primary.can_shoot_through_enemy = false 
     self.lemming_primary.can_shoot_through_wall = false 
     self.lemming_primary.can_shoot_through_shield = false 
@@ -441,6 +442,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.new_m14_upg_primary.NR_CLIPS_MAX = 7
     self.new_m14_upg_primary.AMMO_MAX = self.new_m14_upg_primary.CLIP_AMMO_MAX * self.new_m14_upg_primary.NR_CLIPS_MAX
     self.new_m14_upg_primary.stats_modifiers = {damage = 8}
+    self.new_m14_upg_primary.armor_piercing_chance = 1
     self.new_m14_upg_primary.can_shoot_through_enemy = true
     self.new_m14_upg_secondary = deep_clone(self.new_m14_upg_primary)
     self.new_m14_upg_secondary.use_data = {selection_index = SECONDARY}
@@ -657,6 +659,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.peacemaker_upg_primary.stats_modifiers = {damage = 14}
     self.peacemaker_upg_primary.CLIP_AMMO_MAX = 6
     self.peacemaker_upg_primary.NR_CLIPS_MAX = 14
+    self.peacemaker_upg_primary.armor_piercing_chance = 1
     self.peacemaker_upg_primary.can_shoot_through_enemy = true
     self.peacemaker_upg_primary.can_shoot_through_shield = true
     self.peacemaker_upg_primary.AMMO_MAX = self.peacemaker_upg_primary.CLIP_AMMO_MAX * self.peacemaker_upg_primary.NR_CLIPS_MAX
@@ -671,6 +674,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.new_raging_bull_upg_primary.stats_modifiers = {damage = 16}
     self.new_raging_bull_upg_primary.CLIP_AMMO_MAX = 6
     self.new_raging_bull_upg_primary.NR_CLIPS_MAX = 10
+    self.new_raging_bull_upg_primary.armor_piercing_chance = 1
     self.new_raging_bull_upg_primary.can_shoot_through_enemy = true
     self.new_raging_bull_upg_primary.can_shoot_through_shield = true
     self.new_raging_bull_upg_primary.AMMO_MAX = self.new_raging_bull_upg_primary.CLIP_AMMO_MAX * self.new_raging_bull_upg_primary.NR_CLIPS_MAX
@@ -748,6 +752,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.lemming_upg_primary.stats_modifiers = {damage = 13}
     self.lemming_upg_primary.CLIP_AMMO_MAX = 20
     self.lemming_upg_primary.NR_CLIPS_MAX = 7
+    self.lemming_upg_primary.armor_piercing_chance = 1
     self.lemming_upg_primary.can_shoot_through_enemy = true 
     self.lemming_upg_primary.can_shoot_through_wall = true 
     self.lemming_upg_primary.can_shoot_through_shield = true 
