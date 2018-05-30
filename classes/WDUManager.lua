@@ -358,6 +358,10 @@ function WDUManager:_play_music(event)
         return
     end
 
+    if not XAudio then
+        return
+    end
+
     Global.music_manager.source:post_event("stop_all_music")
 
     if self._music_source then

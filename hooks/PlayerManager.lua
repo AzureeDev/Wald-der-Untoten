@@ -56,55 +56,71 @@ Hooks:PostHook(PlayerManager, "update", "zm_upd_perk", function(self, t, dt)
     local player = self:player_unit()
 
     if self:has_special_equipment("perk_juggernog") then
-        if not self._has_perk_juggernog then
-            player:character_damage():replenish()
-            local new_health = tonumber(player:character_damage():_max_health()) * 2
-            player:character_damage():change_health(new_health)
-            self._has_perk_juggernog = true
+		if not self._has_perk_juggernog then
+			if player then
+				player:character_damage():replenish()
+				local new_health = tonumber(player:character_damage():_max_health()) * 2
+				player:character_damage():change_health(new_health)
+				self._has_perk_juggernog = true
+			end
         end
     end
 
-    if not self._wunderwaffe_unlocked then
-        local current_state = self:get_current_state()
-        if current_state then
-            local current_weapon = current_state:get_equipped_weapon()
-            if current_weapon.name_id == "wunderwaffe_primary" or current_weapon.name_id == "wunderwaffe_secondary" then
-                local lip = SoundDevice:create_source("lip")
-                lip:post_event("zm_announcer_wunder")
-                LuaNetworking:SendToPeers( "ZMWunderwaffeUnlocked", "1" )
-                self._wunderwaffe_unlocked = true
-            end
-        end
+	local GCS = PlayerManager.get_current_state
+	
+	if not self._wunderwaffe_unlocked then
+		if GCS and type(GCS) == "function" then
+			local current_state = self:get_current_state()
+			if current_state then
+				local current_weapon = current_state:get_equipped_weapon()
+				if current_weapon then
+					if current_weapon.name_id == "wunderwaffe_primary" or current_weapon.name_id == "wunderwaffe_secondary" then
+						local lip = SoundDevice:create_source("lip")
+						lip:post_event("zm_announcer_wunder")
+						LuaNetworking:SendToPeers( "ZMWunderwaffeUnlocked", "1" )
+						self._wunderwaffe_unlocked = true
+					end
+				end
+			end
+		end
     end
 
-    if not self._roach_unlocked then
-        local current_state = self:get_current_state()
-        if current_state then
-            local current_weapon = current_state:get_equipped_weapon()
-            if current_weapon.name_id == "roach_primary" or current_weapon.name_id == "roach_secondary" then
-                local lip = SoundDevice:create_source("lip")
-                lip:post_event("zm_announcer_roach")
-                LuaNetworking:SendToPeers( "ZMRoachUnlocked", "1" )
-                self._roach_unlocked = true
-            end
-        end
-    end
+	if not self._roach_unlocked then
+		if GCS and type(GCS) == "function" then
+			local current_state = self:get_current_state()
+			if current_state then
+				local current_weapon = current_state:get_equipped_weapon()
+				if current_weapon then
+					if current_weapon.name_id == "roach_primary" or current_weapon.name_id == "roach_secondary" then
+						local lip = SoundDevice:create_source("lip")
+						lip:post_event("zm_announcer_roach")
+						LuaNetworking:SendToPeers( "ZMRoachUnlocked", "1" )
+						self._roach_unlocked = true
+					end
+				end
+			end
+		end
+	end
+	
+	if GCS and type(GCS) == "function" then
+		local current_state = self:get_current_state()
+		if current_state then
+			local current_weapon = current_state:get_equipped_weapon()
 
-    local current_state = self:get_current_state()
-    if current_state then
-        local current_weapon = current_state:get_equipped_weapon()
+			if current_weapon then
+				local weapon = current_weapon.name_id
+				local weapon_name_id = managers.localization:text(tweak_data.weapon[weapon].name_id)
 
-        local weapon = current_weapon.name_id
-        local weapon_name_id = managers.localization:text(tweak_data.weapon[weapon].name_id)
+				if weapon == "nothing2_primary" then
+					weapon_name_id = ""
+				end
 
-        if weapon == "nothing2_primary" then
-            weapon_name_id = ""
-        end
-
-		managers.hud._hud_zm_waves.weapon_name_bottom_right:set_text(tostring(weapon_name_id))
-		
-		current_weapon:_update_rof_on_perk()
-    end
+				managers.hud._hud_zm_waves.weapon_name_bottom_right:set_text(tostring(weapon_name_id))
+				
+				current_weapon:_update_rof_on_perk()
+			end
+		end
+	end
 
 	self:_count_nb_perks()
 end)
