@@ -227,7 +227,7 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.peacemaker_primary = deep_clone(self.peacemaker)
     self.peacemaker_primary.animations.reload_name_id = "peacemaker"
     self.peacemaker_primary.weapon_hold = "peacemaker"
-    self.peacemaker_primary.NR_CLIPS_MAX = self.peacemaker_primary.NR_CLIPS_MAX * 2
+    self.peacemaker_primary.NR_CLIPS_MAX = self.peacemaker_primary.NR_CLIPS_MAX
     self.peacemaker_primary.AMMO_MAX = self.peacemaker_primary.CLIP_AMMO_MAX * self.peacemaker_primary.NR_CLIPS_MAX
     self.peacemaker_primary.use_data = {selection_index = PRIMARY}    
     self.peacemaker_primary.stats_modifiers = {damage = 2} -- it was 1 before; wtf?
@@ -238,7 +238,7 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.new_raging_bull_primary.animations.reload_name_id = "raging_bull"
     self.new_raging_bull_primary.weapon_hold = "raging_bull"
     self.new_raging_bull_primary.stats_modifiers = {damage = 2}
-    self.new_raging_bull_primary.NR_CLIPS_MAX = self.new_raging_bull_primary.NR_CLIPS_MAX * 2
+    self.new_raging_bull_primary.NR_CLIPS_MAX = self.new_raging_bull_primary.NR_CLIPS_MAX
     self.new_raging_bull_primary.AMMO_MAX = self.new_raging_bull_primary.CLIP_AMMO_MAX * self.new_raging_bull_primary.NR_CLIPS_MAX
     self.new_raging_bull_primary.use_data = {selection_index = PRIMARY}    
     self.new_raging_bull_secondary = deep_clone(self.new_raging_bull_primary)

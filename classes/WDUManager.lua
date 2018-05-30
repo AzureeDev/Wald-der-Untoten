@@ -66,7 +66,7 @@ function WDUManager:_init_variables()
             active = true
         },
         scale = 0,
-        scale_value_max = 2
+        scale_value_max = 0
     }
 
     self.points = {
@@ -99,6 +99,10 @@ function WDUManager:_init_new_player(data)
 
     self:_set_player_name(data.id, data.name)
     self:_set_start_money(data.id, 500)
+end
+
+function WDUManager:_number_of_players()
+    return managers.network:session() and managers.network:session():amount_of_players() or 1
 end
 
 function WDUManager:_is_solo()
@@ -190,6 +194,11 @@ function WDUManager:_peer_id()
 end
 
 function WDUManager:_multiply_zombies_by_wave(current_wave)
+    if self:_is_solo() then
+        self.level.zombies.max_spawns = self.level.zombies.max_spawns + current_wave
+        return
+    end
+
     self.level.zombies.max_spawns = self.level.zombies.max_spawns + (self.level.zombies.add_on_end_wave + current_wave)
 end
 

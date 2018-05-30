@@ -6,11 +6,11 @@ Hooks:PostHook(GroupAITweakData, "_init_unit_categories", "zm_allow_clk_dozers",
     }
     
     self.special_unit_spawn_limits = {
-        shield = 0,
-        medic = 5,
-        taser = 5,
-        tank = 5,
-        spooc = 5
+        shield = 1,
+        medic = 3,
+        taser = 2,
+        tank = 3,
+        spooc = 4
     }
 
     self.unit_categories.hdl_tank = {
@@ -25,84 +25,6 @@ Hooks:PostHook(GroupAITweakData, "_init_unit_categories", "zm_allow_clk_dozers",
 end)
 
 Hooks:PostHook(GroupAITweakData, "_init_enemy_spawn_groups", "zm_new_group", function(self, difficulty_index)
-    self._tactics = {
-		Phalanx_minion = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		Phalanx_vip = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		swat_shotgun_rush = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		swat_shotgun_flank = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		swat_rifle = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		swat_rifle_flank = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		shield_wall_ranged = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		shield_support_ranged = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		shield_wall_charge = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		shield_support_charge = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		shield_wall = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		tazer_flanking = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		tazer_charge = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		tank_rush = {
-			"charge",
-            "murder",
-            "deathguard"
-		},
-		spooc = {
-			"charge",
-            "murder",
-            "deathguard"
-		}
-    }
-    
     self.enemy_spawn_groups.single_hdl_tank = {
 		amount = {
 			1,
@@ -120,8 +42,8 @@ Hooks:PostHook(GroupAITweakData, "_init_enemy_spawn_groups", "zm_new_group", fun
     
     self.enemy_spawn_groups.tac_bull_rush = {
         amount = {
-            6,
-            6
+            3,
+            3
         },
         spawn = {{
             amount_min = 6,
@@ -135,8 +57,8 @@ Hooks:PostHook(GroupAITweakData, "_init_enemy_spawn_groups", "zm_new_group", fun
 
     self.enemy_spawn_groups.single_spooc = {
 		amount = {
-			6,
-			6
+			3,
+			3
 		},
 		spawn = {{
 			freq = 6,
@@ -198,19 +120,19 @@ Hooks:PostHook(GroupAITweakData, "_init_task_data", "zm_init_task_data", functio
             0.09
         },
         FBI_spoocs = {
-            0.50,
-            0.50,
-            0.50
-        },
-        tac_bull_rush = {
-            0.50,
-            0.50,
-            0.50
-        },
-        single_hdl_tank = {
             0.13,
             0.13,
             0.13
+        },
+        tac_bull_rush = {
+            0.13,
+            0.13,
+            0.13
+        },
+        single_hdl_tank = {
+            0.09,
+            0.09,
+            0.09
         }
     }
 end)

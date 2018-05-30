@@ -7,6 +7,7 @@ function GroupAIStateBesiege:_perform_group_spawning(spawn_task, force, use_last
 	local group_ai_tweak = tweak_data.group_ai
 	local spawn_points = spawn_task.spawn_group.spawn_pts
 
+	force = true
 	
 	local function _try_spawn_unit(u_type_name, spawn_entry)
 		if GroupAIStateBesiege._MAX_SIMULTANEOUS_SPAWNS <= nr_units_spawned and not force then
@@ -85,7 +86,7 @@ function GroupAIStateBesiege:_perform_group_spawning(spawn_task, force, use_last
 						spawned_unit:brain()._logic_data.spawned_in_phase = spawn_task.ai_task.phase
 					end
 
-					sp_data.delay_t = self._t
+					sp_data.delay_t = 1
 
 					if sp_data.amount then
 						sp_data.amount = sp_data.amount - 1
