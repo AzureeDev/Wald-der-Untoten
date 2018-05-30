@@ -186,7 +186,7 @@ function NewRaycastWeaponBase:conditional_accuracy_multiplier(current_state)
 	mul = mul + 1 - pm:get_property("desperado", 1)
 
 	if pm:has_special_equipment("perk_deadshot") then
-		mul = mul * 1.33
+		mul = mul * 0.77
 	end
 
 	return self:_convert_add_to_mul(mul)
@@ -203,7 +203,7 @@ function NewRaycastWeaponBase:recoil_multiplier()
 	local mul = 1
 
 	if managers.player:has_special_equipment("perk_deadshot") then
-		mul = 1.33
+		mul = 0.77
 	end
 
 	return managers.blackmarket:recoil_multiplier(self._name_id, self:weapon_tweak_data().categories, self._silencer, self._blueprint, is_moving) * mul
