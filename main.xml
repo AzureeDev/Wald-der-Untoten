@@ -3,7 +3,7 @@
 	<AddFiles directory="assets">
 		<texture path="wald_der_untoten_ui/map_icon"/>
 	</AddFiles>
-	<AssetUpdates id="22716" provider="modworkshop" use_local_dir="true" version="1"/>
+	<AssetUpdates id="22716" provider="modworkshop" use_local_dir="true" version="2"/>
 	<Hooks directory="hooks">
 		<hook file="MeleeWeaponsTweakData.lua" source_file="lib/tweak_data/blackmarket/meleeweaponstweakdata"/>
 		<hook file="UpgradesTweakData.lua" source_file="lib/tweak_data/upgradestweakdata"/>
