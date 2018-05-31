@@ -65,10 +65,16 @@ function ElementAnnouncerGift:on_executed(instigator)
         self._source:set_orientation(self._values.rotation)
         self._source:post_event("zm_announcer_double_points")
 
-        self._source_loop = SoundDevice:create_source(self._editor_name .. "_loop_dp")
-		self._source_loop:set_position(self._values.position)
-        self._source_loop:set_orientation(self._values.rotation)
-        self._source_loop:post_event("zm_double_points_loop")
+        managers.wdu:_element_play_sound({
+            name = self._id,
+            file_name = "double_points_loop.ogg",
+            sound_type = "sfx",
+            custom_dir = "sound",
+            is_relative = false,
+            is_loop = false,
+            is_3d = false,
+            use_velocity = false
+        })
     end
 
     if self._values.gift_id == "double_points_disable" then
@@ -84,10 +90,16 @@ function ElementAnnouncerGift:on_executed(instigator)
         self._source:set_orientation(self._values.rotation)
         self._source:post_event("zm_announcer_instakill")
 
-        self._source_loop = SoundDevice:create_source(self._editor_name .. "_loop_ik")
-		self._source_loop:set_position(self._values.position)
-        self._source_loop:set_orientation(self._values.rotation)
-        self._source_loop:post_event("zm_instakill_loop")
+        managers.wdu:_element_play_sound({
+            name = self._id,
+            file_name = "instakill_loop.ogg",
+            sound_type = "sfx",
+            custom_dir = "sound",
+            is_relative = false,
+            is_loop = false,
+            is_3d = false,
+            use_velocity = false
+        })
     end
 
     if self._values.gift_id == "instakill_disable" then

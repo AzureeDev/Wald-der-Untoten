@@ -40,6 +40,7 @@
 			<hook file="MissionManager.lua" source_file="lib/managers/missionmanager"/>
 			<hook file="NewRaycastWeaponBase.lua" source_file="lib/units/weapons/newraycastweaponbase"/>
 			<hook file="PlayerDamage.lua" source_file="lib/units/beings/player/playerdamage"/>
+			<hook file="PlayerTased.lua" source_file="lib/units/beings/player/states/playertased"/>
 			<hook file="PlayerManager.lua" source_file="lib/managers/playermanager"/>
 			<hook file="PlayerStandard.lua" source_file="lib/units/beings/player/states/playerstandard"/>
 			<hook file="PlayerTweakData.lua" source_file="lib/tweak_data/playertweakdata"/>

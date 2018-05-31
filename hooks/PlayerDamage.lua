@@ -8,7 +8,7 @@ function PlayerDamage:_raw_max_health()
 	return (base_max_health * mul) * juggernog_mul
 end
 
-function PlayerDamage:_chk_cheat_death()
+function PlayerDamage:_chk_cheat_death(is_tazed)
     if Application:digest_value(self._revives, false) > 1 and not self._check_berserker_done and managers.player:has_special_equipment("perk_quickrevive") then
         if managers.wdu:_is_solo() then
             local player_name = managers.network.account:username()
@@ -22,9 +22,9 @@ function PlayerDamage:_chk_cheat_death()
 			
             return
         end
-    end
+	end
 
-	if Application:digest_value(self._revives, false) > 1 and not self._check_berserker_done and managers.player:has_category_upgrade("player", "cheat_death_chance") then
+	if not is_tazed and Application:digest_value(self._revives, false) > 1 and not self._check_berserker_done and managers.player:has_category_upgrade("player", "cheat_death_chance") then
 		local r = math.rand(1)
 
 		if r <= managers.player:upgrade_value("player", "cheat_death_chance", 0) then
