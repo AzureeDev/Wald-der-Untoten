@@ -1,4 +1,4 @@
-Hooks:PostHook(WeaponFactoryTweakData, "init", "Frf2Init", function(self)
+Hooks:PostHook(WeaponFactoryTweakData, "init", "zm_init_weapon_data_factory", function(self)
     self:_init_no_weapon()
     self:_init_wunderwaffe()
     self:_init_wunderwaffe_dg3()

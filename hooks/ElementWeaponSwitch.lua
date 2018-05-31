@@ -105,9 +105,6 @@ function ElementWeaponSwitch:on_executed(instigator)
         if instigator:inventory().equip_selection then
             instigator:inventory():equip_selection(current_index_equipped, false)
 		end
-		
-		managers.hud:set_teammate_weapon_firemode(HUDManager.PLAYER_PANEL, 1, instigator:inventory():unit_by_selection(1):base():fire_mode())
-		managers.hud:set_teammate_weapon_firemode(HUDManager.PLAYER_PANEL, 2, instigator:inventory():unit_by_selection(2):base():fire_mode())
     else
         managers.player:player_unit():inventory():add_unit_by_factory_name(new_weapon_data.factory_id, new_weapon_data.equip, new_weapon_data.instant, new_weapon_data.blueprint, new_weapon_data.cosmetics)
         if managers.player:player_unit():movement().sync_equip_weapon then
@@ -116,9 +113,6 @@ function ElementWeaponSwitch:on_executed(instigator)
         if  managers.player:player_unit():inventory().equip_selection then
             managers.player:player_unit():inventory():equip_selection(current_index_equipped, false)
 		end
-		
-		managers.hud:set_teammate_weapon_firemode(HUDManager.PLAYER_PANEL, 1, managers.player:player_unit():inventory():unit_by_selection(1):base():fire_mode())
-		managers.hud:set_teammate_weapon_firemode(HUDManager.PLAYER_PANEL, 2, managers.player:player_unit():inventory():unit_by_selection(2):base():fire_mode())
 	end
 	
 	managers.player:_change_player_state()
