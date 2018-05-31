@@ -75,9 +75,11 @@ function SniperGrazeDamage:find_wunderwaffe_closest_hit(hit, ignored_enemies, up
             "wunderwaffe_spree2"
         }
 
-        local sound_wunderspree = SoundDevice:create_source("WunderwaffeSpree")
-        sound_wunderspree:set_position(managers.player:player_unit():position())
-        sound_wunderspree:post_event(tbl_spree_soundbank [ math.random( #tbl_spree_soundbank ) ])
+        if alive(managers.player:player_unit()) then
+          local sound_wunderspree = SoundDevice:create_source("WunderwaffeSpree")
+          sound_wunderspree:set_position(managers.player:player_unit():position())
+          sound_wunderspree:post_event(tbl_spree_soundbank [ math.random( #tbl_spree_soundbank ) ])
+        end
     end
     
     local hit_units = World:find_units_quick("sphere", hit.position, 800, enemy_mask)
