@@ -160,38 +160,6 @@ function NewRaycastWeaponBase:soft_replenish()
 	self:update_damage()
 end
 
-function NewRaycastWeaponBase:conditional_accuracy_multiplier(current_state)
-	local mul = 1
-
-	if not current_state then
-		return mul
-	end
-
-	local pm = managers.player
-
-	if current_state:in_steelsight() and self:is_single_shot() then
-		mul = mul + 1 - pm:upgrade_value("player", "single_shot_accuracy_inc", 1)
-	end
-
-	if current_state:in_steelsight() then
-		for _, category in ipairs(self:categories()) do
-			mul = mul + 1 - managers.player:upgrade_value(category, "steelsight_accuracy_inc", 1)
-		end
-	end
-
-	if current_state._moving then
-		mul = mul + 1 - pm:upgrade_value("player", "weapon_movement_stability", 1)
-	end
-
-	mul = mul + 1 - pm:get_property("desperado", 1)
-
-	if pm:has_special_equipment("perk_deadshot") then
-		mul = mul * 0.77
-	end
-
-	return self:_convert_add_to_mul(mul)
-end
-
 function NewRaycastWeaponBase:recoil_multiplier()
 	local is_moving = false
 	local user_unit = self._setup and self._setup.user_unit
@@ -203,7 +171,7 @@ function NewRaycastWeaponBase:recoil_multiplier()
 	local mul = 1
 
 	if managers.player:has_special_equipment("perk_deadshot") then
-		mul = 0.77
+		mul = 0.45
 	end
 
 	return managers.blackmarket:recoil_multiplier(self._name_id, self:weapon_tweak_data().categories, self._silencer, self._blueprint, is_moving) * mul

@@ -72,7 +72,7 @@ function BaseInteractionExt:_get_timer()
 
 	if self.tweak_data == "revive" then
 		if managers.player:has_special_equipment("perk_quickrevive") then
-			multiplier = multiplier * 2
+			multiplier = multiplier / 2
 		end
 	end
 
