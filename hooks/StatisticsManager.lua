@@ -23,7 +23,7 @@ Hooks:PostHook(StatisticsManager, "killed", "zm_init_add_zmpoints", function(sel
         local random = math.random(0, 100)
 
         if random <= 6 then
-            managers.player:player_unit():sound():say("g24", true, true)
+            managers.player:player_unit():sound():say("v46", true, true)
         end
     end
 end)
