@@ -513,6 +513,7 @@
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_juggernog_il" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_speedcola_il" unload="true"/>
 		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_doubletap_il" unload="true"/>
+		<texture force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/perk_deadshot_il" unload="true"/>
 		<object force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 		<sequence_manager force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
 		<unit force="true" path="units/pd2_dlc_dah/props/dah_prop_vending_machine_a/dah_prop_vending_machine_a" unload="true"/>
