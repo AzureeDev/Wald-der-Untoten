@@ -169,8 +169,12 @@ end
 function WeaponFactoryTweakData:_init_roach()
     self.parts.wpn_fps_special_roach_barrel = deep_clone(self.parts.wpn_fps_shot_b682_b_long)
     self.parts.wpn_fps_special_roach_barrel.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"
+    self.parts.wpn_fps_special_roach_barrel_pap = deep_clone(self.parts.wpn_fps_shot_b682_b_long)
+    self.parts.wpn_fps_special_roach_barrel_pap.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_pap"
     self.parts.wpn_fps_special_roach_frame = deep_clone(self.parts.wpn_fps_shot_b682_s_long)
     self.parts.wpn_fps_special_roach_frame.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"
+    self.parts.wpn_fps_special_roach_frame_pap = deep_clone(self.parts.wpn_fps_shot_b682_s_long)
+    self.parts.wpn_fps_special_roach_frame_pap.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap"
     self.parts.wpn_fps_special_roach_discharge = deep_clone(self.parts.wpn_fps_shot_b682_s_long)
     self.parts.wpn_fps_special_roach_discharge.unit = "units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_discharge"
     self.parts.wpn_fps_special_roach_irons = deep_clone(self.parts.wpn_fps_smg_polymer_o_iron)
@@ -214,6 +218,8 @@ function WeaponFactoryTweakData:_init_roach()
 	self.parts.wpn_fps_special_roach_irons.perks = {"scope", "highlight"}
 	self.parts.wpn_fps_special_roach_barrel.adds = {"wpn_fps_special_roach_o_inside", "wpn_fps_special_roach_o_lens", "wpn_fps_special_roach_o_reticle"}
 	self.parts.wpn_fps_special_roach_frame.adds = {"wpn_fps_special_roach_discharge"}
+	self.parts.wpn_fps_special_roach_barrel_pap.adds = {"wpn_fps_special_roach_o_inside", "wpn_fps_special_roach_o_lens", "wpn_fps_special_roach_o_reticle"}
+	--self.parts.wpn_fps_special_roach_frame_pap.adds = {"wpn_fps_special_roach_discharge"}
 	self.parts.wpn_fps_special_roach_fl_built.stats = nil
 	self.parts.wpn_fps_special_roach_fl_built.adds = {"wpn_fps_upg_fl_ass_peq15_flashlight"}
 	self.parts.wpn_fps_special_roach_fl_built.perks = {"gadget"}
@@ -255,6 +261,13 @@ function WeaponFactoryTweakData:_init_roach()
 
     self.wpn_fps_special_roach_upg_primary = deep_clone(self.wpn_fps_special_roach_primary)
     self.wpn_fps_special_roach_upg_primary.unit = "units/mods/weapons/wpn_fps_special_roach/wpn_fps_special_roach_upg_primary"
+    self.wpn_fps_special_roach_upg_primary.default_blueprint = {
+        "wpn_fps_special_roach_barrel_pap",
+        "wpn_fps_special_roach_frame_pap",
+        "wpn_fps_special_roach_irons",
+        "wpn_fps_special_roach_a_sabot",
+        "wpn_fps_special_roach_fl_built"
+    }
     self.wpn_fps_special_roach_upg_secondary = deep_clone(self.wpn_fps_special_roach_primary)
     self.wpn_fps_special_roach_upg_secondary.unit = "units/mods/weapons/wpn_fps_special_roach/wpn_fps_special_roach_upg_secondary"
 end

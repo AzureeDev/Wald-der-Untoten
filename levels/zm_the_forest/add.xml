@@ -354,6 +354,7 @@
 	<unit path="units/mods/weapons/wpn_third_mel_zdann/wpn_third_mel_zdann"/>
 	<material_config path="units/mods/weapons/wpn_third_mel_zdann/wpn_third_mel_zdann"/>
 	<texture path="units/mods/weapons/wpn_fps_special_roach_pts/bf4_railgun_df"/>
+	<texture path="units/mods/weapons/wpn_fps_special_roach_pts/bf4_railgun_pap_df"/>
 	<texture path="units/mods/weapons/wpn_fps_special_roach_pts/bf4_railgun_nm"/>
 	<texture path="units/mods/weapons/wpn_fps_special_roach_pts/bf4_lens_df"/>
 	<texture path="units/mods/weapons/wpn_fps_special_roach_pts/bf4_lens_op"/>
@@ -375,12 +376,23 @@
 	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_thq"/>
+	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_pap"/>
+	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_pap"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_pap"/>
+	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_pap"/>
+	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_barrel_pap_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame"/>
 	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_thq"/>
+	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap"/>
+	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap"/>
+	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap"/>
+	<unit load="true" path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap"/>
+	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap"/>
+	<material_config path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_frame_pap_thq"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built"/>
 	<model path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built"/>
 	<object path="units/mods/weapons/wpn_fps_special_roach_pts/wpn_fps_special_roach_fl_built"/>
