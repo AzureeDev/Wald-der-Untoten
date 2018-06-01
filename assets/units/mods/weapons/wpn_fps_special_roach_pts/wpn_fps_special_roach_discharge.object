@@ -3,7 +3,4 @@
 	<graphics>
 		<object name="g_stock_lod0" enabled="true"/>
 	</graphics>
-	<!--<effects>
-		<effect_spawner name="somethinglol" enabled="true" object="g_stock_lod0" effect="effects/payday2/particles/character/taser_hittarget" />
-	</effects>-->
 </dynamic_object>

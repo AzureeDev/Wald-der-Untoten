@@ -11,6 +11,7 @@
     <effect load="true" path="effects/particles/weapons/wunder_dg3_fire"/>
     <effect load="true" path="effects/particles/weapons/wunder_sparks"/>
     <effect load="true" path="effects/particles/weapons/wunder_dg3_sparks"/>
+    <effect load="true" path="effects/particles/weapons/railgun_barrel"/>
     <effect load="true" path="effects/particles/rain/rain_01_a" force="true" unload="true"/>
     <effect load="true" path="effects/zm/zm_eyes"/>
     <effect load="true" path="effects/zm/zm_teleport"/>
