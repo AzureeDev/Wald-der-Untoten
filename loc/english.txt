@@ -5,6 +5,7 @@
 	"contact_nepgearsy_desc" : "This guy. I've never seen his face. He's also talking through a bad voice filter. I suggest you to be careful when you're going to fulfill his requests. Something bad might happen...",
     "menu_jukebox_track_zm_the_forest" : "with your little shovel",
     "zm_wald_der_untoten_perks_name" : "Available Perks",
+    "zm_wald_der_untoten_perks_2_name" : "Available Perks (continued)",
     "hud_assault_zombie" : "Zombie Assault in progress",
     "hud_zm_power_on" : "Power",
     "zm_no_power" : "You must turn on the Power first!",

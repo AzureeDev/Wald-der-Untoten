@@ -7,6 +7,7 @@
 	<texture force="true" path="effects/textures/bullet_hit/glow_ball"/>
 	<texture force="true" path="skies/sky_eclipse_v2" unload="true"/>
 	<texture force="true" path="map_assets/perks" unload="true"/>
+	<texture force="true" path="map_assets/perks_2" unload="true"/>
 	<texture path="units/skins/pap_1/base_gradient/base_pack-a-punch"/>
 	<texture path="units/skins/pap_1/base_gradient/base_pack-a-punch_2"/>
 	<texture path="units/skins/pap_1/base_gradient/base_pack-a-punch_3"/>
