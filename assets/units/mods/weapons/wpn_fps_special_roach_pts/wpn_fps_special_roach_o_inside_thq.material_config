@@ -5,8 +5,8 @@
         <variable value="0.01" type="scalar" name="falloff_exp"/>
 	</material>
 	<material name="mtr_foregrip" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
-		<diffuse_texture file="units/pd2_dlc_bonnie/weapons/wpn_fps_shot_b682_pts/fg_df" mip="1" />
-		<bump_normal_texture file="units/pd2_dlc_bonnie/weapons/wpn_fps_shot_b682_pts/fg_nm" mip="1" />
+		<diffuse_texture file="units/mods/weapons/wpn_fps_special_roach_pts/bf4_railgun_df" mip="1" />
+		<bump_normal_texture file="units/mods/weapons/wpn_fps_special_roach_pts/bf4_railgun_nm" mip="1" />
 	</material>
 	<material name="slug" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
 		<diffuse_texture file="units/mods/weapons/wpn_fps_special_roach_pts/bf4_railgun_df" mip="1" />

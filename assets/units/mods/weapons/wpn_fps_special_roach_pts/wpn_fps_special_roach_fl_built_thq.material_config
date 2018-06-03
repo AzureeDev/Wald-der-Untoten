@@ -10,8 +10,8 @@
         <variable value="1" type="scalar" name="falloff_exp"/>
     </material>
     <material name="mtr_peq15" render_template="generic:DIFFUSE_TEXTURE:NORMALMAP:NORMALMAP_UV1" version="2">
-        <diffuse_texture file="units/pd2_dlc_gage_jobs/weapons/wpn_fps_upg_fl_ass_peq15/peq15_df" mip="1"/>
-        <bump_normal_texture file="units/pd2_dlc_gage_jobs/weapons/wpn_fps_upg_fl_ass_peq15/peq15_nm" mip="1"/>
+        <diffuse_texture file="units/mods/weapons/wpn_fps_special_roach_pts/bf4_railgun_df" mip="1"/>
+        <bump_normal_texture file="units/mods/weapons/wpn_fps_special_roach_pts/bf4_railgun_nm" mip="1"/>
     </material>
     <material name="light" render_template="generic:SELF_ILLUMINATION" version="2">
         <variable value="streetlight" type="scalar" name="il_multiplier"/>
