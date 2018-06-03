@@ -46,7 +46,6 @@
 			<hook file="PlayerTweakData.lua" source_file="lib/tweak_data/playertweakdata"/>
 			<hook file="ProjectilesTweakData.lua" source_file="lib/tweak_data/blackmarket/projectilestweakdata"/>
 			<hook file="RaycastWeaponBase.lua" source_file="lib/units/weapons/raycastweaponbase"/>
-			<hook file="Rebalance.lua" source_file="lib/managers/hudmanager"/>
 			<hook file="SniperGrazeDamage.lua" source_file="lib/managers/player/snipergrazedamage"/>
 			<hook file="StatisticsManager.lua" source_file="lib/managers/statisticsmanager"/>
 			<hook file="TweakData.lua" source_file="lib/tweak_data/tweakdata"/>
