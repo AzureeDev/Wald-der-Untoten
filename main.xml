@@ -570,6 +570,27 @@
 			<sound id="zm_hs_1" path="headshot_1.ogg"/>
 			<sound id="zm_hs_2" path="headshot_2.ogg"/>
 			<sound id="zm_hs_3" path="headshot_3.ogg"/>
+			<sound path="pack_loop.ogg"/>
+			<sound path="pack_sting.ogg"/>
+			<sound path="doubletap_sting.ogg"/>
+			<sound path="deadshot_sting.ogg"/>
+			<sound path="stamin_sting.ogg"/>
+			<sound path="speed_sting.ogg"/>
+			<sound path="revive_sting.ogg"/>
+			<sound path="juggernog_sting.ogg"/>
+			<sound path="belch.ogg.ogg"/>
+			<sound path="box_interact.ogg"/>
+			<sound path="box_interact_stop.ogg"/>
+			<sound path="box_move.ogg"/>
+			<sound path="box_moved.ogg"/>
+			<sound path="dispense.ogg"/>
+			<sound path="Door_buy1.ogg"/>
+			<sound path="Door_buy2.ogg"/>
+			<sound path="Door_buy3.ogg"/>
+			<sound path="hum.ogg"/>
+			<sound path="Secret_nearby.ogg"/>
+			<sound path="swallow.ogg"/>
+			<sound path="special_spawn.ogg"/>
 		</sounds>
 	</level>
 	<narrative briefing_event="" contact="nepgearsy" icon="wald_der_untoten_ui/map_icon" id="zm_the_forest">
