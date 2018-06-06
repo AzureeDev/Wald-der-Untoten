@@ -114,7 +114,7 @@ function ElementAnnouncerGift:on_executed(instigator)
 			play_paused = true,
 			fade_in = 0,
 			fade_out = 3,
-			color = Color(0.8, 1, 1, 1),
+			color = Color(0.65, 1, 1, 1),
 			timer = TimerManager:main()
         }
         

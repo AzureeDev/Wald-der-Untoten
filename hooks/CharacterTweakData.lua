@@ -66,7 +66,7 @@ Hooks:PostHook(CharacterTweakData, "_init_fbi", "zm_disable_surrenders", functio
 	self.fbi.dodge = nil
 	self.fbi.no_retreat = true
 	self.fbi.no_arrest = true
-	--self.fbi.move_speed = presets.move_speed.lightning
+	self.fbi.move_speed = presets.move_speed.very_fast
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_swat", "zm_disable_surrenders_2", function(self, presets)
@@ -76,7 +76,7 @@ Hooks:PostHook(CharacterTweakData, "_init_swat", "zm_disable_surrenders_2", func
 	self.swat.dodge = nil
 	self.swat.no_retreat = true
 	self.swat.no_arrest = true
-	--self.swat.move_speed = presets.move_speed.lightning
+	self.swat.move_speed = presets.move_speed.very_fast
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_heavy_swat", "zm_disable_surrenders_3", function(self, presets)
@@ -86,7 +86,7 @@ Hooks:PostHook(CharacterTweakData, "_init_heavy_swat", "zm_disable_surrenders_3"
 	self.heavy_swat.dodge = nil
 	self.heavy_swat.no_retreat = true
 	self.heavy_swat.no_arrest = true
-	--self.heavy_swat.move_speed = presets.move_speed.lightning
+	self.heavy_swat.move_speed = presets.move_speed.very_fast
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_fbi_swat", "zm_disable_surrenders_4", function(self, presets)
@@ -96,7 +96,7 @@ Hooks:PostHook(CharacterTweakData, "_init_fbi_swat", "zm_disable_surrenders_4", 
 	self.fbi_swat.dodge = nil
 	self.fbi_swat.no_retreat = true
 	self.fbi_swat.no_arrest = true
-	--self.fbi_swat.move_speed = presets.move_speed.lightning
+	self.fbi_swat.move_speed = presets.move_speed.very_fast
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_fbi_heavy_swat", "zm_disable_surrenders_5", function(self, presets)
@@ -106,7 +106,7 @@ Hooks:PostHook(CharacterTweakData, "_init_fbi_heavy_swat", "zm_disable_surrender
 	self.fbi_heavy_swat.dodge = nil
 	self.fbi_heavy_swat.no_retreat = true
 	self.fbi_heavy_swat.no_arrest = true
-	--self.fbi_heavy_swat.move_speed = presets.move_speed.lightning
+	self.fbi_heavy_swat.move_speed = presets.move_speed.very_fast
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_city_swat", "zm_disable_surrenders_6", function(self, presets)
@@ -116,7 +116,7 @@ Hooks:PostHook(CharacterTweakData, "_init_city_swat", "zm_disable_surrenders_6",
 	self.city_swat.dodge = nil
 	self.city_swat.no_retreat = true
 	self.city_swat.no_arrest = true
-	--self.city_swat.move_speed = presets.move_speed.lightning
+	self.city_swat.move_speed = presets.move_speed.very_fast
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_medic", "zm_med_tweak", function(self, presets)
@@ -126,7 +126,7 @@ Hooks:PostHook(CharacterTweakData, "_init_medic", "zm_med_tweak", function(self,
 	self.medic.dodge = nil
 	self.medic.no_retreat = true
 	self.medic.no_arrest = true
-	--self.medic.move_speed = presets.move_speed.lightning
+	self.medic.move_speed = presets.move_speed.very_fast
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_taser", "zm_taser_tweak", function(self, presets)
@@ -134,7 +134,7 @@ Hooks:PostHook(CharacterTweakData, "_init_taser", "zm_taser_tweak", function(sel
 	self.taser.no_retreat = true
 	self.taser.no_arrest = true
 	self.taser.allowed_poses = {crouch = false, stand = true}
-	--self.taser.move_speed = presets.move_speed.lightning
+	self.taser.move_speed = presets.move_speed.very_fast
 
 	self.taser.weapon.is_rifle.range.optimal = 10000
 	self.taser.weapon.is_rifle.range.far = 10000
@@ -155,6 +155,7 @@ Hooks:PostHook(CharacterTweakData, "_init_tank", "zm_tankie_tweak", function(sel
 	self.tank.weapon.is_rifle.range.far = 10000
 	self.tank.weapon.is_rifle.range.close = 10000
 	self.tank.weapon.is_rifle.focus_delay = 1
+	self.tank.move_speed = presets.move_speed.very_fast
 end)
 
 function CharacterTweakData:_presets(tweak_data)

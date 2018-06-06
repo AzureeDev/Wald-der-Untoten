@@ -165,7 +165,7 @@ end
 function GroupAIStateBesiege:_find_spawn_group_near_area(target_area, allowed_groups, target_pos, max_dis, verify_clbk)
 	local all_areas = self._area_data
 	local mvec3_dis = mvector3.distance_sq
-	max_dis = 3000
+	max_dis = 4000
 	local t = self._t
 	local valid_spawn_groups = {}
 	local valid_spawn_group_distances = {}
@@ -265,7 +265,7 @@ function GroupAIStateBesiege:_find_spawn_group_near_area(target_area, allowed_gr
 	local total_weight = 0
 	local candidate_groups = {}
 	self._debug_weights = {}
-	local dis_limit = 5000
+	local dis_limit = 4000
 
 	for i, dis in pairs(valid_spawn_group_distances) do
 		local my_wgt = math.lerp(1, 0.2, math.min(1, dis / dis_limit)) * 5

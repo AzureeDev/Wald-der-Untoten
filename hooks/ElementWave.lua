@@ -21,9 +21,16 @@ function ElementWave:on_executed(instigator)
         managers.wdu.level.zombies.killed = managers.wdu.level.zombies.killed + 1
 
         if managers.wdu.level.zombies.killed == math.floor(managers.wdu.level.zombies.max_spawns) then
-            managers.wdu.level.zombies.killed = 0
-            managers.wdu.level.zombies.currently_spawned = 0
-            managers.wdu:_multiply_zombies_by_wave(current_wave)
+
+            if managers.wdu:_is_special_wave() then
+                managers.wdu:_set_special_wave(false)
+            end
+
+            DelayedCalls:Add("zm_delay_between_waves", managers.wdu.level.wave.delay_timeout, function()
+                managers.wdu.level.zombies.killed = 0
+                managers.wdu.level.zombies.currently_spawned = 0
+                managers.wdu:_multiply_zombies_by_wave(current_wave)
+            end)
             
             ElementWave.super.on_executed(self, instigator)
             return
@@ -35,6 +42,10 @@ function ElementWave:on_executed(instigator)
     if current_wave > 0 then
         managers.hud._hud_zm_waves:_new_animation_wave_start()
         managers.player:add_grenade_amount(2, true)
+
+        if self._values.special_wave then
+            managers.wdu:_set_special_wave(true)
+        end
 
         managers.wdu:_increase_scale_value()
 

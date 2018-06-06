@@ -1,35 +1,5 @@
 dofile(ModPath .. "classes/WDUManager.lua")
 
-function GameSetup:init_managers(managers)
-	Setup.init_managers(self, managers)
-
-	managers.interaction = ObjectInteractionManager:new()
-	managers.dialog = DialogManager:new()
-	managers.enemy = EnemyManager:new()
-	managers.spawn = SpawnManager:new()
-    managers.wdu = WDUManager:new()
-    managers.hud = HUDManager:new()
-	managers.navigation = NavigationManager:new()
-	managers.objectives = ObjectivesManager:new()
-	managers.hint = HintManager:new()
-	managers.money = MoneyManager:new()
-	managers.killzone = KillzoneManager:new()
-	managers.groupai = GroupAIManager:new()
-	managers.statistics = StatisticsManager:new()
-	managers.ai_data = CoreAiDataManager.AiDataManager:new()
-	managers.occlusion = _OcclusionManager:new()
-	managers.criminals = CriminalsManager:new()
-	managers.trade = TradeManager:new()
-	managers.feedback = FeedBackManager:new()
-	managers.time_speed = TimeSpeedManager:new()
-	managers.explosion = ExplosionManager:new()
-	managers.game_play_central = GamePlayCentralManager:new()
-	managers.action_messaging = ActionMessagingManager:new()
-	managers.motion_path = MotionPathManager:new()
-	managers.dot = DOTManager:new()
-	managers.wait = WaitManager:new()
-
-	if SystemInfo:platform() == Idstring("X360") then
-		managers.blackmarket:load_equipped_weapons()
-	end
-end
+Hooks:PostHook(GameSetup, "init_managers", "zm_init_wdumanager", function(self, managers)
+	managers.wdu = WDUManager:new()
+end)

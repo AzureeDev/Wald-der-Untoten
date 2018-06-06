@@ -22,4 +22,5 @@ Hooks:PostHook(BlackMarketTweakData, "_init_projectiles", "zm_new_nade_amount", 
     self.projectiles.fir_com.no_cheat_count = true
 
     self.projectiles.rocket_frag.time_cheat = 0
+    self.projectiles.launcher_frag_arbiter.time_cheat = 0
 end)

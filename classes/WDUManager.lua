@@ -22,29 +22,25 @@ function WDUManager:_init_variables()
             player_name = "",
             total_score = 500,
             money = 500,
-            max_waves_survived = 0,
-            synched = false
+            max_waves_survived = 0
         },
         [2] = {
             player_name = "",
             total_score = 500,
             money = 500,
-            max_waves_survived = 0,
-            synched = false
+            max_waves_survived = 0
         },
         [3] = {
             player_name = "",
             total_score = 500,
             money = 500,
-            max_waves_survived = 0,
-            synched = false
+            max_waves_survived = 0
         },
         [4] = {
             player_name = "",
             total_score = 500,
             money = 500,
-            max_waves_survived = 0,
-            synched = false
+            max_waves_survived = 0
         }
     }
     self.level = {
@@ -55,7 +51,9 @@ function WDUManager:_init_variables()
             add_on_end_wave = 2
         },
         wave = {
-            current = 0
+            current = 0,
+            delay_timeout = 10,
+            is_special_wave = false
         },
         active_events = {
             double_points = false,
@@ -417,6 +415,14 @@ end
 
 function WDUManager:_is_teleporter_available()
     return self.level.teleporter.active
+end
+
+function WDUManager:_is_special_wave()
+    return self.level.wave.is_special_wave
+end
+
+function WDUManager:_set_special_wave(state)
+    self.level.wave.is_special_wave = state
 end
 
 function WDUManager:_get_weapons_in_mystery_box()
