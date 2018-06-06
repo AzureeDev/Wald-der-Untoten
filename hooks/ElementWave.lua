@@ -39,14 +39,13 @@ function ElementWave:on_executed(instigator)
         return
     end
 
+    if self._values.special_wave then
+        managers.wdu:_set_special_wave(true)
+    end
+
     if current_wave > 0 then
         managers.hud._hud_zm_waves:_new_animation_wave_start()
         managers.player:add_grenade_amount(2, true)
-
-        if self._values.special_wave then
-            managers.wdu:_set_special_wave(true)
-        end
-
         managers.wdu:_increase_scale_value()
 
         if managers.wdu:_scale_required() then

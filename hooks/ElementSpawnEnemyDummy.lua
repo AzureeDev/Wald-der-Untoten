@@ -6,12 +6,14 @@ function ElementSpawnEnemyDummy:produce(params)
     if managers.wdu.level.zombies.currently_spawned >= math.floor(managers.wdu.level.zombies.max_spawns) then
         return
     end
-
-	managers.wdu.level.zombies.currently_spawned = managers.wdu.level.zombies.currently_spawned + 1
 	
 	local units_special_wave = {}
 
 	if managers.wdu:_is_special_wave() then
+		if managers.player.totalCopAlive >= managers.wdu:_get_max_special_wave_spawns() then
+			return
+		end
+
 		units_special_wave = {
 			Idstring("units/pd2_dlc_hvh/characters/ene_bulldozer_hvh_1/ene_bulldozer_hvh_1"),
 			Idstring("units/pd2_dlc_hvh/characters/ene_bulldozer_hvh_2/ene_bulldozer_hvh_2"),
@@ -24,15 +26,71 @@ function ElementSpawnEnemyDummy:produce(params)
 			Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
 			Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
 			Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
-			Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
-			Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
-			Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
-			Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
-			Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
-			Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1"),
 			Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1")
 		}
+
+		local pos, rot = self:get_orientation()
+
+		World:effect_manager():spawn({
+			effect = Idstring("effects/zm/zm_special_spawn"),
+			position = pos
+		})
+
+		managers.wdu:_element_play_sound({
+			name = self._id,
+			custom_dir = "sound",
+			file_name = "special_spawn.ogg",
+			is_loop = false,
+			is_relative = false
+		})
+
+		DelayedCalls:Add("zm_shake_little_delay", 1.6, function()
+			if alive(managers.player:player_unit()) then
+				local feedback = managers.feedback:create("mission_triggered")
+				feedback:set_unit(managers.player:player_unit())
+				feedback:set_enabled("camera_shake", true)
+				feedback:set_enabled("rumble", true)
+				feedback:set_enabled("above_camera_effect", false)
+
+				local params = {
+					"camera_shake",
+					"multiplier",
+					1,
+					"camera_shake",
+					"amplitude",
+					0.5,
+					"camera_shake",
+					"attack",
+					0.05,
+					"camera_shake",
+					"sustain",
+					0.15,
+					"camera_shake",
+					"decay",
+					0.5,
+					"rumble",
+					"multiplier_data",
+					1,
+					"rumble",
+					"peak",
+					0.5,
+					"rumble",
+					"attack",
+					0.05,
+					"rumble",
+					"sustain",
+					0.15,
+					"rumble",
+					"release",
+					0.5
+				}
+
+				feedback:play(unpack(params))
+			end
+		end)
 	end
+
+	managers.wdu.level.zombies.currently_spawned = managers.wdu.level.zombies.currently_spawned + 1
 
 	if params and params.name then
 		local unit

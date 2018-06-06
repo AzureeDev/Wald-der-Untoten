@@ -46,9 +46,11 @@ function WDUManager:_init_variables()
     self.level = {
         zombies = {
             currently_spawned = 0,
+            total_alive = 0,
             max_spawns = 8,
             killed = 0,
-            add_on_end_wave = 2
+            add_on_end_wave = 2,
+            max_special_wave_spawns = 4
         },
         wave = {
             current = 0,
@@ -103,8 +105,21 @@ function WDUManager:_number_of_players()
     return managers.network:session() and managers.network:session():amount_of_players() or 1
 end
 
-function WDUManager:_is_solo()
+function WDUManager:_get_max_special_wave_spawns()
+    local nb_players = self:_number_of_players()
 
+    return self.level.zombies.max_special_wave_spawns * nb_players
+end
+
+function WDUManager:_get_total_cops_alive()
+    return self.level.zombies.total_alive
+end
+
+function WDUManager:change_cops_alive(nb)
+    self.level.zombies.total_alive = self.level.zombies.total_alive + nb
+end
+
+function WDUManager:_is_solo()
     if Global.game_settings.single_player then
         return true
     end
@@ -312,7 +327,7 @@ function WDUManager:_element_play_sound(data)
     end
 
     if self._sound_sources[data.name] then
-        self._sound_buffers[data.name]:close(true)
+        self._sound_buffers[data.name]:close()
         self._sound_sources[data.name]:close()
         self._sound_sources[data.name] = nil
     end
