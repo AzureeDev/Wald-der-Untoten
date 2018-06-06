@@ -155,7 +155,6 @@ Hooks:PostHook(CharacterTweakData, "_init_tank", "zm_tankie_tweak", function(sel
 	self.tank.weapon.is_rifle.range.far = 10000
 	self.tank.weapon.is_rifle.range.close = 10000
 	self.tank.weapon.is_rifle.focus_delay = 1
-	self.tank.move_speed = presets.move_speed.very_fast
 end)
 
 function CharacterTweakData:_presets(tweak_data)
