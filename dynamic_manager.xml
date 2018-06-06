@@ -19,4 +19,5 @@
     <effect load="true" path="effects/zm/zm_teleport_no_smoke"/>
     <effect load="true" path="effects/zm/zm_teleport_sparks"/>
     <effect load="true" path="effects/zm/zm_glow"/>
+    <effect load="true" path="effects/zm/zm_special_spawn"/>
 </table>
