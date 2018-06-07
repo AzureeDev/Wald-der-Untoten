@@ -226,7 +226,10 @@ function WDUManager:_add_money_to(peer_id, amount)
         self.players[peer_id].money = self.players[peer_id].money + additional_amount
         self.players[peer_id].total_score = self.players[peer_id].total_score + additional_amount
 
-        LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
+        if not self:_is_solo() then
+            LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
+        end
+
         self:_update_hud_element()
     end
 end
@@ -236,7 +239,10 @@ function WDUManager:_deduct_money_to(peer_id, amount)
         local minus_amount = math.floor(amount)
         self.players[peer_id].money = self.players[peer_id].money - minus_amount
 
-        LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
+        if not self:_is_solo() then
+            LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
+        end
+        
         self:_update_hud_element()
     end
 end
