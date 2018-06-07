@@ -37,6 +37,7 @@
 			<hook file="InteractionExt.lua" source_file="lib/units/interactions/interactionext"/>
 			<hook file="InteractionTweakData.lua" source_file="lib/tweak_data/interactiontweakdata"/>
 			<hook file="MissionManager.lua" source_file="lib/managers/missionmanager"/>
+			<hook file="MoneyManager.lua" source_file="lib/managers/moneymanager"/>
 			<hook file="NewRaycastWeaponBase.lua" source_file="lib/units/weapons/newraycastweaponbase"/>
 			<hook file="PlayerDamage.lua" source_file="lib/units/beings/player/playerdamage"/>
 			<hook file="PlayerTased.lua" source_file="lib/units/beings/player/states/playertased"/>

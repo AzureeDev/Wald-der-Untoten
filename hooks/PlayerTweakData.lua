@@ -1,5 +1,6 @@
 Hooks:PostHook(PlayerTweakData, "init", "zm_no_penalty_timer", function(self)
 	self.damage.respawn_time_penalty = 0
+	self.damage.base_respawn_time_penalty = 0
 end)
 
 Hooks:PostHook(PlayerTweakData, "_init_new_stances", "zm_init_new_stances", function(self)

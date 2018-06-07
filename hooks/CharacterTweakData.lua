@@ -67,6 +67,7 @@ Hooks:PostHook(CharacterTweakData, "_init_fbi", "zm_disable_surrenders", functio
 	self.fbi.no_retreat = true
 	self.fbi.no_arrest = true
 	self.fbi.move_speed = presets.move_speed.very_fast
+	self.fbi.damage.hurt_severity = presets.hurt_severities.no_hurts
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_swat", "zm_disable_surrenders_2", function(self, presets)
@@ -77,6 +78,7 @@ Hooks:PostHook(CharacterTweakData, "_init_swat", "zm_disable_surrenders_2", func
 	self.swat.no_retreat = true
 	self.swat.no_arrest = true
 	self.swat.move_speed = presets.move_speed.very_fast
+	self.swat.damage.hurt_severity = presets.hurt_severities.no_hurts
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_heavy_swat", "zm_disable_surrenders_3", function(self, presets)
@@ -87,6 +89,7 @@ Hooks:PostHook(CharacterTweakData, "_init_heavy_swat", "zm_disable_surrenders_3"
 	self.heavy_swat.no_retreat = true
 	self.heavy_swat.no_arrest = true
 	self.heavy_swat.move_speed = presets.move_speed.very_fast
+	self.heavy_swat.damage.hurt_severity = presets.hurt_severities.no_hurts
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_fbi_swat", "zm_disable_surrenders_4", function(self, presets)
@@ -97,6 +100,7 @@ Hooks:PostHook(CharacterTweakData, "_init_fbi_swat", "zm_disable_surrenders_4", 
 	self.fbi_swat.no_retreat = true
 	self.fbi_swat.no_arrest = true
 	self.fbi_swat.move_speed = presets.move_speed.very_fast
+	self.fbi_swat.damage.hurt_severity = presets.hurt_severities.no_hurts
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_fbi_heavy_swat", "zm_disable_surrenders_5", function(self, presets)
@@ -107,6 +111,7 @@ Hooks:PostHook(CharacterTweakData, "_init_fbi_heavy_swat", "zm_disable_surrender
 	self.fbi_heavy_swat.no_retreat = true
 	self.fbi_heavy_swat.no_arrest = true
 	self.fbi_heavy_swat.move_speed = presets.move_speed.very_fast
+	self.fbi_heavy_swat.damage.hurt_severity = presets.hurt_severities.no_hurts
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_city_swat", "zm_disable_surrenders_6", function(self, presets)
@@ -117,6 +122,7 @@ Hooks:PostHook(CharacterTweakData, "_init_city_swat", "zm_disable_surrenders_6",
 	self.city_swat.no_retreat = true
 	self.city_swat.no_arrest = true
 	self.city_swat.move_speed = presets.move_speed.very_fast
+	self.city_swat.damage.hurt_severity = presets.hurt_severities.no_hurts
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_medic", "zm_med_tweak", function(self, presets)
@@ -144,6 +150,7 @@ end)
 
 Hooks:PostHook(CharacterTweakData, "_init_spooc", "zm_cloakie_tweak", function(self, presets)
 	self.spooc.allowed_poses = {crouch = false, stand = true}
+	self.spooc.damage.hurt_severity = presets.hurt_severities.no_hurts
 end)
 
 Hooks:PostHook(CharacterTweakData, "_init_tank", "zm_tankie_tweak", function(self, presets)
@@ -156,6 +163,134 @@ Hooks:PostHook(CharacterTweakData, "_init_tank", "zm_tankie_tweak", function(sel
 	self.tank.weapon.is_rifle.range.close = 10000
 	self.tank.weapon.is_rifle.focus_delay = 1
 end)
+
+--This currently crashes, kept here because I'm dumb
+--[[Hooks:PostHook(CharacterTweakData, "_presets", "zm_ph_presets", function(self, tweak_data)
+	self.presets.weapon.normal.is_rifle.focus_delay = 1
+	self.presets.weapon.normal.is_rifle.optimal = 10000
+	self.presets.weapon.normal.is_rifle.far = 10000
+	self.presets.weapon.normal.is_rifle.close = 10000
+	self.presets.weapon.normal.is_shotgun_pump.focus_delay = 1
+	self.presets.weapon.normal.is_shotgun_pump.optimal = 10000
+	self.presets.weapon.normal.is_shotgun_pump.far = 10000
+	self.presets.weapon.normal.is_shotgun_pump.close = 10000
+	self.presets.weapon.normal.is_smg.focus_delay = 1
+	self.presets.weapon.normal.is_smg.optimal = 10000
+	self.presets.weapon.normal.is_smg.far = 10000
+	self.presets.weapon.normal.is_smg.close = 10000
+	self.presets.weapon.normal.mini.focus_delay = 1
+	self.presets.weapon.normal.mini.optimal = 10000
+	self.presets.weapon.normal.mini.far = 10000
+	self.presets.weapon.normal.mini.close = 10000
+	self.presets.weapon.normal.is_lmg.focus_delay = 1
+	self.presets.weapon.normal.is_lmg.optimal = 10000
+	self.presets.weapon.normal.is_lmg.far = 10000
+	self.presets.weapon.normal.is_lmg.close = 10000
+	self.presets.weapon.normal.is_lmg.focus_delay = 1
+	self.presets.weapon.normal.is_lmg.optimal = 10000
+	self.presets.weapon.normal.is_lmg.far = 10000
+	self.presets.weapon.normal.is_lmg.close = 10000
+	
+	self.presets.weapon.good.is_rifle.focus_delay = 1
+	self.presets.weapon.good.is_rifle.optimal = 10000
+	self.presets.weapon.good.is_rifle.far = 10000
+	self.presets.weapon.good.is_rifle.close = 10000
+	self.presets.weapon.good.is_shotgun_pump.focus_delay = 1
+	self.presets.weapon.good.is_shotgun_pump.optimal = 10000
+	self.presets.weapon.good.is_shotgun_pump.far = 10000
+	self.presets.weapon.good.is_shotgun_pump.close = 10000
+	self.presets.weapon.good.is_smg.focus_delay = 1
+	self.presets.weapon.good.is_smg.optimal = 10000
+	self.presets.weapon.good.is_smg.far = 10000
+	self.presets.weapon.good.is_smg.close = 10000
+	self.presets.weapon.good.mini.focus_delay = 1
+	self.presets.weapon.good.mini.optimal = 10000
+	self.presets.weapon.good.mini.far = 10000
+	self.presets.weapon.good.mini.close = 10000
+	self.presets.weapon.good.is_lmg.focus_delay = 1
+	self.presets.weapon.good.is_lmg.optimal = 10000
+	self.presets.weapon.good.is_lmg.far = 10000
+	self.presets.weapon.good.is_lmg.close = 10000
+	self.presets.weapon.good.is_lmg.focus_delay = 1
+	self.presets.weapon.good.is_lmg.optimal = 10000
+	self.presets.weapon.good.is_lmg.far = 10000
+	self.presets.weapon.good.is_lmg.close = 10000
+	
+	self.presets.weapon.expert.is_rifle.focus_delay = 1
+	self.presets.weapon.expert.is_rifle.optimal = 10000
+	self.presets.weapon.expert.is_rifle.far = 10000
+	self.presets.weapon.expert.is_rifle.close = 10000
+	self.presets.weapon.expert.is_shotgun_pump.focus_delay = 1
+	self.presets.weapon.expert.is_shotgun_pump.optimal = 10000
+	self.presets.weapon.expert.is_shotgun_pump.far = 10000
+	self.presets.weapon.expert.is_shotgun_pump.close = 10000
+	self.presets.weapon.expert.is_smg.focus_delay = 1
+	self.presets.weapon.expert.is_smg.optimal = 10000
+	self.presets.weapon.expert.is_smg.far = 10000
+	self.presets.weapon.expert.is_smg.close = 10000
+	self.presets.weapon.expert.mini.focus_delay = 1
+	self.presets.weapon.expert.mini.optimal = 10000
+	self.presets.weapon.expert.mini.far = 10000
+	self.presets.weapon.expert.mini.close = 10000
+	self.presets.weapon.expert.is_lmg.focus_delay = 1
+	self.presets.weapon.expert.is_lmg.optimal = 10000
+	self.presets.weapon.expert.is_lmg.far = 10000
+	self.presets.weapon.expert.is_lmg.close = 10000
+	self.presets.weapon.expert.is_lmg.focus_delay = 1
+	self.presets.weapon.expert.is_lmg.optimal = 10000
+	self.presets.weapon.expert.is_lmg.far = 10000
+	self.presets.weapon.expert.is_lmg.close = 10000
+	
+	self.presets.weapon.deathwish.is_rifle.focus_delay = 1
+	self.presets.weapon.deathwish.is_rifle.optimal = 10000
+	self.presets.weapon.deathwish.is_rifle.far = 10000
+	self.presets.weapon.deathwish.is_rifle.close = 10000
+	self.presets.weapon.deathwish.is_shotgun_pump.focus_delay = 1
+	self.presets.weapon.deathwish.is_shotgun_pump.optimal = 10000
+	self.presets.weapon.deathwish.is_shotgun_pump.far = 10000
+	self.presets.weapon.deathwish.is_shotgun_pump.close = 10000
+	self.presets.weapon.deathwish.is_smg.focus_delay = 1
+	self.presets.weapon.deathwish.is_smg.optimal = 10000
+	self.presets.weapon.deathwish.is_smg.far = 10000
+	self.presets.weapon.deathwish.is_smg.close = 10000
+	self.presets.weapon.deathwish.mini.focus_delay = 1
+	self.presets.weapon.deathwish.mini.optimal = 10000
+	self.presets.weapon.deathwish.mini.far = 10000
+	self.presets.weapon.deathwish.mini.close = 10000
+	self.presets.weapon.deathwish.is_lmg.focus_delay = 1
+	self.presets.weapon.deathwish.is_lmg.optimal = 10000
+	self.presets.weapon.deathwish.is_lmg.far = 10000
+	self.presets.weapon.deathwish.is_lmg.close = 10000
+	self.presets.weapon.deathwish.is_lmg.focus_delay = 1
+	self.presets.weapon.deathwish.is_lmg.optimal = 10000
+	self.presets.weapon.deathwish.is_lmg.far = 10000
+	self.presets.weapon.deathwish.is_lmg.close = 10000
+	
+	self.presets.weapon.easywish.is_rifle.focus_delay = 1
+	self.presets.weapon.easywish.is_rifle.optimal = 10000
+	self.presets.weapon.easywish.is_rifle.far = 10000
+	self.presets.weapon.easywish.is_rifle.close = 10000
+	self.presets.weapon.easywish.is_shotgun_pump.focus_delay = 1
+	self.presets.weapon.easywish.is_shotgun_pump.optimal = 10000
+	self.presets.weapon.easywish.is_shotgun_pump.far = 10000
+	self.presets.weapon.easywish.is_shotgun_pump.close = 10000
+	self.presets.weapon.easywish.is_smg.focus_delay = 1
+	self.presets.weapon.easywish.is_smg.optimal = 10000
+	self.presets.weapon.easywish.is_smg.far = 10000
+	self.presets.weapon.easywish.is_smg.close = 10000
+	self.presets.weapon.easywish.mini.focus_delay = 1
+	self.presets.weapon.easywish.mini.optimal = 10000
+	self.presets.weapon.easywish.mini.far = 10000
+	self.presets.weapon.easywish.mini.close = 10000
+	self.presets.weapon.easywish.is_lmg.focus_delay = 1
+	self.presets.weapon.easywish.is_lmg.optimal = 10000
+	self.presets.weapon.easywish.is_lmg.far = 10000
+	self.presets.weapon.easywish.is_lmg.close = 10000
+	self.presets.weapon.easywish.is_lmg.focus_delay = 1
+	self.presets.weapon.easywish.is_lmg.optimal = 10000
+	self.presets.weapon.easywish.is_lmg.far = 10000
+	self.presets.weapon.easywish.is_lmg.close = 10000
+end)]]
 
 function CharacterTweakData:_presets(tweak_data)
 	local presets = {hurt_severities = {}}
