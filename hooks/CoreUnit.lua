@@ -7,10 +7,12 @@ function safe_spawn_unit(unit_name, ...)
         if managers.wdu:_is_special_wave() then
             --if not Network:is_server() then
 
-                World:effect_manager():spawn({
-                    effect = Idstring("effects/zm/zm_special_spawn"),
-                    position = pos
-                })
+                if pos then
+                    World:effect_manager():spawn({
+                        effect = Idstring("effects/zm/zm_special_spawn"),
+                        position = pos
+                    })
+                end
 
                 managers.wdu:_element_play_sound({
                     name = "play_sound_spawn",

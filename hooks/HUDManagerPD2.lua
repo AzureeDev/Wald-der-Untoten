@@ -604,18 +604,274 @@ function HUDZMPoints:_create_zm_hud(parent)
     self._zmp_points[2]:set_text("---")
     self._zmp_points[3]:set_text("---")
     self._zmp_points[4]:set_text("---")
-end
 
-function HUDZMPoints:_animate_points_gained(text)
-    text:set_font_size(tweak_data.menu.pd2_small_font_size + 4)
+    local peer_1_points_gained = zm_points_panel:text({
+        name = "peer_1_points_gained",
+        vertical = "center",
+        valign = "center",
+        x = -10,
+        y = 5,
+        text = "100000",
+        visible = true,
+        color = Color(1, 1, 0),
+        font_size = tweak_data.menu.pd2_small_font_size,
+        font = tweak_data.menu.pd2_large_font
+    })
+    managers.hud:make_fine_text(peer_1_points_gained)
+    peer_1_points_gained:set_left(peer_1_avatar:right() + 60)
+    peer_1_points_gained:set_world_center_y(peer_1_avatar:world_center_y())
 
-    local function animate_points_gained_big(o)
-        over(1, function(t)
-            o:set_font_size(4 - (t - tweak_data.menu.pd2_small_font_size))
-        end)
+    local peer_2_points_gained = zm_points_panel:text({
+        name = "peer_2_points_gained",
+        vertical = "center",
+        valign = "center",
+        x = -10,
+        y = 5,
+        text = "",
+        visible = true,
+        color = Color(1, 1, 0),
+        font_size = tweak_data.menu.pd2_small_font_size,
+        font = tweak_data.menu.pd2_large_font
+    })
+    managers.hud:make_fine_text(peer_2_points_gained)
+    peer_2_points_gained:set_left(peer_2_avatar:right() + 60)
+    peer_2_points_gained:set_world_center_y(peer_2_avatar:world_center_y())
+
+    local peer_3_points_gained = zm_points_panel:text({
+        name = "peer_3_points_gained",
+        vertical = "center",
+        valign = "center",
+        x = -10,
+        y = 5,
+        text = "",
+        visible = true,
+        color = Color(1, 1, 0),
+        font_size = tweak_data.menu.pd2_small_font_size,
+        font = tweak_data.menu.pd2_large_font
+    })
+    managers.hud:make_fine_text(peer_3_points_gained)
+    peer_3_points_gained:set_left(peer_3_avatar:right() + 60)
+    peer_3_points_gained:set_world_center_y(peer_3_avatar:world_center_y())
+
+    local peer_4_points_gained = zm_points_panel:text({
+        name = "peer_4_points_gained",
+        vertical = "center",
+        valign = "center",
+        x = -10,
+        y = 5,
+        text = "",
+        visible = true,
+        color = Color(1, 1, 0),
+        font_size = tweak_data.menu.pd2_small_font_size,
+        font = tweak_data.menu.pd2_large_font
+    })
+    managers.hud:make_fine_text(peer_4_points_gained)
+    peer_4_points_gained:set_left(peer_4_avatar:right() + 60)
+    peer_4_points_gained:set_world_center_y(peer_4_avatar:world_center_y())
+
+    self._zmp_points_gain = {
+        [1] = peer_1_points_gained,
+        [2] = peer_2_points_gained,
+        [3] = peer_3_points_gained,
+        [4] = peer_4_points_gained
+    }
+
+    for i = 1, 4 do
+        self._zmp_points_gain[i]:set_text("")
     end
 
-    text:animate(animate_points_gained_big)
+    self._zmp_points_initial_ixes = {
+        [1] = peer_1_points_gained:x(),
+        [2] = peer_2_points_gained:x(),
+        [3] = peer_3_points_gained:x(),
+        [4] = peer_4_points_gained:x()
+    }
+
+    self._zmp_points_initial_whys = {
+        [1] = peer_1_points_gained:y(),
+        [2] = peer_2_points_gained:y(),
+        [3] = peer_3_points_gained:y(),
+        [4] = peer_4_points_gained:y()
+    }
+
+    local peer_1_points_gained_dupe_1 = self:GenerateDuplicates(zm_points_panel, 1, 1)
+    local peer_1_points_gained_dupe_2 = self:GenerateDuplicates(zm_points_panel, 1, 2)
+    local peer_1_points_gained_dupe_3 = self:GenerateDuplicates(zm_points_panel, 1, 3)
+    local peer_1_points_gained_dupe_4 = self:GenerateDuplicates(zm_points_panel, 1, 4)
+    local peer_1_points_gained_dupe_5 = self:GenerateDuplicates(zm_points_panel, 1, 5)
+    local peer_1_points_gained_dupe_6 = self:GenerateDuplicates(zm_points_panel, 1, 6)
+    local peer_1_points_gained_dupe_7 = self:GenerateDuplicates(zm_points_panel, 1, 7)
+    local peer_1_points_gained_dupe_8 = self:GenerateDuplicates(zm_points_panel, 1, 8)
+    local peer_1_points_gained_dupe_9 = self:GenerateDuplicates(zm_points_panel, 1, 9)
+    local peer_1_points_gained_dupe_10 = self:GenerateDuplicates(zm_points_panel, 1, 10)
+    local peer_2_points_gained_dupe_1 = self:GenerateDuplicates(zm_points_panel, 2, 1)
+    local peer_2_points_gained_dupe_2 = self:GenerateDuplicates(zm_points_panel, 2, 2)
+    local peer_2_points_gained_dupe_3 = self:GenerateDuplicates(zm_points_panel, 2, 3)
+    local peer_2_points_gained_dupe_4 = self:GenerateDuplicates(zm_points_panel, 2, 4)
+    local peer_2_points_gained_dupe_5 = self:GenerateDuplicates(zm_points_panel, 2, 5)
+    local peer_2_points_gained_dupe_6 = self:GenerateDuplicates(zm_points_panel, 2, 6)
+    local peer_2_points_gained_dupe_7 = self:GenerateDuplicates(zm_points_panel, 2, 7)
+    local peer_2_points_gained_dupe_8 = self:GenerateDuplicates(zm_points_panel, 2, 8)
+    local peer_2_points_gained_dupe_9 = self:GenerateDuplicates(zm_points_panel, 2, 9)
+    local peer_2_points_gained_dupe_10 = self:GenerateDuplicates(zm_points_panel, 2, 10)
+    local peer_3_points_gained_dupe_1 = self:GenerateDuplicates(zm_points_panel, 3, 1)
+    local peer_3_points_gained_dupe_2 = self:GenerateDuplicates(zm_points_panel, 3, 2)
+    local peer_3_points_gained_dupe_3 = self:GenerateDuplicates(zm_points_panel, 3, 3)
+    local peer_3_points_gained_dupe_4 = self:GenerateDuplicates(zm_points_panel, 3, 4)
+    local peer_3_points_gained_dupe_5 = self:GenerateDuplicates(zm_points_panel, 3, 5)
+    local peer_3_points_gained_dupe_6 = self:GenerateDuplicates(zm_points_panel, 3, 6)
+    local peer_3_points_gained_dupe_7 = self:GenerateDuplicates(zm_points_panel, 3, 7)
+    local peer_3_points_gained_dupe_8 = self:GenerateDuplicates(zm_points_panel, 3, 8)
+    local peer_3_points_gained_dupe_9 = self:GenerateDuplicates(zm_points_panel, 3, 9)
+    local peer_3_points_gained_dupe_10 = self:GenerateDuplicates(zm_points_panel, 3, 10)
+    local peer_4_points_gained_dupe_1 = self:GenerateDuplicates(zm_points_panel, 4, 1)
+    local peer_4_points_gained_dupe_2 = self:GenerateDuplicates(zm_points_panel, 4, 2)
+    local peer_4_points_gained_dupe_3 = self:GenerateDuplicates(zm_points_panel, 4, 3)
+    local peer_4_points_gained_dupe_4 = self:GenerateDuplicates(zm_points_panel, 4, 4)
+    local peer_4_points_gained_dupe_5 = self:GenerateDuplicates(zm_points_panel, 4, 5)
+    local peer_4_points_gained_dupe_6 = self:GenerateDuplicates(zm_points_panel, 4, 6)
+    local peer_4_points_gained_dupe_7 = self:GenerateDuplicates(zm_points_panel, 4, 7)
+    local peer_4_points_gained_dupe_8 = self:GenerateDuplicates(zm_points_panel, 4, 8)
+    local peer_4_points_gained_dupe_9 = self:GenerateDuplicates(zm_points_panel, 4, 9)
+    local peer_4_points_gained_dupe_10 = self:GenerateDuplicates(zm_points_panel, 4, 10)
+
+    self._zmp_points_gain_dupes = {
+        [1] = {
+            [1] = peer_1_points_gained_dupe_1,
+            [2] = peer_1_points_gained_dupe_2,
+            [3] = peer_1_points_gained_dupe_3,
+            [4] = peer_1_points_gained_dupe_4,
+            [5] = peer_1_points_gained_dupe_5,
+            [6] = peer_1_points_gained_dupe_6,
+            [7] = peer_1_points_gained_dupe_7,
+            [8] = peer_1_points_gained_dupe_8,
+            [9] = peer_1_points_gained_dupe_9,
+            [10] = peer_1_points_gained_dupe_10
+        },
+        [2] = {
+            [1] = peer_2_points_gained_dupe_1,
+            [2] = peer_2_points_gained_dupe_2,
+            [3] = peer_2_points_gained_dupe_3,
+            [4] = peer_2_points_gained_dupe_4,
+            [5] = peer_2_points_gained_dupe_5,
+            [6] = peer_2_points_gained_dupe_6,
+            [7] = peer_2_points_gained_dupe_7,
+            [8] = peer_2_points_gained_dupe_8,
+            [9] = peer_2_points_gained_dupe_9,
+            [10] = peer_2_points_gained_dupe_10
+        },
+        [3] = {
+            [1] = peer_3_points_gained_dupe_1,
+            [2] = peer_3_points_gained_dupe_2,
+            [3] = peer_3_points_gained_dupe_3,
+            [4] = peer_3_points_gained_dupe_4,
+            [5] = peer_3_points_gained_dupe_5,
+            [6] = peer_3_points_gained_dupe_6,
+            [7] = peer_3_points_gained_dupe_7,
+            [8] = peer_3_points_gained_dupe_8,
+            [9] = peer_3_points_gained_dupe_9,
+            [10] = peer_3_points_gained_dupe_10
+        },
+        [4] = {
+            [1] = peer_4_points_gained_dupe_1,
+            [2] = peer_4_points_gained_dupe_2,
+            [3] = peer_4_points_gained_dupe_3,
+            [4] = peer_4_points_gained_dupe_4,
+            [5] = peer_4_points_gained_dupe_5,
+            [6] = peer_4_points_gained_dupe_6,
+            [7] = peer_4_points_gained_dupe_7,
+            [8] = peer_4_points_gained_dupe_8,
+            [9] = peer_4_points_gained_dupe_9,
+            [10] = peer_4_points_gained_dupe_10
+        }
+    }
+
+    self._zmp_points_gain_dupes_status = {
+        [1] = 0,
+        [2] = 0,
+        [3] = 0,
+        [4] = 0
+    }
+end
+
+function HUDZMPoints:GenerateDuplicates(parent_panel, player_id, proper_id)
+    local params = {
+        name = "peer_" .. player_id .. "_points_gained_dupe_" .. proper_id,
+        vertical = "center",
+        valign = "center",
+        x = -10,
+        y = 5,
+        text = "+99999",
+        visible = true,
+        color = Color(1, 1, 0),
+        font_size = tweak_data.menu.pd2_small_font_size,
+        font = tweak_data.menu.pd2_large_font
+    }
+
+    local dupe_text = parent_panel:text(params)
+
+    managers.hud:make_fine_text(dupe_text)
+    dupe_text:set_left(self._zmp_avatars[player_id]:right() + 60)
+    dupe_text:set_world_center_y(self._zmp_avatars[player_id]:world_center_y())
+    dupe_text:set_text("")
+
+    return dupe_text
+end
+
+function HUDZMPoints:_animate_points_gained_v2(id, gain, is_positive)
+    local text = "+0"
+    local sign = is_positive and "+" or "-"
+
+    if gain then
+        text = sign .. gain
+    end
+
+    local text_panel_to_use = self._zmp_points_gain[id]
+
+    if self._zmp_points_gain_dupes_status[id] > 0 then
+        text_panel_to_use = self._zmp_points_gain_dupes[id][self._zmp_points_gain_dupes_status[id]]
+    end
+
+    text_panel_to_use:set_text(text)
+
+    if not is_positive then
+        text_panel_to_use:set_color(Color(1, 1, 0, 0))
+    else
+        text_panel_to_use:set_color(Color(1, 1, 1, 0))
+    end
+
+    local initial_x = self._zmp_points_initial_ixes[id]
+    local initial_y = self._zmp_points_initial_whys[id]
+
+    local function anim_test(o)
+        o:stop()
+        local color_from = text_panel_to_use:color()
+        local color_to = text_panel_to_use:color():with_alpha(0)
+        local from = initial_x
+        local to = initial_x + math.random(40, 75)
+        local from_y = initial_y
+        local to_y = initial_y + math.random(-20, 20)
+        local t = 0
+
+        while t < 1 do
+            local dt = coroutine.yield()
+            t = t + dt
+
+            o:set_x(from * (1 - t) + to * t)
+            o:set_y(from_y * (1 - t) + to_y * t)
+            o:set_color(color_from * (1 - t) + color_to * t)
+        end
+	end
+
+    text_panel_to_use:animate(anim_test)
+    text_panel_to_use:set_x(initial_x)
+    text_panel_to_use:set_y(initial_y)
+
+    if self._zmp_points_gain_dupes_status[id] >= 10 then
+        self._zmp_points_gain_dupes_status[id] = 0
+    else
+        self._zmp_points_gain_dupes_status[id] = self._zmp_points_gain_dupes_status[id] + 1
+    end
 end
 
 local HUDManager_setup_player_info_hud_pd2_original = HUDManager._setup_player_info_hud_pd2

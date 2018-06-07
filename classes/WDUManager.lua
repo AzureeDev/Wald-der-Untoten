@@ -230,6 +230,7 @@ function WDUManager:_add_money_to(peer_id, amount)
             LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
         end
 
+        managers.hud._hud_zm_points:_animate_points_gained_v2(peer_id, amount, true)
         self:_update_hud_element()
     end
 end
@@ -242,7 +243,8 @@ function WDUManager:_deduct_money_to(peer_id, amount)
         if not self:_is_solo() then
             LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
         end
-        
+
+        managers.hud._hud_zm_points:_animate_points_gained_v2(peer_id, amount, false)
         self:_update_hud_element()
     end
 end

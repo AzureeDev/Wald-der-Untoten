@@ -34,7 +34,11 @@ function XAudioInitializer:PlaySound(data)
         self._sound_sources[data.name] = nil
     end
 
-    local directory = self:GetRootAssetsPath() .. data.custom_dir .. "/"
+	local directory = self:GetRootAssetsPath() .. data.custom_dir .. "/"
+	
+	if not XAudio then
+		error("SuperBLT is NOT installed properly. Refer to the step 1 in the installation guide for more details.")
+	end
 	
     self._sound_buffers[data.name] = XAudio.Buffer:new(directory .. data.file_name)
     self._sound_sources[data.name] = XAudio.Source:new(self._sound_buffers[data.name])
