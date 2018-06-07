@@ -268,7 +268,7 @@ function WeaponFactoryTweakData:_init_roach()
         "wpn_fps_special_roach_a_sabot",
         "wpn_fps_special_roach_fl_built"
     }
-    self.wpn_fps_special_roach_upg_secondary = deep_clone(self.wpn_fps_special_roach_primary)
+    self.wpn_fps_special_roach_upg_secondary = deep_clone(self.wpn_fps_special_roach_upg_primary)
     self.wpn_fps_special_roach_upg_secondary.unit = "units/mods/weapons/wpn_fps_special_roach/wpn_fps_special_roach_upg_secondary"
 end
 
