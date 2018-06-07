@@ -231,22 +231,13 @@ function WDUManager:_add_money_to(peer_id, amount)
             LuaNetworking:SendToPeers( "ZMUpdatePointsGained", tostring(amount) )
         end
 
-        managers.hud._hud_zm_points:_animate_points_gained_v2(peer_id, amount, true)
-        self:_update_hud_element()
-    end
-end
+        local positive = true
 
-function WDUManager:_deduct_money_to(peer_id, amount)
-    if amount and type(amount) == "number" then
-        local minus_amount = math.floor(amount)
-        self.players[peer_id].money = self.players[peer_id].money - minus_amount
-
-        if not self:_is_solo() then
-            LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
-            LuaNetworking:SendToPeers( "ZMUpdatePointsGained", tostring(amount) )
+        if amount < 0 then
+            positive = false
         end
 
-        managers.hud._hud_zm_points:_animate_points_gained_v2(peer_id, amount, false)
+        managers.hud._hud_zm_points:_animate_points_gained_v2(peer_id, amount, positive)
         self:_update_hud_element()
     end
 end
@@ -585,6 +576,86 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
     if id == "ZMWavesHighScore" then
         local max_waves = tonumber(data)
         managers.wdu.players[sender].max_waves_survived = max_waves
+    end
+
+    local function string_to_vector(str)
+        local data = string.split( str, "[|]" )
+        if #data < 3 then
+            return nil
+        end
+        local split_str = "[:]"
+
+        local x = tonumber(string.split(data[1], split_str)[2])
+        local y = tonumber(string.split(data[2], split_str)[2])
+        local z = tonumber(string.split(data[3], split_str)[2])
+
+        return Vector3(x, y, z)
+    end
+
+    if id == "SpecialWave_SpawnPosition" then
+        if managers.wdu:_is_special_wave() then
+            local pos = string_to_vector(data)
+
+            if pos then
+                World:effect_manager():spawn({
+                    effect = Idstring("effects/zm/zm_special_spawn"),
+                    position = pos
+                })
+            end
+
+            managers.wdu:_element_play_sound({
+                name = "play_sound_spawn",
+                custom_dir = "sound",
+                file_name = "special_spawn.ogg",
+                is_loop = false,
+                is_relative = false
+            })
+
+            DelayedCalls:Add("zm_shake_little_delay", 1.6, function()
+                if alive(managers.player:player_unit()) then
+                    local feedback = managers.feedback:create("mission_triggered")
+                    feedback:set_unit(managers.player:player_unit())
+                    feedback:set_enabled("camera_shake", true)
+                    feedback:set_enabled("rumble", true)
+                    feedback:set_enabled("above_camera_effect", false)
+
+                    local params = {
+                        "camera_shake",
+                        "multiplier",
+                        1,
+                        "camera_shake",
+                        "amplitude",
+                        0.5,
+                        "camera_shake",
+                        "attack",
+                        0.05,
+                        "camera_shake",
+                        "sustain",
+                        0.15,
+                        "camera_shake",
+                        "decay",
+                        0.5,
+                        "rumble",
+                        "multiplier_data",
+                        1,
+                        "rumble",
+                        "peak",
+                        0.5,
+                        "rumble",
+                        "attack",
+                        0.05,
+                        "rumble",
+                        "sustain",
+                        0.15,
+                        "rumble",
+                        "release",
+                        0.5
+                    }
+
+                    feedback:play(unpack(params))
+                end
+            end)
+        end
     end
 end)
 

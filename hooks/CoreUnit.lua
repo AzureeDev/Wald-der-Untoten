@@ -3,9 +3,22 @@ function safe_spawn_unit(unit_name, ...)
     local arg = {...}
     local pos = arg[1]
 
+    local function vector_to_string(vec)
+        local dataString = "x:{1}|y:{2}|z:{3}"
+        dataString = dataString:gsub("{1}", math.round_with_precision(vec.x, 4))
+        dataString = dataString:gsub("{2}", math.round_with_precision(vec.y, 4))
+        dataString = dataString:gsub("{3}", math.round_with_precision(vec.z, 4))
+
+        return dataString
+    end
+
     if managers and managers.wdu then
         if managers.wdu:_is_special_wave() then
             --if not Network:is_server() then
+
+                if Network:is_server() then
+                    LuaNetworking:SendToPeers("SpecialWave_SpawnPosition", vector_to_string(pos))
+                end
 
                 if pos then
                     World:effect_manager():spawn({
