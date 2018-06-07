@@ -1,3 +1,6 @@
+core:import("CoreMissionScriptElement")
+ElementSpawnEnemyDummy = ElementSpawnEnemyDummy or class(CoreMissionScriptElement.MissionScriptElement)
+
 function ElementSpawnEnemyDummy:client_on_executed(...)
 	if managers.wdu:_is_special_wave() then
 		local pos, rot = self:get_orientation()

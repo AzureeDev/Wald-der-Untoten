@@ -113,7 +113,12 @@ end)
 Hooks:PreHook(CopDamage, "damage_simple", "zm_instakill_simple", function(self, attack_data)
     if self._dead or self._invulnerable then
 		return
-    end
+	end
+	
+	if (attack_data.knock_down and "knock_down" or attack_data.stagger and not self._has_been_staggered and "stagger") then
+		return
+	end
+
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -130,13 +135,18 @@ end)
 Hooks:PreHook(CopDamage, "damage_melee", "zm_instakill_melee", function(self, attack_data)
     if self._dead or self._invulnerable then
 		return
-    end
+	end
+	
+	if attack_data.shield_knock and self._char_tweak.damage.shield_knocked and "shield_knock" or attack_data.variant == "counter_tased" and "counter_tased" or attack_data.variant == "taser_tased" and "taser_tased" or attack_data.variant == "counter_spooc" and "expl_hurt" or "fire_hurt" then
+		return
+	end
+
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
     end
 
-    if attack_data.attacker_unit == managers.player:player_unit() then
+    if attack_data.attacker_unit == managers.player:player_unit() and not attack_data.knock_down then
         local peer_id = managers.wdu:_peer_id()
         local hit_points = managers.wdu.level.active_events.double_points and 20 or 10
 
@@ -163,13 +173,17 @@ end
 function CopDamage:damage_bullet(attack_data)
 	if self._dead or self._invulnerable then
 		return
-    end
+	end
+	
+	if (attack_data.knock_down and "knock_down" or attack_data.stagger and not self._has_been_staggered and "stagger") then
+		return
+	end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
     end
 
-    if attack_data.attacker_unit == managers.player:player_unit() then
+    if attack_data.attacker_unit == managers.player:player_unit() and not attack_data.knock_down or attack_data.stagger then
         local peer_id = managers.wdu:_peer_id()
         local hit_points = managers.wdu.level.active_events.double_points and 20 or 10
 
@@ -329,7 +343,7 @@ function CopDamage:damage_bullet(attack_data)
 		end
 	else
 		attack_data.damage = damage
-		local result_type = not self._char_tweak.immune_to_knock_down and (attack_data.knock_down and "knock_down" or attack_data.stagger and not self._has_been_staggered and "stagger") or self:get_damage_type(damage_percent, "bullet")
+		local result_type = not self._char_tweak.immune_to_knock_down and (attack_data.knock_down and "knock_down" or attack_data.stagger and not self._has_been_stagdown and "knock_down" or attack_data.stagger and not self._has_been_staggered and "stagger") or self:get_damage_type(damage_percent, "bullet")
 		result = {
 			type = result_type,
 			variant = attack_data.variant
