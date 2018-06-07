@@ -348,6 +348,10 @@ function WDUManager:_element_play_sound(data)
         directory = data.custom_dir .. "/"
     end
 
+    if not XAudio then
+        error("SuperBLT is NOT installed properly. Refer to the step 1 in the installation guide for more details.")
+    end
+
     self._sound_buffers[data.name] = XAudio.Buffer:new(self:_get_mod_path() .. "assets/" .. directory .. data.file_name)
     self._sound_sources[data.name] = XAudio.Source:new(self._sound_buffers[data.name])
 
