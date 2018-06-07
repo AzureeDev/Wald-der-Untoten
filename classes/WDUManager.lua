@@ -228,6 +228,7 @@ function WDUManager:_add_money_to(peer_id, amount)
 
         if not self:_is_solo() then
             LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
+            LuaNetworking:SendToPeers( "ZMUpdatePointsGained", tostring(amount) )
         end
 
         managers.hud._hud_zm_points:_animate_points_gained_v2(peer_id, amount, true)
@@ -242,6 +243,7 @@ function WDUManager:_deduct_money_to(peer_id, amount)
 
         if not self:_is_solo() then
             LuaNetworking:SendToPeers( "ZMUpdatePoints", tostring(self:_get_own_money()) )
+            LuaNetworking:SendToPeers( "ZMUpdatePointsGained", tostring(amount) )
         end
 
         managers.hud._hud_zm_points:_animate_points_gained_v2(peer_id, amount, false)
@@ -565,6 +567,19 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
         end
 
         managers.wdu:_update_total_score(sender, points)
+    end
+
+    if id == "ZMUpdatePointsGained" then
+        local points = tonumber(data)
+        local positive = true
+
+        if points < 0 then
+            positive = false
+        end
+
+        if managers.hud then
+            managers.hud._hud_zm_points:_animate_points_gained_v2(sender, points, positive)
+        end
     end
 
     if id == "ZMWavesHighScore" then
