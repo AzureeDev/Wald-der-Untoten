@@ -1,3 +1,67 @@
+function ElementSpawnEnemyDummy:client_on_executed(...)
+	if managers.wdu:_is_special_wave() then
+		local pos, rot = self:get_orientation()
+
+		World:effect_manager():spawn({
+			effect = Idstring("effects/zm/zm_special_spawn"),
+			position = pos
+		})
+
+		managers.wdu:_element_play_sound({
+			name = self._id,
+			custom_dir = "sound",
+			file_name = "special_spawn.ogg",
+			is_loop = false,
+			is_relative = false
+		})
+
+		DelayedCalls:Add("zm_shake_little_delay", 1.6, function()
+			if alive(managers.player:player_unit()) then
+				local feedback = managers.feedback:create("mission_triggered")
+				feedback:set_unit(managers.player:player_unit())
+				feedback:set_enabled("camera_shake", true)
+				feedback:set_enabled("rumble", true)
+				feedback:set_enabled("above_camera_effect", false)
+
+				local params = {
+					"camera_shake",
+					"multiplier",
+					1,
+					"camera_shake",
+					"amplitude",
+					0.5,
+					"camera_shake",
+					"attack",
+					0.05,
+					"camera_shake",
+					"sustain",
+					0.15,
+					"camera_shake",
+					"decay",
+					0.5,
+					"rumble",
+					"multiplier_data",
+					1,
+					"rumble",
+					"peak",
+					0.5,
+					"rumble",
+					"attack",
+					0.05,
+					"rumble",
+					"sustain",
+					0.15,
+					"rumble",
+					"release",
+					0.5
+				}
+
+				feedback:play(unpack(params))
+			end
+		end)
+	end
+end
+
 function ElementSpawnEnemyDummy:produce(params)
 	if not managers.groupai:state():is_AI_enabled() then
 		return

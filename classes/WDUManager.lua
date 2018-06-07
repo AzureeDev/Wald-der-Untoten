@@ -50,7 +50,7 @@ function WDUManager:_init_variables()
             max_spawns = 8,
             killed = 0,
             add_on_end_wave = 2,
-            max_special_wave_spawns = 4
+            max_special_wave_spawns = 2
         },
         wave = {
             current = 0,
@@ -243,14 +243,16 @@ end
 
 function WDUManager:_update_hud_element()
     if not Global.game_settings.single_player then
-        for _, peer in pairs(managers.network:session():all_peers()) do
-                Steam:friend_avatar(2, peer:user_id(), function (texture)
-                    local avatar = texture or "guis/textures/pd2/none_icon"
-                    managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_image(avatar)
-                    managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_visible(true)
-                end)
-                managers.hud._hud_zm_points._zmp_points[peer:id()]:set_text(tostring(self.players[peer:id()].money))
-                managers.hud._hud_zm_points._zmp_points[peer:id()]:set_visible(true)
+        if managers and managers.network and managers.network:session() then
+            for _, peer in pairs(managers.network:session():all_peers()) do
+                    Steam:friend_avatar(2, peer:user_id(), function (texture)
+                        local avatar = texture or "guis/textures/pd2/none_icon"
+                        managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_image(avatar)
+                        managers.hud._hud_zm_points._zmp_avatars[peer:id()]:set_visible(true)
+                    end)
+                    managers.hud._hud_zm_points._zmp_points[peer:id()]:set_text(tostring(self.players[peer:id()].money))
+                    managers.hud._hud_zm_points._zmp_points[peer:id()]:set_visible(true)
+            end
         end
     else
         Steam:friend_avatar(2, Steam:userid(), function (texture)

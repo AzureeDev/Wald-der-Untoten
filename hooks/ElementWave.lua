@@ -26,7 +26,15 @@ function ElementWave:on_executed(instigator)
                 managers.wdu:_set_special_wave(false)
             end
 
-            DelayedCalls:Add("zm_delay_between_waves", managers.wdu.level.wave.delay_timeout, function()
+            local timeout = 0
+
+            if self._values.special_wave then
+                timeout = managers.wdu.level.wave.delay_timeout + 10
+            else
+                timeout = managers.wdu.level.wave.delay_timeout
+            end
+
+            DelayedCalls:Add("zm_delay_between_waves", timeout, function()
                 managers.wdu.level.zombies.killed = 0
                 managers.wdu.level.zombies.currently_spawned = 0
                 managers.wdu:_multiply_zombies_by_wave(current_wave)
