@@ -55,7 +55,7 @@ function WDUManager:_init_variables()
         },
         wave = {
             current = 0,
-            delay_timeout = 10,
+            delay_timeout = 15,
             is_special_wave = false
         },
         active_events = {
@@ -450,7 +450,7 @@ end
 
 function WDUManager:_start_new_wave(t)
     if not t then
-        t = 10
+        t = self.level.wave.delay_timeout
     end
 
     DelayedCalls:Add("zm_delay_between_waves", t, function()
