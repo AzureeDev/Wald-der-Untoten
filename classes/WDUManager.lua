@@ -448,12 +448,18 @@ function WDUManager:_set_special_wave(state)
     self.level.wave.is_special_wave = state
 end
 
-function WDUManager:_start_new_wave(t)
+function WDUManager:_start_new_wave(t, was_special_wave)
     if not t then
         t = self.level.wave.delay_timeout
     end
 
+    local special_wave = was_special_wave
+
     DelayedCalls:Add("zm_delay_between_waves", t, function()
+        if special_wave then
+            managers.wdu:_set_special_wave(false)
+        end
+
         self.level.zombies.killed = 0
         self.level.zombies.currently_spawned = 0
         self:_multiply_zombies_by_wave(self:_get_current_wave())

@@ -26,14 +26,15 @@ function ElementWave:on_executed(instigator)
 
         if managers.wdu:_is_special_wave() then
             if managers.wdu.level.zombies.killed == (managers.wdu.level.zombies.max_special_wave_total_spawns * managers.wdu:_number_of_players()) then
-                managers.wdu:_start_new_wave(13)
-                managers.wdu:_set_special_wave(false)
+                managers.wdu:_start_new_wave(13, true)
                 ElementWave.super.on_executed(self, instigator)
+                return
             end
         else
             if managers.wdu.level.zombies.killed == math.floor(managers.wdu.level.zombies.max_spawns) then
                 managers.wdu:_start_new_wave(13)
                 ElementWave.super.on_executed(self, instigator)
+                return
             end
         end
 
