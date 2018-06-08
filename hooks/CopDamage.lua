@@ -41,9 +41,9 @@ Hooks:PreHook(CopDamage, "damage_explosion", "zm_instakill_explosion", function(
 		return
 	end
 	
-	if CopDamage.is_civilian then
-		return
-	end
+	--if CopDamage.is_civilian then
+		--return
+	--end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -62,9 +62,9 @@ Hooks:PreHook(CopDamage, "damage_fire", "zm_instakill_fire", function(self, atta
 		return
 	end
 	
-	if CopDamage.is_civilian then
-		return
-	end
+	--if CopDamage.is_civilian then
+	----	return
+	--end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -83,9 +83,9 @@ Hooks:PreHook(CopDamage, "damage_tase", "zm_instakill_tase", function(self, atta
 		return
 	end
 	
-	if CopDamage.is_civilian then
-		return
-	end
+	--if CopDamage.is_civilian then
+	--	return
+	--end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -104,9 +104,9 @@ Hooks:PreHook(CopDamage, "damage_simple", "zm_instakill_simple", function(self, 
 		return
 	end
 
-	if CopDamage.is_civilian then
-		return
-	end
+	--if CopDamage.is_civilian then
+	--	return
+	--end
 	
 	if (attack_data.knock_down and "knock_down" or attack_data.stagger and not self._has_been_staggered and "stagger") then
 		return
@@ -130,9 +130,9 @@ Hooks:PreHook(CopDamage, "damage_melee", "zm_instakill_melee", function(self, at
 		return
 	end
 
-	if CopDamage.is_civilian then
-		return
-	end
+	--if CopDamage.is_civilian then
+	--	return
+	--end
 
 	if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -171,9 +171,9 @@ function CopDamage:damage_bullet(attack_data)
 		return
 	end
 
-	if CopDamage.is_civilian then
-		return
-	end
+	--if CopDamage.is_civilian then
+	--	return
+	--end
 	
 	if (attack_data.knock_down and "knock_down" or attack_data.stagger and not self._has_been_staggered and "stagger") then
 		return
