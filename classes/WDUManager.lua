@@ -448,6 +448,18 @@ function WDUManager:_set_special_wave(state)
     self.level.wave.is_special_wave = state
 end
 
+function WDUManager:_start_new_wave(t)
+    if not t then
+        t = 10
+    end
+
+    DelayedCalls:Add("zm_delay_between_waves", t, function()
+        self.level.zombies.killed = 0
+        self.level.zombies.currently_spawned = 0
+        self:_multiply_zombies_by_wave(self:_get_current_wave())
+    end)
+end
+
 function WDUManager:_get_weapons_in_mystery_box()
     return {
         "wpn_fps_spe_wunderwaffe",
