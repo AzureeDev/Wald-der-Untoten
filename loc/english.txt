@@ -65,5 +65,18 @@
     "wpn_minigun_upg_name" : "K.M. Vulcan",
     "wpn_rpg7_upg_name" : "Atomic Protivotankoviy Granatomyot",
     "wpn_msr_upg_name" : "SHS-95 - 'Skeletal Head Seeker'",
-    "wpn_r870_upg_name" : "The Slow Hand"
+    "wpn_r870_upg_name" : "The Slow Hand",
+    "wpn_judge_upg_name" : "Executioner",
+    "wpn_ak_upg_name" : "AK Superifle",
+    "wpn_p90_upg_name" : "Spray and Pray",
+    "wpn_ak17_upg_name" : "AK Megarifle",
+    "wpn_mp40_upg_name" : "The Afterburner",
+    "wpn_57_upg_name" : "Pocket Sniper",
+    "wpn_garand_upg_name" : "M1G-115",
+    "wpn_ump45_upg_name" : "Modern UMP-45 Warfare II",
+    "wpn_mp9_upg_name" : "Pewpewpewpew",
+    "wpn_amcar_upg_name" : "NFCAR 'Noob Friendly'",
+    "wpn_fal_upg_name" : "Fallen Hero",
+    "wpn_m16_upg_name" : "The Last Judgement",
+    "wpn_scar_upg_name" : "Vulture Rifle"
 }

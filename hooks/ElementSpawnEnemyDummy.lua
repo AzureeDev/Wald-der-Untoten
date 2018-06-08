@@ -8,7 +8,8 @@ function ElementSpawnEnemyDummy:produce(params)
 			return
 		end
 	else
-		if managers.wdu.level.zombies.currently_spawned >= math.floor(managers.wdu.level.zombies.max_special_wave_total_spawns) then
+		local total_spe_spawns = managers.wdu.level.zombies.max_special_wave_total_spawns * managers.wdu:_number_of_players()
+		if managers.wdu.level.zombies.currently_spawned >= math.floor(total_spe_spawns) then
 			return
 		end
 	end
