@@ -14,9 +14,8 @@ function safe_spawn_unit(unit_name, ...)
 
     if managers and managers.wdu then
         if managers.wdu:_is_special_wave() then
-            --if not Network:is_server() then
-
-                if Network:is_server() then
+            if unit_name == Idstring("units/pd2_dlc_hvh/characters/ene_spook_hvh_1/ene_spook_hvh_1") or unit_name == Idstring("units/pd2_dlc_hvh/characters/ene_bulldozer_hvh_3/ene_bulldozer_hvh_3") or unit_name == Idstring("units/pd2_dlc_hvh/characters/ene_bulldozer_hvh_2/ene_bulldozer_hvh_2") or unit_name == Idstring("units/pd2_dlc_hvh/characters/ene_bulldozer_hvh_1/ene_bulldozer_hvh_1") then
+                if Network:is_server() and not managers.wdu:_is_solo() then
                     LuaNetworking:SendToPeers("SpecialWave_SpawnPosition", vector_to_string(pos))
                 end
 
@@ -79,7 +78,7 @@ function safe_spawn_unit(unit_name, ...)
                         feedback:play(unpack(params))
                     end
                 end)
-           -- end
+            end
         end
     end
 

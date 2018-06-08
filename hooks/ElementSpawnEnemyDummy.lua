@@ -44,6 +44,14 @@ function ElementSpawnEnemyDummy:produce(params)
 
 		if managers.wdu:_is_special_wave() then
 			unit = safe_spawn_unit(units_special_wave[ math.random( #units_special_wave ) ], self:get_orientation())
+		elseif managers.wdu:_get_current_wave() > 15 then
+			local random_chance = math.random(0, 100)
+
+			if random_chance < 5 then
+				unit = safe_spawn_unit(units_special_wave[ math.random( #units_special_wave ) ], self:get_orientation())
+			else
+				unit = safe_spawn_unit(params.name, self:get_orientation())
+			end
 		else
 			unit = safe_spawn_unit(params.name, self:get_orientation())
 		end
@@ -67,6 +75,14 @@ function ElementSpawnEnemyDummy:produce(params)
 
 		if managers.wdu:_is_special_wave() then
 			enemy_name = units_special_wave[ math.random( #units_special_wave ) ]
+		elseif managers.wdu:_get_current_wave() > 15 then
+			local random_chance = math.random(0, 100)
+
+			if random_chance < 5 then
+				enemy_name = units_special_wave[ math.random( #units_special_wave ) ]
+			else
+				enemy_name = self:value("enemy") or self._enemy_name
+			end
 		else
 			enemy_name = self:value("enemy") or self._enemy_name
 		end
