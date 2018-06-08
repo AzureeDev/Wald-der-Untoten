@@ -247,7 +247,7 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.striker_primary = deep_clone(self.striker)
     self.striker_primary.animations.reload_name_id = "striker"
     self.striker_primary.weapon_hold = "striker"
-    self.striker_primary.NR_CLIPS_MAX = self.striker_primary.NR_CLIPS_MAX * 2
+    self.striker_primary.NR_CLIPS_MAX = self.striker_primary.NR_CLIPS_MAX
     self.striker_primary.AMMO_MAX = self.striker_primary.CLIP_AMMO_MAX * self.striker_primary.NR_CLIPS_MAX
     self.striker_primary.stats.damage = 120
     self.striker_primary.use_data = {selection_index = PRIMARY, align_place = "left_hand"}
@@ -350,7 +350,7 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.ching_primary.animations.reload_name_id = "ching"
     self.ching_primary.weapon_hold = "ching"
     self.ching_primary.stats_modifiers = {damage = 2}
-    self.ching_primary.NR_CLIPS_MAX = self.ching_primary.NR_CLIPS_MAX * 2
+    self.ching_primary.NR_CLIPS_MAX = self.ching_primary.NR_CLIPS_MAX
     self.ching_primary.AMMO_MAX = self.ching_primary.CLIP_AMMO_MAX * self.ching_primary.NR_CLIPS_MAX
     self.ching_primary.use_data = {selection_index = PRIMARY}
     self.ching_secondary = deep_clone(self.ching_primary)

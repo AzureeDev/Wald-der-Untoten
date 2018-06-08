@@ -25,7 +25,8 @@ function ElementAnnouncerGift:on_executed(instigator)
                     managers.hud:set_ammo_amount( id, weapon.unit:base():ammo_info() )
                 end
                 
-                managers.player:add_grenade_amount(10)
+                managers.player:add_grenade_amount(10, true)
+                managers.player:add_cable_ties(2)
             end
         end
 

@@ -39,7 +39,11 @@ end
 Hooks:PreHook(CopDamage, "damage_explosion", "zm_instakill_explosion", function(self, attack_data)
     if self._dead or self._invulnerable then
 		return
-    end
+	end
+	
+	if CopDamage.is_civilian then
+		return
+	end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -56,7 +60,11 @@ end)
 Hooks:PreHook(CopDamage, "damage_fire", "zm_instakill_fire", function(self, attack_data)
     if self._dead or self._invulnerable then
 		return
-    end
+	end
+	
+	if CopDamage.is_civilian then
+		return
+	end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -73,7 +81,11 @@ end)
 Hooks:PreHook(CopDamage, "damage_tase", "zm_instakill_tase", function(self, attack_data)
     if self._dead or self._invulnerable then
 		return
-    end
+	end
+	
+	if CopDamage.is_civilian then
+		return
+	end
 
     if managers.wdu:_is_event_active("instakill") then
         self._health = 1
@@ -89,6 +101,10 @@ end)
 
 Hooks:PreHook(CopDamage, "damage_simple", "zm_instakill_simple", function(self, attack_data)
     if self._dead or self._invulnerable then
+		return
+	end
+
+	if CopDamage.is_civilian then
 		return
 	end
 	
@@ -113,15 +129,18 @@ Hooks:PreHook(CopDamage, "damage_melee", "zm_instakill_melee", function(self, at
     if self._dead or self._invulnerable then
 		return
 	end
+
+	if CopDamage.is_civilian then
+		return
+	end
+
+	if managers.wdu:_is_event_active("instakill") then
+        self._health = 1
+    end
 	
 	if attack_data.shield_knock and self._char_tweak.damage.shield_knocked and "shield_knock" or attack_data.variant == "counter_tased" and "counter_tased" or attack_data.variant == "taser_tased" and "taser_tased" or attack_data.variant == "counter_spooc" and "expl_hurt" or "fire_hurt" then
 		return
 	end
-
-
-    if managers.wdu:_is_event_active("instakill") then
-        self._health = 1
-    end
 
     if attack_data.attacker_unit == managers.player:player_unit() and not attack_data.knock_down then
         local peer_id = managers.wdu:_peer_id()
@@ -149,6 +168,10 @@ end
 
 function CopDamage:damage_bullet(attack_data)
 	if self._dead or self._invulnerable then
+		return
+	end
+
+	if CopDamage.is_civilian then
 		return
 	end
 	
