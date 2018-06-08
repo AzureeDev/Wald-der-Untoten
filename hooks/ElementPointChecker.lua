@@ -43,7 +43,10 @@ function ElementPointChecker:on_executed(instigator)
 	local C = self._values.cost
 	local D = 0 - C
 
-	managers.wdu:_add_money_to(peer_id, D)
+	if instigator == managers.player:player_unit() then
+		managers.wdu:_add_money_to(peer_id, D)
+	end
+
 	ElementPointChecker.super.on_executed(self, instigator)
 end
 

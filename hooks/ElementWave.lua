@@ -20,16 +20,13 @@ function ElementWave:on_executed(instigator)
     if self._values.ending_check then
         managers.wdu.level.zombies.killed = managers.wdu.level.zombies.killed + 1
 
-        if managers.wdu.level.zombies.killed == math.floor(managers.wdu.level.zombies.max_spawns) then
-
-            if managers.wdu:_is_special_wave() then
-                managers.wdu:_set_special_wave(false)
-            end
+        if managers.wdu:_is_special_wave() then
+            managers.wdu:_set_special_wave(false)
 
             local timeout = 0
 
             if self._values.special_wave then
-                timeout = managers.wdu.level.wave.delay_timeout + 10
+                timeout = managers.wdu.level.wave.delay_timeout + 20
             else
                 timeout = managers.wdu.level.wave.delay_timeout
             end
@@ -39,6 +36,15 @@ function ElementWave:on_executed(instigator)
                 managers.wdu.level.zombies.currently_spawned = 0
                 managers.wdu:_multiply_zombies_by_wave(current_wave)
             end)
+            
+            ElementWave.super.on_executed(self, instigator)
+            return
+        end
+
+        if managers.wdu.level.zombies.killed == math.floor(managers.wdu.level.zombies.max_spawns) then
+            managers.wdu.level.zombies.killed = 0
+            managers.wdu.level.zombies.currently_spawned = 0
+            managers.wdu:_multiply_zombies_by_wave(current_wave)
             
             ElementWave.super.on_executed(self, instigator)
             return

@@ -48,6 +48,7 @@ function WDUManager:_init_variables()
             currently_spawned = 0,
             total_alive = 0,
             max_spawns = 8,
+            max_special_wave_total_spawns = 10,
             killed = 0,
             add_on_end_wave = 2,
             max_special_wave_spawns = 2

@@ -3,9 +3,15 @@ function ElementSpawnEnemyDummy:produce(params)
 		return
     end
 
-    if managers.wdu.level.zombies.currently_spawned >= math.floor(managers.wdu.level.zombies.max_spawns) then
-        return
-    end
+	if not managers.wdu:_is_special_wave() then
+		if managers.wdu.level.zombies.currently_spawned >= math.floor(managers.wdu.level.zombies.max_spawns) then
+			return
+		end
+	else
+		if managers.wdu.level.zombies.currently_spawned >= math.floor(managers.wdu.level.zombies.max_special_wave_total_spawns) then
+			return
+		end
+	end
 	
 	local units_special_wave = {}
 

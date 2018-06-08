@@ -820,7 +820,7 @@ end
 
 function HUDZMPoints:_animate_points_gained_v2(id, gain, is_positive)
     local text = "+0"
-    local sign = is_positive and "+" or "-"
+    local sign = is_positive and "+" or ""
 
     if gain then
         text = sign .. gain
