@@ -858,7 +858,10 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 
     self.vulcan_upg = deep_clone(self.shuno)
     self.vulcan_upg.name_id = "wpn_minigun_upg_name"
+    self.vulcan_upg.animations.reload_name_id = "shuno"
     self.vulcan_upg.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.vulcan_upg.sounds.fire = "zm_pew_lmg"
+    self.vulcan_upg.sounds.fire_single = "zm_pew_lmg"
     self.vulcan_upg.CLIP_AMMO_MAX = 999
     self.vulcan_upg.NR_CLIPS_MAX = 1
     self.vulcan_upg.AMMO_MAX = self.vulcan_upg.CLIP_AMMO_MAX * self.vulcan_upg.NR_CLIPS_MAX

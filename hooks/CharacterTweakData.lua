@@ -31,7 +31,7 @@ function CharacterTweakData:_multiply_by_wave_nb(wave)
 	end
 
     local base = 1
-	local divider = 0.090
+	local divider = 0.200
 
 	self.fbi.HEALTH_INIT = self.fbi.HEALTH_INIT * base + (wave / divider)
 	self.swat.HEALTH_INIT = self.swat.HEALTH_INIT * base + (wave / divider)

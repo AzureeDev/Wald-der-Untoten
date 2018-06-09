@@ -276,12 +276,14 @@ function WDUManager:_update_total_score(peer_id, add)
 end
 
 function WDUManager:_get_points_amount(category, unit)
+    local double_point_effect = self.level.active_events.double_points and 2 or 1
+    
     if not unit then
         return self.points[category]
     end
 
     if not self.points[category][unit] then
-        return self.points["default"]
+        return self.points["default"] * double_point_effect
     end
 
     return self.points[category][unit]
