@@ -23,6 +23,7 @@
 			<hook file="CharacterTweakData.lua" source_file="lib/tweak_data/charactertweakdata"/>
 			<hook file="CopBase.lua" source_file="lib/units/enemies/cop/copbase"/>
 			<hook file="CopDamage.lua" source_file="lib/units/enemies/cop/copdamage"/>
+			<hook file="CivilianDamage.lua" source_file="lib/units/civilians/civiliandamage"/>
 			<hook file="ElementSpawnEnemyDummy.lua" source_file="lib/managers/mission/elementspawnenemydummy"/>
 			<hook file="EquipmentsTweakdata.lua" source_file="lib/tweak_data/equipmentstweakdata"/>
 			<hook file="GroupAIStateBesiege.lua" source_file="lib/managers/group_ai_states/groupaistatebesiege"/>
