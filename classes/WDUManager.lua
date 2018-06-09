@@ -466,6 +466,21 @@ function WDUManager:_start_new_wave(t, was_special_wave)
     end)
 end
 
+function WDUManager:PostWave15Apocalypse()
+    if not self:_is_special_wave() then
+        if self:_get_current_wave() > 15 then
+            math.randomseed(os.time())
+            local random = math.random(0, 100)
+
+            if random > 95 then
+                return true
+            end
+        end
+    end
+
+    return false
+end
+
 function WDUManager:_get_weapons_in_mystery_box()
     return {
         "wpn_fps_spe_wunderwaffe",
