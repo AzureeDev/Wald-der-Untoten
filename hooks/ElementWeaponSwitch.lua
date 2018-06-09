@@ -135,8 +135,6 @@ function ElementWeaponSwitch:_get_random_weapon()
 	elseif managers.player._roach_unlocked and managers.player._wunderwaffe_unlocked then
 		table.remove(table_available_weapons_mystery_box, 1)
     end
-    
-    math.randomseed(os.time())
 
 	local random_entry = table_available_weapons_mystery_box[math.random(#table_available_weapons_mystery_box)]
 

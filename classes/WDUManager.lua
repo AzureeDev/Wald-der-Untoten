@@ -469,10 +469,7 @@ end
 function WDUManager:PostWave15Apocalypse()
     if not self:_is_special_wave() then
         if self:_get_current_wave() > 15 then
-            math.randomseed(os.time())
-            local random = math.random(0, 100)
-
-            if random > 95 then
+            if math.random(0, 100) > 94 then
                 return true
             end
         end
