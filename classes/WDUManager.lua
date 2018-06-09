@@ -574,7 +574,8 @@ function WDUManager:_convert_factory_to_upgrade()
         wpn_fps_special_roach_primary = "wpn_fps_special_roach_upg_primary",
         wpn_fps_special_roach_secondary = "wpn_fps_special_roach_upg_secondary",
         wpn_fps_snp_msr_primary = "wpn_fps_snp_msr_upg_primary",
-        wpn_fps_snp_msr_secondary = "wpn_fps_snp_msr_upg_secondary"
+        wpn_fps_snp_msr_secondary = "wpn_fps_snp_msr_upg_secondary",
+        wpn_fps_ass_nothing2_primary = "wpn_fps_spe_vulcan_upg_primary"
 	}
 end
 

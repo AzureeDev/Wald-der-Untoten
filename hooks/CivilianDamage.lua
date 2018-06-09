@@ -1,3 +1,7 @@
+function CivilianDamage:_on_damage_received(damage_info)
+	return
+end
+
 function CivilianDamage:damage_bullet(attack_data)
     return
 end

@@ -7,7 +7,7 @@ Hooks:PostHook(BlackMarketTweakData, "_init_weapon_skins", "zm_init_new_weapon_c
 		bonus = "spread_p1",
 		reserve_quality = true,
 		base_gradient = "units/skins/pap_1/base_gradient/base_pack-a-punch",
-        cubemap_pattern_control = Vector3(1, 0.3513, 0),
+        cubemap_pattern_control = Vector3(1, 1, 1),
         types = {
 			barrel = {
                 pattern = "units/skins/pap_1/pattern/pat_pack-a-punch",

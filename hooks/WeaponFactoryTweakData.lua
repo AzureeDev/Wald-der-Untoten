@@ -750,4 +750,7 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
     }
     self.wpn_fps_snp_msr_upg_secondary = deep_clone(self.wpn_fps_snp_msr_upg_primary)
     self.wpn_fps_snp_msr_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_snp_msr_upg_secondary"
+
+    self.wpn_fps_spe_vulcan_upg_primary = deep_clone(self.wpn_fps_lmg_shuno)
+    self.wpn_fps_spe_vulcan_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_spe_vulcan_upg_primary"
 end

@@ -800,6 +800,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
 	
 	self.schakal_upg_primary = deep_clone(self.schakal_primary)
     self.schakal_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.schakal_upg_primary.name_id = "wpn_ump45_upg_name"
     self.schakal_upg_primary.sounds.fire = "zm_pew_smg"
     self.schakal_upg_primary.sounds.fire_single = "zm_pew_smg"
     self.schakal_upg_primary.stats_modifiers = {damage = 14}
@@ -846,4 +847,12 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.roach_upg_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
     self.roach_upg_secondary = deep_clone(self.roach_upg_primary)
     self.roach_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
+
+    self.vulcan_upg = deep_clone(self.shuno)
+    self.vulcan_upg.name_id = "wpn_minigun_upg_name"
+    self.vulcan_upg.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.vulcan_upg.CLIP_AMMO_MAX = 999
+    self.vulcan_upg.NR_CLIPS_MAX = 1
+    self.vulcan_upg.AMMO_MAX = self.vulcan_upg.CLIP_AMMO_MAX * self.vulcan_upg.NR_CLIPS_MAX
+    self.vulcan_upg.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
 end
