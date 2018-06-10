@@ -67,7 +67,7 @@ Hooks:PostHook(CharacterTweakData, "_init_fbi", "zm_disable_surrenders", functio
 	self.fbi.no_retreat = true
 	self.fbi.no_arrest = true
 	self.fbi.move_speed = presets.move_speed.very_fast
-	self.fbi.damage.hurt_severity = presets.hurt_severities.no_hurts
+	self.fbi.damage.hurt_severity = presets.hurt_severities.only_light_hurt
 	self.fbi.weapon = deep_clone(presets.weapon.good)
 	self.fbi.weapon.is_rifle.focus_delay = 1
 	self.fbi.weapon.is_rifle.optimal = 10000
@@ -87,7 +87,7 @@ Hooks:PostHook(CharacterTweakData, "_init_swat", "zm_disable_surrenders_2", func
 	self.swat.no_retreat = true
 	self.swat.no_arrest = true
 	self.swat.move_speed = presets.move_speed.very_fast
-	self.swat.damage.hurt_severity = presets.hurt_severities.no_hurts
+	self.swat.damage.hurt_severity = presets.hurt_severities.only_light_hurt
 	self.swat.weapon = deep_clone(presets.weapon.good)
 	self.swat.weapon.is_rifle.focus_delay = 1
 	self.swat.weapon.is_rifle.optimal = 10000
@@ -111,7 +111,7 @@ Hooks:PostHook(CharacterTweakData, "_init_heavy_swat", "zm_disable_surrenders_3"
 	self.heavy_swat.no_retreat = true
 	self.heavy_swat.no_arrest = true
 	self.heavy_swat.move_speed = presets.move_speed.very_fast
-	self.heavy_swat.damage.hurt_severity = presets.hurt_severities.no_hurts
+	self.heavy_swat.damage.hurt_severity = presets.hurt_severities.only_light_hurt
 	self.heavy_swat.weapon = deep_clone(presets.weapon.good)
 	self.heavy_swat.weapon.is_rifle.focus_delay = 1
 	self.heavy_swat.weapon.is_rifle.optimal = 10000
@@ -135,7 +135,7 @@ Hooks:PostHook(CharacterTweakData, "_init_fbi_swat", "zm_disable_surrenders_4", 
 	self.fbi_swat.no_retreat = true
 	self.fbi_swat.no_arrest = true
 	self.fbi_swat.move_speed = presets.move_speed.very_fast
-	self.fbi_swat.damage.hurt_severity = presets.hurt_severities.no_hurts
+	self.fbi_swat.damage.hurt_severity = presets.hurt_severities.only_light_hurt
 	self.fbi_swat.weapon = deep_clone(presets.weapon.good)
 	self.fbi_swat.weapon.is_rifle.focus_delay = 1
 	self.fbi_swat.weapon.is_rifle.optimal = 10000
@@ -159,7 +159,7 @@ Hooks:PostHook(CharacterTweakData, "_init_fbi_heavy_swat", "zm_disable_surrender
 	self.fbi_heavy_swat.no_retreat = true
 	self.fbi_heavy_swat.no_arrest = true
 	self.fbi_heavy_swat.move_speed = presets.move_speed.very_fast
-	self.fbi_heavy_swat.damage.hurt_severity = presets.hurt_severities.no_hurts
+	self.fbi_heavy_swat.damage.hurt_severity = presets.hurt_severities.only_light_hurt
 	self.fbi_heavy_swat.weapon = deep_clone(presets.weapon.good)
 	self.fbi_heavy_swat.weapon.is_rifle.focus_delay = 1
 	self.fbi_heavy_swat.weapon.is_rifle.optimal = 10000
@@ -183,7 +183,7 @@ Hooks:PostHook(CharacterTweakData, "_init_city_swat", "zm_disable_surrenders_6",
 	self.city_swat.no_retreat = true
 	self.city_swat.no_arrest = true
 	self.city_swat.move_speed = presets.move_speed.very_fast
-	self.city_swat.damage.hurt_severity = presets.hurt_severities.no_hurts
+	self.city_swat.damage.hurt_severity = presets.hurt_severities.only_light_hurt
 	self.city_swat.weapon = deep_clone(presets.weapon.good)
 	self.city_swat.weapon.is_rifle.focus_delay = 1
 	self.city_swat.weapon.is_rifle.optimal = 10000
@@ -233,7 +233,6 @@ end)
 
 Hooks:PostHook(CharacterTweakData, "_init_spooc", "zm_cloakie_tweak", function(self, presets)
 	self.spooc.allowed_poses = {crouch = false, stand = true}
-	self.spooc.damage.hurt_severity = presets.hurt_severities.no_hurts
 	self.spooc.weapon.is_smg.focus_delay = 1
 	self.spooc.weapon.is_smg.optimal = 10000
 	self.spooc.weapon.is_smg.far = 10000
