@@ -582,7 +582,7 @@
 			<sound path="speed_sting.ogg"/>
 			<sound path="revive_sting.ogg"/>
 			<sound path="juggernog_sting.ogg"/>
-			<sound path="belch.ogg.ogg"/>
+			<sound path="belch.ogg"/>
 			<sound path="box_interact.ogg"/>
 			<sound path="box_interact_stop.ogg"/>
 			<sound path="box_move.ogg"/>
