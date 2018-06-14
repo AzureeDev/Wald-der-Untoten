@@ -1,0 +1,6 @@
+<materials version="3">
+    <material name="ammo_pickup" render_template="generic:DIFFUSE_TEXTURE" unique="true" version="2">
+        <variable value="0" type="scalar" name="specular_power"/>
+        <diffuse_texture file="power_ups/firesale/firesale_df"/>
+    </material>
+</materials>

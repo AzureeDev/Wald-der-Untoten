@@ -92,6 +92,8 @@ function HUDZMWaves:_set_gift_visible(gift, visible)
     texture:set_visible(visible)
 
     local function animate_icon_lifetime(o)
+        o:stop()
+
         local from = 1
         local to = 0
         local t = 0
@@ -435,7 +437,7 @@ function HUDZMWaves:_animate_text_blinking()
 
         managers.trade:set_trade_countdown(true)
 
-        wait(8.5)
+        wait(10)
 
         managers.trade:set_trade_countdown(false)
         

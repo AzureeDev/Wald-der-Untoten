@@ -8,6 +8,8 @@ function WDUManager:init()
     self:_init_variables()
     self:_setup_xaudio()
     self:_setup_video_panel()
+
+    self._power_ups = WDUPowerUps
     
     if LocalizationManager then
         LocalizationManager:load_localization_file( self:_get_mod_path() .. "loc/unique_lines.txt" )
@@ -579,6 +581,14 @@ function WDUManager:_convert_factory_to_upgrade()
         wpn_fps_snp_msr_secondary = "wpn_fps_snp_msr_upg_secondary",
         wpn_fps_ass_nothing2_primary = "wpn_fps_spe_vulcan_upg_primary"
 	}
+end
+
+function WDUManager:power_ups()
+    return self._power_ups
+end
+
+function WDUManager:wait(t, uniqid, ect)
+    DelayedCalls:Add(uniqid, t, ect)
 end
 
 Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function(sender, id, data)

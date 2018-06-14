@@ -55,6 +55,8 @@
 			<hook file="WeaponTweakData.lua" source_file="lib/tweak_data/weapontweakdata"/>
 			<hook file="EnemyManager.lua" source_file="lib/managers/enemymanager"/>
 			<hook file="CoreUnit.lua" source_file="core/lib/utils/coreunit"/>
+			<hook file="PowerUps.lua" source_file="lib/units/pickups/ammoclip"/>
+			<hook file="GamePlayCentralManager.lua" source_file="lib/managers/gameplaycentralmanager"/>
 		</hooks>
 		<include directory="levels/zm_the_forest">
 			<file file="world.world" type="binary"/>

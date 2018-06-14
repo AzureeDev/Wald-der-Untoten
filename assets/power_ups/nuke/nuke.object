@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<dynamic_object>
+  <diesel materials="power_ups/nuke/nuke" orientation_object="rp_ammo_pickup" />
+  <graphics>
+    <object name="g_ammo_pickup_lod0" enabled="true" shadow_caster="true" />
+  </graphics>
+</dynamic_object>
