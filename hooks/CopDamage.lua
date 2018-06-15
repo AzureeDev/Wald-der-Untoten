@@ -13,10 +13,12 @@ function CopDamage:drop_pickup(extra)
 
 		mvector3.set(mvec_1, position)
 
-		managers.game_play_central:spawn_pickup({
-			position = mvec_1,
-			rotation = rotation
-		})
+		if Network:is_server() then
+			managers.game_play_central:spawn_pickup({
+				position = mvec_1,
+				rotation = rotation
+			})
+		end
 
 		managers.wdu:_element_play_sound({
 			name = "power_up_spawn",

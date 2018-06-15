@@ -452,7 +452,7 @@ function UseInteractionExt:sync_interacted(peer, player, status, skip_alive_chec
 			end
 		end
 
-		managers.wdu:_add_money_to(managers.wdu:_peer_id(), amount_to_deduct)
+		managers.wdu:_add_money_to(peer:id(), amount_to_deduct)
 
 		if not self._tweak_data.stay_active then
 			self:remove_interact()

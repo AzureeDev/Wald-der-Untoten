@@ -637,6 +637,20 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
         return Vector3(x, y, z)
     end
 
+    if id == "PowerUpSyncTable" then
+        local str_to_table = LuaNetworking:StringToTable(data)
+
+        local powerups_ids = {
+            [1] = Idstring("power_ups/max_ammo/max_ammo"),
+            [2] = Idstring("power_ups/double_points/double_points"),
+            [3] = Idstring("power_ups/instakill/instakill"),
+            [4] = Idstring("power_ups/firesale/firesale"),
+            [5] = Idstring("power_ups/nuke/nuke")
+        }
+
+        World:spawn_unit(powerups_ids[str_to_table.power_up_id], str_to_table.power_up_pos, Rotation(0, 0, 0))
+    end
+
     if id == "SpecialWave_SpawnPosition" then
         if managers.wdu:_is_special_wave() then
             local pos = string_to_vector(data)
