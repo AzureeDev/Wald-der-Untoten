@@ -426,8 +426,33 @@ function UseInteractionExt:sync_interacted(peer, player, status, skip_alive_chec
 	end
 
 	if self._tweak_data.zm_interaction then
-		local amount_to_deduct = self._tweak_data.points_cost
-		managers.wdu:_deduct_money_to(peer, amount_to_deduct)
+		local amount_to_deduct = 0 - self._tweak_data.points_cost
+
+		if self.tweak_data == "zm_mystery_box" and managers.wdu:_is_event_active("firesale") then
+			amount_to_deduct = 0 - 10
+		end
+
+		if self._tweak_data.weapon and not self._tweak_data.grenade_spot then
+			local current_state = managers.player:get_current_state()
+			if current_state then
+				local current_weapon = current_state:get_equipped_weapon()
+				local is_secondary = managers.player:player_unit():inventory():equipped_selection() == 1
+				local is_primary = managers.player:player_unit():inventory():equipped_selection() == 2
+				local suffix = "_primary"
+
+				if is_secondary then
+					suffix = "_secondary"
+				end
+
+				local converted_id_to_new_system = self._tweak_data.weapon_id .. suffix
+
+				if current_weapon.name_id == converted_id_to_new_system then
+					amount_to_deduct = amount_to_deduct / 2
+				end
+			end
+		end
+
+		managers.wdu:_add_money_to(managers.wdu:_peer_id(), amount_to_deduct)
 
 		if not self._tweak_data.stay_active then
 			self:remove_interact()
