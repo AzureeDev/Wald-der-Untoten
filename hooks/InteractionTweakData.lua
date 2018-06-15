@@ -222,7 +222,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		zm_interaction = true,
 		points_cost = 2500,
 		perk = "Juggernog",
-		is_perk_interaction = true
+		is_perk_interaction = true,
 		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
@@ -236,7 +236,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		zm_interaction = true,
 		points_cost = 3000,
 		perk = "Speed Cola",
-		is_perk_interaction = true
+		is_perk_interaction = true,
 		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
@@ -250,7 +250,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		zm_interaction = true,
 		points_cost = 2000,
 		perk = "Double Tap",
-		is_perk_interaction = true
+		is_perk_interaction = true,
 		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
@@ -264,7 +264,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		zm_interaction = true,
 		points_cost = 1500,
 		perk = "Quick Revive",
-		is_perk_interaction = true
+		is_perk_interaction = true,
 		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
@@ -278,13 +278,11 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		zm_interaction = true,
 		points_cost = 500,
 		perk = "Quick Revive",
-		is_perk_interaction = true
+		is_perk_interaction = true,
 		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
 		timer = 3,
-		special_equipment = "zm_power_on",
-		equipment_text_id = "zm_no_power",		
 		special_equipment_block = "perk_quickrevive"
 	}
 
@@ -292,7 +290,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		zm_interaction = true,
 		points_cost = 4000,
 		perk = "Dead Shot",
-		is_perk_interaction = true
+		is_perk_interaction = true,
 		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",

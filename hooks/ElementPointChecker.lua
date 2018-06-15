@@ -15,22 +15,6 @@ function ElementPointChecker:on_executed(instigator)
 		return
 	end
 
-	local peer = managers.network:session():peer_by_unit(instigator)
-	local peer_id = peer:id() or 1
-
-	local current_points = tonumber(managers.wdu.players[peer_id].money)
-	if current_points < self._values.cost then
-		managers.wdu:_element_play_sound({
-			name = self._editor_name .. "_" .. self._id,
-			custom_dir = "sound",
-			file_name = "denied.ogg",
-			sound_type = "sfx",
-			is_3d = true,
-			position = self._values.position
-		})
-		return
-	end
-
 	managers.wdu:_element_play_sound({
 		name = self._editor_name .. "_" .. self._id,
 		custom_dir = "sound",
@@ -39,13 +23,6 @@ function ElementPointChecker:on_executed(instigator)
 		is_3d = true,
 		position = self._values.position
 	})
-
-	local C = self._values.cost
-	local D = 0 - C
-
-	if instigator == managers.player:player_unit() then
-		managers.wdu:_add_money_to(peer_id, D)
-	end
 
 	ElementPointChecker.super.on_executed(self, instigator)
 end

@@ -6,9 +6,18 @@ function PowerUps:init(unit)
 	--self._ammo_type = ""
     --self._ammo_box = self._unit:name() == Idstring("units/pickups/ammo/ammo_pickup")
     self._power_up_id = self._power_up_id or 1
+    self:init_lifetime()
 end
 
 function PowerUps:reload_contour()
+end
+
+function PowerUps:init_lifetime()
+    managers.wdu:wait(30, "lifetime_power_up_" .. self._power_up_id, function()
+        if alive(self._unit) then
+            self:consume()
+        end
+    end)
 end
 
 function PowerUps:_pickup(unit)

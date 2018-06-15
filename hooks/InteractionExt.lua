@@ -50,16 +50,16 @@ function BaseInteractionExt:selected(player, locator, hand_id)
 			local item = self._tweak_data.perk
 
 			if current_money >= cost then
-				text = text .. " the " .. item
+				text = text .. item
 				text = text .. " [Cost : " .. cost .. "]"
 			else
 				local points_needed = cost - current_money
-				text = "You need " .. points_needed .. " more points to buy the " .. item
+				text = "You need " .. points_needed .. " more points to buy " .. item
 			end
 		end
 
 		if self._tweak_data.path then
-			text = "Hold " .. managers.localization:btn_macro("interact") .. " to open"
+			text = "Hold " .. managers.localization:btn_macro("interact") .. " to open "
 			local path_type = "the path"
 			
 			if self._tweak_data.custom_path then
@@ -79,7 +79,6 @@ function BaseInteractionExt:selected(player, locator, hand_id)
 			text = "Hold " .. managers.localization:btn_macro("interact") .. " to upgrade your weapon"
 
 			if current_money >= cost then
-				text = text .. path_type
 				text = text .. " [Cost : " .. cost .. "]"
 			else
 				local points_needed = cost - current_money
@@ -96,7 +95,6 @@ function BaseInteractionExt:selected(player, locator, hand_id)
 			end
 
 			if current_money >= cost then
-				text = text .. path_type
 				text = text .. " [Cost : " .. cost .. "]"
 			else
 				local points_needed = cost - current_money
@@ -146,10 +144,10 @@ end
 
 function BaseInteractionExt:quick_swap()
 	if not managers.wdu.level.active_events.firesale_box_swap then
-		self._disabled = true
+		self:set_active(false)
 
 		managers.wdu:wait(0.1, "quick_swap_interaction", function()
-			self._disabled = false
+			self:set_active(true)
 		end)
 
 		managers.wdu.level.active_events.firesale_box_swap = true
@@ -179,6 +177,10 @@ function BaseInteractionExt:can_interact(player)
 	if self._tweak_data.zm_interaction then
 		local current_money = managers.wdu:_get_own_money()
 		local cost = self._tweak_data.points_cost or 0
+
+		if self.tweak_data == "zm_mystery_box" and managers.wdu:_is_event_active("firesale") then
+			cost = 10
+		end
 
 		if current_money < cost then
 			return false
@@ -250,8 +252,13 @@ function BaseInteractionExt:interact(player)
 	self._tweak_data_at_interact_start = nil
 
 	if self._tweak_data.zm_interaction then
-		local amount_to_deduct = self._tweak_data.points_cost
-		managers.wdu:_deduct_money_to(managers.wdu:_peer_id(), amount_to_deduct)
+		local amount_to_deduct = 0 - self._tweak_data.points_cost
+
+		if self.tweak_data == "zm_mystery_box" and managers.wdu:_is_event_active("firesale") then
+			amount_to_deduct = 0 - 10
+		end
+
+		managers.wdu:_add_money_to(managers.wdu:_peer_id(), amount_to_deduct)
 	end
 
 	self:_post_event(player, "sound_done")
