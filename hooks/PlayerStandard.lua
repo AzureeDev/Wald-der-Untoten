@@ -2,6 +2,7 @@ Hooks:PostHook(PlayerStandard, "init", "Railgun_SteelsightColor_PlayerStandard__
 	self._in_steelsight_last = false
 	self._in_steelsight_delault_color = managers.user:get_setting("video_color_grading")
 	self._in_steelsight_use_color = "color_heat"
+	self._pickup_area = 100
 end)
 
 Hooks:PostHook(PlayerStandard, "_check_action_steelsight", "Railgun_SteelsightColor_PlayerStandard__check_action_steelsight", function(self)

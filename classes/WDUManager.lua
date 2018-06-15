@@ -63,7 +63,8 @@ function WDUManager:_init_variables()
         active_events = {
             double_points = false,
             instakill = false,
-            firesale = false
+            firesale = false,
+            firesale_box_swap = false
         },
         teleporter = {
             active = true

@@ -55,6 +55,8 @@ function WDUPowerUps:execute_firesale()
         managers.hud._hud_zm_waves:_set_gift_visible("icon_firesale", true) 
     end
 
+    self._source = SoundDevice:create_source("firesale_announcer")
+    self._source:post_event("zm_announcer_firesale")
     managers.wdu:_setup_event_state("firesale", true)
 
     managers.wdu:_element_play_sound({
@@ -71,6 +73,7 @@ function WDUPowerUps:execute_firesale()
     managers.wdu:wait(30, "firesale_timer_wait", function()
         managers.wdu:_setup_event_state("firesale", false)
         managers.hud._hud_zm_waves:_set_gift_visible("icon_firesale", false)
+        managers.wdu.level.active_events.firesale_box_swap = false
     end)
 end
 

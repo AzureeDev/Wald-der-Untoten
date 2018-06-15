@@ -1,78 +1,141 @@
 Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", function(self, tweak_data)
-    self.zm_wall_buy_falcon_1200 = {
-        text_id = "zm_buy_falcon_1200",
-		action_text_id = "zm_buy_weapon",
-		start_active = false,
-		axis = "y",
-		timer = 1.5
-    }
-
-    self.zm_wall_buy_joceline_1600 = {
-        text_id = "zm_wall_buy_joceline_1600",
-		action_text_id = "zm_buy_weapon",
-		start_active = false,
-		axis = "y",
-		timer = 1.5
-    }
-
     self.zm_wall_buy_m14_2000 = {
-        text_id = "zm_wall_buy_m14_2000",
+		zm_interaction = true,
+		weapon = "M308 Rifle",
+		points_cost = 1350,
+		stay_active = true,
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		axis = "y",
-		timer = 1.5
+		timer = 0.5
 	}
-	
+
+	self.zm_wall_buy_joceline_1600 = {
+		zm_interaction = true,
+		weapon = "Joceline Shotgun",
+		points_cost = 500,
+		stay_active = true,
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 0.5
+	}
+
 	self.zm_wall_buy_r870_1300 = {
-        text_id = "zm_wall_buy_r870_1300",
+		zm_interaction = true,
+		weapon = "Reinfeld 880 Shotgun",
+		points_cost = 1200,
+		stay_active = true,
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		axis = "y",
-		timer = 1.5
-	}
-	
-	self.zm_wall_buy_tec9_800 = {
-		text_id = "zm_wall_buy_tec9_800",
-		action_text_id = "zm_buy_weapon",
-		start_active = false,
-		axis = "y",
-		timer = 1.5
+		timer = 0.5
 	}
 
 	self.zm_wall_buy_57_1000 = {
-		text_id = "zm_wall_buy_57_1000",
+		zm_interaction = true,
+		weapon = "5/7 Pistol",
+		points_cost = 850,
+		stay_active = true,
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		axis = "y",
-		timer = 1.5
+		timer = 0.5
 	}
-	
+
 	self.zm_wall_buy_ump45_1450 = {
-		text_id = "zm_wall_buy_ump45_1450",
+		zm_interaction = true,
+		weapon = "Jackal SMG",
+		points_cost = 1400,
+		stay_active = true,
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		axis = "y",
-		timer = 1.5
+		timer = 0.5
 	}
 
 	self.zm_wall_buy_m37_1300 = {
-		text_id = "zm_wall_buy_m37_1300",
+		zm_interaction = true,
+		weapon = "GSPS Shotgun",
+		points_cost = 1350,
+		stay_active = true,
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		axis = "y",
-		timer = 1.5
+		timer = 0.5
 	}
 
-    self.zm_pack_a_punch = {
-        text_id = "zm_pack_a_punch",
+	self.zm_wall_buy_mp9_2500 = {
+		zm_interaction = true,
+		weapon = "MP9 Submachine Gun",
+		points_cost = 1000,
+		stay_active = true,
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 0.5
+	}
+
+	self.zm_wall_buy_ak47_2000 = {
+		zm_interaction = true,
+		weapon = "AK Rifle",
+		points_cost = 1800,
+		stay_active = true,
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 0.5
+	}
+
+	self.zm_wall_buy_mp40_1100 = {
+		zm_interaction = true,
+		weapon = "MP40 SMG",
+		points_cost = 1300,
+		stay_active = true,
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 0.5
+	}
+
+	self.zm_wall_buy_garand_1500 = {
+		zm_interaction = true,
+		weapon = "Galant Rifle",
+		points_cost = 500,
+		stay_active = true,
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 0.5
+	}
+
+	self.zm_wall_buy_nades_1000 = {
+		zm_interaction = true,
+		weapon = "Grenades",
+		grenade_spot = true,
+		points_cost = 1000,
+		stay_active = true,
+		action_text_id = "zm_buy_weapon",
+		start_active = false,
+		axis = "y",
+		timer = 0.5
+	}
+
+	self.zm_pack_a_punch = {
+		zm_interaction = true,
+		pack_a_punch = true,
+		points_cost = 5000,
+		stay_active = true,
 		action_text_id = "zm_upgrade_weapon",
 		start_active = false,
 		axis = "y",
 		timer = 4
-    }
-
-    self.zm_open_path_1000 = {
-        text_id = "zm_open_path_1000",
+	}
+	
+	self.zm_open_path_1000 = {
+		zm_interaction = true,
+		path = true,
+		points_cost = 1000,
 		action_text_id = "zm_opening_path",
 		start_active = false,
 		timer = 1.5,
@@ -80,7 +143,9 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	}
 
 	self.zm_open_path_1000_nrm = {
-		text_id = "zm_open_path_1000",
+		zm_interaction = true,
+		path = true,
+		points_cost = 1000,
 		action_text_id = "zm_opening_path",
 		start_active = false,
 		timer = 1.5,
@@ -88,7 +153,9 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	}
 
 	self.zm_open_path_2000 = {
-		text_id = "zm_open_path_2000",
+		zm_interaction = true,
+		path = true,
+		points_cost = 2000,
 		action_text_id = "zm_opening_path",
 		start_active = false,
 		timer = 1.5,
@@ -96,21 +163,29 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	}
 
 	self.zm_open_path_2000_exp = {
-		text_id = "zm_open_path_2000",
+		zm_interaction = true,
+		path = true,
+		points_cost = 2000,
 		action_text_id = "zm_opening_path",
 		start_active = false,
 		timer = 1.5,
         interact_distance = 1300
 	}
-	
-	self.zm_wall_buy_mp9_2500 = {
-        text_id = "zm_wall_buy_mp9_2500",
+
+	self.zm_mystery_box = {
+		zm_interaction = true,
+		mystery_box = true,
+		points_cost = 950,
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
 		axis = "y",
-		timer = 1.5
+		timer = 4
 	}
-	
+end)
+
+--[[
+
+Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", function(self, tweak_data)
 	self.zm_mystery_box = {
 		text_id = "zm_mystery_box_950",
 		action_text_id = "zm_buy_weapon",
@@ -263,3 +338,4 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		timer = 1.5
 	}
 end)
+--]]
