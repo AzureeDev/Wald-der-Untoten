@@ -172,6 +172,16 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
         interact_distance = 1300
 	}
 
+	self.zm_open_door_2000 = {
+		zm_interaction = true,
+		path = true,
+		custom_path = "the door",
+		points_cost = 2000,
+		action_text_id = "zm_opening_path",
+		start_active = false,
+		timer = 1.5
+	}
+
 	self.zm_mystery_box = {
 		zm_interaction = true,
 		mystery_box = true,
@@ -181,103 +191,12 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		axis = "y",
 		timer = 4
 	}
-end)
 
---[[
-
-Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", function(self, tweak_data)
-	self.zm_mystery_box = {
-		text_id = "zm_mystery_box_950",
+	self.zm_activate_song_invisible = {
+		text_id = "zm_activate_song_invisible",
 		action_text_id = "zm_buy_weapon",
 		start_active = false,
-		axis = "y",
-		timer = 4
-	}
-
-	self.zm_mystery_box_fs = {
-		text_id = "zm_mystery_box_10",
-		action_text_id = "zm_buy_weapon",
-		start_active = false,
-		axis = "y",
-		timer = 4
-	}
-
-	self.zm_perk_juggernog = {
-		text_id = "zm_perk_juggernog_2500",
-		action_text_id = "zm_buy_perk",
-		start_active = false,
-		axis = "y",
-		timer = 3,
-		special_equipment = "zm_power_on",
-		equipment_text_id = "zm_no_power",		
-		special_equipment_block = "perk_juggernog",
-		is_perk_interaction = true
-	}
-
-	self.zm_perk_speedcola = {
-		text_id = "zm_perk_speedcola_3000",
-		action_text_id = "zm_buy_perk",
-		start_active = false,
-		axis = "y",
-		timer = 3,
-		special_equipment = "zm_power_on",
-		equipment_text_id = "zm_no_power",
-		special_equipment_block = "perk_speedcola",
-		is_perk_interaction = true
-	}
-
-	self.zm_perk_doubletap = {
-		text_id = "zm_perk_doubletap_2000",
-		action_text_id = "zm_buy_perk",
-		start_active = false,
-		axis = "y",
-		timer = 3,
-		special_equipment = "zm_power_on",
-		equipment_text_id = "zm_no_power",		
-		special_equipment_block = "perk_doubletap",
-		is_perk_interaction = true
-	}
-
-	self.zm_perk_quickrevive = {
-		text_id = "zm_perk_quickrevive_1500",
-		action_text_id = "zm_buy_perk",
-		start_active = false,
-		axis = "y",
-		timer = 3,
-		special_equipment = "zm_power_on",
-		equipment_text_id = "zm_no_power",		
-		special_equipment_block = "perk_quickrevive",
-		is_perk_interaction = true
-	}
-
-	self.zm_perk_quickrevive_solo = {
-		text_id = "zm_perk_quickrevive_solo",
-		action_text_id = "zm_buy_perk",
-		start_active = false,
-		axis = "y",
-		timer = 3,
-		special_equipment_block = "perk_quickrevive",
-		is_perk_interaction = true
-	}
-
-	self.zm_perk_deadshot = {
-		text_id = "zm_perk_deadshot_4000",
-		action_text_id = "zm_buy_perk",
-		start_active = false,
-		axis = "y",
-		timer = 3,
-		special_equipment = "zm_power_on",
-		equipment_text_id = "zm_no_power",		
-		special_equipment_block = "perk_deadshot",
-		is_perk_interaction = true
-	}
-
-	self.zm_open_door_2000 = {
-		text_id = "zm_open_door_2000",
-		action_text_id = "zm_opening_path",
-		start_active = false,
-		axis = "y",
-		timer = 4
+		interact_distance = 250
 	}
 
 	self.zm_teleporter = {
@@ -299,43 +218,87 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 		interact_distance = 500
 	}
 
-	self.zm_activate_song_invisible = {
-		text_id = "zm_activate_song_invisible",
-		action_text_id = "zm_buy_weapon",
-		start_active = false,
-		interact_distance = 250
-	}
-
-	self.zm_wall_buy_ak47_2000 = {
-		text_id = "zm_wall_buy_ak47_2000",
-		action_text_id = "zm_buy_weapon",
+	self.zm_perk_juggernog = {
+		zm_interaction = true,
+		points_cost = 2500,
+		perk = "Juggernog",
+		is_perk_interaction = true
+		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
-		timer = 1.5
+		timer = 3,
+		special_equipment = "zm_power_on",
+		equipment_text_id = "zm_no_power",		
+		special_equipment_block = "perk_juggernog"
 	}
 
-	self.zm_wall_buy_mp40_1100 = {
-		text_id = "zm_wall_buy_mp40_1100",
-		action_text_id = "zm_buy_weapon",
+	self.zm_perk_speedcola = {
+		zm_interaction = true,
+		points_cost = 3000,
+		perk = "Speed Cola",
+		is_perk_interaction = true
+		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
-		timer = 1.5
+		timer = 3,
+		special_equipment = "zm_power_on",
+		equipment_text_id = "zm_no_power",		
+		special_equipment_block = "perk_speedcola"
 	}
 
-	self.zm_wall_buy_garand_1500 = {
-		text_id = "zm_wall_buy_garand_1500",
-		action_text_id = "zm_buy_weapon",
+	self.zm_perk_doubletap = {
+		zm_interaction = true,
+		points_cost = 2000,
+		perk = "Double Tap",
+		is_perk_interaction = true
+		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
-		timer = 1.5
+		timer = 3,
+		special_equipment = "zm_power_on",
+		equipment_text_id = "zm_no_power",		
+		special_equipment_block = "perk_doubletap"
 	}
 
-	self.zm_wall_buy_nades_1000 = {
-		text_id = "zm_wall_buy_nades_1000",
-		action_text_id = "zm_buy_weapon",
+	self.zm_perk_quickrevive = {
+		zm_interaction = true,
+		points_cost = 1500,
+		perk = "Quick Revive",
+		is_perk_interaction = true
+		action_text_id = "zm_buy_perk",
 		start_active = false,
 		axis = "y",
-		timer = 1.5
+		timer = 3,
+		special_equipment = "zm_power_on",
+		equipment_text_id = "zm_no_power",		
+		special_equipment_block = "perk_quickrevive"
+	}
+
+	self.zm_perk_quickrevive_solo = {
+		zm_interaction = true,
+		points_cost = 500,
+		perk = "Quick Revive",
+		is_perk_interaction = true
+		action_text_id = "zm_buy_perk",
+		start_active = false,
+		axis = "y",
+		timer = 3,
+		special_equipment = "zm_power_on",
+		equipment_text_id = "zm_no_power",		
+		special_equipment_block = "perk_quickrevive"
+	}
+
+	self.zm_perk_deadshot = {
+		zm_interaction = true,
+		points_cost = 4000,
+		perk = "Dead Shot",
+		is_perk_interaction = true
+		action_text_id = "zm_buy_perk",
+		start_active = false,
+		axis = "y",
+		timer = 3,
+		special_equipment = "zm_power_on",
+		equipment_text_id = "zm_no_power",		
+		special_equipment_block = "perk_deadshot"
 	}
 end)
---]]
