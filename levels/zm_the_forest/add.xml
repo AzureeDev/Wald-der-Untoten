@@ -5,6 +5,7 @@
 	<texture force="true" path="effects/textures/bullet_hit/e_dist_heat"/>
 	<texture force="true" path="effects/textures/bullet_hit/e_muzzle_flash03_mgsj2"/>
 	<texture force="true" path="effects/textures/bullet_hit/glow_ball"/>
+	<texture force="true" path="effects/textures/smoke/e_smoke_04_6x6_seq"/>
 	<texture force="true" path="skies/sky_eclipse_v2" unload="true"/>
 	<texture force="true" path="map_assets/perks" unload="true"/>
 	<texture force="true" path="map_assets/perks_2" unload="true"/>

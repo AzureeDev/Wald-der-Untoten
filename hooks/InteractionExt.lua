@@ -22,35 +22,79 @@ function BaseInteractionExt:selected(player, locator, hand_id)
 			end
 
 			local item = self._tweak_data.weapon
+			local own_weapon = false
 
-			--[[if not self._tweak_data.grenade_spot then
-				for id,weapon in pairs( player_unit:inventory():available_selections() ) do
-					if alive(weapon.unit) then
-						local wpn_name = weapon.unit:base():get_name_id()
+			if not self._tweak_data.grenade_spot then
+				local current_state = managers.player:get_current_state()
+				if current_state then
+					local current_weapon = current_state:get_equipped_weapon()
+					local is_secondary = managers.player:player_unit():inventory():equipped_selection() == 1
+					local is_primary = managers.player:player_unit():inventory():equipped_selection() == 2
+					local suffix = "_primary"
 
-						managers.hud:set_ammo_amount( id, weapon.unit:base():ammo_info() )
+					if is_secondary then
+						suffix = "_secondary"
 					end
-					
-					managers.player:add_grenade_amount(10, true)
-					managers.player:add_cable_ties(2)
+
+					local converted_id_to_new_system = self._tweak_data.weapon_id .. suffix
+
+					if current_weapon.name_id == converted_id_to_new_system then
+						text = "Hold " .. managers.localization:btn_macro("interact") .. " to refill the ammo of"
+						cost = cost / 2
+						own_weapon = true
+					end
 				end
-			end--]]
+			end
 
 			if current_money >= cost then
 				if not self._tweak_data.grenade_spot then text = text .. " the " .. item end
 				text = text .. " [Cost : " .. cost .. "]"
 			else
 				local points_needed = cost - current_money
-				if not self._tweak_data.grenade_spot then text = "You need " .. points_needed .. " more points to buy the " .. item else
-				text = "You need " .. points_needed .. " more points to refill your throwables" end
+				
+				if not self._tweak_data.grenade_spot then 
+					text = "You need " .. points_needed .. " more points to buy the " .. item 
+				else
+					text = "You need " .. points_needed .. " more points to refill your throwables" 
+				end
+
+				if own_weapon then
+					if not self._tweak_data.grenade_spot then text = "You need " .. points_needed .. " more points to refill the ammo of the " .. item end
+				end
 			end
 		end
 
 		if self._tweak_data.perk then
 			local item = self._tweak_data.perk
 
+			if self._tweak_data.special_equipment and not managers.player:has_special_equipment(self._tweak_data.special_equipment) then
+				local has_special_equipment = false
+		
+				if self._tweak_data.possible_special_equipment then
+					for i, special_equipment in ipairs(self._tweak_data.possible_special_equipment) do
+						if managers.player:has_special_equipment(special_equipment) then
+							has_special_equipment = true
+		
+							break
+						end
+					end
+				end
+		
+				if not has_special_equipment then
+					text = managers.localization:text(self._tweak_data.equipment_text_id, string_macros)
+					icon = self.no_equipment_icon or self._tweak_data.no_equipment_icon or icon
+				end
+
+				managers.hud:show_interact({
+					text = text,
+					icon = icon
+				})
+
+				return true
+			end
+
 			if current_money >= cost then
-				text = text .. item
+				text = text .. " " .. item
 				text = text .. " [Cost : " .. cost .. "]"
 			else
 				local points_needed = cost - current_money
@@ -182,6 +226,26 @@ function BaseInteractionExt:can_interact(player)
 			cost = 10
 		end
 
+		if self._tweak_data.weapon and not self._tweak_data.grenade_spot then
+			local current_state = managers.player:get_current_state()
+			if current_state then
+				local current_weapon = current_state:get_equipped_weapon()
+				local is_secondary = managers.player:player_unit():inventory():equipped_selection() == 1
+				local is_primary = managers.player:player_unit():inventory():equipped_selection() == 2
+				local suffix = "_primary"
+
+				if is_secondary then
+					suffix = "_secondary"
+				end
+
+				local converted_id_to_new_system = self._tweak_data.weapon_id .. suffix
+
+				if current_weapon.name_id == converted_id_to_new_system then
+					cost = cost / 2
+				end
+			end
+		end
+
 		if current_money < cost then
 			return false
 		end
@@ -256,6 +320,26 @@ function BaseInteractionExt:interact(player)
 
 		if self.tweak_data == "zm_mystery_box" and managers.wdu:_is_event_active("firesale") then
 			amount_to_deduct = 0 - 10
+		end
+
+		if self._tweak_data.weapon and not self._tweak_data.grenade_spot then
+			local current_state = managers.player:get_current_state()
+			if current_state then
+				local current_weapon = current_state:get_equipped_weapon()
+				local is_secondary = managers.player:player_unit():inventory():equipped_selection() == 1
+				local is_primary = managers.player:player_unit():inventory():equipped_selection() == 2
+				local suffix = "_primary"
+
+				if is_secondary then
+					suffix = "_secondary"
+				end
+
+				local converted_id_to_new_system = self._tweak_data.weapon_id .. suffix
+
+				if current_weapon.name_id == converted_id_to_new_system then
+					amount_to_deduct = amount_to_deduct / 2
+				end
+			end
 		end
 
 		managers.wdu:_add_money_to(managers.wdu:_peer_id(), amount_to_deduct)

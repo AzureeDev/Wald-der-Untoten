@@ -2,6 +2,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
     self.zm_wall_buy_m14_2000 = {
 		zm_interaction = true,
 		weapon = "M308 Rifle",
+		weapon_id = "new_m14",
 		points_cost = 1350,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",
@@ -13,6 +14,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	self.zm_wall_buy_joceline_1600 = {
 		zm_interaction = true,
 		weapon = "Joceline Shotgun",
+		weapon_id = "b682",
 		points_cost = 500,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",
@@ -24,6 +26,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	self.zm_wall_buy_r870_1300 = {
 		zm_interaction = true,
 		weapon = "Reinfeld 880 Shotgun",
+		weapon_id = "r870",
 		points_cost = 1200,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",
@@ -35,6 +38,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	self.zm_wall_buy_57_1000 = {
 		zm_interaction = true,
 		weapon = "5/7 Pistol",
+		weapon_id = "lemming",
 		points_cost = 850,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",
@@ -46,6 +50,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	self.zm_wall_buy_ump45_1450 = {
 		zm_interaction = true,
 		weapon = "Jackal SMG",
+		weapon_id = "schakal",
 		points_cost = 1400,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",
@@ -57,6 +62,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	self.zm_wall_buy_m37_1300 = {
 		zm_interaction = true,
 		weapon = "GSPS Shotgun",
+		weapon_id = "m37",
 		points_cost = 1350,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",
@@ -68,6 +74,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	self.zm_wall_buy_mp9_2500 = {
 		zm_interaction = true,
 		weapon = "MP9 Submachine Gun",
+		weapon_id = "mp9",
 		points_cost = 1000,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",
@@ -79,6 +86,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	self.zm_wall_buy_ak47_2000 = {
 		zm_interaction = true,
 		weapon = "AK Rifle",
+		weapon_id = "ak74",
 		points_cost = 1800,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",
@@ -90,6 +98,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	self.zm_wall_buy_mp40_1100 = {
 		zm_interaction = true,
 		weapon = "MP40 SMG",
+		weapon_id = "erma",
 		points_cost = 1300,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",
@@ -101,6 +110,7 @@ Hooks:PostHook(InteractionTweakData, "init", "zm_init_new_interactions", functio
 	self.zm_wall_buy_garand_1500 = {
 		zm_interaction = true,
 		weapon = "Galant Rifle",
+		weapon_id = "ching",
 		points_cost = 500,
 		stay_active = true,
 		action_text_id = "zm_buy_weapon",

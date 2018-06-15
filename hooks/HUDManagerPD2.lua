@@ -1,7 +1,6 @@
 HUDZMWaves = HUDZMWaves or class()
 
 function HUDZMWaves:init(parent)
-    self._current_wave = 0
     self:_create_zm_waves_hud(parent)
     self:_create_gift_hud(parent)
 end
@@ -20,13 +19,13 @@ function HUDZMWaves:_create_zm_waves_hud(parent)
         y = 0,
         x = 10,
         layer = 1,
-        text = "WAVE " .. self._current_wave,
+        text = "",
         color = Color(1, 0.6, 0, 0),
         font_size = tweak_data.menu.pd2_large_font_size,
         font = tweak_data.menu.pd2_large_font,
         visible = true
     })
-    zm_wave_text:set_world_center_y(zm_wave_panel:world_center_y() + 1)
+    zm_wave_text:set_world_center_y(zm_wave_panel:world_center_y())
 
     self._zm_wave_text = zm_wave_text
 end
@@ -75,7 +74,7 @@ function HUDZMWaves:_create_gift_hud(parent)
         h = 64,
         visible = is_firesale
     })
-    icon_firesale:set_right(icon_instakill:left() + 5)
+    icon_firesale:set_right(icon_instakill:left())
 
     local icon_double_points = gift_panel:bitmap({
         name = "icon_double_points",
@@ -345,16 +344,14 @@ function HUDZMWaves:_new_animation_wave_start()
 			o:set_color(o:color():with_alpha(p))
         end)
         
-        over(0.5, function (p)
-			o:set_color(o:color():with_alpha(1 - p))
-        end)
-        
         over(1, function (p)
 			o:set_color(o:color():with_alpha(1 - p))
         end)
 
         managers.wdu.level.wave.current = managers.wdu.level.wave.current + 1
-        self._zm_wave_text:set_text("WAVE " .. managers.wdu.level.wave.current)
+        local text_wave = ""
+
+        self._zm_wave_text:set_text(text_wave .. managers.wdu.level.wave.current)
         
         wait(1)
 
@@ -433,7 +430,7 @@ function HUDZMWaves:_animate_text_blinking()
         o:set_color(to)
 
         managers.wdu.level.wave.current = managers.wdu.level.wave.current + 1
-        self._zm_wave_text:set_text("WAVE " .. managers.wdu.level.wave.current)
+        self._zm_wave_text:set_text(managers.wdu.level.wave.current)
 
         managers.trade:set_trade_countdown(true)
 
