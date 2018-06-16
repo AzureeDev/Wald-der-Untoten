@@ -648,7 +648,7 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
             [5] = Idstring("power_ups/nuke/nuke")
         }
 
-        World:spawn_unit(powerups_ids[str_to_table.power_up_id], str_to_table.power_up_pos, Rotation(0, 0, 0))
+        World:spawn_unit(powerups_ids[tonumber(str_to_table[1])], string_to_vector(str_to_table[2]), Rotation(0, 0, 0))
     end
 
     if id == "SpecialWave_SpawnPosition" then

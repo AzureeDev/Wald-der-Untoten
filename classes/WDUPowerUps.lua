@@ -120,7 +120,6 @@ function WDUPowerUps:execute_kaboom()
     managers.overlay_effect:play_effect(overlay_effect)
 
     local double_point_effect = managers.wdu:_is_event_active("double_points") and 2 or 1
-    managers.wdu:_add_money_to(managers.wdu:_peer_id(), 400 * double_point_effect)
 
     managers.wdu:wait(1, "kaboom_wait", function()
         local function nukeunit(pawn)
@@ -140,5 +139,7 @@ function WDUPowerUps:execute_kaboom()
         for u_key,u_data in pairs(managers.enemy:all_enemies()) do
             nukeunit(u_data)
         end
+
+        managers.wdu:_add_money_to(managers.wdu:_peer_id(), 400 * double_point_effect)
     end)
 end

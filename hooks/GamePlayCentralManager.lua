@@ -21,9 +21,7 @@ function GamePlayCentralManager:spawn_pickup(params)
 
     if not managers.wdu:_is_solo() then
 
-        local tbl_sync = {
-            power_up_id = random_id,
-            power_up_pos = vector_to_string(params.position)
+        local tbl_sync = {random_id, power_up_pos = vector_to_string(params.position)
         }
 
         local tbl_str = LuaNetworking:TableToString(tbl_sync)
