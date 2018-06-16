@@ -5,20 +5,18 @@ end)
 local mvec_1 = Vector3()
 
 function CopDamage:drop_pickup(extra)
-	local random_drop = math.random(0, 100)
-	if random_drop < 3 and not managers.wdu:_is_special_wave() then
+	if self._pickup then
 		local tracker = self._unit:movement():nav_tracker()
 		local position = tracker:lost() and tracker:field_position() or tracker:position()
 		local rotation = self._unit:rotation()
 
 		mvector3.set(mvec_1, position)
 
-		if Network:is_server() then
-			managers.game_play_central:spawn_pickup({
-				position = mvec_1,
-				rotation = rotation
-			})
-		end
+		managers.game_play_central:spawn_pickup({
+			name = self._pickup,
+			position = mvec_1,
+			rotation = rotation
+		})
 
 		managers.wdu:_element_play_sound({
 			name = "power_up_spawn",
@@ -32,8 +30,6 @@ function CopDamage:drop_pickup(extra)
 			use_velocity = false
 		})
 	end
-
-	return
 end
 
 function CopDamage:_dismember_condition(attack_data)
