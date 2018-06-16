@@ -66,6 +66,14 @@ function WDUManager:_init_variables()
             firesale = false,
             firesale_box_swap = false
         },
+        power_up_chance = 50,
+        power_up_table = {
+            "max_ammo",
+            "double_points",
+            "firesale",
+            "instakill",
+            "nuke"
+        },
         teleporter = {
             active = true
         },
@@ -649,34 +657,6 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
         local z = tonumber(string.split(data[3], split_str)[2])
 
         return Vector3(x, y, z)
-    end
-
-    if id == "PowerUpSyncTable" then
-        local str_to_table = LuaNetworking:StringToTable(data)
-
-        local powerups_ids = {
-            [1] = Idstring("power_ups/max_ammo/max_ammo"),
-            [2] = Idstring("power_ups/double_points/double_points"),
-            [3] = Idstring("power_ups/instakill/instakill"),
-            [4] = Idstring("power_ups/firesale/firesale"),
-            [5] = Idstring("power_ups/nuke/nuke")
-        }
-
-        local pos
-        local power_up_id = 1
-
-        for k, v in pairs(str_to_table) do
-            if string.find(v, 'x') then
-                pos = string_to_vector_wilko_sucks(v)
-            else
-                power_up_id = tonumber(v)
-            end
-        end
-
-        log("POWER UP ID =", tostring(powerups_ids[power_up_id]))
-        log("POS =", tostring(pos))
-
-        safe_spawn_unit(powerups_ids[power_up_id], pos, Rotation())
     end
 
     if id == "PWUP_EXECUTE" then

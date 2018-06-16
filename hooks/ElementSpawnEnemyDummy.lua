@@ -57,9 +57,12 @@ function ElementSpawnEnemyDummy:produce(params)
 		table.insert(self._units, unit)
 		self:event("spawn", unit)
 
-		if self._values.force_pickup and self._values.force_pickup ~= "none" then
-			local pickup_name = self._values.force_pickup ~= "no_pickup" and self._values.force_pickup or nil
+		local power_up_table = managers.wdu.level.power_up_table
+		local random_power_up_chance = managers.wdu.level.power_up_chance
+		local random_number = math.random(0, 100)
 
+		if random_number < random_power_up_chance then
+			local pickup_name = power_up_table[ math.random(#power_up_table) ]
 			unit:character_damage():set_pickup(pickup_name)
 		end
 	else
@@ -110,9 +113,14 @@ function ElementSpawnEnemyDummy:produce(params)
 		table.insert(self._units, unit)
 		self:event("spawn", unit)
 
-		if self._values.force_pickup and self._values.force_pickup ~= "none" then
-			local pickup_name = self._values.force_pickup ~= "no_pickup" and self._values.force_pickup or nil
+		local power_up_table = managers.wdu.level.power_up_table
+		local random_power_up_chance = managers.wdu.level.power_up_chance
+		local random_number = math.random(0, 100)
 
+		log(random_number)
+
+		if random_number < random_power_up_chance then
+			local pickup_name = power_up_table[ math.random(#power_up_table) ]
 			unit:character_damage():set_pickup(pickup_name)
 		end
 	end
