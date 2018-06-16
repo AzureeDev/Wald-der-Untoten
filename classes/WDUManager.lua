@@ -624,7 +624,7 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
     end
 
     local function string_to_vector(str)
-        local data = string.split( str, "[|]" )
+        local data = string.split( str, "[-]" )
         if #data < 3 then
             return nil
         end
@@ -647,6 +647,18 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
             [4] = Idstring("power_ups/firesale/firesale"),
             [5] = Idstring("power_ups/nuke/nuke")
         }
+
+        log("received powerup data: ", tostring(data))
+        log("transform into table: ", tostring(str_to_table))
+
+        for k, v in pairs(str_to_table) do
+            log("key = ", tostring(k))
+            log("value = ", tostring(v))
+        end
+
+        log("now spawning with the following data!")
+        log("str_to_table[1]", tostring(str_to_table[1]))
+        log("str_to_table[2]", tostring(str_to_table[2]))
 
         World:spawn_unit(powerups_ids[tonumber(str_to_table[1])], string_to_vector(str_to_table[2]), Rotation(0, 0, 0))
     end

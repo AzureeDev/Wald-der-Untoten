@@ -1,6 +1,6 @@
 function GamePlayCentralManager:spawn_pickup(params)
     local function vector_to_string(vec)
-        local dataString = "x:{1}|y:{2}|z:{3}"
+        local dataString = "x:{1}-y:{2}-z:{3}"
         dataString = dataString:gsub("{1}", math.round_with_precision(vec.x, 4))
         dataString = dataString:gsub("{2}", math.round_with_precision(vec.y, 4))
         dataString = dataString:gsub("{3}", math.round_with_precision(vec.z, 4))
