@@ -342,8 +342,13 @@ function BaseInteractionExt:interact(player)
 			end
 		end
 
-		local peer_id = managers.network and managers.network:session():peer_by_unit(player) or 1
-		
+		local peer_id = 1
+
+		if managers and managers.network then
+			local peer = managers.network:session():peer_by_unit(player)
+			peer_id = peer:id()
+		end
+
 		if peer_id == managers.wdu:_peer_id() then
 			managers.wdu:_add_money_to(peer_id, amount_to_deduct)
 		end
@@ -429,69 +434,34 @@ function UseInteractionExt:sync_interacted(peer, player, status, skip_alive_chec
 		return
 	end
 
-	if self._tweak_data.zm_interaction then
-		local amount_to_deduct = 0 - self._tweak_data.points_cost
+	local player = peer:unit()
 
-		if self.tweak_data == "zm_mystery_box" and managers.wdu:_is_event_active("firesale") then
-			amount_to_deduct = 0 - 10
-		end
-
-		if self._tweak_data.weapon and not self._tweak_data.grenade_spot then
-			local current_state = managers.player:get_current_state()
-			if current_state then
-				local current_weapon = current_state:get_equipped_weapon()
-				local is_secondary = managers.player:player_unit():inventory():equipped_selection() == 1
-				local is_primary = managers.player:player_unit():inventory():equipped_selection() == 2
-				local suffix = "_primary"
-
-				if is_secondary then
-					suffix = "_secondary"
-				end
-
-				local converted_id_to_new_system = self._tweak_data.weapon_id .. suffix
-
-				if current_weapon.name_id == converted_id_to_new_system then
-					amount_to_deduct = amount_to_deduct / 2
-				end
-			end
-		end
-
-		managers.wdu:_add_money_to(peer:id(), amount_to_deduct)
-
-		if not self._tweak_data.stay_active then
-			self:remove_interact()
-			self:set_active(false)
-		end
-	else
-		local player = peer:unit()
-
-		if not skip_alive_check and not alive(player) then
-			return
-		end
-
-		if player ~= managers.player:player_unit() then
-			if self._achievement_stat then
-				managers.achievment:award_progress(self._achievement_stat)
-			elseif self._achievement_id then
-				managers.achievment:award(self._achievement_id)
-			elseif self._challenge_stat then
-				managers.challenge:award_progress(self._challenge_stat)
-			elseif self._trophy_stat then
-				managers.custom_safehouse:award(self._trophy_stat)
-			elseif self._challenge_award then
-				managers.challenge:award(self._challenge_award)
-			elseif self._sidejob_award then
-				managers.generic_side_jobs:award(self._sidejob_award)
-			elseif self.award_blackmarket then
-				local args = string.split(self.award_blackmarket, " ")
-
-				managers.blackmarket:add_to_inventory(unpack(args))
-			end
-		end
-
-		self:remove_interact()
-		self:set_active(false)
+	if not skip_alive_check and not alive(player) then
+		return
 	end
+
+	if player ~= managers.player:player_unit() then
+		if self._achievement_stat then
+			managers.achievment:award_progress(self._achievement_stat)
+		elseif self._achievement_id then
+			managers.achievment:award(self._achievement_id)
+		elseif self._challenge_stat then
+			managers.challenge:award_progress(self._challenge_stat)
+		elseif self._trophy_stat then
+			managers.custom_safehouse:award(self._trophy_stat)
+		elseif self._challenge_award then
+			managers.challenge:award(self._challenge_award)
+		elseif self._sidejob_award then
+			managers.generic_side_jobs:award(self._sidejob_award)
+		elseif self.award_blackmarket then
+			local args = string.split(self.award_blackmarket, " ")
+
+			managers.blackmarket:add_to_inventory(unpack(args))
+		end
+	end
+
+	self:remove_interact()
+	self:set_active(false)
 
 	if self._unit:damage() then
 		self._unit:damage():run_sequence_simple("interact", {unit = player})
