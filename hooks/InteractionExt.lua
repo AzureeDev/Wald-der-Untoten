@@ -343,8 +343,10 @@ function BaseInteractionExt:interact(player)
 		end
 
 		local peer_id = managers.network and managers.network:session():peer_by_unit(player) or 1
-
-		managers.wdu:_add_money_to(peer_id, amount_to_deduct)
+		
+		if peer_id == managers.wdu:_peer_id() then
+			managers.wdu:_add_money_to(peer_id, amount_to_deduct)
+		end
 	end
 
 	self:_post_event(player, "sound_done")
