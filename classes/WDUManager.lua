@@ -651,16 +651,22 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
         log("received powerup data: ", tostring(data))
         log("transform into table: ", tostring(str_to_table))
 
+        local pos
+        local power_up_id = 1
+
         for k, v in pairs(str_to_table) do
-            log("key = ", tostring(k))
-            log("value = ", tostring(v))
+            if string.find(v, 'x') then
+                pos = string_to_vector(v)
+            else
+                power_up_id = tonumber(v)
+            end
         end
 
         log("now spawning with the following data!")
-        log("str_to_table[1]", tostring(str_to_table[1]))
-        log("str_to_table[2]", tostring(str_to_table[2]))
+        log("pos", tostring(pos))
+        log("power_up_id", tostring(power_up_id))
 
-        World:spawn_unit(powerups_ids[tonumber(str_to_table[1])], string_to_vector(str_to_table[2]), Rotation(0, 0, 0))
+        World:spawn_unit(powerups_ids[power_up_id], pos, Rotation(0, 0, 0))
     end
 
     if id == "SpecialWave_SpawnPosition" then
