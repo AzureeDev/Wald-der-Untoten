@@ -624,7 +624,21 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
     end
 
     local function string_to_vector(str)
-        local data = string.split( str, "[-]" )
+        local data = string.split( str, "[|]" )
+        if #data < 3 then
+            return nil
+        end
+        local split_str = "[:]"
+
+        local x = tonumber(string.split(data[1], split_str)[2])
+        local y = tonumber(string.split(data[2], split_str)[2])
+        local z = tonumber(string.split(data[3], split_str)[2])
+
+        return Vector3(x, y, z)
+    end
+
+    local function string_to_vector_wilko_sucks(str)
+        local data = string.split( str, "[;]" )
         if #data < 3 then
             return nil
         end
@@ -656,7 +670,7 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
 
         for k, v in pairs(str_to_table) do
             if string.find(v, 'x') then
-                pos = string_to_vector(v)
+                pos = string_to_vector_wilko_sucks(v)
             else
                 power_up_id = tonumber(v)
             end
