@@ -465,7 +465,7 @@
 	<cooked_physics path="power_ups/max_ammo/max_ammo"/>
 	<model path="power_ups/max_ammo/max_ammo"/>
 	<object path="power_ups/max_ammo/max_ammo"/>
-	<unit path="power_ups/max_ammo/max_ammo"/>
+	<unit load="true" path="power_ups/max_ammo/max_ammo"/>
 	<material_config path="power_ups/max_ammo/max_ammo"/>
 	<texture path="power_ups/max_ammo/max_ammo_df"/>
 	<texture path="power_ups/max_ammo/max_ammo_nm"/>
@@ -473,14 +473,14 @@
 	<cooked_physics path="power_ups/firesale/firesale"/>
 	<model path="power_ups/firesale/firesale"/>
 	<object path="power_ups/firesale/firesale"/>
-	<unit path="power_ups/firesale/firesale"/>
+	<unit load="true" path="power_ups/firesale/firesale"/>
 	<material_config path="power_ups/firesale/firesale"/>
 	<texture path="power_ups/firesale/firesale_df"/>
 	
 	<cooked_physics path="power_ups/instakill/instakill"/>
 	<model path="power_ups/instakill/instakill"/>
 	<object path="power_ups/instakill/instakill"/>
-	<unit path="power_ups/instakill/instakill"/>
+	<unit load="true" path="power_ups/instakill/instakill"/>
 	<material_config path="power_ups/instakill/instakill"/>
 	<texture path="power_ups/instakill/instakill_df"/>
 	<texture path="power_ups/instakill/instakill_nm"/>
@@ -488,7 +488,7 @@
 	<cooked_physics path="power_ups/double_points/double_points"/>
 	<model path="power_ups/double_points/double_points"/>
 	<object path="power_ups/double_points/double_points"/>
-	<unit path="power_ups/double_points/double_points"/>
+	<unit load="true" path="power_ups/double_points/double_points"/>
 	<material_config path="power_ups/double_points/double_points"/>
 	<texture path="power_ups/double_points/double_points_df"/>
 	<texture path="power_ups/double_points/double_points_nm"/>
@@ -496,7 +496,7 @@
 	<cooked_physics path="power_ups/nuke/nuke"/>
 	<model path="power_ups/nuke/nuke"/>
 	<object path="power_ups/nuke/nuke"/>
-	<unit path="power_ups/nuke/nuke"/>
+	<unit load="true" path="power_ups/nuke/nuke"/>
 	<material_config path="power_ups/nuke/nuke"/>
 	<texture path="power_ups/nuke/nuke_df"/>
 	<texture path="power_ups/nuke/nuke_nm"/>
