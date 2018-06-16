@@ -33,14 +33,19 @@ function PowerUps:_pickup(unit)
 
         if self._power_up_id == 1 then  -- MAX AMMO
             managers.wdu:power_ups():execute_max_ammo()
+            LuaNetworking:SendToPeers( "PWUP_EXECUTE", "1" )
         elseif self._power_up_id == 2 then -- DOUBLE POINTS
             managers.wdu:power_ups():execute_double_points()
+            LuaNetworking:SendToPeers( "PWUP_EXECUTE", "2" )
         elseif self._power_up_id == 3 then -- INSTAKILL
             managers.wdu:power_ups():execute_instakill()
+            LuaNetworking:SendToPeers( "PWUP_EXECUTE", "3" )
         elseif self._power_up_id == 4 then -- FIRESALE
             managers.wdu:power_ups():execute_firesale()
+            LuaNetworking:SendToPeers( "PWUP_EXECUTE", "4" )
         elseif self._power_up_id == 5 then -- KABOOM
             managers.wdu:power_ups():execute_kaboom()
+            LuaNetworking:SendToPeers( "PWUP_EXECUTE", "5" )
         end
 
         if Network:is_client() then

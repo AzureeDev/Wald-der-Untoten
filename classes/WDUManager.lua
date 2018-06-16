@@ -662,9 +662,6 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
             [5] = Idstring("power_ups/nuke/nuke")
         }
 
-        log("received powerup data: ", tostring(data))
-        log("transform into table: ", tostring(str_to_table))
-
         local pos
         local power_up_id = 1
 
@@ -676,11 +673,26 @@ Hooks:Add("NetworkReceivedData", "NetworkReceivedData_WDUManager_Sync", function
             end
         end
 
-        log("now spawning with the following data!")
-        log("pos", tostring(pos))
-        log("power_up_id", tostring(power_up_id))
+        log("POWER UP ID =", tostring(powerups_ids[power_up_id]))
+        log("POS =", tostring(pos))
 
-        World:spawn_unit(powerups_ids[power_up_id], pos, Rotation(0, 0, 0))
+        safe_spawn_unit(powerups_ids[power_up_id], pos, Rotation())
+    end
+
+    if id == "PWUP_EXECUTE" then
+        local power_up = tonumber(data)
+
+        if power_up == 1 then
+            managers.wdu:power_ups():execute_max_ammo()
+        elseif power_up == 2 then
+            managers.wdu:power_ups():execute_double_points()
+        elseif power_up == 3 then
+            managers.wdu:power_ups():execute_instakill()
+        elseif power_up == 4 then
+            managers.wdu:power_ups():execute_firesale()
+        elseif power_up == 5 then
+            managers.wdu:power_ups():execute_kaboom()
+        end
     end
 
     if id == "SpecialWave_SpawnPosition" then
