@@ -13,7 +13,7 @@ function PowerUps:reload_contour()
 end
 
 function PowerUps:init_lifetime()
-    managers.wdu:wait(30, "lifetime_power_up_" .. self._power_up_id, function()
+    managers.wdu:wait(30, "lifetime_power_up_" .. self._power_up_id .. "_" .. math.random(0,1000), function()
         if alive(self._unit) then
             self:consume()
         end

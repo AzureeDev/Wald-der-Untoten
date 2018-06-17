@@ -117,7 +117,7 @@ function ElementSpawnEnemyDummy:produce(params)
 		local random_power_up_chance = managers.wdu.level.power_up_chance
 		local random_number = math.random(0, 100)
 
-		if random_number < random_power_up_chance and not managers.wdu:_is_special_wave() then
+		if random_number < random_power_up_chance then
 			local pickup_name = power_up_table[ math.random(#power_up_table) ]
 			unit:character_damage():set_pickup(pickup_name)
 		end

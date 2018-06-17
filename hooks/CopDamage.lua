@@ -5,7 +5,7 @@ end)
 local mvec_1 = Vector3()
 
 function CopDamage:drop_pickup(extra)
-	if self._pickup then
+	if self._pickup and not managers.wdu:_is_special_wave() then
 		local tracker = self._unit:movement():nav_tracker()
 		local position = tracker:lost() and tracker:field_position() or tracker:position()
 		local rotation = self._unit:rotation()
