@@ -182,6 +182,10 @@
 	<unit path="new_weapon_units/upgrade/wpn_fps_snp_msr_upg_primary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_snp_msr_upg_secondary"/>
 	<unit path="new_weapon_units/upgrade/wpn_fps_spe_vulcan_upg_primary"/>
+	<unit path="new_weapon_units/wpn_fps_sho_deamon_primary"/>
+	<unit path="new_weapon_units/wpn_fps_sho_deamon_secondary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_sho_deamon_upg_primary"/>
+	<unit path="new_weapon_units/upgrade/wpn_fps_sho_deamon_upg_secondary"/>
 	<cooked_physics path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<model path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>
 	<object path="units/mods/weapons/wpn_fps_ass_nothing2/wpn_fps_ass_nothing2"/>

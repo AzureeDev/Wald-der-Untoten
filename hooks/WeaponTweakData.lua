@@ -429,6 +429,16 @@ function WeaponTweakData:_init_zm_new_weapons()
     self.msr_secondary = deep_clone(self.msr_primary)
     self.msr_secondary.use_data = {selection_index = SECONDARY, align_place = "left_hand"}
 
+    self.deamon_primary = deep_clone(self.boot)
+    self.deamon_primary.animations.reload_name_id = "boot"
+    self.deamon_primary.weapon_hold = "boot"
+    self.deamon_primary.stats_modifiers = {damage = 2}
+    self.deamon_primary.NR_CLIPS_MAX = self.deamon_primary.NR_CLIPS_MAX * 2
+    self.deamon_primary.AMMO_MAX = self.deamon_primary.CLIP_AMMO_MAX * self.deamon_primary.NR_CLIPS_MAX
+    self.deamon_primary.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
+    self.deamon_secondary= deep_clone(self.deamon_primary)
+    self.deamon_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
+
     self:_init_upgraded_zm_weapons()
 end
 
@@ -836,7 +846,7 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.msr_upg_primary.CLIP_AMMO_MAX = 10
     self.msr_upg_primary.NR_CLIPS_MAX = 6
     self.msr_upg_primary.AMMO_MAX = self.msr_upg_primary.CLIP_AMMO_MAX * self.msr_upg_primary.NR_CLIPS_MAX
-    self.msr_upg_primary.sounds.fire = "zm_pew_snp_b"
+    self.msr_upg_primary.sounds.fire = "zm_pew_snp_e"
     self.msr_upg_primary.sounds.fire_single = "zm_pew_snp_e"
     self.msr_upg_primary.stats_modifiers = {damage = 85}
     self.msr_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
@@ -867,4 +877,16 @@ function WeaponTweakData:_init_upgraded_zm_weapons()
     self.vulcan_upg.AMMO_MAX = self.vulcan_upg.CLIP_AMMO_MAX * self.vulcan_upg.NR_CLIPS_MAX
     self.vulcan_upg.stats_modifiers = {damage = 10}
     self.vulcan_upg.use_data = {selection_index = PRIMARY, align_place = "right_hand"}
+
+    self.deamon_upg_primary = deep_clone(self.deamon_primary)
+    self.deamon_upg_primary.name_id = "wpn_deamon_upg_name"
+    self.deamon_upg_primary.CLIP_AMMO_MAX = 14
+    self.deamon_upg_primary.NR_CLIPS_MAX = 6
+    self.deamon_upg_primary.AMMO_MAX = self.deamon_upg_primary.CLIP_AMMO_MAX * self.deamon_upg_primary.NR_CLIPS_MAX
+    self.deamon_upg_primary.sounds.fire = "zm_pew_shts"
+    self.deamon_upg_primary.sounds.fire_single = "zm_pew_shts"
+    self.deamon_upg_primary.stats_modifiers = {damage = 14}
+    self.deamon_upg_primary.muzzleflash = "effects/zm/zm_pap_muzzle"
+    self.deamon_upg_secondary = deep_clone(self.deamon_upg_primary)
+    self.deamon_upg_secondary.use_data = {selection_index = SECONDARY, align_place = "right_hand"}
 end

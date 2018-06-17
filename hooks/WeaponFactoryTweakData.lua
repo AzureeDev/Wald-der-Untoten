@@ -429,6 +429,11 @@ function WeaponFactoryTweakData:_init_multiplix()
     self.wpn_fps_snp_msr_primary.unit = "new_weapon_units/wpn_fps_snp_msr_primary"
     self.wpn_fps_snp_msr_secondary = deep_clone(self.wpn_fps_snp_msr)
     self.wpn_fps_snp_msr_secondary.unit = "new_weapon_units/wpn_fps_snp_msr_secondary"
+
+    self.wpn_fps_sho_deamon_primary = deep_clone(self.wpn_fps_sho_boot)
+    self.wpn_fps_sho_deamon_primary.unit = "new_weapon_units/wpn_fps_sho_deamon_primary"
+    self.wpn_fps_sho_deamon_secondary = deep_clone(self.wpn_fps_sho_boot)
+    self.wpn_fps_sho_deamon_secondary.unit = "new_weapon_units/wpn_fps_sho_deamon_secondary"
 end
 
 function WeaponFactoryTweakData:_init_upgraded_multiplix()
@@ -753,4 +758,19 @@ function WeaponFactoryTweakData:_init_upgraded_multiplix()
 
     self.wpn_fps_spe_vulcan_upg_primary = deep_clone(self.wpn_fps_lmg_shuno)
     self.wpn_fps_spe_vulcan_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_spe_vulcan_upg_primary"
+
+    self.wpn_fps_sho_deamon_upg_primary = deep_clone(self.wpn_fps_sho_boot)
+    self.wpn_fps_sho_deamon_upg_primary.unit = "new_weapon_units/upgrade/wpn_fps_sho_deamon_upg_primary"
+    self.wpn_fps_sho_deamon_upg_primary.default_blueprint = {
+        "wpn_fps_sho_boot_b_legendary",
+        "wpn_fps_sho_boot_fg_legendary",
+        "wpn_fps_sho_boot_o_legendary",
+        "wpn_fps_sho_boot_s_legendary",
+        "wpn_fps_sho_boot_body_standard",
+        "wpn_fps_sho_boot_em_extra",
+        "wpn_fps_sho_boot_m_standard",
+        "wpn_fps_upg_a_custom_free"
+    }
+    self.wpn_fps_sho_deamon_upg_secondary = deep_clone(self.wpn_fps_sho_deamon_upg_primary)
+    self.wpn_fps_sho_deamon_upg_secondary.unit = "new_weapon_units/upgrade/wpn_fps_sho_deamon_upg_secondary"
 end

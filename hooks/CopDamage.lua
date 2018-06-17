@@ -29,8 +29,6 @@ function CopDamage:drop_pickup(extra)
 			position = position,
 			use_velocity = false
 		})
-	else
-		log("no pickup . . .")
 	end
 end
 

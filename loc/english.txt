@@ -78,5 +78,6 @@
     "wpn_amcar_upg_name" : "NFCAR 'Noob Friendly'",
     "wpn_fal_upg_name" : "Fallen Hero",
     "wpn_m16_upg_name" : "The Last Judgement",
-    "wpn_scar_upg_name" : "Vulture Rifle"
+    "wpn_scar_upg_name" : "Vulture Rifle",
+    "wpn_deamon_upg_name" : "AHZH"
 }
