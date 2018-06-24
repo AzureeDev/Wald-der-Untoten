@@ -5,8 +5,11 @@ function PowerUps:init(unit)
 
 	--self._ammo_type = ""
     --self._ammo_box = self._unit:name() == Idstring("units/pickups/ammo/ammo_pickup")
-    self._power_up_id = self._power_up_id or 1
-    self:init_lifetime()
+    self._power_up_id = self._power_up_id or nil
+
+    if self._power_up_id then
+        self:init_lifetime()
+    end
 end
 
 function PowerUps:reload_contour()
@@ -28,7 +31,32 @@ function PowerUps:_pickup(unit)
 	local player_manager = managers.player
 	local inventory = unit:inventory()
 
-	if not unit:character_damage():dead() and inventory then
+    if not unit:character_damage():dead() and inventory then
+        local picked_up = false
+
+        if not self._power_up_id then
+            if self._projectile_id then
+                if managers.blackmarket:equipped_projectile() == self._projectile_id and not player_manager:got_max_grenades() then
+                    player_manager:add_grenade_amount(self._ammo_count or 1)
+                    picked_up = true
+                end
+            end
+
+            if picked_up then
+                managers.player:register_grenade(managers.network:session():local_peer():id())
+				managers.network:session():send_to_peers_synched("sync_unit_event_id_16", self._unit, "pickup", 16)
+
+                if Network:is_client() then
+                    managers.network:session():send_to_host("sync_pickup", self._unit)
+                end
+    
+                unit:sound():play(self._pickup_event or "pickup_ammo", nil, true)
+
+                self:consume()
+                return true
+            end
+        end
+
         self._picked_up = true
 
         if self._power_up_id == 1 then  -- MAX AMMO

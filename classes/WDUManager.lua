@@ -329,6 +329,10 @@ function WDUManager:_get_current_wave()
 end
 
 function WDUManager:_setup_xaudio()
+    if not XAudio then
+        error("SuperBLT is NOT installed properly. Refer to the step 1 in the installation guide for more details.")
+    end
+    
     blt.xaudio.setup()
     self.xaudio_initialized = true
 end
