@@ -78,8 +78,6 @@ function PlayerStandard:_start_action_intimidate(t, secondary)
 				sound_name = tweak_data.character[prime_target.unit:base()._tweak_table].silent_priority_shout .. "_any"
 			else
 				sound_name = tweak_data.character[prime_target.unit:base()._tweak_table].priority_shout .. "x_any"
-				sound_name = managers.crime_spree:modify_value("PlayerStandart:_start_action_intimidate", sound_name, prime_target.unit)
-															--  ^^^^^^^^^^^^^^ good job overgreed
 			end
 
 			if managers.player:has_category_upgrade("player", "special_enemy_highlight") then

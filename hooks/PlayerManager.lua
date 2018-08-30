@@ -303,8 +303,6 @@ function PlayerManager:_internal_load()
 		amount = self:get_grenade_amount(peer_id) or amount
 	end
 
-	amount = managers.crime_spree:modify_value("PlayerManager:GetThrowablesMaxAmount", amount)
-
 	self:_set_grenade({
 		grenade = grenade,
 		amount = math.min(amount, self:get_max_grenades())

@@ -26,7 +26,6 @@ function GroupAIStateBesiege:_perform_group_spawning(spawn_task, force, use_last
 				if sp_data.delay_t < self._t then
 					local units = category.unit_types[current_unit_type]
 					produce_data.name = units[math.random(#units)]
-					produce_data.name = managers.crime_spree:modify_value("GroupAIStateBesiege:SpawningUnit", produce_data.name)
 					local spawned_unit = sp_data.mission_element:produce(produce_data)
                     
                     if not spawned_unit then
